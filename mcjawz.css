@@ -14,7 +14,7 @@
   width: 100%;
 }
 
-only screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
   .col-s-0 {width: 0.00%;}
   .col-s-1 {width: 8.33%;}
   .col-s-2 {width: 16.66%;}
@@ -28,8 +28,13 @@ only screen and (min-width: 600px) {
   .col-s-10 {width: 83.33%;}
   .col-s-11 {width: 91.66%;}
   .col-s-12 {width: 100%;}
+  div.shark{display:none;}
+  div.shark2{display:none;}
+  div.chicken{left:0px;}
+   div.food-product{top:0px;}
+   div.description{display:none;}
 }
- only screen and (min-width: 768px) {
+ @media screen and (max-width: 1000px) {
   .col-1 {width: 8.33%;}
   .col-2 {width: 16.66%;}
   .col-3 {width: 25%;}
@@ -42,35 +47,37 @@ only screen and (min-width: 600px) {
   .col-10 {width: 83.33%;}
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
-}
+  div.shark{display:none;}
+  div.shark2{display:none;}
+ div.chicken{left:0px;}
+ div.food-product{top:0px;}
+ }
+
+
 
 .Header{
+  position:relative;
   background-color: grey;
   text-align: center;
   color: white;
-  padding:0px;
+  padding:5px;
   font-size: 40px;
   width:100%;
-  float: left;}
+  }
 
 .shark{
-	position: absolute; 
-	right:100px;
-	top: -35px;
-	left:550px;
-    padding: 0px;
+position: absolute; 
+right:0px;
+top:-50px;
 }
+
 .shark2{
-	position: absolute; 
-	left:100px;
-	top: -35px;
-	right:550px;
+position: absolute; 
 transform: rotateY(180deg);	
- padding: 0px;
+top:-50px;
 }
 
 .clear-button {
-
   border: none;
   padding: 20px;
   margin-left:100px;
@@ -80,7 +87,6 @@ transform: rotateY(180deg);
 }
 
 .menu{
-position:relative;
 text-align:right;
 background-color:#f6f6f6;
 margin-top:-20px;
@@ -101,16 +107,19 @@ text-align: right;}
   background: none;
   font-size: 20px; 
 }
+
 .clear-button-dropdown {
   border: none;
   padding: 20px;
   background: none;
-  font-size: 35px; 
+  font-size: 35px;
+  position:relative;  
 }
 
 .dropdown-aisles {
-  position: absolute;
+   position: absolute;
   text-align:left;
+   
 }
 
 .diff-aisles-dropdown {
@@ -127,7 +136,7 @@ text-align: right;}
   color: black;
   padding: 10px 15px;
   text-decoration: none;
-  display: block;
+  display:block;
 }
 
 .dropdown-button{
@@ -136,41 +145,39 @@ text-align: right;}
   text-align:left;
   font-weight:bold;
 }
+
 .aisle-pic{
 	padding-top:10 px;
 	margin:20px;
+
 }
 .aisle-writing{
   position:absolute;
-  border: none;
-  top:700px;
-  left:700px;
-  background: none;
   font-size: 50px;
   font-weight:bold;
-	
+  left:750px;
+  top:250px;
+  max-width:40%;
 }
 .savings-writing{
-	
   position:absolute;
-  border: none;
-  top:700px;
-  left:1750px;
-  background: none;
   font-size: 50px;
   font-weight:bold;
+  
 	
 }
 .savings-pic{
-  position:absolute;
-  left:1572px;
-  background: none;
-  bottom:233px;
-  padding:2px;
+  padding-top:10 px;
+	margin:20px;
+
 }
 .gallery{
+	width:100%;
 	display:inline-block;
+	position:relative;
+	overflow:hidden;
 }
+
 .aisle-name-p2{
 background-color: grey;
 padding:10px;
@@ -178,7 +185,7 @@ text-align: center;
 color: white;
 }
   .clear-button-products {
-  width:100%;
+  width:60%;
   border: none;
   padding: 10px;
   background: none;
@@ -199,6 +206,46 @@ color: white;
   display: inline-block;
   object-fit: contain;
   overflow: hidden;
+}
+
+.foodcontainer{
+  width:100%;
+  max-width: 100%;
+  margin: 15px;
+  padding: 0px;
+  display: inline-block;
+  object-fit: contain;
+  overflow: hidden;
+}
+.food-product {
+	
+	position:relative;
+	display: inline-block;
+	max-width:40%;
+	float:right;
+	position:absolute;
+	padding:-10px;
+}
+
+.chicken{	
+position:relative;
+}
+
+#chickenb{
+	position: relative;
+	max-width:50%;
+	display: inline-block;
+}
+
+#footer-chicken{
+overflow: auto;
+background-color: grey;
+text-align: right;
+padding:10px;}
+	
+	
+}
+.description{	
 }
 .dropdown-content a:hover {background-color: #ddd;}
 
