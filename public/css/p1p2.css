@@ -157,13 +157,13 @@
 
 
 .Header {
-    position: relative;
-    background-color: grey;
-    text-align: center;
-    color: white;
-    padding: 5px;
-    font-size: 40px;
-    width: 100%;
+  position: relative;
+  background-color: grey;
+  text-align: center;
+  color: white;
+  padding: 5px;
+  font-size: 40px;
+  width: 100%;
 }
 
 .shark {
