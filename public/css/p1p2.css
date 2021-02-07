@@ -95,6 +95,8 @@
 
 .row {
   background-color: rgba(54, 72, 89, 0.8);
+  max-width: 100%;
+  margin: 0px;
 }
 
 .card {
@@ -103,6 +105,7 @@
   border: 2px solid #343a40;
   color: #343a40;
   object-fit: contain;
+  max-width: 100%;
 }
 
 .card-body img {
@@ -114,6 +117,9 @@
   background-color: #f6f6f6;
 }
 
+.card-header {
+  word-wrap: break-word;
+}
 .card-body btn-dark btn-blockbtn {
   min-width: 100%;
 }
