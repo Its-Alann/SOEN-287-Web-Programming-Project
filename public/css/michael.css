@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto:wght@300&display=swap");
 
 :root {
-  --primary-color: #808080;
+  --primary-color: #b2babb;
   --secondary-color: #383838;
 }
 
@@ -26,6 +26,18 @@ a:visited {
   text-decoration: none;
 }
 
+button:hover {
+  transform: scale(0.98);
+}
+
+button:focus {
+  transform: scale(0.96);
+}
+
+.card-columns {
+  column-gap: 0.5rem;
+}
+
 /* Header */
 .header {
   height: 80px;
@@ -43,7 +55,7 @@ a:visited {
 
 /* Subheader */
 .subheader {
-  background-color: lightgray;
+  background-color: var(--primary-color);
   height: 60px;
   display: flex;
   flex: 1;
@@ -59,51 +71,15 @@ a:visited {
   align-self: center;
 }
 
-.subheader-item:first-child > * {
-  margin-right: auto;
-}
-
-.subheader-item:last-child > * {
-  margin-left: auto;
-}
-
 /* Main */
 .main {
-  border: 2px black solid;
-  width: 90%;
+  max-width: 90%;
+  margin: auto;
 }
 
-.main p {
-  font-size: 14px;
-}
-
-.cell {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-}
-
-.cell h1 {
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-}
-
-.cell img {
-  max-height: 200px;
+.main img {
   width: auto;
-}
-
-.cell p {
-  display: flex;
-}
-
-.col-border {
-  border-right: 2px black solid;
-}
-
-.row-border {
-  border-bottom: 2px black solid;
+  max-height: 200px;
 }
 
 /* Footer */
@@ -139,6 +115,7 @@ a:visited {
 
   .subheader .login-cart {
     order: 1;
+    margin: 7px 0;
   }
 
   .subheader .aisle-links {
@@ -148,15 +125,5 @@ a:visited {
 
   .subheader .flex {
     flex-direction: column;
-  }
-
-  .cell img {
-    width: 50%;
-    display: flex;
-    align-self: center;
-  }
-
-  .col-border {
-    border-right: none;
   }
 }
