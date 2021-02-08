@@ -1,5 +1,5 @@
 .navbar {
-  box-shadow: 0 8px 8px 0.2;
+  box-shadow: 0 8px 8px 1px;
   background: #f6f6f6;
   padding: 0px;
   margin-bottom: -16px;
@@ -29,7 +29,7 @@
 }
 
 .footer {
-  padding: 20px;
+  padding-top: 20px;
   margin-top: 0px;
   overflow: auto;
   background-color: #343a40;
@@ -95,6 +95,8 @@
 
 .row {
   background-color: rgba(54, 72, 89, 0.8);
+  max-width: 100%;
+  margin: 0px;
 }
 
 .card {
@@ -103,6 +105,7 @@
   border: 2px solid #343a40;
   color: #343a40;
   object-fit: contain;
+  max-width: 100%;
 }
 
 .card-body img {
@@ -114,6 +117,19 @@
   background-color: #f6f6f6;
 }
 
+.card-header {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 81px;
+}
+
+.card-header h1 {
+  width: 276px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline;
+}
 .card-body btn-dark btn-blockbtn {
   min-width: 100%;
 }
@@ -122,4 +138,24 @@
   padding: 0px;
   max-width: 100%;
   max-height: 100%;
+}
+
+.input-group {
+  max-width: 30%;
+}
+
+#productCC {
+  background-color: #f6f6f6;
+  overflow: hidden;
+  object-fit: contain;
+  border: 2px solid #343a40;
+  color: #343a40;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 0px;
+}
+
+#productcc .card-body {
+  border: 1px solid #343a40;
+  padding: 0px;
 }
