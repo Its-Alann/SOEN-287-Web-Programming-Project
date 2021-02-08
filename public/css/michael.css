@@ -17,12 +17,10 @@ body {
 }
 
 a {
-  color: #fff;
   text-decoration: none;
 }
 
 a:visited {
-  color: #000;
   text-decoration: none;
 }
 
@@ -49,8 +47,10 @@ button:focus {
   align-self: flex-end;
 }
 
-.header a:hover {
+.header a:hover,
+.header a:visited {
   text-decoration: none;
+  color: #fff;
 }
 
 /* Subheader */
@@ -66,20 +66,49 @@ button:focus {
   font-size: 17px;
 }
 
+.subheader a {
+  color: black;
+}
+
+.subheader a:hover {
+  text-decoration: underline;
+}
+
+.subheader a:visited {
+  color: black;
+}
+
 .subheader-item {
   justify-content: center;
   align-self: center;
 }
 
 /* Main */
-.main {
+.main,
+.main-product {
   max-width: 90%;
   margin: auto;
 }
 
-.main img {
+.main a {
+  color: white;
+}
+
+.main-product img {
   width: auto;
-  max-height: 200px;
+  max-height: 350px;
+}
+
+.container-product-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-right-side {
+  border: none;
+  width: 100%;
+  background-color: blueviolet;
 }
 
 /* Footer */
