@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto:wght@300&display=swap");
+
+:root {
+  --primary-color: #b2babb;
+  --secondary-color: #383838;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f2f2f2;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+button:hover {
+  transform: scale(0.98);
+}
+
+button:focus {
+  transform: scale(0.96);
+}
+
+.card-columns {
+  column-gap: 0.5rem;
+}
+
+/* Header */
+.header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .slogan {
+  align-self: flex-end;
+}
+
+.header a:hover,
+.header a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Subheader */
+.subheader {
+  background-color: var(--primary-color);
+  height: 60px;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.subheader h5 {
+  font-size: 17px;
+}
+
+.subheader a {
+  color: black;
+}
+
+.subheader a:hover {
+  text-decoration: underline;
+}
+
+.subheader a:visited {
+  color: black;
+}
+
+.subheader-item {
+  justify-content: center;
+  align-self: center;
+}
+
+/* Main */
+.main,
+.main-product {
+  max-width: 90%;
+  margin: auto;
+}
+
+.main a {
+  color: white;
+}
+
+.main-product img {
+  width: auto;
+  max-height: 350px;
+}
+
+.container-product-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-right-side {
+  border: none;
+  width: 100%;
+  background-color: blueviolet;
+}
+
+/* Footer */
+.footer {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+}
+
+.footer p {
+  color: lightgrey;
+}
+
+.footer a:hover {
+  color: lightgrey;
+}
+
+.footer-item {
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+  .subheader {
+    height: 110px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subheader .aisle-name {
+    order: 3;
+  }
+
+  .subheader .login-cart {
+    order: 1;
+    margin: 7px 0;
+  }
+
+  .subheader .aisle-links {
+    margin: 0;
+    order: 2;
+  }
+
+  .subheader .flex {
+    flex-direction: column;
+  }
+}

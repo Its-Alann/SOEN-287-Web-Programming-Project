@@ -1,77 +1,110 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-
+<html lang="en">
 <head>
-    <title>Soen 287 project</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../../public/css/p1p2.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8" />
-    <link href="/public/css/p1p2.css" rel="stylesheet" type="text/css">
+    <title>McJawz Main Page</title>
+
 </head>
 
 <body>
 
-    <div class="row">
-        <div class="Header">
-            <h1>McJawz</h1>
-            <p>Your one stop shop for online groceries.</p>
-            <a href="/public/html/aisles/poultry-aisle.html">Test Button</a>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<a class="navbar-brand " href=index.html>
+    <h1 class="d-inline align-middle">McJawz</h1><br>
+    <p class="d-inline align-top">Top of the food chain </p>
+</a>
+<ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+        <a href="../../public/html/index.html" class="nav-link">Aisles</a>
+    </li>
+    <li class="nav-item">
+        <a href="" class="nav-link">Sign Up</a>
+    </li>
+    <li class="nav-item">
+        <a href="../../public/html/login.html" class="nav-link">Login</a>
+    </li>
+</ul>
+</nav>
+<div class="filler">
+<img src="../../images/sharkk.png" alt="shark" >
+</div>
+<h1 class="seperator">Aisles</h1>
 
-            <div class="col-s-2 col-2">
-                <div class="2sharks">
-                    <div class="shark">
-                        <img src="shark.png" alt="Shark" width="450" height="326">
-                    </div>
-
-                    <div class="shark2">
-                        <img src="shark.png" alt="Shark" width="450" height="326">
-                    </div>
-                </div>
-            </div>
+<div class="container-fluid p-0"> 
+<div class="row">
+    <div class="col-sm-6 col-lg-4 md-truncate">
+      <div class="card text-center">
+        <div class="card-header bg-dark text-white">
+          <h1>Meat, Poultry and Fish </h1>
         </div>
+        <div class="card-body">
+        <a href="../../public/html/aisles/poultry-aisle.html"><img src="../../images/meat.jpg"alt="meat"></a>
+        </div>
+      </div>
     </div>
 
-    <div class="menu">
-        <div class="dropdown-aisles">
-            <button class="clear-button-dropdown">Aisles</button>
-            <div class="diff-aisles-dropdown">
-                <a class="dropdown-button"
-                    href="https://www.metro.ca/en/online-grocery/aisles/meat-poultry/beef-veal/ground/lean-ground-beef-value-pack/p/201710"
-                    role="button">Fruits and Vegetables</a>
-                <a class="dropdown-button"
-                    href="https://www.metro.ca/en/online-grocery/aisles/meat-poultry/beef-veal/ground/lean-ground-beef-value-pack/p/201710"
-                    role="button">Dairy and Eggs</a>
-                <a class="dropdown-button"
-                    href="https://www.metro.ca/en/online-grocery/aisles/meat-poultry/beef-veal/ground/lean-ground-beef-value-pack/p/201710"
-                    role="button">Meats and Poultry</a>
-                <a class="dropdown-button"
-                    href="https://www.metro.ca/en/online-grocery/aisles/meat-poultry/beef-veal/ground/lean-ground-beef-value-pack/p/201710"
-                    role="button">Beverages</a></div>
+    <div class="col-sm-6 col-lg-4 md-truncate">
+      <div class="card text-center">
+        <div class="card-header bg-dark text-white">
+            <h1>Fruits and Vegetables</h1>
         </div>
-        <button class="clear-button">Sign Up/Login</button>
-        <button class="clear-button">Cart</button>
+        <div class="card-body">
+            <a href="../../public/html/aisles/fruitsandveg-aisle.html"><img src="../../images/fruitsandveggy.jpg"alt="Fruits and vegetanbles"></a>
+        </div>
+      </div>
+    </div>
+
+  <div class="col-sm-6 col-lg-4 md-truncate">
+      <div class="card text-center">
+        <div class="card-header bg-dark text-white">
+            <h1>Dairy and Eggs</h1>
+        </div>
+        <div class="card-body">
+          <a href=""><img src="../../images/dAIRY.jpg"alt="Dairy"></a>
+        </div>
+      </div>
     </div>
 
 
-    <div class="gallery">
-        <div class="bothpics">
-            <h1 class="aisle-writing">Aisles</h1>
-            <a href="https://moneywise.com/a/america-names-its-favorite-grocery-chain"><img class="aisle-pic"
-                    src="grocery.jpg" alt="grocery aisle"></a>
-            <h1 class="savings-writing">Savings and Deals</h1>
-            <a href="https://www.offpathtravels.com/travel-savings-and-budgeting/"><img class="savings-pic"
-                    src="savings.jpg" alt="Money in Jar savings"></a>
+    <div class="col-sm-6 col-lg-4 md-truncate">
+        <div class="card text-center">
+          <div class="card-header bg-dark text-white">
+              <h1>Snacks</h1>
+          </div>
+          <div class="card-body">
+          <a href="../../public/html/aisles/snack_aisle.html"><img src="../../images/snacks.jpg" alt="Snacks"></a>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <br>
+      <div class="col-sm-6 col-lg-4">
+        <div class="card text-center">
+          <div class="card-header md-truncate bg-dark text-white">
+              <h1>Beverages</h1>
+          </div>
+          <div class="card-body">
+          <a href=""><img src="../../images/beverages.jpg" alt="Beverages"></a>
+          </div>
+        </div>
+      </div>
+</div>
+
+</div>
+
+
     <div class="footer">
         <footer>
-            <div>
-                <button class="clear-button-footer">Contact Us</button>
-                <button class="clear-button-footer">FAQ</button>
-            </div>
-        </footer>
-    </div>
-</body>
+        <div>
+        <button class="clear-button-footer">Contact Us</button>
+        <button class="clear-button-footer">FAQ</button>
+        </div>
+        </footer></div>
 
+
+
+</body>
 </html>
