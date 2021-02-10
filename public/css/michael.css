@@ -1,158 +1,177 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto:wght@300&display=swap");
 
 :root {
-  --primary-color: #b2babb;
-  --secondary-color: #383838;
+    --color-light-grey: #ced2d6;
+    --color-dark-blue: #174776;
+    --color-medium-blue: #3e5c7a;
+    --color-light-blue: #e2e8ee;
+    --color-very-dark-blue: #0d2f4f;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: #f2f2f2;
+    font-family: "Roboto", sans-serif;
+    background-color: var(--color-light-blue);
 }
 
 a {
-  text-decoration: none;
 }
 
 a:visited {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 button:hover {
-  transform: scale(0.98);
+    transform: scale(0.98);
 }
 
 button:focus {
-  transform: scale(0.96);
+    transform: scale(0.96);
 }
 
-.card-columns {
-  column-gap: 0.5rem;
+nav {
+    overflow: hidden;
+}
+
+.navbar li {
+    list-style-type: none;
+}
+.navbar-left {
+    float: left;
+}
+
+.navbar-right {
+    float: right;
+}
+
+.navbar .link-sep {
+    margin: 0 7px;
 }
 
 /* Header */
 .header {
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
+    height: 60px;
+    background-color: var(--color-dark-blue);
+    color: #fff;
 }
 
-.header .slogan {
-  align-self: flex-end;
-}
-
-.header a:hover,
 .header a:visited {
-  text-decoration: none;
-  color: #fff;
+    text-decoration: none;
+    color: #fff;
+}
+
+.header img {
+    height: 46px;
+}
+
+.header .logo a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.header .navbar-right {
+    margin-top: 11px;
+    float: right;
+}
+
+/*  Aisle Name */
+.aisle-name {
+    background-color: var(--color-medium-blue);
+    height: 40px;
+    color: white;
+    font-size: 30px;
+}
+
+.aisle-name div {
+    text-align: center;
 }
 
 /* Subheader */
 .subheader {
-  background-color: var(--primary-color);
-  height: 60px;
-  display: flex;
-  flex: 1;
-  justify-content: space-between;
-}
-
-.subheader h5 {
-  font-size: 17px;
+    background-color: var(--color-light-blue);
+    height: 20px;
+    font-size: 15px;
 }
 
 .subheader a {
-  color: black;
+    color: black;
+    margin: 0;
 }
 
 .subheader a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .subheader a:visited {
-  color: black;
+    color: black;
 }
 
-.subheader-item {
-  justify-content: center;
-  align-self: center;
+.subheader nav {
 }
 
 /* Main */
-.main,
-.main-product {
-  max-width: 90%;
-  margin: auto;
+.main {
+    max-width: 90%;
+    margin: auto;
 }
 
 .main a {
-  color: white;
+    color: white;
 }
 
 .main-product img {
-  width: auto;
-  max-height: 350px;
-}
-
-.container-product-info {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.card-right-side {
-  border: none;
-  width: 100%;
-  background-color: blueviolet;
+    width: auto;
+    max-height: 350px;
 }
 
 /* Footer */
 .footer {
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  background-color: black;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-very-dark-blue);
 }
 
 .footer p {
-  color: lightgrey;
+    color: lightgrey;
+    margin: 0 10px;
 }
 
 .footer a:hover {
-  color: lightgrey;
+    color: lightgrey;
 }
 
 .footer-item {
-  align-self: center;
+    align-self: center;
 }
 
 @media (max-width: 768px) {
-  .subheader {
-    height: 110px;
-    flex-direction: column;
-    align-items: center;
-  }
+    .subheader {
+        height: 110px;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .subheader .aisle-name {
-    order: 3;
-  }
+    .subheader .aisle-name {
+        order: 3;
+    }
 
-  .subheader .login-cart {
-    order: 1;
-    margin: 7px 0;
-  }
+    .subheader .login-cart {
+        order: 1;
+        margin: 7px 0;
+    }
 
-  .subheader .aisle-links {
-    margin: 0;
-    order: 2;
-  }
+    .subheader .aisle-links {
+        margin: 0;
+        order: 2;
+    }
 
-  .subheader .flex {
-    flex-direction: column;
-  }
+    .subheader .flex {
+        flex-direction: column;
+    }
 }
