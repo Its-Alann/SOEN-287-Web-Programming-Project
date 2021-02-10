@@ -1,0 +1,103 @@
+body{
+    font-family:'Times New Roman', Times, serif
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    background-color: transparent
+}
+
+a:hover{
+    color:rgb(206, 59, 39);
+}
+
+.title{
+    background-color: cornflowerblue;
+    text-align: center;
+    font-size: larger;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color:white;
+}
+
+p{
+    margin: 0px;
+    padding: 0px;
+}
+
+.aisles{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: cornflowerblue;
+}
+
+.myCartContainer{
+    background-color: cornflowerblue;
+    text-align: right;
+    padding-bottom: 15px;
+}
+
+.cartIcon{
+    height: 15px;
+    width: 10px;
+    position: relative;
+}
+
+.cardDeck{
+    padding: 15px 15px;
+}
+
+.cardSize{
+    height: 200px;
+    width: 400px;
+}
+
+.pricesP{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: large;
+}
+
+.quantity{
+    text-align: center;
+}
+
+.addToCart{
+    float: center;
+    margin-top: 15px;
+}
+
+a.item-link{
+    color:black;
+}
+
+a.item-link:hover{
+    color: red;
+    text-decoration: none;
+}
+
+.footer{
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align:center;
+    background-color: rgb(219, 200, 174);
+
+}
+
+.ftext{
+    padding: 30px 30px;
+    text-align:left;
+    color:black;
+}
+
+.fName{
+    color: black;
+    padding: 30px 30px;
+    width: 100%;
+    text-align: right;
+}
