@@ -35,7 +35,13 @@ p{
     text-align: right;
     padding-bottom: 15px;
 }
+.card-img{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
 
+}
 .cartIcon{
     height: 15px;
     width: 10px;
