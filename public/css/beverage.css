@@ -11,7 +11,7 @@ a:hover{
 }
 
 .title{
-    background-color: black;
+    background-color:cornflowerblue;
     text-align: center;
     font-size: larger;
     padding-top: 15px;
@@ -100,7 +100,7 @@ a.item-link:hover{
     width: 100%;
     text-align:center;
     display: flex;
-    color:white;
+    color:cornflowerblue;
     background-color: rgb(219, 200, 174);
     margin-top: 20px;
 
