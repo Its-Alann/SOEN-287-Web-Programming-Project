@@ -30,7 +30,8 @@ p{
     background-color: cornflowerblue;
 }
 .button{
-    position:relative;
+    position: relative;
+    align-items: ;
     text-align: center;
 }
 
