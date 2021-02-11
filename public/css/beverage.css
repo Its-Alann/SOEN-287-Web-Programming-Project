@@ -11,7 +11,7 @@ a:hover{
 }
 
 .title{
-    background-color:cornflowerblue;
+    background-color:white;
     text-align: center;
     font-size: larger;
     padding-top: 15px;
@@ -27,7 +27,7 @@ p{
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: cornflowerblue;
+    background-color: white;
 }
 .button{
     position: relative;
