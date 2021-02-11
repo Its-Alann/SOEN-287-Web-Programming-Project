@@ -31,6 +31,14 @@ p{
     margin-right: 0px;
     background-color: white;
 }
+.other-aisles{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color:cornflowerblue;
+}
 .button{
     position: relative;
     text-align: center;
