@@ -200,7 +200,7 @@ nav {
 
 @media (max-width: 768px) {
     .subheader {
-        height: 100px;
+        height: 150px;
     }
 
     .subheader .navbar-left {
