@@ -12,7 +12,7 @@ a:hover{
 }
 
 .title{
-    background-color: cornflowerblue;
+    background-color: black;
     text-align: center;
     font-size: larger;
     padding-top: 15px;
@@ -45,7 +45,7 @@ p{
 }
 
 .cardDeck{
-    padding: 15px 15px;
+    padding: 20px 20px;
 }
 
 .cardSize{
@@ -84,6 +84,8 @@ a.item-link:hover{
     bottom: 0;
     width: 100%;
     text-align:center;
+    display: flex;
+    color:white;
     background-color: rgb(219, 200, 174);
 
 }
