@@ -29,6 +29,10 @@ p{
     padding-bottom: 10px;
     background-color: cornflowerblue;
 }
+.button{
+    position: center;
+    text-align: center;
+}
 
 .myCartContainer{
     background-color: cornflowerblue;
