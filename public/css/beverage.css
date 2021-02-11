@@ -11,11 +11,11 @@ a:hover{
 }
 
 .title{
-    background-color:white;
+    background-color:cornflowerblue;
     text-align: center;
     font-size: larger;
     padding-top: 15px;
-    color:cornflowerblue;
+    color:white;
 }
 
 p{
@@ -27,6 +27,8 @@ p{
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
     background-color: white;
 }
 .button{
