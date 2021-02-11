@@ -3,7 +3,7 @@ body{
 }
 
 a{
-    color: white;
+    color:black;
     display: incline-block;
 }
 
@@ -90,6 +90,7 @@ a.item-link:hover{
     display: flex;
     color:white;
     background-color: rgb(219, 200, 174);
+    margin-top: 20px;
 
 }
 
@@ -97,6 +98,7 @@ a.item-link:hover{
     padding: 30px 30px;
     text-align:left;
     color:black;
+    display: flex;
 }
 
 .fName{
