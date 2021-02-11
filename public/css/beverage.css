@@ -37,7 +37,7 @@ p{
     padding-bottom: 0px;
     margin-left: 0px;
     margin-right: 0px;
-    background-color:grey;
+    background-color:rgb(197, 195, 195);
 }
 .button{
     position: relative;
@@ -45,7 +45,7 @@ p{
 }
 
 .myCartContainer{
-    background-color: grey;
+    background-color: rgb(197, 195, 195);
     text-align: right;
     padding-bottom: 10px;
 }
