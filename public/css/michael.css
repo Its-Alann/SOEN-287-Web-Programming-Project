@@ -1,158 +1,220 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto:wght@300&display=swap");
 
 :root {
-  --primary-color: #b2babb;
-  --secondary-color: #383838;
+    --color-dark-blue: #133d58;
+    --color-medium-blue: #516e8c;
+    --color-light-blue: #e2e8ee;
+    --color-very-dark-blue: #0d2f4f;
+    --color-dark-gray: #1c2833;
+    --color-button: #1f618d;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: #f2f2f2;
-}
-
-a {
-  text-decoration: none;
+    background-color: var(--color-light-blue);
 }
 
 a:visited {
-  text-decoration: none;
+    text-decoration: none;
 }
 
-button:hover {
-  transform: scale(0.98);
+nav {
+    overflow: hidden;
 }
 
-button:focus {
-  transform: scale(0.96);
+.main,
+.product-page {
+    min-height: calc(100vh - 110px);
 }
 
-.card-columns {
-  column-gap: 0.5rem;
+.btn {
+    background-color: var(--color-button);
+    color: white;
+}
+
+.btn:hover {
+    transform: scale(0.96);
+}
+
+.navbar li {
+    list-style-type: none;
+}
+.navbar-left {
+    float: left;
+}
+
+.navbar-right {
+    float: right;
+}
+
+.navbar .link-sep {
+    margin: 0 7px;
+}
+
+.card {
+    border: 1px darkgrey solid;
+    border-radius: 8px;
+}
+
+.card p,
+.card h1 {
+    color: #7b7d7d;
 }
 
 /* Header */
 .header {
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
+    height: 60px;
+    background-color: var(--color-very-dark-blue);
+    color: #fff;
 }
 
-.header .slogan {
-  align-self: flex-end;
-}
-
-.header a:hover,
 .header a:visited {
-  text-decoration: none;
-  color: #fff;
+    text-decoration: none;
+    color: #fff;
+}
+
+.header img {
+    height: 46px;
+}
+
+.header .logo a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.header .navbar-right {
+    margin-top: 11px;
+    float: right;
+}
+
+/*  Aisle Name */
+.aisle-name {
+    background-color: var(--color-medium-blue);
+    height: 50px;
+    color: white;
+    font-size: 30px;
+}
+
+.aisle-name div {
+    text-align: center;
+    padding-top: 10px;
 }
 
 /* Subheader */
 .subheader {
-  background-color: var(--primary-color);
-  height: 60px;
-  display: flex;
-  flex: 1;
-  justify-content: space-between;
-}
-
-.subheader h5 {
-  font-size: 17px;
+    background-color: var(--color-light-blue);
+    height: 20px;
+    font-size: 15px;
 }
 
 .subheader a {
-  color: black;
+    color: black;
+    margin: 0;
 }
 
 .subheader a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .subheader a:visited {
-  color: black;
+    color: black;
 }
 
-.subheader-item {
-  justify-content: center;
-  align-self: center;
+.subheader img {
+    height: 26px;
+    width: auto;
+    margin-right: 4px;
 }
 
 /* Main */
-.main,
-.main-product {
-  max-width: 90%;
-  margin: auto;
+.main {
+    max-width: 80%;
+    margin: auto;
 }
 
-.main a {
-  color: white;
+.main img {
+    margin-bottom: 10px;
 }
 
-.main-product img {
-  width: auto;
-  max-height: 350px;
+.main .card p,
+.main .card h1 {
+    color: #7b7d7d;
 }
 
-.container-product-info {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.main .card h1 {
+    font-size: 17px;
+    margin: 0;
 }
 
-.card-right-side {
-  border: none;
-  width: 100%;
-  background-color: blueviolet;
+.main .card p {
+    font-size: 13px;
+}
+
+/* Product Page */
+.product-page .card {
+    width: 80%;
+    margin: auto;
+}
+
+.product-page img {
+    height: 300px;
+    width: auto;
+    margin-right: 15px;
+}
+
+.product-page .card h1 {
+    font-size: 30px;
+}
+
+.product-page .card-body {
+    display: flex;
+    flex-direction: row;
 }
 
 /* Footer */
 .footer {
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  background-color: black;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-very-dark-blue);
 }
 
 .footer p {
-  color: lightgrey;
+    color: lightgrey;
+    margin: 0 10px;
 }
 
 .footer a:hover {
-  color: lightgrey;
+    color: lightgrey;
 }
 
 .footer-item {
-  align-self: center;
+    align-self: center;
 }
 
 @media (max-width: 768px) {
-  .subheader {
-    height: 110px;
-    flex-direction: column;
-    align-items: center;
-  }
+    .subheader {
+        height: 150px;
+    }
 
-  .subheader .aisle-name {
-    order: 3;
-  }
+    .subheader .navbar-left {
+        display: inline-block;
+        vertical-align: middle;
+    }
 
-  .subheader .login-cart {
-    order: 1;
-    margin: 7px 0;
-  }
+    .navbar-left .link-sep {
+        color: transparent;
+        height: 3px;
+    }
 
-  .subheader .aisle-links {
-    margin: 0;
-    order: 2;
-  }
-
-  .subheader .flex {
-    flex-direction: column;
-  }
+    .product-page .card-body {
+        display: flex;
+        flex-direction: column;
+    }
 }
