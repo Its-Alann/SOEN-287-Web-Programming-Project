@@ -4,8 +4,7 @@ body{
 
 a{
     color: white;
-    text-decoration: none;
-    background-color: transparent
+    display: incline-block;
 }
 
 a:hover{
