@@ -36,10 +36,10 @@ p{
     padding-bottom: 15px;
 }
 .card-img{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-left: 150px;
+    margin-right: 150px;
 
 }
 .cartIcon{
@@ -53,8 +53,8 @@ p{
 }
 
 .cardDeck{
-    padding: 20px 20px;
-    margin-right: 0px;
+    padding: 150px 150px;
+    margin-right: 10px;
 }
 
 .cardSize{
