@@ -15,14 +15,16 @@ box-shadow: 10px 10px 5px grey;
 }
 
 #MobileNavContainer{
+  display: flex;
   width:auto;
-  max-height:50px;
-  width:40px;
+  justify-content: space-around;
   background-color: lightblue;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  padding-left:5px;
-
+  padding-left: 10px;
+  padding-right:10px;
+  padding-top: 5px;
+  padding-bottom:5px;
 }
 
 #mobileNavBar_icon{
@@ -70,12 +72,12 @@ max-width:50px;
 
 }
 .itemCard{
-  margin: 20px;
+  margin: 10px;
   border-style:solid;
   border-width: 2px;
   border-color:lightblue;
   border-radius:3px;
-  width: 500px;
+  width: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
 }
@@ -84,6 +86,8 @@ max-width:50px;
   border-top-style:solid;
   border-top-width: 2px;
   border-color:lightblue;
+  font-size:25pt;
+  padding:10px;
 
 }
 #footer{
@@ -93,7 +97,7 @@ max-width:50px;
   flex-direction:row;
   background-color:#2c3036;
   font: normal normal 14pt serif;
-
+  padding-left:25px;
 
 }
 .footerText{
