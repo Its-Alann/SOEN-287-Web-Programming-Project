@@ -1,14 +1,15 @@
 
-body {
+.title {
 
-  background-color: red
-  align-content: center;
+  text-align: center;
 }
 
-h1 {
+.products {
 
-  color: red
-
+  text-align: center;
 }
 
-head {background-color: red}
+.container-fluid {
+
+  text-align: left;
+}
