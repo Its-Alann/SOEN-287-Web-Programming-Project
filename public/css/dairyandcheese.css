@@ -1,9 +1,4 @@
 
-.title {
-
-  text-align: center;
-}
-
 .products {
 
   text-align: center;
@@ -12,4 +7,30 @@
 .container-fluid {
 
   text-align: left;
+}
+
+.navbar{
+
+padding: 20px;
+margin-bottom: -16px;
+}
+
+ .navbar .nav-item .nav-link {
+    color: white;
+}
+
+.navbar .nav-item {
+    font-size: 1.3rem;
+}
+
+.footer {
+
+  Position: absolute;
+  Bottom: 0;
+  width: 100%;
+}
+
+p{
+  padding: 10px 10px 0px 10px;
+  color: White;
 }
