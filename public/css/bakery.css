@@ -1,8 +1,6 @@
 *{
   font-family:serif;
 }
-/*Smartphone view*/
-@media only screen and (max-width: 768px){
 /*Header section*/
 #Header {
   min-width: 576px;
@@ -12,8 +10,8 @@
   padding-bottom:10px;
   background-color: #2c3036;
   color:white;
-  align-items: center;
-  box-shadow: 10px 10px 5px grey;
+align-items: center;
+box-shadow: 10px 10px 5px grey;
 }
 
 #MobileNavContainer{
@@ -115,126 +113,4 @@ max-width:50px;
   padding-top: 5px;
   padding-bottom:5px;
 
-}
-}
-/*Tablet view*/
-@media only screen and (min-width: 768px) {
-  /*Header section*/
-  #Header {
-    min-width: 100%;
-    width:auto;
-    padding-top:10px;
-    padding-bottom:10px;
-    background-color: #2c3036;
-    color:white;
-    align-items: center;
-  }
-
-  #MobileNavContainer{
-    display: flex;
-
-    justify-content: center;
-    background-color: lightblue;
-    border-top-right-radius: 2.5px;
-    border-bottom-right-radius: 2.5px;
-    padding-left: 8px;
-    padding-right:8px;
-    padding-top: 2px;
-    padding-bottom:2px;
-  }
-
-  #mobileNavBar_icon{
-  max-width:30px;
-  }
-
-  #LogoContainer{
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    width:auto;
-    padding-left:25px;
-    font: normal bold 25pt serif;
-
-  }
-
-  #logo{
-    width:50px;
-
-  }
-
-  #shoppingCartContainer{
-    display:flex;
-    justify-content: flex-end;
-
-  }
-  #shoppingCartIcon{
-    width:55px;
-    padding-right:15px;
-  }
-
-  /*Aisle name section*/
-  #aisleName{
-    display:flex;
-    justify-content: center;
-    background-color:lightblue;
-    font:italic bolder 30pt serif;
-    color:white;
-  }
-  /*Item cards section*/
-  #itemCardContainer{
-    min-height:100%;
-    padding-top:20px;
-    padding-bottom:20px;
-    display:flex;
-    flex-direction:row;
-    justify-content: flex-start;
-    overflow: auto;
-    white-space:nowrap;
-
-  }
-  .itemCard{
-    min-width:45%;
-    max-width:45%;
-    margin: 20px;
-    border-style:solid;
-    border-width: 2px;
-    border-color:lightblue;
-    border-radius:3px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-  }
-
-  #itemCardDescription{
-    border-top-style:solid;
-    border-top-width: 2px;
-    border-color:lightblue;
-    font-size:25pt;
-    padding:10px;
-
-  }
-  #footer{
-    overflow:hidden;
-    position:fixed;
-    bottom:0;
-    width:100%;
-    padding:10px;
-    display:flex;
-    flex-direction:row;
-    background-color:#2c3036;
-    font: normal normal 14pt serif;
-    padding-left:25px;
-
-  }
-  .footerText{
-    display:flex;
-    border-right-style:solid;
-    border-right-color: darkgrey;
-    border-right-width: 1px;
-    justify-content: center;
-    padding-left:15px;
-    padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom:5px;
-
-}
 }
