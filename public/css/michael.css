@@ -22,6 +22,9 @@
 
 body {
     background-color: var(--color-light-gray);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a:visited {
@@ -33,8 +36,9 @@ nav {
 }
 
 .main,
-.product-page {
-    min-height: calc(100vh - 110px);
+.product-page,
+.user-list {
+    flex: 1;
 }
 
 .btn {
@@ -102,15 +106,15 @@ nav {
     float: right;
 }
 
-/*  Aisle Name */
-.aisle-name {
+/*  Page Name */
+.page-name {
     background-color: var(--color-medium-gray);
     height: 50px;
     color: white;
     font-size: 30px;
 }
 
-.aisle-name div {
+.page-name div {
     text-align: center;
     margin: auto;
 }
@@ -188,6 +192,34 @@ nav {
 
 .product-page .card-body .product-right-side {
     margin: 0 auto;
+}
+
+/* User List */
+.user-list {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.user-list .table-bordered,
+.user-list .table-bordered > thead > tr > th,
+.user-list .table-bordered > tbody > tr > td {
+    border: 1px solid var(--color-medium-gray);
+}
+
+.user-list table .btn-col {
+    width: 20%;
+}
+
+.user-list .btn-delete {
+    background-color: #c0392b;
+}
+
+.user-list .btn-edit {
+    background-color: #d4ac0d;
+}
+
+table .btn-cell {
+    text-align: center;
 }
 
 /* Footer */
