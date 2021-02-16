@@ -180,8 +180,6 @@ a.item-link:hover{
     border-top-right-radius: calc(0.25rem - 1px);
 }
 
-
-
 @media (max-width: 991px){
     .myCartContainer{
         text-align: center;
