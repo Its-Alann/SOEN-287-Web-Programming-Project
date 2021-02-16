@@ -1,23 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 
 :root {
     --color-dark-blue: #133d58;
     --color-medium-blue: #516e8c;
     --color-light-blue: #e2e8ee;
     --color-very-dark-blue: #0d2f4f;
-    --color-dark-gray: #1c2833;
-    --color-button: #1f618d;
+
+    --color-dark-gray: #343c45;
+    --color-medium-gray: #51585f;
+    --color-light-gray: #e2e3e4;
+
+    --color-button: #2471a3;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 body {
-    background-color: var(--color-light-blue);
+    background-color: var(--color-light-gray);
 }
 
 a:visited {
@@ -40,6 +44,7 @@ nav {
 
 .btn:hover {
     transform: scale(0.96);
+    color: #fff;
 }
 
 .navbar li {
@@ -70,7 +75,11 @@ nav {
 /* Header */
 .header {
     height: 60px;
-    background-color: var(--color-very-dark-blue);
+    background-color: var(--color-dark-gray);
+    color: #fff;
+}
+
+.header a {
     color: #fff;
 }
 
@@ -95,7 +104,7 @@ nav {
 
 /*  Aisle Name */
 .aisle-name {
-    background-color: var(--color-medium-blue);
+    background-color: var(--color-medium-gray);
     height: 50px;
     color: white;
     font-size: 30px;
@@ -103,12 +112,12 @@ nav {
 
 .aisle-name div {
     text-align: center;
-    padding-top: 10px;
+    margin: auto;
 }
 
 /* Subheader */
 .subheader {
-    background-color: var(--color-light-blue);
+    background-color: var(--color-light-gray);
     height: 20px;
     font-size: 15px;
 }
@@ -148,12 +157,12 @@ nav {
 }
 
 .main .card h1 {
-    font-size: 17px;
+    font-size: 18px;
     margin: 0;
 }
 
 .main .card p {
-    font-size: 13px;
+    font-size: 15px;
 }
 
 /* Product Page */
@@ -177,12 +186,16 @@ nav {
     flex-direction: row;
 }
 
+.product-page .card-body .product-right-side {
+    margin: 0 auto;
+}
+
 /* Footer */
 .footer {
     height: 50px;
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-very-dark-blue);
+    background-color: black;
 }
 
 .footer p {
