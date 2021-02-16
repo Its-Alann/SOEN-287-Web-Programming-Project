@@ -150,13 +150,13 @@ a.item-link:hover{
     border-top-right-radius: calc(0.25rem - 1px);
 }
 
-.card-img-fp{
+.card-img-juice{
     width: 395px;
     border-top-left-radius: calc(0.25rem - 1px);
     border-top-right-radius: calc(0.25rem - 1px);
 }
 
-.card-img-fpP{
+.card-img-juiceP{
     width: 500px;
     padding-left: 100px;
     border-top-left-radius: calc(0.25rem - 1px);
@@ -166,7 +166,7 @@ a.item-link:hover{
 .card-img-ed{
     width: 349px;
     padding-top: 75px;
-    padding-bottom: 100px;
+    padding-bottom: 95px;
     border-top-left-radius: calc(0.25rem - 1px);
     border-top-right-radius: calc(0.25rem - 1px);
 }
