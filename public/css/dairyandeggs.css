@@ -1,26 +1,63 @@
-html, body{
+body{
 
-background-color: white;
+background-color: black;
 width: 100%;
 }
 
 .navbar .nav-item {
-
 
     font-size: 1.3rem;
 }
 
 .navbar{
 
-
 padding: 20px;
 margin-bottom: 0px;
 }
 
+.header a{
+
+  color: #F2F2F2;
+}
+
+.header a:hover{
+
+  color: grey;
+}
+
 section.header{
 
-  background-color: lightblue;
+  background-color: #192A40;
 }
+
+section.subheader{
+
+  padding-top: 10px;
+  color: white;
+  text-align: center;
+  background: #223A59;
+  height: 100px;
+}
+
+.subheader a{
+
+  color: #F2F2F2;
+}
+
+.subheader a:hover{
+
+  color: #F2F2F2;
+}
+
+.links{
+
+  text-align: left;
+}
+
+.cart{
+
+  text-align: right;
+  }
 
 .img-thumbnail{
 
@@ -31,7 +68,21 @@ section.header{
 .itemsbox{
 
 text-align: center;
+background-color: #F2F2F2;
 }
+
+.cart .cart-icon{
+
+  color: red;
+}
+
+.cart-icon{
+
+  margin: 10px;
+  height: 30px;
+  width: 30px;
+}
+
 
 .numberinput{
 
@@ -47,7 +98,12 @@ text-align: center;
 
 .product{
 
-  padding: 10px;
+  padding: 20px;
+}
+
+.container{
+
+  bottom:-100px;
 }
 
 .footer {
@@ -68,3 +124,30 @@ text-align: center;
 
 .footer-item {
     align-self: center;
+}
+
+/* Products CSS */
+
+section.descbox{
+
+  border: 2px solid;
+  border-radius: 25px;
+  border-color: lightgrey;
+  padding: 10px;
+  margin: 100px 90px 190px 90px;
+  height: 500px;
+  background-color: #F2F2F2;
+  text-align: center;
+}
+
+.descproducts{
+
+  margin-top: 25px;
+  height: 400px;
+  width: 400px;
+}
+
+.descbox p{
+
+  margin: 0px;
+}
