@@ -335,6 +335,7 @@ max-width:50px;
 .itemCounter > input{
   font: normal normal 25pt serif;
 }
+
 }
 /*Desktop version*/
 @media screen and (min-device-width: 1024px) {
