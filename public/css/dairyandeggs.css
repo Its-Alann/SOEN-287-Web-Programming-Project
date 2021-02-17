@@ -124,3 +124,30 @@ background-color: #F2F2F2;
 
 .footer-item {
     align-self: center;
+}
+
+/* Products CSS */
+
+section.descbox{
+
+  border: 2px solid;
+  border-radius: 25px;
+  border-color: lightgrey;
+  padding: 10px;
+  margin: 100px 90px 190px 90px;
+  height: 500px;
+  background-color: #F2F2F2;
+  text-align: center;
+}
+
+.descproducts{
+
+  margin-top: 25px;
+  height: 400px;
+  width: 400px;
+}
+
+.descbox p{
+
+  margin: 0px;
+}
