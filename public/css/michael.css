@@ -232,6 +232,17 @@ input[type="number"] {
     margin: 0 auto;
 }
 
+.product-page .card-footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.product-page .card .qty {
+    width: 30px;
+    text-align: center;
+    height: auto;
+}
+
 /* User List */
 .user-list {
     width: 80%;
@@ -321,25 +332,6 @@ table .btn-cell {
 }
 
 @media (max-width: 1150px) {
-    .subheader {
-        height: 150px;
-    }
-
-    .subheader .navbar-left {
-        display: inline-block;
-        vertical-align: middle;
-    }
-
-    .navbar-left .link-sep {
-        color: transparent;
-        height: 3px;
-    }
-
-    .product-page .card-body {
-        display: flex;
-        flex-direction: column;
-    }
-
     .snack-aisle .card-footer {
         flex-direction: column;
         align-content: space-between;
@@ -386,8 +378,13 @@ table .btn-cell {
         height: 3px;
     }
 
+    .product-page img {
+        max-width: 100%;
+        height: auto;
+        margin: 5px;
+    }
+
     .product-page .card-body {
-        display: flex;
         flex-direction: column;
     }
 
@@ -403,5 +400,16 @@ table .btn-cell {
     .admin .card {
         width: 130px;
         height: 150px;
+    }
+}
+
+@media (max-width: 500px) {
+    .product-page .card-footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .product-page .cart-button {
+        margin-top: 5px;
     }
 }
