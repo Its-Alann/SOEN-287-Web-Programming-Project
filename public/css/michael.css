@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 
 :root {
-    --color-dark-blue: #133d58;
-    --color-medium-blue: #516e8c;
-    --color-light-blue: #e2e8ee;
-    --color-very-dark-blue: #0d2f4f;
-
     --color-dark-gray: #343c45;
     --color-medium-gray: #51585f;
     --color-light-gray: #e2e3e4;
@@ -36,12 +31,16 @@ nav {
 .main,
 .product-page,
 .user-list,
-.edit-product {
+.edit-product,
+.admin {
     flex: 1;
 }
 
+.link-sep {
+    margin: 0 7px;
+}
+
 .btn {
-    background-color: var(--color-button);
     color: white;
 }
 
@@ -62,6 +61,14 @@ nav {
     background-color: #2471a3;
 }
 
+.btn-green {
+    background-color: #229954;
+}
+
+.btn-purple {
+    background-color: #992267;
+}
+
 .navbar li {
     list-style-type: none;
 }
@@ -71,10 +78,6 @@ nav {
 
 .navbar-right {
     float: right;
-}
-
-.navbar .link-sep {
-    margin: 0 7px;
 }
 
 .card {
@@ -89,6 +92,15 @@ nav {
 
 .w-30 {
     width: 30%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 /* Header */
@@ -160,28 +172,39 @@ nav {
     margin-right: 4px;
 }
 
-/* Main */
-.main {
+/* Snack Aisle */
+.snack-aisle {
     max-width: 80%;
     margin: auto;
 }
 
-.main img {
+.snack-aisle img {
     margin-bottom: 10px;
 }
 
-.main .card p,
-.main .card h1 {
-    color: #7b7d7d;
+.snack-aisle .card {
+    margin-top: 20px;
 }
 
-.main .card h1 {
+.snack-aisle .card h1 {
     font-size: 18px;
     margin: 0;
 }
 
-.main .card p {
+.snack-aisle .card p {
     font-size: 15px;
+}
+
+.snack-aisle .card-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.snack-aisle .card .qty {
+    width: 30px;
+    text-align: center;
+    margin: auto 4px;
+    height: auto;
 }
 
 /* Product Page */
@@ -257,8 +280,23 @@ table .btn-cell {
     height: 100px;
 }
 
-.edit-product .btn-edit {
+.edit-product .btn-yellow {
     width: 30%;
+}
+
+/* Admin */
+.admin {
+    max-width: 80%;
+    margin: auto;
+}
+
+.admin a:hover {
+    text-decoration: none;
+    transform: translateY(-5px);
+}
+
+.admin .card {
+    width: 200px;
 }
 
 /* Footer */
@@ -282,7 +320,7 @@ table .btn-cell {
     align-self: center;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1150px) {
     .subheader {
         height: 150px;
     }
@@ -302,6 +340,15 @@ table .btn-cell {
         flex-direction: column;
     }
 
+    .snack-aisle .card-footer {
+        flex-direction: column;
+        align-content: space-between;
+    }
+
+    .snack-aisle .card-footer .cart-button {
+        margin-top: 5px;
+    }
+
     .edit-product {
         width: 80%;
         margin: 50px auto;
@@ -309,6 +356,18 @@ table .btn-cell {
 
     .edit-product .btn-yellow {
         width: 40%;
+    }
+
+    .user-list .btn-cell {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .user-list .btn-cell button {
+        width: 100%;
+        margin: 2px 0;
     }
 }
 
@@ -340,12 +399,9 @@ table .btn-cell {
     .edit-product .btn-yellow {
         width: 40%;
     }
-}
 
-@media (max-width: 500px) {
-    .user-list .btn-cell {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .admin .card {
+        width: 130px;
+        height: 150px;
     }
 }
