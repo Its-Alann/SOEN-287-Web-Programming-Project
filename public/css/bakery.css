@@ -131,27 +131,48 @@ max-width:50px;
 .productDescription > p{
   font-size:20pt;
 }
+.productDescription{
+  margin:20px;
+  display:flex;
+  justify-content: center;
+  flex-wrap:wrap;
+}
 .addToCart{
+  display:flex;
+  justify-content: center;
+  flex-wrap:wrap;
+  align-items:center;
   padding:15px;
   border:1px solid lightblue;
   background-color: white;
-  justify-content: center;
-  align-self:center;
   width:auto;
   font: normal bold 30pt serif;
+}
+.itemCounter{
+  margin:0px 30px;
+
+}
+.itemCounter > input{
+  font: normal normal 30pt serif;
+}
+.addToCart > button{
+  margin: 0px 120px;
 }
 .customBtn{
   border: none;
   color: white;
-  padding: 7px 20px;
+  width:70px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   border-radius:10px;
+  font: normal normal 30pt serif;
 }
+
 }
 /*Tablet view*/
 @media screen and (min-device-width: 768px) {
+/*-----AISLE------*/
   /*Header section*/
   #Header {
     min-width: 100%;
@@ -271,9 +292,52 @@ max-width:50px;
 #navBar{
   display:none;
 }
+/*-------PRODUCT-------*/
+#productContainer{
+  display:flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding:20px
+}
+.productDescription{
+  margin-top:px;
+
+}
+.productDescription > p{
+  font-size:20pt;
+}
+.addToCart{
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  padding:15px;
+  border:1px solid lightblue;
+  background-color: white;
+  width:auto;
+  font: normal bold 20pt serif;
+}
+.addToCart > button{
+  margin: 0px 15px;
+}
+.customBtn{
+  border: none;
+  color: white;
+  width:50px;
+  height:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius:10px;
+  font: normal normal 25pt serif;
+}
+.itemCounter > input{
+  font: normal normal 25pt serif;
+}
 }
 /*Desktop version*/
 @media screen and (min-device-width: 1024px) {
+  /*-------AISLE-------*/
   /*Header section*/
   #Header {
     display:flex;
@@ -402,6 +466,47 @@ max-width:50px;
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom:5px;
+}
+/*-------PRODUCT-------*/
+#productContainer{
+  display:flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding:20px
+}
+.productDescription{
+  margin-top:px;
 
+}
+.productDescription > p{
+  font-size:20pt;
+}
+.addToCart{
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  padding:15px;
+  border:1px solid lightblue;
+  background-color: white;
+  width:auto;
+  font: normal bold 20pt serif;
+}
+.addToCart > button{
+  margin: 0px 15px;
+}
+.customBtn{
+  border: none;
+  color: white;
+  width:50px;
+  height:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius:10px;
+  font: normal normal 25pt serif;
+}
+.itemCounter > input{
+  font: normal normal 25pt serif;
 }
 }
