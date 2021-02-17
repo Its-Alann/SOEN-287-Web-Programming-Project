@@ -1,21 +1,14 @@
 body{
-    font-family:'Times New Roman', Times, serif
+    font-family: 'Raleway', sans-serif;
 }
 
 a{
-    color:black;
+    color: white;
+    display: inline-block;
 }
 
 a:hover{
-    color:rgb(206, 59, 39);
-}
-
-.title{
-    background-color:cornflowerblue;
-    text-align: center;
-    font-size: larger;
-    padding-top: 15px;
-    color:white;
+    color: grey;
 }
 
 p{
@@ -23,67 +16,54 @@ p{
     padding: 0px;
 }
 
-.aisles{
+.title{
+    background-color: rgb(51,51,51);
     text-align: center;
-    padding-top: 0px;
-    padding-bottom: 5px;
-    margin-left: 0px;
-    margin-right: 0px;
-    background-color: white;
-}
-.other-aisles{
-    text-align: center;
+    font-size: large;
     padding-top: 10px;
-    padding-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    background-color:rgb(197, 195, 195);
+    color: white;
+    position: fixed;
+
 }
-.button{
-    position: relative;
-    text-align: center;
+
+.aisles{
+    text-align: left;
+    padding-top: 5px;
+    background-color: rgb(51,51,51);
+    padding-bottom: 10px;
+    left: 10px;
 }
 
 .myCartContainer{
-    background-color: rgb(197, 195, 195);
+    background-color: rgb(51,51,51);
     text-align: right;
+    position: fixed;
+    right: 10px;
     padding-bottom: 10px;
 }
+
+
+
 .shoppingcarticon{
     height: 25px;
     width: 25px;
     position: relative;
 }
-.card-img{
-    margin-top: 150px;
-    margin-bottom: 150px;
-    margin-left: 0px;
-    margin-right: 0px;
 
+.card-deck{
+    padding: 20px 20px;
 }
 
-.cartIcon{
-    height: 15px;
-    width: 10px;
-    position: relative;
-}
-
-.card{
-    margin-top: 15px;
-}
-
-.cardDeck{
-    padding: 150px 150px;
-    margin-right: 0px;
-}
-
-.cardSize{
-    height: 200px;
+.card-size{
     width: 400px;
+    height: 200px;
 }
 
-.pricesP{
-    padding-top: 10px;
+.incdec{
+    font-size: 15px;
+}
+
+.pricing{
     padding-bottom: 10px;
     text-align: center;
     font-size: large;
@@ -95,41 +75,121 @@ p{
 
 .addToCart{
     float: center;
-    margin-top: 15px;
+    margin-top: 10px;
+}
+
+.card{
+    margin-top: 20px;
+}
+
+.card-deck{
+    margin-right: 0px;
+    padding-left: 300px;
+    position:relative;
 }
 
 a.item-link{
-    color:black;
+    color: black;
 }
 
 a.item-link:hover{
-    color: red;
     text-decoration: none;
 }
 
-.footer{
+.footer {
     position: static;
     left: 0;
     bottom: 0;
     width: 100%;
-    text-align:center;
+    background-color: rgb(51,51,51);
+    color: white;
+    text-align: center;
     display: flex;
-    color:cornflowerblue;
-    background-color: rgb(219, 200, 174);
     margin-top: 20px;
+  }
 
-}
-
-.ftext{
-    padding: 30px 30px;
-    text-align:left;
-    color:black;
+.footer-text{
+    padding: 10px 50px;
+    text-align: left;
+    color: white;
     display: flex;
 }
 
-.fName{
-    color: black;
-    padding: 30px 30px;
+.footer-name{
+    color: white;
+    padding: 10px 50px;
     width: 100%;
     text-align: right;
+}
+
+.card-img-w{
+    width: 379px;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+.card-img-wP{
+    width: 600px;
+    height: 700px;
+    padding-left: 100px;
+    padding-bottom: 50px;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.card-img-soda{
+    width: 379px;
+    padding-top: 135px;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.card-img-sodaP{
+    width: 550px;
+    padding-top: 50px;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.card-img-juice{
+    width: 395px;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.card-img-juiceP{
+    width: 500px;
+    padding-left: 100px;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.card-img-ed{
+    width: 349px;
+    padding-top: 75px;
+    padding-bottom: 95px;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.card-img-edP{
+    width: 475px;
+    padding-top: 75px;
+    padding-left: 100px;
+    padding-bottom: 100px;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+
+
+
+@media (max-width: 991px){
+    .myCartContainer{
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .aisles{
+        text-align: center;
+    }
+
 }

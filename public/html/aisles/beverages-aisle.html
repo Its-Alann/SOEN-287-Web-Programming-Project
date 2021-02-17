@@ -4,55 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="Width=device-width, initial-scale=1.0">
-    <title>McJaws || Beverages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McJawz || Beverages</title>
     <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../../public/css/beverage.css">
     <link rel="stylesheet" href="../../../public/css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     
 </head>
 
 <body>
     
     <!--NAVIGATIONAL BAR-->
-    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../../public/html/index.html">
+            <img style="margin-right: 5px;" class="icon-logo" src="../../../images/mcJawz_logo_no_txt.png" 
+            width="40" height="40" class="d-inline-block align-top" alt="">
+            McJawz
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../public/html/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../public/html/signup.html">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../public/html/login.html">Log in</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <!--SUBHEADER-->
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12 title">
-                <h2>Beverages and Drinks</h2>
+            <div class="row">
+                <div class="col-lg-12 title">
+                    <h2>Beverages and Drinks </h2>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-lg other-aisles">
-            <a href="../../../public/html/aisles/poultry-aisle.html">Meat and Poultry</a>
-            <a href="../../../public/html/aisles/dairy-aisle.html">Dairy and Eggs</a>   
-            <a href="../../../public/html/aisles/snack_aisle.html">Snacks</a>
-            <a href="../../../public/html/aisles/fruitsandveg-aisle.html">Fruits and Vegetables</a>
+        <div class="row">
+            <div class="col-lg-6 aisles">
+                <a href="../../../public/html/aisles/poultry-aisle.html">Meat and Poultry</a>
+                ||
+                <a href="../../../public/html/aisles/dairy-aisle.html">Dairy and Eggs</a>   
+                ||
+                <a href="../../../public/html/aisles/snack_aisle.html">Snacks</a>
+                ||
+                <a href="../../../public/html/aisles/fruitsandveg-aisle.html">Fruits and Vegetables</a>
+            </div>
+            <div class="col-lg-6 col-md-12 myCartContainer">
+                <img class="shoppingcarticon" src="../../../images/shoppingcarticon.png">
+                <a href="../../../public/html/cart.html">
+                    <p>My Cart</p>
+                </a>
+            </div>
         </div>
-        <div class="col-lg-6 col-md-12 myCartContainer">
-            <img class="shoppingcarticon" src="../../../images/shoppingcarticon.png">
-            <a href="../../../public/html/cart.html">
-                <p>My Cart</p>
-            </a>
-        </div>
-    </div>
 
     <!--BEVERAGES AND DRINKS-->
-    <div class="cardDeck">
-        <div class="row aisles">
-            <div class="col-lg-3 col-md-4">
+    <div class="card-deck">
+        <div class="row">
+            <div class="col-md-4">
                 <div class="card">
                     <a class="item-link" href="../../../public/html/products/beverages-water.html">
-                       <img class="card-img" src="../../../images/evian-water.jpg">
+                       <img class="card-img-w" src="../../../images/evian-water.jpg">
                        <div class="card-body"> 
                             <h5 class="card-title">Water</h5>
                             <p class="card-text"><small class="text-muted">500ml</small></p>
                         </div>
                     </a>
                     <div class="card-footer">
-                            <p class="pricesP"><b>$1.20/bottle</b></p>
+                            <p class="pricing"><b>$1.20/bottle</b></p>
                             <div class="row quantity">
                                 <div class="col-lg-12 addToCart">
                                     <a href="../../../public/html/products/beverages-water.html">
@@ -66,17 +96,17 @@
         
 
             
-            <div class="col-lg-3 col-md-4">
+            <div class="col-md-4">
                 <div class="card">
                     <a class="item-link" href="../../../public/html/products/beverages-sprite.html">
-                       <img class="card-img" src="../../../images/sprite.jpg">
+                       <img class="card-img-soda" src="../../../images/sprite.jpg">
                        <div class="card-body"> 
                             <h5 class="card-title">Sprite</h5>
                             <p class="card-text"><small class="text-muted">600ml</small></p>
                         </div>
                     </a>
                     <div class="card-footer">
-                        <p class="pricesP"><b>$1.80/bottle</b></p>
+                        <p class="pricing"><b>$1.80/bottle</b></p>
                         <div class="row quantity">
                             <div class="col-lg-12 addToCart">
                                 <a href="../../../public/html/products/beverages-sprite.html">
@@ -90,17 +120,17 @@
         
 
         
-            <div class="col-lg-3 col-md-4">
+            <div class="col-md-4">
                 <div class="card">
                     <a class="item-link" href="../../../public/html/products/beverages-cocacola.html">
-                       <img class="card-img" src="../../../images/cola.jpg">
+                       <img class="card-img-soda" src="../../../images/cola.jpg">
                        <div class="card-body"> 
                             <h5 class="card-title">Coca Cola</h5>
                             <p class="card-text"><small class="text-muted">600ml</small></p>
                         </div>
                     </a>
                     <div class="card-footer">
-                        <p class="pricesP"><b>$1.80/bottle</b></p>
+                        <p class="pricing"><b>$1.80/bottle</b></p>
                         <div class="row quantity">
                             <div class="col-lg-12 addToCart">
                                 <a href="../../../public/html/products/beverages-cocacola.html">
@@ -114,19 +144,19 @@
         </div>
     </div>
 
-    <div class="cardDeck">
-        <div class="row aisles">
-            <div class="col-lg-3 col-md-4">
+    <div class="card-deck">
+        <div class="row">
+            <div class="col-md-4">
                 <div class="card">
                     <a class="item-link" href="../../../public/html/products/beverages-fruitpunch.html">
-                       <img class="card-img" src="../../../images/fruitpunch.png">
+                       <img class="card-img-juice" src="../../../images/fruitpunch.png">
                        <div class="card-body"> 
                             <h5 class="card-title">Fruit Punch</h5>
                             <p class="card-text"><small class="text-muted">1.25L</small></p>
                         </div>
                     </a>
                     <div class="card-footer">
-                        <p class="pricesP"><b>$2.25/bottle</b></p>
+                        <p class="pricing"><b>$2.25/bottle</b></p>
                         <div class="row quantity">
                             <div class="col-lg-12 addToCart">
                                 <a href="../../../public/html/products/beverages-fruitpunch.html">
@@ -140,17 +170,17 @@
         
 
     
-            <div class="col-lg-3 col-md-4">
+            <div class="col-md-4">
                 <div class="card">
                     <a class="item-link" href="../../../public/html/products/beverages-orangejuice.html">
-                       <img class="card-img" src="../../../images/orangejuice.png">
+                       <img class="card-img-juice" src="../../../images/orangejuice.png">
                        <div class="card-body"> 
                             <h5 class="card-title">Orange Juice</h5>
                             <p class="card-text"><small class="text-muted">1.25L</small></p>
                         </div>
                     </a>
                     <div class="card-footer">
-                        <p class="pricesP"><b>$2.25/bottle</b></p>
+                        <p class="pricing"><b>$2.25/bottle</b></p>
                         <div class="row quantity">
                             <div class="col-lg-12 addToCart">
                                 <a href="../../../public/html/products/beverages-orangejuice.html">
@@ -164,17 +194,17 @@
         
 
     
-            <div class="col-lg-3 col-md-4">
+            <div class="col-md-4">
                 <div class="card">
                     <a class="item-link" href="../../../public/html/products/beverages-energydrink.html">
-                       <img class="card-img" src="../../../images/energydrink.jpg">
+                       <img class="card-img-ed" src="../../../images/energydrink.jpg">
                        <div class="card-body"> 
                             <h5 class="card-title">Energy Drink</h5>
                             <p class="card-text"><small class="text-muted">473mL</small></p>
                         </div>
                     </a>
                     <div class="card-footer">
-                        <p class="pricesP"><b>$2.75/can</b></p>
+                        <p class="pricing"><b>$2.75/can</b></p>
                         <div class="row quantity">
                             <div class="col-lg-12 addToCart">
                                 <a href="../../../public/html/products/beverages-energydrink.html">
@@ -190,10 +220,10 @@
 
     <!--FOOTER-->
     <div class="footer">
-        <div class="ftext">
-            <a href="#">Admin</a>
+        <div class="footer-text">
+            <a href="../../../public/html/admin.html">Admin</a>
         </div>
-        <div class="fName">
+        <div class="footer-name">
             <p>Jeffery Kim || 40175238</p>
         </div>
     </div>

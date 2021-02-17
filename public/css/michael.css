@@ -1,23 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 
 :root {
-    --color-dark-blue: #133d58;
-    --color-medium-blue: #516e8c;
-    --color-light-blue: #e2e8ee;
-    --color-very-dark-blue: #0d2f4f;
-    --color-dark-gray: #1c2833;
-    --color-button: #1f618d;
+    --color-dark-gray: #343c45;
+    --color-medium-gray: #51585f;
+    --color-light-gray: #e2e3e4;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 body {
-    background-color: var(--color-light-blue);
+    background-color: var(--color-light-gray);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a:visited {
@@ -29,17 +29,44 @@ nav {
 }
 
 .main,
-.product-page {
-    min-height: calc(100vh - 110px);
+.product-page,
+.user-list,
+.edit-product,
+.admin {
+    flex: 1;
+}
+
+.link-sep {
+    margin: 0 7px;
 }
 
 .btn {
-    background-color: var(--color-button);
     color: white;
 }
 
 .btn:hover {
     transform: scale(0.96);
+    color: #fff;
+}
+
+.btn-red {
+    background-color: #c0392b;
+}
+
+.btn-yellow {
+    background-color: #d4ac0d;
+}
+
+.btn-blue {
+    background-color: #2471a3;
+}
+
+.btn-green {
+    background-color: #229954;
+}
+
+.btn-purple {
+    background-color: #992267;
 }
 
 .navbar li {
@@ -53,10 +80,6 @@ nav {
     float: right;
 }
 
-.navbar .link-sep {
-    margin: 0 7px;
-}
-
 .card {
     border: 1px darkgrey solid;
     border-radius: 8px;
@@ -67,10 +90,27 @@ nav {
     color: #7b7d7d;
 }
 
+.w-30 {
+    width: 30%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 /* Header */
 .header {
     height: 60px;
-    background-color: var(--color-very-dark-blue);
+    background-color: var(--color-dark-gray);
+    color: #fff;
+}
+
+.header a {
     color: #fff;
 }
 
@@ -93,22 +133,22 @@ nav {
     float: right;
 }
 
-/*  Aisle Name */
-.aisle-name {
-    background-color: var(--color-medium-blue);
+/*  Page Name */
+.page-name {
+    background-color: var(--color-medium-gray);
     height: 50px;
     color: white;
     font-size: 30px;
 }
 
-.aisle-name div {
+.page-name div {
     text-align: center;
-    padding-top: 10px;
+    margin: auto;
 }
 
 /* Subheader */
 .subheader {
-    background-color: var(--color-light-blue);
+    background-color: var(--color-light-gray);
     height: 20px;
     font-size: 15px;
 }
@@ -132,28 +172,39 @@ nav {
     margin-right: 4px;
 }
 
-/* Main */
-.main {
+/* Snack Aisle */
+.snack-aisle {
     max-width: 80%;
     margin: auto;
 }
 
-.main img {
+.snack-aisle img {
     margin-bottom: 10px;
 }
 
-.main .card p,
-.main .card h1 {
-    color: #7b7d7d;
+.snack-aisle .card {
+    margin-top: 20px;
 }
 
-.main .card h1 {
-    font-size: 17px;
+.snack-aisle .card h1 {
+    font-size: 18px;
     margin: 0;
 }
 
-.main .card p {
-    font-size: 13px;
+.snack-aisle .card p {
+    font-size: 15px;
+}
+
+.snack-aisle .card-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.snack-aisle .card .qty {
+    width: 30px;
+    text-align: center;
+    margin: auto 4px;
+    height: auto;
 }
 
 /* Product Page */
@@ -177,12 +228,83 @@ nav {
     flex-direction: row;
 }
 
+.product-page .card-body .product-right-side {
+    margin: 0 auto;
+}
+
+/* User List */
+.user-list {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.user-list .table-bordered,
+.user-list .table-bordered > thead > tr > th,
+.user-list .table-bordered > tbody > tr > td {
+    border: 1px solid var(--color-medium-gray);
+}
+
+.user-list table .btn-col {
+    width: 20%;
+}
+
+table .btn-cell {
+    text-align: center;
+}
+
+/* Edit Product */
+.edit-product {
+    width: 40%;
+    margin: 50px auto;
+}
+
+.edit-product form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-product label {
+    font-size: 30px;
+    display: block;
+}
+
+.edit-product input {
+    width: 100%;
+}
+
+.edit-product input[type="text"] {
+    height: 30px;
+}
+
+.edit-product textarea {
+    height: 100px;
+}
+
+.edit-product .btn-yellow {
+    width: 30%;
+}
+
+/* Admin */
+.admin {
+    max-width: 80%;
+    margin: auto;
+}
+
+.admin a:hover {
+    text-decoration: none;
+    transform: translateY(-5px);
+}
+
+.admin .card {
+    width: 200px;
+}
+
 /* Footer */
 .footer {
     height: 50px;
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-very-dark-blue);
+    background-color: black;
 }
 
 .footer p {
@@ -198,7 +320,7 @@ nav {
     align-self: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1150px) {
     .subheader {
         height: 150px;
     }
@@ -216,5 +338,70 @@ nav {
     .product-page .card-body {
         display: flex;
         flex-direction: column;
+    }
+
+    .snack-aisle .card-footer {
+        flex-direction: column;
+        align-content: space-between;
+    }
+
+    .snack-aisle .card-footer .cart-button {
+        margin-top: 5px;
+    }
+
+    .edit-product {
+        width: 80%;
+        margin: 50px auto;
+    }
+
+    .edit-product .btn-yellow {
+        width: 40%;
+    }
+
+    .user-list .btn-cell {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .user-list .btn-cell button {
+        width: 100%;
+        margin: 2px 0;
+    }
+}
+
+@media (max-width: 830px) {
+    .subheader {
+        height: 150px;
+    }
+
+    .subheader .navbar-left {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .navbar-left .link-sep {
+        color: transparent;
+        height: 3px;
+    }
+
+    .product-page .card-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .edit-product {
+        width: 80%;
+        margin: 50px auto;
+    }
+
+    .edit-product .btn-yellow {
+        width: 40%;
+    }
+
+    .admin .card {
+        width: 130px;
+        height: 150px;
     }
 }
