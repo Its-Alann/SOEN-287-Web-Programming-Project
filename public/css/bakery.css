@@ -292,6 +292,7 @@ max-width:50px;
 #navBar{
   display:none;
 }
+
 /*-------PRODUCT-------*/
 #productContainer{
   display:flex;
@@ -301,7 +302,6 @@ max-width:50px;
   padding:20px
 }
 .productDescription{
-  margin-top:px;
 
 }
 .productDescription > p{
@@ -311,6 +311,7 @@ max-width:50px;
   display:flex;
   justify-content:space-around;
   flex-wrap:wrap;
+  align-items: center;
   padding:15px;
   border:1px solid lightblue;
   background-color: white;
@@ -318,7 +319,7 @@ max-width:50px;
   font: normal bold 20pt serif;
 }
 .addToCart > button{
-  margin: 0px 15px;
+  margin: 10px 15px;
 }
 .customBtn{
   border: none;
@@ -472,7 +473,7 @@ max-width:50px;
   display:flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-around;
   padding:20px
 }
 .productDescription{
@@ -485,6 +486,7 @@ max-width:50px;
 .addToCart{
   display:flex;
   justify-content:space-around;
+  align-items: center;
   flex-wrap:wrap;
   padding:15px;
   border:1px solid lightblue;
@@ -493,7 +495,7 @@ max-width:50px;
   font: normal bold 20pt serif;
 }
 .addToCart > button{
-  margin: 0px 15px;
+  text-align: center;
 }
 .customBtn{
   border: none;
