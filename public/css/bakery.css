@@ -4,6 +4,7 @@
 
 /*Smartphone view*/
 @media screen and (max-device-width: 767px){
+/*-------AISLE-------*/
 /*Header section*/
 #Header {
   min-width: 576px;
@@ -13,7 +14,7 @@
   background-color: #2c3036;
   color:white;
   align-items: center;
-  box-shadow: 10px 10px 5px grey;
+
 }
 
 #MobileNavContainer{
@@ -119,6 +120,35 @@ max-width:50px;
 #navBar{
   display:none;
 }
+/*-------PRODUCT-------*/
+#productContainer{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding:20px
+}
+.productDescription > p{
+  font-size:20pt;
+}
+.addToCart{
+  padding:15px;
+  border:1px solid lightblue;
+  background-color: white;
+  justify-content: center;
+  align-self:center;
+  width:auto;
+  font: normal bold 30pt serif;
+}
+.customBtn{
+  border: none;
+  color: white;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius:10px;
+}
 }
 /*Tablet view*/
 @media screen and (min-device-width: 768px) {
@@ -131,6 +161,7 @@ max-width:50px;
     background-color: #2c3036;
     color:white;
     align-items: center;
+
   }
 
   #MobileNavContainer{
