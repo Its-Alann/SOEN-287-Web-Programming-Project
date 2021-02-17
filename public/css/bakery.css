@@ -116,6 +116,9 @@ max-width:50px;
 .headerText{
   display:none;
 }
+#navBar{
+  display:none;
+}
 }
 /*Tablet view*/
 @media screen and (min-device-width: 768px) {
@@ -234,6 +237,9 @@ max-width:50px;
 .headerText{
   display:none;
 }
+#navBar{
+  display:none;
+}
 }
 /*Desktop version*/
 @media screen and (min-device-width: 1024px) {
@@ -262,7 +268,7 @@ max-width:50px;
     flex-direction: row;
     align-items: center;
     width:auto;
-    padding-left:25px;
+    padding-left:15px;
     font: normal bold 25pt serif;
   }
 
@@ -277,9 +283,6 @@ max-width:50px;
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom:5px;
-    background-color:blue;
-
-
 }
 
   #shoppingCartContainer{
@@ -291,7 +294,25 @@ max-width:50px;
     width:45px;
     padding-right:15px;
   }
-
+  /*Desktop Navigation Bar*/
+  #navBar{
+    display:flex;
+    justify-content: flex-start;
+    background-color:#2c3036;
+    border-top:1px solid #505762;
+  }
+  .navBarText{
+    color:white;
+    font:normal bold 20pt serif;
+    padding-left:15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom:10px;
+    border-right:1px solid darkgrey
+  }
+  .navBarText:hover{
+    color:white;
+  }
   /*Aisle name section*/
   #aisleName{
     display:flex;
@@ -307,15 +328,13 @@ max-width:50px;
     padding-bottom:20px;
     display:flex;
     flex-direction:row;
-    justify-content: flex-start;
-    overflow: auto;
-    white-space:nowrap;
-    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .itemCard{
     width:auto;
-    min-width:45%;
-    max-width:410px;
+    min-width:30%;
+    max-width:30%;
     margin: 20px;
     border-style:solid;
     border-width: 2px;
