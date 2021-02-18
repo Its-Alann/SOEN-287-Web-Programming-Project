@@ -1,3 +1,7 @@
+/* SOEN 287, Assignment 1 */
+/* February 19, 2021 */
+/* Michael Totarella, 40005251 */
+
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 
 :root {
@@ -67,6 +71,16 @@ nav {
 
 .btn-purple {
     background-color: #992267;
+}
+
+.btn-blue-outline {
+    color: #2471a3;
+    background-color: #fff;
+    border-color: #2471a3;
+}
+
+.btn-blue-outline:hover {
+    color: #2471a3;
 }
 
 .navbar li {
@@ -197,6 +211,13 @@ input[type="number"] {
 
 .snack-aisle .card-footer {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.snack-aisle .card-footer .card-footer-cart {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
