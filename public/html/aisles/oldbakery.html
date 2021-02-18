@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <!-- viewport meta tag for responsiveness-->
     <meta name="viewport:" content="width=device-width, initial-scale=1.0">
-    <title>McJawz | French Baguette</title>
+    <title>McJawz | Bakery</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -31,34 +31,46 @@
         </div>
       </div>
       <div class="row" id="navBar">
-        <a class="navBarText" href="../aisles/poultry-aisle.html">Meats</a>
-        <a class="navBarText" href="../aisles/fruitsandveg-aisle.html">Fruits&Veggies</a>
-        <a class="navBarText" href="../aisles/dairyandeggs-aisle.html">Dairy</a>
-        <a class="navBarText" href="../aisles/snack_aisle.html">Snacks</a>
-        <a class="navBarText" href="../aisles/beverages-aisle.html">Beverages</a>
-        <a class="navBarText" href="../aisles/bakery.html">Bakery</a>
+        <a class="navBarText" href="poultry-aisle.html">Meats</a>
+        <a class="navBarText" href="fruitsandveg-aisle.html">Fruits&Veggies</a>
+        <a class="navBarText" href="dairyandeggs-aisle.html">Dairy</a>
+        <a class="navBarText" href="snack_aisle.html">Snacks</a>
+        <a class="navBarText" href="beverages-aisle.html">Beverages</a>
+        <a class="navBarText" href="#">Bakery</a>
       </div>
-      <!--Body-->
+      <!--AisleName-->
       <div class="row" id="aisleName">
-        French Baguette
+        Bakery
       </div>
-      <div class="container-fluid" id="productContainer">
-        <div class="itemCard" style="margin-top:0px; margin-bottom:0px;">
+
+      <div class="container-fluid" id="itemCardContainer">
+
+        <div class="itemCard">
+          <a href="../products/bakery-frenchbaguette.html">
+            <img class="rounded" src="../../../images/baguette.jpg" alt="Baguette" style="width:100%">
+          </a>
+          <div class="container" id="itemCardDescription">
+          French Baguette
+          <br>
+          2.99$ ea.
+          </div>
+        </div>
+
+        <div class="itemCard">
           <img class="rounded" src="../../../images/baguette.jpg" alt="Baguette" style="width:100%">
-        </div >
-        <div class="productDescription">
-          <p>Description: French style baguette freshly baked from this morning.</p>
+          <div class="container" id="itemCardDescription">
+          Name:
+          <br>
+          Price
+          </div>
+        </div>
 
-          <div class="addToCart">
-            Price: 2.99$ ea.
-            <div class="itemCounter">
-              <button class="customBtn" type="button" name="removeItem" style="background-color:#f44336;">-</button>
-              <input type="text" name="productAmount" value="1" style="width:40px; border-style:solid; margin:0px 5px;">
-              <button class="customBtn" type="button" name="addItem" style="background-color:#4CAF50; ">+</button>
-            </div>
-            <button type="button" name="button"style="border-radius:15px;">🛒 Add to cart 🛒</button>
-
-
+        <div class="itemCard">
+          <img class="rounded" src="../../../images/baguette.jpg" alt="Baguette" style="width:100%">
+          <div class="container" id="itemCardDescription">
+          Name:
+          <br>
+          Price
           </div>
         </div>
 
