@@ -260,7 +260,7 @@ table .btn-cell {
   align-self: center;
 }
 
-/*Images */
+/*Images P7 */
 .img-fluid {
   max-height: 400px;
   max-width: 400px;
@@ -355,4 +355,33 @@ table .btn-cell {
     width: 95%;
     height: 100%;
   }
+}
+
+.flex-wrapper {
+  display: flex;
+  min-height: 83vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.inputField {
+  background-color: rgba(81, 88, 95, 0.05);
+  border: none;
+  padding: 0px;
+  font-size: 20px;
+  object-fit: contain;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+a.clickhere:active,
+a.clickhere:visited,
+a.clickhere:hover {
+  margin-top: 5px;
+  text-decoration: none;
+  color: #7b7d7d;
+}
+
+.card-footer {
+  color: #7b7d7d;
 }
