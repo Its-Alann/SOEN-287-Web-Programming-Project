@@ -75,6 +75,12 @@ section.subheader{
 
       height: 0px;
     }
+
+    section.cartitems .removebutt{
+       margin-inline: 5px;
+       margin-top: 5px;
+    }
+
 }
 
 @media (max-width: 672px) {
@@ -106,7 +112,7 @@ section.subheader{
 .cartitems .row {
 
   height: 100px;
-  background-color: pink;
+  background-color: #F2F2F2;
   padding: 10px;
   margin: 5px;
 }
@@ -121,26 +127,55 @@ section.subheader{
   text-align: center;
 }
 
+.row .itemdesc p{
+  margin-top: 25px;
+}
+
+@media (max-width: 1431px){
+  section.cartitems .itembuttons{
+     margin-top: -5px;
+  }
+}
+
 .itembuttons{
   text-align: right;
+  margin-top: 10px;
+}
+
+.itembuttons .btn-group .btn{
+  border-radius: 25px;
+  padding: 5px;
+}
+
+.itembuttons .btn-group{
+  margin-top: 5px;
+}
+
+.itembuttons .removebutt{
+   margin-inline: 5px;
+   margin-top: 5px;
+}
+
+.numberinput{
+  width: 50px;
 }
 
 .cartitems{
   float:left;
   width: 50%;
-  background-color: grey;
+  background-color: #192A40;
 }
 
 .pricebox{
   float: right;
   width: 50%;
-  background-color: grey;
+  background-color: #192A40;
 }
 
 .pricebox .row {
 
-  height: 415px;
-  background-color: pink;
+  height: 65px;
+  background-color: #F2F2F2;
   padding: 10px;
   margin: 5px;
 
@@ -149,6 +184,7 @@ section.subheader{
 .moreitems{
 
   height: 790px;
+  background-color: #F2F2F2;
 }
 
 .footer {
