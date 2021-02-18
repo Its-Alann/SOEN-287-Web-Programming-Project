@@ -1,0 +1,212 @@
+
+html, body{
+  min-height: 100%;
+  background-color: black;
+}
+
+.navbar .nav-item {
+    font-size: 1.3rem;
+}
+
+.navbar{
+  padding: 20px;
+  margin-bottom: 0px;
+}
+
+.header a{
+  color: #F2F2F2;
+}
+
+.header a:hover{
+  color: grey;
+}
+
+section.header{
+  background-color: #192A40;
+}
+
+section.subheader{
+  padding-top: 10px;
+  color: white;
+  text-align: center;
+  background: #223A59;
+  height: 100px;
+}
+
+.subheader a{
+  color: #F2F2F2;
+      display: inline-block;
+}
+
+.subheader a:hover{
+  color: #F2F2F2;
+}
+
+@media (max-width: 767px) {
+    section.subheader {
+          height: 120px;
+    }
+
+    .row .links{
+      text-align: center;
+    }
+
+    .row .cart{
+      text-align: center;
+    }
+
+    section.cartitems .row{
+      margin-right: 5px;
+    }
+
+    section.cartitems{
+
+      width: auto;
+      float:none;
+    }
+
+    section.pricebox{
+
+      width: auto;
+      float: none;
+    }
+
+    section.moreitems{
+
+      height: 0px;
+    }
+
+    section.cartitems .removebutt{
+       margin-inline: 5px;
+       margin-top: 5px;
+    }
+
+}
+
+@media (max-width: 672px) {
+    section.subheader {
+          height: 150px;
+    }
+}
+
+@media (max-width: 350px) {
+    section.subheader {
+          height: 180px;
+    }
+}
+
+.links{
+  text-align: left;
+}
+
+.cart{
+  text-align: right;
+  }
+
+.cart-icon{
+  margin: 10px;
+  height: 30px;
+  width: 30px;
+}
+
+.cartitems .row {
+
+  height: 100px;
+  background-color: #F2F2F2;
+  padding: 10px;
+  margin: 5px;
+}
+
+.img-thumbnail{
+
+  height: 70px;
+  width: 70px;
+}
+
+.itemdesc{
+  text-align: center;
+}
+
+.row .itemdesc p{
+  margin-top: 25px;
+}
+
+@media (max-width: 1431px){
+  section.cartitems .itembuttons{
+     margin-top: -5px;
+  }
+}
+
+.itembuttons{
+  text-align: right;
+  margin-top: 10px;
+}
+
+.itembuttons .btn-group .btn{
+  border-radius: 25px;
+  padding: 5px;
+}
+
+.itembuttons .btn-group{
+  margin-top: 5px;
+}
+
+.itembuttons .removebutt{
+   margin-inline: 5px;
+   margin-top: 5px;
+}
+
+.numberinput{
+  width: 50px;
+}
+
+.cartitems{
+  float:left;
+  width: 50%;
+  background-color: #192A40;
+}
+
+.pricebox{
+  float: right;
+  width: 50%;
+  background-color: #192A40;
+}
+
+.pricebox .row {
+
+  height: 65px;
+  background-color: #F2F2F2;
+  padding: 10px;
+  margin: 5px;
+
+}
+
+.moreitems{
+
+  height: 790px;
+  background-color: #F2F2F2;
+}
+
+.footer {
+
+    bottom: 0;
+    position: relative;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #192A40;
+    width: 100%;
+}
+
+.footer p {
+    color: lightgrey;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    color: lightgrey;
+}
+
+.footer-item {
+    align-self: center;
+}
