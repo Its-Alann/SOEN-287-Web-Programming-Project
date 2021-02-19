@@ -361,6 +361,7 @@ table .btn-cell {
   align-items: center;
   margin:15px;
 }
+
 @media (max-width: 1150px) {
     .snack-aisle .card-footer {
         flex-direction: column;
