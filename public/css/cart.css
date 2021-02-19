@@ -4,10 +4,6 @@ html, body{
   background-color: white;
 }
 
-.navbar .nav-item {
-    font-size: 1.3rem;
-}
-
 .navbar{
   padding: 20px;
   margin-bottom: 0px;
@@ -124,7 +120,7 @@ section.subheader{
 }
 
 .itemdesc{
-  text-align: center;
+  text-align: right;;
 }
 
 .row .itemdesc p{
@@ -160,6 +156,7 @@ section.subheader{
 
 .itembuttons .btn-group{
   margin-top: 5px;
+  margin-left: 5px;
 
 }
 
