@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/michael.css">
-    <title>McJawz | User List</title>
+    <title>McJawz | Edit User</title>
 </head>
 <body>
 
@@ -44,7 +44,7 @@
     <!-- Page Name -->
     <section class="page-name">
         <div>
-            User List
+            Edit User
         </div>
     </section>
 
@@ -102,78 +102,72 @@
     </section>
 
 <!-- User List -->
-<section class="user-list">
-    <table class="table table-bordered bg-white">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th class="btn-col" scope="col"></th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td scope="row">1</td>
-                <td>James</td>
-                <td>Kirk</td>
-                <td>
-                    <div class="btn-cell">
-                        <button class="btn shadow-none btn-red mr-3">Delete</button>
-                        <button class="btn shadow-none btn-yellow">Edit</button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">2</td>
-                <td>Jean-Luc</td>
-                <td>Picard</td>
-                <td>
-                    <div class="btn-cell">
-                        <button class="btn shadow-none btn-red mr-3">Delete</button>
-                        <button class="btn shadow-none btn-yellow">Edit</button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">3</td>
-                <td>Benjamin</td>
-                <td>Sisko</td>
-                <td>
-                    <div class="btn-cell">
-                        <button class="btn shadow-none btn-red mr-3">Delete</button>
-                        <button class="btn shadow-none btn-yellow">Edit</button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">4</td>
-                <td>Kathryn</td>
-                <td>Janeway</td>
-                <td>
-                    <div class="btn-cell">
-                        <button class="btn shadow-none btn-red mr-3">Delete</button>
-                        <button class="btn shadow-none btn-yellow">Edit</button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">5</td>
-                <td>Jonathan</td>
-                <td>Archer</td>
-                <td>
-                    <div class="btn-cell">
-                        <button class="btn shadow-none btn-red mr-3">Delete</button>
-                        <button class="btn shadow-none btn-yellow">Edit</button>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<section style="">
+  <div class="fieldContainer">
+    <!--Field-->
+    <div>
+      First Name <br>
+      <input type="textfield" name="First Name" placeholder="Ex. Elon">
+    </div>
+    <br>
+    <!--Field-->
+    <div>
+      Last Name <br>
+      <input type="textfield" name="Last Name" placeholder="Ex. Musk">
+    </div>
+    <br>
+    <!--Field-->
+    <div>
+      Email Address <br>
+      <input type="textfield" name="Email Address" placeholder="Ex. 123@gmail.com">
+    </div>
+    <br>
+    <!--Field-->
+    <div>
+      Password <br>
+      <input type="password" name="Password" placeholder="8-12 characters" maxlength="12">
+    </div>
+    <br>
+    <!--Field-->
+    <div>
+      Confirm Password <br>
+      <input type="password" name="Confirm Password" placeholder="Must match" maxlength="12">
+    </div>
+    <br>
+    <!--Field-->
+    <div>
+      Address <br>
+      <input type="textfield" name="Address" placeholder="Ex. 123 Snow Street">
+    </div>
+    <br>
+    <!--Field-->
+    <div>
+      City <br>
+      <input type="textfield" name="City">
+    </div>
+    <br>
+    <!--Field-->
+    <div>
+      Province/State <br>
+      <input type="textfield" name="Province">
+    </div>
+    <br>
+    <!--Field-->
+    <div>
+      Country <br>
+      <input type="textfield" name="Country">
+    </div>
+    <br>
+    <!--Field-->
+    <div>
+      ZIP Code <br>
+      <input type="textfield" name="ZIP Code" placeholder="Ex. H4W 8U2">
+    </div>
+    <br>
+    <button class="btn btn-blue shadow-none"type="button" name="button">Save</button>
+  </div>
 
-    <button class="btn btn-blue shadow-none">Add User</button>
-    <button class="btn btn-blue shadow-none">Save</button>
-
+<br>
 </section>
 
 <!-- Footer -->

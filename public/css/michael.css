@@ -355,7 +355,12 @@ table .btn-cell {
 .footer-item {
     align-self: center;
 }
-
+.fieldContainer{
+  display:flex;
+  flex-flow:column wrap;
+  align-items: center;
+  margin:15px;
+}
 @media (max-width: 1150px) {
     .snack-aisle .card-footer {
         flex-direction: column;
