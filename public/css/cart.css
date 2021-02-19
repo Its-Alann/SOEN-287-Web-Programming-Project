@@ -1,7 +1,7 @@
 
 html, body{
   min-height: 100%;
-  background-color: black;
+  background-color: white;
 }
 
 .navbar .nav-item {
@@ -137,9 +137,20 @@ section.subheader{
   }
 }
 
+@media (max-width: 400px){
+  .row .nicebuttons{
+    right: 10px;
+  }
+}
+
+.images{
+  top: 20px;
+}
+
 .itembuttons{
   text-align: right;
   margin-top: 10px;
+  display: inline-grid;
 }
 
 .itembuttons .btn-group .btn{
@@ -149,11 +160,13 @@ section.subheader{
 
 .itembuttons .btn-group{
   margin-top: 5px;
+
 }
 
 .itembuttons .removebutt{
    margin-inline: 5px;
    margin-top: 5px;
+   margin-bottom: 5px;
 }
 
 .numberinput{
@@ -163,13 +176,14 @@ section.subheader{
 .cartitems{
   float:left;
   width: 50%;
-  background-color: #192A40;
+  background-color: white;
 }
 
 .pricebox{
   float: right;
   width: 50%;
-  background-color: #192A40;
+  background-color: white;
+  margin-top: 20px;
 }
 
 .pricebox .row {
@@ -184,8 +198,9 @@ section.subheader{
 .moreitems{
 
   height: 790px;
-  background-color: #F2F2F2;
+  background-color: white;
 }
+
 
 .footer {
 
