@@ -218,7 +218,7 @@ input[type="number"] {
 .snack-aisle .card-footer .card-footer-cart {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .snack-aisle .card .qty {
@@ -255,7 +255,11 @@ input[type="number"] {
 
 .product-page .card-footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
+}
+
+.product-page .card-footer .cart-button {
+    margin-left: 10px;
 }
 
 .product-page .card .qty {
