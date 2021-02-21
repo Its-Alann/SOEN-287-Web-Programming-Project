@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="../../public/css/backstore.css">
@@ -11,7 +11,7 @@
 
 <body>
     <!--HEADER-->
-    <section class="header">
+    <div class="header">
         <nav class="header-nav">
             <ul class="navbar navbar-left">
                 <li class="logo">
@@ -39,16 +39,16 @@
                 </li>
             </ul>
         </nav>
-    </section>
+    </div>
     <!--PAGE NAME-->
-    <section class="page-name">
+    <div class="page-name">
         <div>
             Order List
         </div>
-    </section>
+    </div>
 
     <!--SUBHEADER-->
-    <section class="subheader">
+    <div class="subheader">
         <nav class="subheader-nav">
             <ul class="navbar navbar-left">
                 <li class="aisle-link">
@@ -98,29 +98,29 @@
                 </li>
             </ul>
         </nav>
-    </section>
+    </div>
 
     <!--ORDER LIST-->
-    <section class="user-list">
+    <div class="user-list">
         <table class="table table-bordered bg-white">
-            <thead class="thead-dark">
+            <tr class="thead-dark">
                 <th scope="col" style="text-align: center;">First Name</th>
                 <th scope="col" style="text-align: center;">Last Name</th>
                 <th scope="col" style="text-align: center;">Order Number</th>
                 <th scope="col" style="text-align: center;">Order List</th>
                 <th scope="col" style="text-align: center;">Functions</th>
-            </thead>
+            </tr>
             <tbody>
-                <tr>
+                <tr style="text-align: center;">
                     <td>James</td>
                     <td>Kirk</td>
                     <td>14682</td>
                     <td>
-                        <li>Chicken Breast</li>
-                        <li>Broccoli</li>
-                        <li>Carrots</li>
-                        <li>Quebon 2% Milk</li>
-                        <li>Burnbrae White Eggs</li>
+                        <h6>Chicken Breast</h6>
+                        <h6>Broccoli</h6>
+                        <h6>Carrots</h6>
+                        <h6>Quebon 2% Milk</h6>
+                        <h6>Burnbrae White Eggs</h6>
                     </td>
                     <td>
                         <a href="../../public/html/edit_orderlist.html" class="btn btn-info">Edit</a>
@@ -129,16 +129,16 @@
                     </td>
 
                 </tr>
-                <tr>
+                <tr style="text-align: center;">
                     <td>Jean-Luc</td>
                     <td>Picard</td>
                     <td>12588</td>
                     <td>
-                        <li>Ground Meat</li>
-                        <li>Lettuce</li>
-                        <li>Chiquita Bananas</li>
-                        <li>Water</li>
-                        <li>Granola Bars</li>
+                        <h6>Ground Meat</h6>
+                        <h6>Lettuce</h6>
+                        <h6>Chiquita Bananas</h6>
+                        <h6>Water</h6>
+                        <h6>Granola Bars</h6>
                     </td>
                     <td>
                         <a href="../../public/html/edit_orderlist.html" class="btn btn-info">Edit</a>
@@ -146,16 +146,16 @@
                         <div class="btn btn-info">Save</div>
                     </td>
                 </tr>
-                <tr>
+                <tr style="text-align: center;">
                     <td>Benjamin</td>
                     <td>Sisko</td>
                     <td>10031</td>
                     <td>
-                        <li>Chicken Legs</li>
-                        <li>Broccoli</li>
-                        <li>Carrots</li>
-                        <li>Energy Drink</li>
-                        <li>Lays Chips</li>
+                            <h6>Chicken Legs</h6>
+                            <h6>Broccoli</h6>
+                            <h6>Carrots</h6>
+                            <h6>Energy Drink</h6>
+                            <h6>Lays Chips</h6>
                     </td>
                     <td>
                         <a href="../../public/html/edit_orderlist.html" class="btn btn-info">Edit</a>
@@ -163,16 +163,16 @@
                         <div class="btn btn-info">Save</div>
                     </td>
                 </tr>
-                <tr>
+                <tr style="text-align: center;">
                     <td>Kathryn</td>
                     <td>Janeway</td>
                     <td>01027</td>
                     <td>
-                        <li>Beyond Meat</li>
-                        <li>Assorted Bell Peppers</li>
-                        <li>Papaya Fruit</li>
-                        <li>Zespri Kiwifruit</li>
-                        <li>Royal Gala Apples</li>
+                        <h6>Beyond Meat</h6>
+                        <h6>Assorted Bell Peppers</h6>
+                        <h6>Papaya Fruit</h6>
+                        <h6>Zespri Kiwifruit</h6>
+                        <h6>Royal Gala Apples</h6>
                     </td>
                     <td>
                         <a href="../../public/html/edit_orderlist.html" class="btn btn-info">Edit</a>
@@ -180,16 +180,16 @@
                         <div class="btn btn-info">Save</div>
                     </td>
                 </tr>
-                <tr>
+                <tr style="text-align: center;">
                     <td>Jonathan</td>
                     <td>Archer</td>
                     <td>11001</td>
                     <td>
-                        <li>Chicken Breast</li>
-                        <li>Broccoli</li>
-                        <li>French Baguette</li>
-                        <li>Sprite</li>
-                        <li>Oreo</li>
+                        <h6>Chicken Breast</h6>
+                        <h6>Broccoli</h6>
+                        <h6>French Baguette</h6>
+                        <h6>Sprite</h6>
+                        <h6>Oreo</h6>
                     </td>
                     <td>
                         <a href="../../public/html/edit_orderlist.html" class="btn btn-info">Edit</a>
@@ -200,11 +200,11 @@
             </tbody>
         </table>
 
-    </section>
+    </div>
 
     
     <!--FOOTER-->
-    <section class="footer">
+    <div class="footer">
         <div class="footer-item ml-3">
             <a href="../../public/html/admin.html">
                 <p>Admin</p>
@@ -213,7 +213,7 @@
         <div class="footer-item ml-3">
             <p class="font-italic">Jeffery Kim - 40175238</p>
         </div>
-    </section>
+    </div>
 </body>
 
 </html>
