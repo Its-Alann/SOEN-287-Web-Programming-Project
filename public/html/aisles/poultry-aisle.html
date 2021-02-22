@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../../../public/css/fruitsandveg-aisle.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -19,8 +20,8 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="../../../public/html/index.html">
-            <img style="margin-right: 5px;" class="icon-logo" src="../../../images/mcJawz_logo_no_txt.png" width="40"
-                height="40" class="d-inline-block align-top" alt="">
+            <img style="margin-right: 5px;" class="icon-logo d-inline-block align-top" src="../../../images/mcJawz_logo_no_txt.png" width="40"
+                height="40" alt="logo">
             McJawz
         </a>
 
@@ -57,11 +58,13 @@
             <div class="col-lg-6 aisles">
                 <a href="../../../public/html/aisles/fruitsandveg-aisle.html">Fruits and Vegetables</a>
                 |
-                <a href="../../../public/html/aisles/dairy-aisle.html">Dairy and Eggs</a>
+                <a href="../../../public/html/aisles/dairyandeggs-aisle.html">Dairy and Eggs</a>
                 |
                 <a href="../../../public/html/aisles/snack_aisle.html">Snacks</a>
                 |
-                <a href="../../../public/html/aisles/beverage-aisle.html">Beverages</a>
+                <a href="../../../public/html/aisles/beverages-aisle.html">Beverages</a>
+                |
+                <a href="../../../public/html/aisles/beverages-aisle.html">Bakery</a>
             </div>
 
             <div class="col-lg-6 col-md-12 myCartContainer">
@@ -93,15 +96,14 @@
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-left-minus btn btn-danger btn-number"
-                                        data-type="minus" data-field="">
-                                        <p class="incdec">-</p>
-                                    </button>
-                                </span>
-                                <input size="3" type="text" value="1" min="1" max="100">
+                                        data-type="minus" data-field="">-
+                                    </button></span>
+
+                                <input size="3" type="text" value="1">
+                                
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
-                                        data-type="plus" data-field="">
-                                        <p class="incdec">+</p>
+                                <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                        data-type="plus" data-field="">+
                                     </button>
                                 </span>
                             </div>
@@ -127,25 +129,24 @@
                           <p class="pricing"><b>Price: $7.99/kg</b></p>
   
                           <div class="row quantity">
-                              <div class="col-lg-12 incDecButton">
-                                  <span class="input-group-btn">
-                                      <button type="button" class="quantity-left-minus btn btn-danger btn-number"
-                                          data-type="minus" data-field="">
-                                          <p class="incdec">-</p>
-                                      </button>
-                                  </span>
-                                  <input size="3" type="text" value="1" min="1" max="100">
-                                  <span class="input-group-btn">
-                                      <button type="button" class="quantity-right-plus btn btn-success btn-number"
-                                          data-type="plus" data-field="">
-                                          <p class="incdec">+</p>
-                                      </button>
-                                  </span>
-                              </div>
-                              <div class="col-lg-12 addToCart">
-                                  <button type="button" class="btn btn-info">Add to cart</button>
-                              </div>
-                          </div>
+                            <div class="col-lg-12 incDecButton">
+                                <span class="input-group-btn">
+                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                        data-type="minus" data-field="">-
+                                    </button></span>
+
+                                <input size="3" type="text" value="1">
+                                
+                                <span class="input-group-btn">
+                                <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                        data-type="plus" data-field="">+
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="col-lg-12 addToCart">
+                                <button type="button" class="btn btn-info">Add to cart</button>
+                            </div>
+                        </div>
   
                       </div>
                   </div>
@@ -168,15 +169,14 @@
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-left-minus btn btn-danger btn-number"
-                                        data-type="minus" data-field="">
-                                        <p class="incdec">-</p>
-                                    </button>
-                                </span>
-                                <input size="3" type="text" value="1" min="1" max="100">
+                                        data-type="minus" data-field="">-
+                                    </button></span>
+
+                                <input size="3" type="text" value="1">
+                                
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
-                                        data-type="plus" data-field="">
-                                        <p class="incdec">+</p>
+                                <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                        data-type="plus" data-field="">+
                                     </button>
                                 </span>
                             </div>
@@ -203,25 +203,24 @@
                       <p class="pricing"><b>Price: $8.99/kg</b></p>
 
                       <div class="row quantity">
-                          <div class="col-lg-12 incDecButton">
-                              <span class="input-group-btn">
-                                  <button type="button" class="quantity-left-minus btn btn-danger btn-number"
-                                      data-type="minus" data-field="">
-                                      <p class="incdec">-</p>
-                                  </button>
-                              </span>
-                              <input size="3" type="text" value="1" min="1" max="100">
-                              <span class="input-group-btn">
-                                  <button type="button" class="quantity-right-plus btn btn-success btn-number"
-                                      data-type="plus" data-field="">
-                                      <p class="incdec">+</p>
-                                  </button>
-                              </span>
-                          </div>
-                          <div class="col-lg-12 addToCart">
-                              <button type="button" class="btn btn-info">Add to cart</button>
-                          </div>
-                      </div>
+                        <div class="col-lg-12 incDecButton">
+                            <span class="input-group-btn">
+                                <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                    data-type="minus" data-field="">-
+                                </button></span>
+
+                            <input size="3" type="text" value="1" >
+                            
+                            <span class="input-group-btn">
+                            <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                    data-type="plus" data-field="">+
+                                </button>
+                            </span>
+                        </div>
+                        <div class="col-lg-12 addToCart">
+                            <button type="button" class="btn btn-info">Add to cart</button>
+                        </div>
+                    </div>
 
                   </div>
               </div>
@@ -244,15 +243,14 @@
                         <div class="col-lg-12 incDecButton">
                             <span class="input-group-btn">
                                 <button type="button" class="quantity-left-minus btn btn-danger btn-number"
-                                    data-type="minus" data-field="">
-                                    <p class="incdec">-</p>
-                                </button>
-                            </span>
-                            <input size="3" type="text" value="1" min="1" max="100">
+                                    data-type="minus" data-field="">-
+                                </button></span>
+
+                            <input size="3" type="text" value="1">
+                            
                             <span class="input-group-btn">
-                                <button type="button" class="quantity-right-plus btn btn-success btn-number"
-                                    data-type="plus" data-field="">
-                                    <p class="incdec">+</p>
+                            <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                    data-type="plus" data-field="">+
                                 </button>
                             </span>
                         </div>
@@ -279,31 +277,28 @@
                   <p class="pricing"><b>Price: $14.99/kg</b></p>
 
                   <div class="row quantity">
-                      <div class="col-lg-12 incDecButton">
-                          <span class="input-group-btn">
-                              <button type="button" class="quantity-left-minus btn btn-danger btn-number"
-                                  data-type="minus" data-field="">
-                                  <p class="incdec">-</p>
-                              </button>
-                          </span>
-                          <input size="3" type="text" value="1" min="1" max="100">
-                          <span class="input-group-btn">
-                              <button type="button" class="quantity-right-plus btn btn-success btn-number"
-                                  data-type="plus" data-field="">
-                                  <p class="incdec">+</p>
-                              </button>
-                          </span>
-                      </div>
-                      <div class="col-lg-12 addToCart">
-                          <button type="button" class="btn btn-info">Add to cart</button>
-                      </div>
-                  </div>
+                    <div class="col-lg-12 incDecButton">
+                        <span class="input-group-btn">
+                            <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                data-type="minus" data-field="">-</button></span>
+                                <input size="3" type="text" value="1">
+                            
+                            <span class="input-group-btn">
+                            <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                    data-type="plus" data-field="">+
+                                </button>
+                            </span>
+                        </div>
+                        <div class="col-lg-12 addToCart">
+                            <button type="button" class="btn btn-info">Add to cart</button>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
 
-              </div>
-          </div>
-      </div>
-
-
+                </div>
+            </div>
+        </div>
             
     <!-- Footer -->
     <div class="footer">
@@ -317,3 +312,4 @@
 
 
 </html>
+

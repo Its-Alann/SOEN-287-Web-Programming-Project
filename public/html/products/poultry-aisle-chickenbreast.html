@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
@@ -19,7 +20,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="../../../public/html/index.html">
             <img style="margin-right: 5px;" class="icon-logo" src="../../../images/mcJawz_logo_no_txt.png" width="40"
-                height="40" class="d-inline-block align-top" alt="">
+                height="40" alt="logo">
             McJawz
         </a>
 
@@ -53,14 +54,16 @@
 
         <div class="row">
             <div class="col-lg-6 aisles">
-                <a href="../../../public/html/aisles/fruitsandveg-aisle.html">Fruits and Vegetables</a>
-                |
-                <a href="../../../public/html/aisles/dairy-aisle.html">Dairy and Eggs</a>
-                |
-                <a href="../../../public/html/aisles/snack_aisle.html">Snacks</a>
-                |
-                <a href="../../../public/html/aisles/beverage-aisle.html">Beverages</a>
-            </div>
+                    <a href="../../../public/html/aisles/fruitsandveg-aisle.html">Fruits and Vegetables</a>
+                    |
+                    <a href="../../../public/html/aisles/dairyandeggs-aisle.html">Dairy and Eggs</a>
+                    |
+                    <a href="../../../public/html/aisles/snack_aisle.html">Snacks</a>
+                    |
+                    <a href="../../../public/html/aisles/beverages-aisle.html">Beverages</a>
+                    |
+                <a href="../../../public/html/aisles/bakery.html">Bakery</a>
+                </div>
 
             <div class="col-lg-6 col-md-12 myCartContainer">
                 <img class="shoppingcarticon" src="../../../images/shoppingcarticon.png" alt="">
@@ -88,26 +91,21 @@
                         <div class="col-lg-12 incDecButton">
                             <span class="input-group-btn">
                                 <button type="button" class="quantity-left-minus btn btn-danger btn-number"
-                                    data-type="minus" data-field="">
-                                    <p class="incdec">-</p>
-                                </button>
-                            </span>
-                            <input size="3" type="text" value="1" min="1" max="100">
+                                    data-type="minus" data-field="">-
+                                </button></span>
+
+                            <input size="3" type="text" value="1">
+                            
                             <span class="input-group-btn">
-                                <button type="button" class="quantity-right-plus btn btn-success btn-number"
-                                    data-type="plus" data-field="">
-                                    <p class="incdec">+</p>
+                            <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                    data-type="plus" data-field="">+
                                 </button>
                             </span>
-                            <button type="button" class="btn btn-info mt-1">
-                                <img class="shoppingcarticon" src="../../../images/shoppingcarticon.png" alt="">
-                                <div class="addTocartButtonText">
-                                    Add to cart
-                                </div>
-                            </button>
+                        </div>
+                        <div class="col-lg-12 addToCart">
+                            <button type="button" class="btn btn-info mt-2">Add to cart</button>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="accordian">
