@@ -66,6 +66,7 @@ p{
     padding: 20px 20px;
     text-align: center;
     padding-left: 280px;
+    position: relative;
 }
 
 .card-size{
@@ -138,65 +139,7 @@ a.item-link:hover{
 .card-img-top{
     position: flex;
 }
-
-.card-img-w{
-    width: 379px;
-    border-top-left-radius: calc(0.25rem - 1px);
-    border-top-right-radius: calc(0.25rem - 1px);
-}
-.card-img-wP{
-    width: 600px;
-    height: 700px;
-    padding-left: 100px;
-    padding-bottom: 50px;
-    border-top-left-radius: calc(0.25rem - 1px);
-    border-top-right-radius: calc(0.25rem - 1px);
-}
-
-.card-img-soda{
-    width: 500px;
-    padding-top: 222px;
-    border-top-left-radius: calc(0.25rem - 1px);
-    border-top-right-radius: calc(0.25rem - 1px);
-}
-
-.card-img-sodaP{
-    width: 550px;
-    padding-top: 50px;
-    border-top-left-radius: calc(0.25rem - 1px);
-    border-top-right-radius: calc(0.25rem - 1px);
-}
-
-.card-img-juice{
-    width: 395px;
-    border-top-left-radius: calc(0.25rem - 1px);
-    border-top-right-radius: calc(0.25rem - 1px);
-}
-
-.card-img-juiceP{
-    width: 500px;
-    padding-left: 100px;
-    border-top-left-radius: calc(0.25rem - 1px);
-    border-top-right-radius: calc(0.25rem - 1px);
-}
-
-.card-img-ed{
-    width: 349px;
-    padding-top: 75px;
-    padding-bottom: 95px;
-    border-top-left-radius: calc(0.25rem - 1px);
-    border-top-right-radius: calc(0.25rem - 1px);
-}
-
-.card-img-edP{
-    width: 475px;
-    padding-top: 75px;
-    padding-left: 100px;
-    padding-bottom: 100px;
-    border-top-left-radius: calc(0.25rem - 1px);
-    border-top-right-radius: calc(0.25rem - 1px);
-}
-
+ 
 .bev{
     width: 400px;
     height: 450px;
