@@ -32,6 +32,7 @@ p{
     margin-right: 0px;
     margin-left: 0px;
 }
+
 .aisles{
     text-align: left;
     padding-top: 5px;
@@ -64,7 +65,7 @@ p{
     max-width: 100%;
     padding: 20px 20px;
     text-align: center;
-    padding-left: 350px;
+    padding-left: 280px;
 }
 
 .card-size{
@@ -109,7 +110,7 @@ a.item-link:hover{
 }
 
 .footer {
-    position: static;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -197,8 +198,8 @@ a.item-link:hover{
 }
 
 .bev{
-    width: 500px;
-    height: 550px;
+    width: 400px;
+    height: 450px;
 }
 
 @media (max-width: 991px){
