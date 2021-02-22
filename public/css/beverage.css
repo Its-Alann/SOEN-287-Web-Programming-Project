@@ -147,9 +147,31 @@ a.item-link:hover{
 }
 
 .bev-prod{
-    width: 500px;
-    height: 550px;
+    width: 300px;
+    height: 350px;
 
+}
+
+@media (max-width: 1024px){
+    .myCartContainer{
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .aisles{
+        text-align: center;
+    }
+
+    .card-deck{
+        max-width: 100%;
+        padding: 20px 20px;
+        text-align: center;
+    }
+
+    .bev{
+        width: 180px;
+        height: 250px;
+    }
 }
 
 @media (max-width: 991px){
@@ -166,6 +188,11 @@ a.item-link:hover{
         max-width: 100%;
         padding: 20px 20px;
         text-align: center;
+    }
+
+    .bev{
+        width: 180px;
+        height: 250px;
     }
 }
 
