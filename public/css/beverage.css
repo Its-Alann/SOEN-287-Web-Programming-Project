@@ -1,5 +1,6 @@
 body{
     font-family: 'Raleway', sans-serif;
+    background-color: #ecf0f1;
 }
 
 a{
@@ -65,6 +66,7 @@ p{
     max-width: 100%;
     padding: 20px 20px;
     text-align: center;
+    padding-left: 150px;
 }
 
 .card-size{
@@ -97,7 +99,7 @@ p{
 
 .card-deck{
     margin-right: 0px;
-    position: flex;
+    display: flex;
 }
 
 a.item-link{
@@ -141,6 +143,8 @@ a.item-link:hover{
 .bev{
     width: 500px;
     height: 550px;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
 }
 
 @media (max-width: 991px){
