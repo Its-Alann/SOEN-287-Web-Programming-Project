@@ -51,11 +51,11 @@ section.subheader{
       text-align: center;
     }
 
-    section.cartitems .row{
+    div.cartitems .row{
       margin-right: 5px;
     }
 
-    section.cartitems{
+    div.cartitems{
 
       width: auto;
       float:none;
@@ -72,8 +72,7 @@ section.subheader{
       height: 0px;
     }
 
-    section.cartitems .removebutt{
-       margin-inline: 5px;
+    div.cartitems .removebutt{
        margin-top: 5px;
     }
 
@@ -128,7 +127,7 @@ section.subheader{
 }
 
 @media (max-width: 1431px){
-  section.cartitems .itembuttons{
+  div.cartitems .itembuttons{
      margin-top: -5px;
   }
 }
@@ -161,9 +160,7 @@ section.subheader{
 }
 
 .itembuttons .removebutt{
-   margin-inline: 5px;
-   margin-top: 5px;
-   margin-bottom: 5px;
+   margin: 5px;
 }
 
 .numberinput{
