@@ -1,219 +1,331 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>McJawz | Dairy & Eggs</title>
-    <link rel="stylesheet" href="../../../public/css/dairyandeggs.css">
+    <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../../../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../public/css/fruitsandveg-aisle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+</head>
 
-  </head>
+<body>
 
-  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../../public/html/index.html">
+            <img style="margin-right: 5px;" class="icon-logo" src="../../../images/mcJawz_logo_no_txt.png" width="40"
+                height="40" alt="">
+            McJawz
+        </a>
 
-<!-- Header -->
-    <section = class="header">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-            <nav class="navbar navbar-expand-md ">
-              <a class="navbar-brand" href="../../../public/html/index.html">
-                <img src="../../../images/mcJawz_logo_no_txt.png" alt="McJawz Logo"
-                 style="width:40px;">
-                <d6 class="d-inline align-middle">McJawz</d6>
-              </a>
-              <ul class="navbar-nav ml-auto">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="../../../public/html/index.html">Home</a>
+                    <a class="nav-link" href="../../../public/html/index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../../../public/html/signup.html">Sign Up</a>
+                    <a class="nav-link" href="../../../public/html/signup.html">Sign Up</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../../../public/html/login.html">Login</a>
+                    <a class="nav-link" href="../../../public/html/login.html">Log in</a>
                 </li>
-              </ul>
-            </nav>
-          </div>
+            </ul>
         </div>
-      </div>
-    </section>
+    </nav>
 
-<!-- Subheader -->
-    <section class="subheader">
-      <div class="container-fluid">
+
+    <!-- Subheader -->
+    <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12">
-            <div class="aislename">
-              <h3>Dairy & Eggs</h3>
+            <div class="col-lg-12 title">
+                <h2>Dairy & Eggs</h2>
             </div>
-          </div>
         </div>
 
         <div class="row">
-          <div class="col-md-6 ml">
-            <div class="links">
-            <a href="../../../public/html/aisles/poultry-aisle.html">Meat, Poultry and Fish </a> |
-            <a href="../../../public/html/aisles/fruitsandveg-aisle.html">Fruits and Vegetables</a> |
-            <a href="../../../public/html/aisles/snack_aisle.html">Snacks</a> |
-            <a href="../../../public/html/aisles/beverages-aisle.html">Beverages</a> |
-            <a href="../../../public/html/aisles/bakery.html">Bakery </a>
+          <div class="col-lg-6 aisles">
+              <a href="../../../public/html/aisles/bakery.html">Bakery</a>
+              |
+              <a href="../../../public/html/aisles/beverages-aisle.html">Beverages</a>
+              |
+              <a href="../../../public/html/aisles/dairyandeggs-aisle.html">Dairy & Eggs</a>
+              |
+              <a href="../../../public/html/aisles/fruitsandveg-aisle.html">Fruits & Vegetables</a>
+              |
+              <a href="../../../public/html/aisles/poultry-aisle.html">Meat, Poultry & Fish</a>
+              |
+              <a href="../../../public/html/aisles/snack_aisle.html">Snacks</a>
             </div>
-          </div>
 
-          <div class="col-md-6 ml">
-            <div class="cart">
-              <a href="#">My Cart
-                <img class="cart-icon" src="../../../images/shoppingcarticon.png" alt="Cart Icon">
-              </a>
+            <div class="col-lg-6 col-md-12 myCartContainer">
+                <img class="shoppingcarticon" src="../../../images/shoppingcarticon.png" alt="">
+                <a href="../../../public/html/cart.html">
+                    <p>My Cart</p>
+                </a>
             </div>
-          </div>
-
         </div>
-      </div>
-    </section>
+    </div>
 
+    <!-- Items -->
+    <div class="card-deck">
 
-<!-- Items box -->
-    <section = class="itemsbox">
-      <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-sm-6">
-            <div class="product">
-              <a class="item-link" href="../products/dairyandeggs-yogurt.html">
-                <img src="../../../images/yoplait_yogurt.jpg" alt="Source Strawberry Yogurt" class="img-thumbnail">
-              </a>
-              <div class="productname">
-                <h6>Source Strawberry Yogurt</h6>
-                <p>3.99$</p>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-outline-success">-</button>
-                <input class = numberinput size="3" type="number" value="0" min="0">
-                  <button type="button" class="btn btn-outline-danger">+</button>
-                </div>
-              </div>
-                <a href="#">
-                  <img class="cart-icon" src="../../../images/cart_transparent_black.png" alt="">
-                </a>
-            </div>
-          </div>
+            <div class="col-lg-4 col-sm-6">
 
-          <div class="col-lg-4 col-sm-6">
-            <div class="product">
-              <a class="item-link" href="#">
-                <img src="../../../images/silk_almondmilk.jpg" alt="Silk Vanilla Almond Milk" class="img-thumbnail">
-              </a>
-              <div class="productname">
-                <h6>Silk Vanila Almond Milk</h6>
-                <p>4.99$</p>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-outline-success">-</button>
-                <input class = numberinput size="3" type="number" value="0" min="0">
-                  <button type="button" class="btn btn-outline-danger">+</button>
-                </div>
-              </div>
-                <a href="#">
-                  <img class="cart-icon" src="../../../images/cart_transparent_black.png" alt="Cart Icon">
-                </a>
-            </div>
-          </div>
+                <div class="card">
+                  <a class="item-link" href="../products/dairyandeggs-yogurt.html">
+                      <img class="card-img-top" src="../../../images/yoplait_yogurt.jpg" alt="Source Strawberry Yogurt">
 
-          <div class="col-lg-4 col-sm-6">
-            <div class="product">
-              <a class="item-link" href="#">
-                <img src="../../../images/quebon_milk.jpg" alt="Quebon 2% Milk" class="img-thumbnail">
-              </a>
-              <div class="productname">
-                <h6>Quebon 2% Milk</h6>
-                <p>6.99$</p>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-outline-success">-</button>
-                <input class = numberinput size="3" type="number" value="0" min="0">
-                  <button type="button" class="btn btn-outline-danger">+</button>
-                </div>
-              </div>
-                <a href="#">
-                  <img class="cart-icon" src="../../../images/cart_transparent_black.png" alt="Cart Icon">
-                </a>
-            </div>
-          </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Source Strawberry Yogurt</h5>
+                            <p class="card-text">Made with real fruits 650g</p>
+                            <p class="card-text"><small class="text-muted">35 cal/100g</small></p>
+                        </div>
+                    </a>
+                    <div class="card-footer">
+                        <p class="pricing"><b>$3.99/each</b></p>
 
-          <div class="col-lg-4 col-sm-6">
-            <div class="product">
-              <a class="item-link" href="#">
-                <img src="../../../images/ptitqc_cheese.jpg" alt="P'Tit Quebec Cheese" class="img-thumbnail">
-              </a>
-              <div class="productname">
-                <h6>P'Tit Quebec Cheese</h6>
-                <p>4.99$</p>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-outline-success">-</button>
-                <input class = numberinput size="3" type="number" value="0" min="0">
-                  <button type="button" class="btn btn-outline-danger">+</button>
-                </div>
-              </div>
-                <a href="#">
-                  <img class="cart-icon" src="../../../images/cart_transparent_black.png" alt="Cart Icon">
-                </a>
-            </div>
-          </div>
+                        <div class="row quantity">
+                            <div class="col-lg-12 incDecButton">
+                                <span class="input-group-btn">
+                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                        data-type="minus" data-field="">
+                                        -
+                                    </button>
+                                </span>
+                                <input size="3" type="text" value="1">
+                                <span class="input-group-btn">
+                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                        data-type="plus" data-field="">
+                                        +
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="col-lg-12 addToCart">
+                                <button type="button" class="btn btn-info">Add to cart</button>
+                            </div>
+                        </div>
 
-          <div class="col-lg-4 col-sm-6">
-            <div class="product">
-              <a class="item-link" href="#">
-                <img src="../../../images/burnbrae_browneggs.jpg" alt="Burnbrae Brown Eggs" class="img-thumbnail">
-              </a>
-              <div class="productname">
-                <h6>Burnbrae Brown Eggs</h6>
-                <p>4.50$</p>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-outline-success">-</button>
-                <input class = numberinput size="3" type="number" value="0" min="0">
-                  <button type="button" class="btn btn-outline-danger">+</button>
+                    </div>
                 </div>
-              </div>
-                <a href="#">
-                  <img class="cart-icon" src="../../../images/cart_transparent_black.png" alt="Cart Icon">
-                </a>
             </div>
-          </div>
 
-          <div class="col-lg-4 col-sm-6">
-            <div class="product">
-              <a class="item-link" href="#">
-                <img src="../../../images/burnbrae_whiteeggs.jpg" alt="Burnbrae White Eggs" class="img-thumbnail">
-              </a>
-              <div class="productname">
-                <h6>Burnbrae White Eggs</h6>
-                <p>2.99$</p>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                  <button type="button" class="btn btn-outline-success">-</button>
-                <input class = numberinput size="3" type="number" value="0" min="0">
-                  <button type="button" class="btn btn-outline-danger">+</button>
+            <div class="col-lg-4 col-sm-6">
+                <div class="card">
+                    <a class="item-link" href="../products/dairyandeggs-almondmilk.html">
+                        <img class="card-img-top" src="../../../images/silk_almondmilk.jpg" alt="Silk Vanilla Almond Milk">
+                        <div class="card-body">
+                            <h5 class="card-title">Silk Vanila Almond Milk</h5>
+                            <p class="card-text">Silky smooth vanilla almond milk</p>
+                            <p class="card-text"><small class="text-muted">80 cal/240ml</small></p>
+                        </div>
+                    </a>
+                    <div class="card-footer">
+                        <p class="pricing"><b>$4.99/each</b></p>
+
+                        <div class="row quantity">
+                            <div class="col-lg-12 incDecButton">
+                                <span class="input-group-btn">
+                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                        data-type="minus" data-field="">
+                                        -
+                                    </button>
+                                </span>
+                                <input size="3" type="text" value="1">
+                                <span class="input-group-btn">
+                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                        data-type="plus" data-field="">
+                                        +
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="col-lg-12 addToCart">
+                                <button type="button" class="btn btn-info">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-                <a href="#">
-                  <img class="cart-icon" src="../../../images/cart_transparent_black.png" alt="Cart Icon">
-                </a>
             </div>
-          </div>
+
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="card">
+                    <a class="item-link" href="../products/dairyandeggs-2milk.html">
+                        <img class="card-img-top" src="../../../images/quebon_milk.jpg" alt="Quebon 2% Milk">
+                        <div class="card-body">
+                            <h5 class="card-title">Quebon 2% Milk</h5>
+                            <p class="card-text">Milk from local farms</p>
+                            <p class="card-text"><small class="text-muted">130 cal/250ml</small></p>
+                        </div>
+                    </a>
+                    <div class="card-footer">
+                        <p class="pricing"><b>$6.99/each</b></p>
+
+                        <div class="row quantity">
+                            <div class="col-lg-12 incDecButton">
+                                <span class="input-group-btn">
+                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                        data-type="minus" data-field="">
+                                        -
+                                    </button>
+                                </span>
+                                <input size="3" type="text" value="1">
+                                <span class="input-group-btn">
+                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                        data-type="plus" data-field="">
+                                        +
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="col-lg-12 addToCart">
+                                <button type="button" class="btn btn-info">Add to cart</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="card">
+                    <a class="item-link" href="../products/dairyandeggs-cheese.html">
+                        <img class="card-img-top" src="../../../images/ptitqc_cheese.jpg" alt="P'Tit Quebec Cheese">
+                        <div class="card-body">
+                            <h5 class="card-title">P'Tit Quebec Cheese</h5>
+                            <p class="card-text">Mozarella cheese</p>
+                            <p class="card-text"><small class="text-muted">100 cal/30g</small></p>
+                        </div>
+                    </a>
+                    <div class="card-footer">
+                        <p class="pricing"><b>$4.99/each</b></p>
+
+                        <div class="row quantity">
+                            <div class="col-lg-12 incDecButton">
+                                <span class="input-group-btn">
+                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                        data-type="minus" data-field="">
+                                        -
+                                    </button>
+                                </span>
+                                <input size="3" type="text" value="1">
+                                <span class="input-group-btn">
+                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                        data-type="plus" data-field="">
+                                        +
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="col-lg-12 addToCart">
+                                <button type="button" class="btn btn-info">Add to cart</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="card">
+                    <a class="item-link" href="../products/dairyandeggs-browneggs.html">
+                        <img class="card-img-top" src="../../../images/burnbrae_browneggs.jpg" alt="Burnbrae Brown Eggs">
+                        <div class="card-body">
+                            <h5 class="card-title">Burnbrae Brown Eggs</h5>
+                            <p class="card-text">Brown eggs from local farms</p>
+                            <p class="card-text"><small class="text-muted">160 cal/2 large eggs</small></p>
+                        </div>
+                    </a>
+                    <div class="card-footer">
+                        <p class="pricing"><b>$4.50/Box</b></p>
+
+                        <div class="row quantity">
+                            <div class="col-lg-12 incDecButton">
+                                <span class="input-group-btn">
+                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                        data-type="minus" data-field="">
+                                        -
+                                    </button>
+                                </span>
+                                <input size="3" type="text" value="1">
+                                <span class="input-group-btn">
+                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                        data-type="plus" data-field="">
+                                        +
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="col-lg-12 addToCart">
+                                <button type="button" class="btn btn-info">Add to cart</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="card">
+                    <a class="item-link" href="../products/dairyandeggs-whiteeggs.html">
+                        <img class="card-img-top" src="../../../images/burnbrae_whiteeggs.jpg" alt="Burnbrae White Eggs">
+                        <div class="card-body">
+                            <h5 class="card-title">Burnbrae White Eggs</h5>
+                            <p class="card-text">White eggs from local farms</p>
+                            <p class="card-text"><small class="text-muted">160 cal/2 large eggs</small></p>
+                        </div>
+                    </a>
+                    <div class="card-footer">
+                        <p class="pricing"><b>$2.99/box</b></p>
+
+                        <div class="row quantity">
+                            <div class="col-lg-12 incDecButton">
+                                <span class="input-group-btn">
+                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                        data-type="minus" data-field="">
+                                        -
+                                    </button>
+                                </span>
+                                <input size="3" type="text" value="1">
+                                <span class="input-group-btn">
+                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                        data-type="plus" data-field="">
+                                        +
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="col-lg-12 addToCart">
+                                <button type="button" class="btn btn-info">Add to cart</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
 
         </div>
-      </div>
-    </section>
 
-  <!-- Footer -->
-    <section class="footer">
-      <div class="footer-item ml-3">
-        <a href="#"><p>Admin</p></a>
-      </div>
-        <div class="footer-item mr-3">
-          <p class="font">Alan Matthew Vadlakunta, 40175007</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-text">
+            <a href="../admin.html">Admin</a>
         </div>
-    </section>
+    </div>
 
-  </body>
+
+</body>
+
+
 </html>

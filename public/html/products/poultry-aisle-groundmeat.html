@@ -1,81 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../../css/bootstrap.css">
-    <link rel="stylesheet" href="../../css/p1p2OG.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chicken Breast</title>
-
+    <title>McJawz | Meat... | Ground Meat</title>
+    <link rel="stylesheet" href="../../../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../public/css/allproducts.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
 </head>
 
-<body style="background-color: rgba(54, 72, 89, 0.8)">
+<body>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-<a class="navbar-brand " href="../index.html"> 
-    <h1 class="d-inline align-middle">McJawz</h1><br>
-    <p class="d-inline align-top">Top of the food chain </p>
-</a>
-<ul class="navbar-nav ml-auto">
-    <li class="nav-item">
-        <a href="../index.html#aisle-here" class="nav-link">Aisles</a>
-    </li>
-    <li class="nav-item">
-        <a href="" class="nav-link">Sign Up</a>
-    </li>
-    <li class="nav-item">
-        <a href="" class="nav-link">Login</a>
-    </li>
-</ul>
-</nav>
-<div class="filler">
-<img src="../../../images/sharkk.png" alt="shark" >
-</div>
-<h1 class="seperator">Meat, Poultry and Fish</h1>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../../public/html/index.html">
+            <img style="margin-right: 5px;" class="icon-logo" src="../../../images/mcJawz_logo_no_txt.png" width="40"
+                height="40" alt="logo">
+            McJawz
+        </a>
 
-    <div class="row">
-      <div class="card-body col-xl-4 col-lg-6 col-md-6 col-sm-6">
-        <img src="../../../images/groundmeat.png" alt="groundmeat">
-      </div> 
-      <div class="col-xl-8 col-lg-6 col-md-6 col-sm-6 align-self-center " id="productCC">
-        <div class="card text-center">
-            <div class="card-header bg-dark text-white">
-                <h1>Ground Meat</h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../public/html/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../public/html/signup.html">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../public/html/login.html">Log in</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Subheader -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 title">
+                <h2>Meat, Poultry and Fish | Ground Meat</h2>
             </div>
-        <div class="card-body my-auto ">
-          <h5 class="card-title text-left">Price: $8.99</h5>
-        <h6 class="card-text text-left ">0.89/100g</h6>
-        <p class="card-text text-left">Ground meat was taken from cows grown on Canadian soil. They were grown antibiotic free and GMO free.SUPPORT YOUR LOCAL FARMERS.</p>
-                <div class="col-xl-3 col-lg-4 col-md-8">
-                    <span class="input-group-btn">
-                        <button type="button" class="quantity-left-minus btn btn-outline-danger btn-number"
-                            data-type="minus" data-field="">
-                            <p>-</p>
-                        </button>
-                    </span>
-                    <input size="5" type="number" value="1" min="1" max="100">
-                    <span class="input-group-btn">
-                        <button type="button" class="quantity-right-plus btn btn-outline-success btn-number"
-                            data-type="plus" data-field="">
-                            <p>+</p>
-                        </button>
-                    </span>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 aisles">
+                <a href="../../../public/html/aisles/bakery.html">Bakery</a>
+                |
+                <a href="../../../public/html/aisles/beverages-aisle.html">Beverages</a>
+                |
+                <a href="../../../public/html/aisles/dairyandeggs-aisle.html">Dairy & Eggs</a>
+                |
+                <a href="../../../public/html/aisles/fruitsandveg-aisle.html">Fruits & Vegetables</a>
+                |
+                <a href="../../../public/html/aisles/poultry-aisle.html">Meat, Poultry & Fish</a>
+                |
+                <a href="../../../public/html/aisles/snack_aisle.html">Snacks</a> 
+</div>
+
+            <div class="col-lg-6 col-md-12 myCartContainer">
+                <img class="shoppingcarticon" src="../../../images/shoppingcarticon.png" alt="">
+                <a href="../../../public/html/cart.html">
+                    <p>My Cart</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="../../../images/groundmeat.jpg" class="card-img" alt="groundmeat">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h2 class="card-title">Ground Meat</h2>
+                    <p class="card-text">100% Canadian Grown Beef</p>
+                    <p class="card-text"><small class="text-muted">Ground meat was taken from cows grown on Canadian soil. They were grown antibiotic free and GMO free.SUPPORT YOUR LOCAL FARMERS.</small></p>
+
+                    <div class="row quantity">
+                        <p class="pricing">8.99/kg</p>
+                        <div class="col-lg-12 incDecButton">
+                            <span class="input-group-btn">
+                                <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                    data-type="minus" data-field="">-
+                                </button></span>
+
+                            <input size="3" type="text" value="1">
+                            
+                            <span class="input-group-btn">
+                            <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                    data-type="plus" data-field="">+
+                                </button>
+                            </span>
+                        </div>
+                        <div class="col-lg-12 addToCart">
+                            <button type="button" class="btn btn-info mt-2">Add to cart</button>
+                        </div>
+                    </div>
                 </div>
 
-        <a href="#" class="btn btn-dark btn-sm mt-2">More description</a>
-    
-        <a href="#" class="btn btn-dark btn-block mt-2">Add to cart</a>
+                <div class="accordian">
+                    <input type="checkbox" id="title1" />
+                    <label for="title1">More Description</label>
+                </div>
+
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+
+    <!-- Footer -->
     <div class="footer">
-        <footer>
-        <div>
-        <button class="clear-button-footer">Contact Us</button>
-        <button class="clear-button-footer">FAQ</button>
+        <div class="footer-text">
+            <a href="../admin.html">Admin</a>
         </div>
-        </footer></div>
-    </body>
+    </div>
+
+
+
+
+</body>
+
 </html>

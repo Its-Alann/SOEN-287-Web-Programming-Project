@@ -1,3 +1,7 @@
+/* SOEN 287, Assignment 1 */
+/* February 22, 2021 */
+/* Michael Totarella, 40005251 */
+
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 
 :root {
@@ -28,8 +32,6 @@ nav {
     overflow: hidden;
 }
 
-.main,
-.product-page,
 .user-list,
 .edit-product,
 .admin {
@@ -67,6 +69,16 @@ nav {
 
 .btn-purple {
     background-color: #992267;
+}
+
+.btn-blue-outline {
+    color: #2471a3;
+    background-color: #fff;
+    border-color: #2471a3;
+}
+
+.btn-blue-outline:hover {
+    color: #2471a3;
 }
 
 .navbar li {
@@ -172,77 +184,6 @@ input[type="number"] {
     margin-right: 4px;
 }
 
-/* Snack Aisle */
-.snack-aisle {
-    max-width: 80%;
-    margin: auto;
-}
-
-.snack-aisle img {
-    margin-bottom: 10px;
-}
-
-.snack-aisle .card {
-    margin-top: 20px;
-}
-
-.snack-aisle .card h1 {
-    font-size: 18px;
-    margin: 0;
-}
-
-.snack-aisle .card p {
-    font-size: 15px;
-}
-
-.snack-aisle .card-footer {
-    display: flex;
-    justify-content: space-between;
-}
-
-.snack-aisle .card .qty {
-    width: 30px;
-    text-align: center;
-    margin: auto 4px;
-    height: auto;
-}
-
-/* Product Page */
-.product-page .card {
-    width: 80%;
-    margin: auto;
-}
-
-.product-page img {
-    height: 300px;
-    width: auto;
-    margin-right: 15px;
-}
-
-.product-page .card h1 {
-    font-size: 30px;
-}
-
-.product-page .card-body {
-    display: flex;
-    flex-direction: row;
-}
-
-.product-page .card-body .product-right-side {
-    margin: 0 auto;
-}
-
-.product-page .card-footer {
-    display: flex;
-    justify-content: space-around;
-}
-
-.product-page .card .qty {
-    width: 30px;
-    text-align: center;
-    height: auto;
-}
-
 /* User List */
 .user-list {
     width: 80%;
@@ -332,15 +273,6 @@ table .btn-cell {
 }
 
 @media (max-width: 1150px) {
-    .snack-aisle .card-footer {
-        flex-direction: column;
-        align-content: space-between;
-    }
-
-    .snack-aisle .card-footer .cart-button {
-        margin-top: 5px;
-    }
-
     .edit-product {
         width: 80%;
         margin: 50px auto;
@@ -378,16 +310,6 @@ table .btn-cell {
         height: 3px;
     }
 
-    .product-page img {
-        max-width: 100%;
-        height: auto;
-        margin: 5px;
-    }
-
-    .product-page .card-body {
-        flex-direction: column;
-    }
-
     .edit-product {
         width: 80%;
         margin: 50px auto;
@@ -400,16 +322,5 @@ table .btn-cell {
     .admin .card {
         width: 130px;
         height: 150px;
-    }
-}
-
-@media (max-width: 500px) {
-    .product-page .card-footer {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .product-page .cart-button {
-        margin-top: 5px;
     }
 }

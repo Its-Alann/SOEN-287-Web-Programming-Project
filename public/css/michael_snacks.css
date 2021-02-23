@@ -1,0 +1,135 @@
+/* SOEN 287, Assignment 1 */
+/* February 22, 2021 */
+/* Michael Totarella, 40005251 */
+
+body {
+    font-family: "Raleway", sans-serif;
+    background-color: #ecf0f1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: white;
+    display: inline-block;
+}
+
+a:hover {
+    color: grey;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.btn:hover {
+    transform: scale(0.96);
+}
+
+.title {
+    background-color: rgb(51, 51, 51);
+    text-align: center;
+    font-size: large;
+    padding-top: 10px;
+    color: white;
+}
+
+.navbar {
+    justify-content: space-between;
+}
+
+.aisles {
+    text-align: left;
+    padding-top: 5px;
+    background-color: rgb(51, 51, 51);
+    padding-bottom: 10px;
+}
+
+.myCartContainer {
+    background-color: rgb(51, 51, 51);
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.shoppingcarticon {
+    height: 25px;
+    width: 25px;
+    position: relative;
+}
+
+.aisle-page,
+.product-info {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.aisle-page .card img,
+.product-info .card-img {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.btn-more-descr {
+    background-color: #78a794;
+    color: #fff;
+}
+
+.card input[type="text"] {
+    text-align: center;
+    width: 33px;
+}
+
+.incdec {
+    font-size: 15px;
+}
+
+.pricing {
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: large;
+}
+
+.addToCart {
+    margin-top: 10px;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+a.item-link {
+    color: black;
+}
+
+a.item-link:hover {
+    text-decoration: none;
+}
+
+.footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: rgb(51, 51, 51);
+}
+
+.footer a {
+    color: #d7dbdd;
+}
+
+.footer-text {
+    padding: 10px 20px;
+    text-align: left;
+    display: flex;
+}
+
+@media (max-width: 991px) {
+    .myCartContainer {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .aisles {
+        text-align: center;
+    }
+}

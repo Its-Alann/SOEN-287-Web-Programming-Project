@@ -42,11 +42,56 @@ section.subheader{
 .subheader a{
 
   color: #F2F2F2;
+      display: inline-block;
 }
 
 .subheader a:hover{
 
   color: #F2F2F2;
+}
+
+@media (max-width: 767px) {
+
+    section.subheader {
+
+          height: 120px;
+    }
+
+    .row .links{
+      text-align: center;
+    }
+
+    .row .cart{
+      text-align: center;
+    }
+
+    .descbox img{
+      width: 50%;
+      margin-bottom: 0;
+    }
+
+    .row .mycontainer{
+      margin-bottom: 20px;
+      margin-top: 0px;
+      text-align: center;
+    }
+
+}
+
+@media (max-width: 554px) {
+
+    section.subheader {
+
+          height: 155px;
+    }
+}
+
+@media (max-width: 350px) {
+
+    section.subheader {
+
+          height: 180px;
+    }
 }
 
 .links{
@@ -134,7 +179,7 @@ section.descbox{
   border-radius: 25px;
   border-color: lightgrey;
   padding: 10px;
-  margin: 100px 90px 190px 90px;
+  margin: 100px 60px 190px 60px;
   height: 500px;
   background-color: #F2F2F2;
   text-align: center;
@@ -142,12 +187,43 @@ section.descbox{
 
 .descproducts{
 
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
   margin-top: 25px;
-  height: 400px;
-  width: 400px;
+  margin-bottom: 25px;
+  width: 345px;
 }
 
 .descbox p{
 
   margin: 0px;
+}
+
+.incDecButton{
+
+  text-align: center;
+}
+
+.incDecButton .cart-icon{
+
+  margin-top: 4px;
+  margin-left: 10px;
+  height: 20px;
+  width: 20px;
+}
+
+.incDecButton .btn{
+
+  height: 40px;
+}
+
+.mycontainer{
+  margin-bottom: 0px;
+  margin-top: 50px;
+}
+
+.descbox .container{
+
+  padding: 5px;
 }
