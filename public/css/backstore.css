@@ -283,6 +283,13 @@ table .btn-cell {
   padding-right: 0px;
 }
 
+.fieldContainer {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin: 15px;
+}
+
 @media (max-width: 1150px) {
   .subheader {
     height: 150px;
