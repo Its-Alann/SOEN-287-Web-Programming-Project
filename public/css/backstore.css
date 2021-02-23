@@ -240,14 +240,15 @@ table .btn-cell {
 }
 
 /* Order List */
-.backstore-p11{
+.backstore-p11 {
   margin-right: 0px;
   padding: 20px 20px;
 }
-.backstore-p12{
+.backstore-p12 {
   margin-right: 0px;
   padding: 20px 20px;
-  width: 100%;
+  width: 50%;
+  margin: 50px auto;
 }
 
 /* Footer */
@@ -271,7 +272,7 @@ table .btn-cell {
   align-self: center;
 }
 
-/*Images */
+/*Images P7 */
 .img-fluid {
   max-height: 400px;
   max-width: 400px;
@@ -362,15 +363,44 @@ table .btn-cell {
   }
 }
 
-@media (min-device-width: 768px) {
+@media (min-width: 768px) {
   .row {
     height: 440px;
   }
 }
 
-@media (max-device-width: 425px) {
+@media (max-width: 425px) {
   .img-fluid {
     width: 95%;
     height: 100%;
   }
+}
+
+.flex-wrapper {
+  display: flex;
+  min-height: 83vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.inputField {
+  background-color: rgba(81, 88, 95, 0.05);
+  border: none;
+  padding: 0px;
+  font-size: 20px;
+  object-fit: contain;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+a.clickhere:active,
+a.clickhere:visited,
+a.clickhere:hover {
+  margin-top: 5px;
+  text-decoration: none;
+  color: #7b7d7d;
+}
+
+.card-footer {
+  color: #7b7d7d;
 }
