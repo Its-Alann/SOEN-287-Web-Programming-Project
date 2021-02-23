@@ -255,7 +255,7 @@ a.item-link:hover{
     }
 
 }
-@media (max-width: 400px){
+@media (max-width: 320px){
     .myCartContainer{
         text-align: center;
         padding-top: 10px;
@@ -282,7 +282,7 @@ a.item-link:hover{
         height: 500px;
     }
     .bev-prod{
-        width: 300px;
+        width: 200px;
     }
 
 }
