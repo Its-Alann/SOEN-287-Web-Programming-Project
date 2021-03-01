@@ -1,321 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>McJawz | Snacks</title>
+        <link
+            rel="icon"
+            href="../../../images/favicon.ico"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="../../../public/css/bootstrap.css" />
+        <link rel="stylesheet" href="../../../public/css/michael_snacks.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
-    <title>McJawz | Snacks</title>
-    <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../../../public/css/bootstrap.css">
-    <link rel="stylesheet" href="../../../public/css/michael_snacks.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-</head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="../../../public/html/index.html">
+                <img
+                    style="margin-right: 5px"
+                    class="icon-logo"
+                    src="../../../images/mcJawz_logo_no_txt.png"
+                    width="40"
+                    height="40"
+                    alt=""
+                />
+                McJawz
+            </a>
 
-<body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="../../../public/html/index.html">
-            <img style="margin-right: 5px;" class="icon-logo" src="../../../images/mcJawz_logo_no_txt.png" width="40"
-                height="40" alt="">
-            McJawz
-        </a>
-
-        <div class="navbar-nav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="../../../public/html/signup.html">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../../../public/html/login.html">Log in</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-
-    <!-- Subheader -->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12 title">
-                <h2>Snacks</h2>
+            <div class="navbar-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="../../../public/html/signup.html"
+                            >Sign Up</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="../../../public/html/login.html"
+                            >Log in</a
+                        >
+                    </li>
+                </ul>
             </div>
-        </div>
+        </nav>
 
-        <div class="row subheader">
-            <div class="col-lg-8 aisles text-dark">
-                <a href="../../../public/html/aisles/bakery.html">Bakery</a>
-                |
-                <a href="../../../public/html/aisles/beverages-aisle.html">Beverages</a>
-                |
-                <a href="../../../public/html/aisles/dairyandeggs-aisle.html">Dairy & Eggs</a>
-                |
-                <a href="../../../public/html/aisles/fruitsandveg-aisle.html">Fruits & Vegetables</a>
-                |
-                <a href="../../../public/html/aisles/poultry-aisle.html">Meat, Poultry & Fish</a>
-                |
-                <a href="../../../public/html/aisles/snack_aisle.html">Snacks</a>
-            </div>
-
-            <div class="col-lg-4 col-md-12 myCartContainer">
-                <img class="shoppingcarticon" src="../../../images/shoppingcarticon.png" alt="">
-                <a href="../../../public/html/cart.html">
-                    <p>My Cart</p>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Items -->
-    <div class="aisle-page card-deck">
-
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-
-                <div class="card text-center">
-                    <a class="item-link" href="../../../public/html/products/snack_aisle_cookies.html">
-                        <img class="card-img-top mb-3" src="../../../images/oreo.jpg" alt="Oreos">
-
-                        <div class="card-body">
-                            <h5 class="card-title mt-4">Oreo Original Cookies</h5>
-                            <p class="card-text text-muted">CHRISTIE</p>
-                            <p class="card-text text-muted"><small>500 g</small></p>
-                        </div>
-                    </a>
-                    <div class="card-footer">
-                        <p class="pricing"><b>$3.99</b></p>
-
-                        <div class="row quantity">
-                            <div class="col-lg-12 incDecButton">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
-                                        data-type="minus" data-field="">
-                                        -
-                                    </button>
-                                </span>
-                                <input size="3" type="text" value="1">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
-                                        data-type="plus" data-field="">
-                                        +
-                                    </button>
-                                </span>
-                            </div>
-                            <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
-                            </div>
-                        </div>
-
-                    </div>
+        <!-- Subheader -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 title">
+                    <h2>Snacks</h2>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6">
-                <div class="card text-center">
-                    <a class="item-link" href="../../../public/html/products/snack_aisle_bars.html">
-                        <img class="card-img-top" src="../../../images/bars.jpg" alt="Granola Bars">
-                        <div class="card-body">
-                            <h5 class="card-title">Crunchy Pecan Cereal Bars</h5>
-                            <p class="card-text text-muted">NATURE VALLEY</p>
-                            <p class="card-text text-muted"><small>210 g</small></p>
-                        </div>
-                    </a>
-                    <div class="card-footer">
-                        <p class="pricing"><b>$2.99</b></p>
-
-                        <div class="row quantity">
-                            <div class="col-lg-12 incDecButton">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
-                                        data-type="minus" data-field="">
-                                        -
-                                    </button>
-                                </span>
-                                <input size="3" type="text" value="1">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
-                                        data-type="plus" data-field="">
-                                        +
-                                    </button>
-                                </span>
-                            </div>
-                            <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
-                            </div>
-                        </div>
-                    </div>
+            <div class="row subheader">
+                <div class="col-lg-8 aisles text-dark">
+                    <a href="../../../public/html/aisles/bakery.html">Bakery</a>
+                    |
+                    <a href="../../../public/html/aisles/beverages-aisle.html"
+                        >Beverages</a
+                    >
+                    |
+                    <a
+                        href="../../../public/html/aisles/dairyandeggs-aisle.html"
+                        >Dairy & Eggs</a
+                    >
+                    |
+                    <a
+                        href="../../../public/html/aisles/fruitsandveg-aisle.html"
+                        >Fruits & Vegetables</a
+                    >
+                    |
+                    <a href="../../../public/html/aisles/poultry-aisle.html"
+                        >Meat, Poultry & Fish</a
+                    >
+                    |
+                    <a href="../../../public/html/aisles/snack_aisle.html"
+                        >Snacks</a
+                    >
                 </div>
-            </div>
 
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card text-center">
-                    <a class="item-link" href="../../../public/html/products/snack_aisle_chips.html">
-                        <img class="card-img-top" src="../../../images/chips.jpg" alt="Potato Chips">
-                        <div class="card-body">
-                            <h5 class="card-title">Classic Potato Chips</h5>
-                            <p class="card-text text-muted">LAY'S</p>
-                            <p class="card-text text-muted"><small class="text-muted">66 g</small></p>
-                        </div>
+                <div class="col-lg-4 col-md-12 myCartContainer">
+                    <img
+                        class="shoppingcarticon"
+                        src="../../../images/shoppingcarticon.png"
+                        alt=""
+                    />
+                    <a href="../../../public/html/cart.html">
+                        <p>My Cart</p>
                     </a>
-                    <div class="card-footer">
-                        <p class="pricing"><b>$1.89</b></p>
-
-                        <div class="row quantity">
-                            <div class="col-lg-12 incDecButton">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
-                                        data-type="minus" data-field="">
-                                        -
-                                    </button>
-                                </span>
-                                <input size="3" type="text" value="1">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
-                                        data-type="plus" data-field="">
-                                        +
-                                    </button>
-                                </span>
-                            </div>
-                            <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card text-center">
-                    <a class="item-link" href="../../../public/html/products/snack_aisle_pistachios.html">
-                        <img class="card-img-top" src="../../../images/pistachios.jpg" alt="Pistachios">
-                        <div class="card-body">
-                            <h5 class="card-title">Roasted Unsalted Pistachios</h5>
-                            <p class="card-text text-muted">WONDERFUL</p>
-                            <p class="card-text text-muted"><small class="text-muted">225 g</small></p>
-                        </div>
-                    </a>
-                    <div class="card-footer">
-                        <p class="pricing"><b>$4.99</b></p>
-
-                        <div class="row quantity">
-                            <div class="col-lg-12 incDecButton">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
-                                        data-type="minus" data-field="">
-                                        -
-                                    </button>
-                                </span>
-                                <input size="3" type="text" value="1">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
-                                        data-type="plus" data-field="">
-                                        +
-                                    </button>
-                                </span>
-                            </div>
-                            <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card text-center">
-                    <a class="item-link" href="../../../public/html/products/snack_aisle_pretzels.html">
-                        <img class="card-img-top" src="../../../images/pretzels.jpg" alt="Pretzels">
-                        <div class="card-body">
-                            <h5 class="card-title">Classic Thins Pretzels</h5>
-                            <p class="card-text text-muted">ROLD GOLD</p>
-                            <p class="card-text text-muted"><small>400 g</small></p>
-                        </div>
-                    </a>
-                    <div class="card-footer">
-                        <p class="pricing"><b>$3.99</b></p>
-
-                        <div class="row quantity">
-                            <div class="col-lg-12 incDecButton">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
-                                        data-type="minus" data-field="">
-                                        -
-                                    </button>
-                                </span>
-                                <input size="3" type="text" value="1">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
-                                        data-type="plus" data-field="">
-                                        +
-                                    </button>
-                                </span>
-                            </div>
-                            <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="card text-center">
-                    <a class="item-link" href="../../../public/html/products/snack_aisle_popcorn.html">
-                        <img class="card-img-top" src="../../../images/popcorn.jpg" alt="Popcorn">
-                        <div class="card-body">
-                            <h5 class="card-title">Extra Buttery 10 Pack Popcorn</h5>
-                            <p class="card-text">ORVILLE REDENBACHER'S</p>
-                            <p class="card-text"><small class="text-muted">820 g</small></p>
-                        </div>
-                    </a>
-                    <div class="card-footer">
-                        <p class="pricing"><b>$8.49</b></p>
-
-                        <div class="row quantity">
-                            <div class="col-lg-12 incDecButton">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
-                                        data-type="minus" data-field="">
-                                        -
-                                    </button>
-                                </span>
-                                <input size="3" type="text" value="1">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
-                                        data-type="plus" data-field="">
-                                        +
-                                    </button>
-                                </span>
-                            </div>
-                            <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
             </div>
         </div>
 
-    </div>
+        <!-- Items -->
+        <div class="aisle-page card-deck">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card text-center">
+                        <a
+                            class="item-link"
+                            href="../../../public/html/products/snack_aisle_cookies.html"
+                        >
+                            <img
+                                class="card-img-top mb-3"
+                                src="../../../images/oreo.jpg"
+                                alt="Oreos"
+                            />
 
-    <!-- Footer -->
-    <div class="footer mt-5">
-        <div class="footer-text">
-            <a href="../../../public/html/admin.html">Admin</a>
+                            <div class="card-body">
+                                <h5 class="card-title mt-4">
+                                    Oreo Original Cookies
+                                </h5>
+                                <p class="card-text text-muted">CHRISTIE</p>
+                                <p class="card-text text-muted">
+                                    <small>500 g</small>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="card-footer">
+                            <p class="pricing"><b>$3.99</b></p>
+
+                            <div class="row quantity">
+                                <div class="col-lg-12 incDecButton">
+                                    <span class="input-group-btn">
+                                        <button
+                                            type="button"
+                                            class="quantity-left-minus btn btn-danger btn-number"
+                                            data-type="minus"
+                                            data-field=""
+                                        >
+                                            -
+                                        </button>
+                                    </span>
+                                    <input size="3" type="text" value="1" />
+                                    <span class="input-group-btn">
+                                        <button
+                                            type="button"
+                                            class="quantity-right-plus btn btn-success btn-number"
+                                            data-type="plus"
+                                            data-field=""
+                                        >
+                                            +
+                                        </button>
+                                    </span>
+                                </div>
+                                <div class="col-lg-12 addToCart">
+                                    <button type="button" class="btn btn-info">
+                                        Add to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card text-center">
+                        <a
+                            class="item-link"
+                            href="../../../public/html/products/snack_aisle_bars.html"
+                        >
+                            <img
+                                class="card-img-top"
+                                src="../../../images/bars.jpg"
+                                alt="Granola Bars"
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Crunchy Pecan Cereal Bars
+                                </h5>
+                                <p class="card-text text-muted">
+                                    NATURE VALLEY
+                                </p>
+                                <p class="card-text text-muted">
+                                    <small>210 g</small>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="card-footer">
+                            <p class="pricing"><b>$2.99</b></p>
+
+                            <div class="row quantity">
+                                <div class="col-lg-12 incDecButton">
+                                    <span class="input-group-btn">
+                                        <button
+                                            type="button"
+                                            class="quantity-left-minus btn btn-danger btn-number"
+                                            data-type="minus"
+                                            data-field=""
+                                        >
+                                            -
+                                        </button>
+                                    </span>
+                                    <input size="3" type="text" value="1" />
+                                    <span class="input-group-btn">
+                                        <button
+                                            type="button"
+                                            class="quantity-right-plus btn btn-success btn-number"
+                                            data-type="plus"
+                                            data-field=""
+                                        >
+                                            +
+                                        </button>
+                                    </span>
+                                </div>
+                                <div class="col-lg-12 addToCart">
+                                    <button type="button" class="btn btn-info">
+                                        Add to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card text-center">
+                        <a
+                            class="item-link"
+                            href="../../../public/html/products/snack_aisle_chips.html"
+                        >
+                            <img
+                                class="card-img-top"
+                                src="../../../images/chips.jpg"
+                                alt="Potato Chips"
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">Classic Potato Chips</h5>
+                                <p class="card-text text-muted">LAY'S</p>
+                                <p class="card-text text-muted">
+                                    <small class="text-muted">66 g</small>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="card-footer">
+                            <p class="pricing"><b>$1.89</b></p>
+
+                            <div class="row quantity">
+                                <div class="col-lg-12 incDecButton">
+                                    <span class="input-group-btn">
+                                        <button
+                                            type="button"
+                                            class="quantity-left-minus btn btn-danger btn-number"
+                                            data-type="minus"
+                                            data-field=""
+                                        >
+                                            -
+                                        </button>
+                                    </span>
+                                    <input size="3" type="text" value="1" />
+                                    <span class="input-group-btn">
+                                        <button
+                                            type="button"
+                                            class="quantity-right-plus btn btn-success btn-number"
+                                            data-type="plus"
+                                            data-field=""
+                                        >
+                                            +
+                                        </button>
+                                    </span>
+                                </div>
+                                <div class="col-lg-12 addToCart">
+                                    <button type="button" class="btn btn-info">
+                                        Add to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card text-center">
+                        <a
+                            class="item-link"
+                            href="../../../public/html/products/snack_aisle_pistachios.html"
+                        >
+                            <img
+                                class="card-img-top"
+                                src="../../../images/pistachios.jpg"
+                                alt="Pistachios"
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Roasted Unsalted Pistachios
+                                </h5>
+                                <p class="card-text text-muted">WONDERFUL</p>
+                                <p class="card-text text-muted">
+                                    <small class="text-muted">225 g</small>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="card-footer">
+                            <p class="pricing"><b>$4.99</b></p>
+
+                            <div class="row quantity">
+                                <div class="col-lg-12 incDecButton">
+                                    <span class="input-group-btn">
+                                        <button
+                                            type="button"
+                                            class="quantity-left-minus btn btn-danger btn-number"
+                                            data-type="minus"
+                                            data-field=""
+                                        >
+                                            -
+                                        </button>
+                                    </span>
+                                    <input size="3" type="text" value="1" />
+                                    <span class="input-group-btn">
+                                        <button
+                                            type="button"
+                                            class="quantity-right-plus btn btn-success btn-number"
+                                            data-type="plus"
+                                            data-field=""
+                                        >
+                                            +
+                                        </button>
+                                    </span>
+                                </div>
+                                <div class="col-lg-12 addToCart">
+                                    <button type="button" class="btn btn-info">
+                                        Add to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card text-center">
+                        <a
+                            class="item-link"
+                            href="../../../public/html/products/snack_aisle_pretzels.html"
+                        >
+                            <img
+                                class="card-img-top"
+                                src="../../../images/pretzels.jpg"
+                                alt="Pretzels"
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Classic Thins Pretzels
+                                </h5>
+                                <p class="card-text text-muted">ROLD GOLD</p>
+                                <p class="card-text text-muted">
+                                    <small>400 g</small>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="card-footer">
+                            <p class="pricing"><b>$3.99</b></p>
+
+                            <div class="row quantity">
+                                <div class="col-lg-12 incDecButton">
+                                    <span class="input-group-btn">
+                                        <button
+                                            type="button"
+                                            class="quantity-left-minus btn btn-danger btn-number"
+                                            data-type="minus"
+                                            data-field=""
+                                        >
+                                            -
+                                        </button>
+                                    </span>
+                                    <input size="3" type="text" value="1" />
+                                    <span class="input-group-btn">
+                                        <button
+                                            type="button"
+                                            class="quantity-right-plus btn btn-success btn-number"
+                                            data-type="plus"
+                                            data-field=""
+                                        >
+                                            +
+                                        </button>
+                                    </span>
+                                </div>
+                                <div class="col-lg-12 addToCart">
+                                    <button type="button" class="btn btn-info">
+                                        Add to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card text-center">
+                        <a
+                            class="item-link"
+                            href="../../../public/html/products/snack_aisle_popcorn.html"
+                        >
+                            <img
+                                class="card-img-top"
+                                src="../../../images/popcorn.jpg"
+                                alt="Popcorn"
+                            />
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Extra Buttery 10 Pack Popcorn
+                                </h5>
+                                <p class="card-text">ORVILLE REDENBACHER'S</p>
+                                <p class="card-text">
+                                    <small class="text-muted">820 g</small>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="card-footer">
+                            <p class="pricing"><b>$8.49</b></p>
+
+                            <div class="row quantity">
+                                <div class="col-lg-12 incDecButton">
+                                    <span class="input-group-btn">
+                                        <button
+                                            type="button"
+                                            class="quantity-left-minus btn btn-danger btn-number"
+                                            data-type="minus"
+                                            data-field=""
+                                        >
+                                            -
+                                        </button>
+                                    </span>
+                                    <input size="3" type="text" value="1" />
+                                    <span class="input-group-btn">
+                                        <button
+                                            type="button"
+                                            class="quantity-right-plus btn btn-success btn-number"
+                                            data-type="plus"
+                                            data-field=""
+                                        >
+                                            +
+                                        </button>
+                                    </span>
+                                </div>
+                                <div class="col-lg-12 addToCart">
+                                    <button type="button" class="btn btn-info">
+                                        Add to cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 
-
-</body>
-
-
+        <!-- Footer -->
+        <div class="footer mt-5">
+            <div class="footer-text">
+                <a href="../../../public/html/admin.html">Admin</a>
+            </div>
+        </div>
+    </body>
 </html>
