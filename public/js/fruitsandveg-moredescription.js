@@ -8,3 +8,11 @@ function displayText(){
     }
     
 }
+
+function getTotal(item,rate){
+    var total = document.getElementById("totalPrice");
+    var quantity = document.getElementById(item);
+    total.innerHTML = "Total Price: $" + Math.round((quantity.value*rate) * 100) / 100;
+}
+
+
