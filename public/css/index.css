@@ -39,6 +39,10 @@ hr {
     margin-bottom: 10px;
 }
 
+.navbar-collapse.collapse.in {
+    display: block!important;
+}
+
 #title {
     background-color: #2B354B;
     color: #ffffff;

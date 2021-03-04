@@ -1,6 +1,8 @@
 body {
     font-family: 'Raleway', sans-serif;
-    max-height: 40px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-color: #ecf0f1;
 }
 
@@ -17,6 +19,11 @@ p {
     margin: 0px;
     padding: 0px;
 }
+
+.navbar-collapse.collapse.in {
+    display: block!important;
+}
+
 
 .title {
     background-color: rgb(51, 51, 51);
@@ -39,8 +46,6 @@ p {
     text-align: right;
     padding-bottom: 10px;
 }
-
-
 
 .shoppingcarticon {
     height: 25px;
@@ -78,6 +83,7 @@ p {
 
 .card {
     margin: 20px 20px;
+    margin-bottom: 50px;
 }
 
 
@@ -93,17 +99,6 @@ p {
 .card-text {
     padding-left: 20px;
 }
-
-#title1 {
-    display: none;
-}
-
-.footer {
-    position: relative;
-    background-color: rgb(51, 51, 51);
-    bottom: 0;
-}
-
 
 label {
     display: block;
@@ -151,17 +146,17 @@ a.item-link:hover {
     text-decoration: none;
 }
 
-
+#description-text{
+    max-width: 100%;
+    padding-right: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    margin-top: auto;
     width: 100%;
     background-color: rgb(51, 51, 51);
-    color: white;
-    text-align: center;
-    display: flex;
 }
 
 .footer-text {
@@ -205,17 +200,6 @@ a.item-link:hover {
         display: flex;
         text-align: center;
         margin-bottom: 20px;
-    }
-
-    .footer {
-        position: static;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: rgb(51, 51, 51);
-        color: white;
-        text-align: center;
-        display: flex;
     }
 
 }

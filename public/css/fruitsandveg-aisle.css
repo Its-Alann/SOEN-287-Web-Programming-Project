@@ -25,6 +25,10 @@ p{
     color: white;
 }
 
+.navbar-collapse.collapse.in {
+    display: block!important;
+}
+
 .aisles{
     text-align: left;
     padding-top: 5px;
