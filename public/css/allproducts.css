@@ -212,3 +212,15 @@ a.item-link:hover {
 
 }
 
+@media (max-width: 370px){
+
+    .btn-info{
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .accordian{
+        margin-left: 0;
+    }
+
+}
