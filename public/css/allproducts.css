@@ -212,7 +212,7 @@ a.item-link:hover {
 
 }
 
-@media (max-width: 369px){
+@media (max-width: 375px){
 
     .btn-info{
         margin-top: 20px;
