@@ -12,7 +12,12 @@ function displayText(){
 function getTotal(item,rate){
     var total = document.getElementById("totalPrice");
     var quantity = document.getElementById(item);
-    total.innerHTML = "Total Price: $" + Math.round((quantity.value*rate) * 100) / 100;
+    if(quantity.value > 0){
+        total.innerHTML = "Total Price: $" + Math.round((quantity.value*rate) * 100) / 100;
+    }
+    else{
+        total.innerHTML = "Total Price: $0"
+    }
 }
 
 
