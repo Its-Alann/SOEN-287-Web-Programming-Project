@@ -17,6 +17,10 @@ p{
     padding: 0px;
 }
 
+ul{
+    text-align: center;
+}
+
 .title{
     background-color: rgb(51,51,51);
     text-align: center;
@@ -130,6 +134,10 @@ a.item-link:hover{
 
     .aisles{
         text-align: center;
+    }
+
+    ul{
+        font-size: 1.2em;
     }
 
 }

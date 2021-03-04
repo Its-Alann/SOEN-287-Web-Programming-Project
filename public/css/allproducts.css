@@ -20,6 +20,10 @@ p {
     padding: 0px;
 }
 
+ul{
+    text-align: center;
+}
+
 .navbar-collapse.collapse.in {
     display: block!important;
 }
@@ -181,6 +185,10 @@ a.item-link:hover {
         margin-bottom: 20px;
     }
 
+    ul{
+        font-size: 1.2em;
+    }
+
 
 }
 
@@ -203,3 +211,4 @@ a.item-link:hover {
     }
 
 }
+
