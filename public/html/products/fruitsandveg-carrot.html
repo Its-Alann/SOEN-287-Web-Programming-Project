@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script src="../../../public/js/fruitsandveg-moredescription.js"></script>
+    <script src="../../../public/js/fruitsandveg-aisle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -90,14 +94,14 @@
                         <p class="pricing">$2.25/kg</p>
                         <div class="col-lg-12 incDecButton">
                             <span class="input-group-btn">
-                                <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                <button onclick="decrement('amount-carrot')" type="button" class="quantity-left-minus btn btn-danger btn-number"
                                     data-type="minus" data-field="">
                                     -
                                 </button>
                             </span>
-                            <input size=3 value=1>
+                            <input id="amount-carrot" size=3 value=1>
                             <span class="input-group-btn">
-                                <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                <button onclick="increment('amount-carrot')" type="button" class="quantity-right-plus btn btn-success btn-number"
                                     data-type="plus" data-field="">
                                     +
                                 </button>
@@ -113,7 +117,10 @@
 
                 <div class="accordian">
                     <input type="checkbox" id="title1" />
-                    <label for="title1">More Description</label>
+                    <label onclick="displayText()" for="title1">More Description</label>
+
+                    <p id="description-text" style="display:none;">Carrots are one of the most popular root vegetable around owing to its versatility in kitchen use and of course, for its wide-range of healthy and nutritional benefits. They come in many colors like purple, yellow, red and white, but the orange variety remains the most common ones. Carrots get their bright-coloured skin from Beta-Carotene, a nutrient that the body readily converts into Vitamin A which is very significant in the support of eye health and prevention of eye diseases. Depending on variety and cultivation, Carrots are normally having sweet flavor and can be juicy and delicious. Our Sama Carrots are freshly flown from Lebanon and guarantees you the best in season Carrots to enjoy.</p>
+                    
                 </div>
 
             </div>

@@ -11,8 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-</head>
-
+    <script src="../../../public/js/fruitsandveg-moredescription.js"></script>
+    <script src="../../../public/js/fruitsandveg-aisle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <body>
 
     <!-- Navbar -->
@@ -90,14 +92,14 @@
                         <p class="pricing">$4.50/kg</p>
                         <div class="col-lg-12 incDecButton">
                             <span class="input-group-btn">
-                                <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                <button onclick="decrement('amount-apple')" type="button" class="quantity-left-minus btn btn-danger btn-number"
                                     data-type="minus" data-field="">
                                     -
                                 </button>
                             </span>
-                            <input size=3 value=1>
+                            <input id="amount-apple" size=3 value=1>
                             <span class="input-group-btn">
-                                <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                <button onclick="increment('amount-apple')" type="button" class="quantity-right-plus btn btn-success btn-number"
                                     data-type="plus" data-field="">
                                     +
                                 </button>
@@ -113,7 +115,10 @@
 
                 <div class="accordian">
                     <input type="checkbox" id="title1" />
-                    <label for="title1">More Description</label>
+                    <label onclick="displayText()" for="title1">More Description</label>
+
+                    <p id="description-text" style="display:none;">Royal Gala Apples are bi-coloured with an attractive orange-red blush, which is most commonly striped and exposes a white-yellow background colouration. The fruit has sweet, yellowish flesh and an attractive crisp texture. Royal Gala Apples are aromatically sweet and snappy which makes it ideal as a healthy ready-to-eat snack. Our Royal Gala Apples are carefully sourced from various countries with the best growing conditions per season, to ensure our customers with a year-round supply of this beloved "gourmet apple" that is a staple among varieties of its kind.</p>
+                    
                 </div>
 
             </div>
@@ -126,7 +131,6 @@
             <a href="../../../public/html/admin.html">Admin</a>
         </div>
     </div>
-
 
 
 

@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script src="../../../public/js/fruitsandveg-moredescription.js"></script>
+    <script src="../../../public/js/fruitsandveg-aisle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -90,14 +94,14 @@
                         <p class="pricing">$4.99/kg</p>
                         <div class="col-lg-12 incDecButton">
                             <span class="input-group-btn">
-                                <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                <button onclick="decrement('amount-kiwi')" type="button" class="quantity-left-minus btn btn-danger btn-number"
                                     data-type="minus" data-field="">
                                     -
                                 </button>
                             </span>
-                            <input size=3 value=1>
+                            <input id="amount-kiwi" size=3 value=1>
                             <span class="input-group-btn">
-                                <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                <button onclick="increment('amount-kiwi')" type="button" class="quantity-right-plus btn btn-success btn-number"
                                     data-type="plus" data-field="">
                                     +
                                 </button>
@@ -113,7 +117,10 @@
 
                 <div class="accordian">
                     <input type="checkbox" id="title1" />
-                    <label for="title1">More Description</label>
+                    <label onclick="displayText()" for="title1">More Description</label>
+
+                    <p id="description-text" style="display:none;">Kiwis are one of the perfect fruits one can incorporate in their diet. Each one has Potassium content as much as a banana and packed with Vitamin C higher than an orange, as well as high levels of Beta-Carotene, Vitamin A and E. Its seeds are rich in Alpha-Linoleic Acid, which is an Omega-3 essential fatty acid. It is also rich in fiber and have antioxidants which are considered great cancer fighters.</p>
+                    
                 </div>
 
             </div>

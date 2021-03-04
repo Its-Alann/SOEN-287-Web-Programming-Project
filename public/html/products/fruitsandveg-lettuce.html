@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script src="../../../public/js/fruitsandveg-moredescription.js"></script>
+    <script src="../../../public/js/fruitsandveg-aisle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -90,14 +94,14 @@
                         <p class="pricing">$1.99/kg</p>
                         <div class="col-lg-12 incDecButton">
                             <span class="input-group-btn">
-                                <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                <button onclick="decrement('amount-lettuce')" type="button" class="quantity-left-minus btn btn-danger btn-number"
                                     data-type="minus" data-field="">
                                     -
                                 </button>
                             </span>
-                            <input size=3 value=1>
+                            <input id="amount-lettuce" size=3 value=1>
                             <span class="input-group-btn">
-                                <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                <button onclick="increment('amount-lettuce')" type="button" class="quantity-right-plus btn btn-success btn-number"
                                     data-type="plus" data-field="">
                                     +
                                 </button>
@@ -113,7 +117,10 @@
 
                 <div class="accordian">
                     <input type="checkbox" id="title1" />
-                    <label for="title1">More Description</label>
+                    <label onclick="displayText()" for="title1">More Description</label>
+
+                    <p id="description-text" style="display:none;">Our Mixed Lettuce include a wonderful selection of Lollo Rosso, ‘Garnet Rosa’, ‘Merlot Flame’, ‘Devil’s Ear’, Butterhead, Green Oak Leave, Red Oak Leave or any of our other heirloom varieties. Selection depends on daily availability. Lettuce have been cultivated for thousands of years. They were first grown by the ancient Egyptians and were then spread by the Romans into the rest of Europe. Lettuce come in lots of different colours, shapes and sizes and we are growing a large selection of seasonal varieties all year round.</p>
+                    
                 </div>
 
             </div>
