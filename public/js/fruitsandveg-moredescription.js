@@ -9,6 +9,7 @@ function displayText(){
     
 }
 
+
 function getTotal(item){
     var priceArray = document.getElementsByClassName("pricing");
     var rate = priceArray[0].innerHTML;
@@ -29,14 +30,14 @@ function updateValue(input){
 
 
     console.log(input);
-    console.log(sessionStorage.getItem(input));
+    console.log(localStorage.getItem(input));
     
-    if(sessionStorage.getItem(input) != null){
+    if(localStorage.getItem(input) != null){
         console.log(input);
-        console.log(sessionStorage.getItem(input));
+        console.log(localStorage.getItem(input));
 
         var itemToUpdate = document.getElementById(input);
-        itemToUpdate.value = (sessionStorage.getItem(input)).toString();
+        itemToUpdate.value = (localStorage.getItem(input)).toString();
         getTotal(input);
     }
 }
