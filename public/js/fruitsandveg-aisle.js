@@ -3,8 +3,8 @@ function increment(input) {
     var curr_amount = null;
     var curr_amount_html = document.getElementById(input);
 
-    if(localStorage[input]){
-        curr_amount = parseInt(localStorage.getItem(input));
+    if(sessionStorage[input]){
+        curr_amount = parseInt(sessionStorage.getItem(input));
     }
     else{
         curr_amount = parseInt(curr_amount_html.value);
@@ -12,7 +12,7 @@ function increment(input) {
 
     curr_amount = parseInt(curr_amount) + 1;
     curr_amount_html.value = curr_amount.toString();
-    localStorage.setItem(input, curr_amount);
+    sessionStorage.setItem(input, curr_amount);
 
 }
 
@@ -21,8 +21,8 @@ function decrement(input) {
     var curr_amount = null;
     var curr_amount_html = document.getElementById(input);
 
-    if(localStorage[input]){
-        curr_amount = parseInt(localStorage.getItem(input));
+    if(sessionStorage[input]){
+        curr_amount = parseInt(sessionStorage.getItem(input));
     }
     else{
         curr_amount = parseInt(curr_amount_html.value);
@@ -31,7 +31,7 @@ function decrement(input) {
     if(curr_amount > 1){
         curr_amount = parseInt(curr_amount) - 1;
         curr_amount_html.value = curr_amount.toString();
-        localStorage.setItem(input, curr_amount);
+        sessionStorage.setItem(input, curr_amount);
     }
 
 }
@@ -39,12 +39,12 @@ function decrement(input) {
 
 function updateValues(){
 
-    keys = (Object.keys(localStorage));
+    keys = (Object.keys(sessionStorage));
     console.log(keys);
     for(i=0; i<keys.length; i++){
-        if(localStorage.getItem(keys[i]) != null){
+        if(sessionStorage.getItem(keys[i]) != null){
             var itemToUpdate = document.getElementById(keys[i]);
-            itemToUpdate.value = (localStorage.getItem(keys[i])).toString();
+            itemToUpdate.value = (sessionStorage.getItem(keys[i])).toString();
             
         }
     }

@@ -30,14 +30,14 @@ function updateValue(input){
 
 
     console.log(input);
-    console.log(localStorage.getItem(input));
+    console.log(sessionStorage.getItem(input));
     
-    if(localStorage.getItem(input) != null){
+    if(sessionStorage.getItem(input) != null){
         console.log(input);
-        console.log(localStorage.getItem(input));
+        console.log(sessionStorage.getItem(input));
 
         var itemToUpdate = document.getElementById(input);
-        itemToUpdate.value = (localStorage.getItem(input)).toString();
+        itemToUpdate.value = (sessionStorage.getItem(input)).toString();
         getTotal(input);
     }
 }
