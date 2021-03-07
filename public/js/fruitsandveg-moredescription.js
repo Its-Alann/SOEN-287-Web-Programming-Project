@@ -9,7 +9,11 @@ function displayText(){
     
 }
 
-function getTotal(item,rate){
+function getTotal(item){
+    var priceArray = document.getElementsByClassName("pricing");
+    var rate = priceArray[0].innerHTML;
+    rate = parseFloat(rate.slice(1, rate.indexOf("/")));
+
     var total = document.getElementById("totalPrice");
     var quantity = document.getElementById(item);
     if(quantity.value > 0){
@@ -20,4 +24,20 @@ function getTotal(item,rate){
     }
 }
 
+
+function updateValue(input){
+
+
+    console.log(input);
+    console.log(sessionStorage.getItem(input));
+    
+    if(sessionStorage.getItem(input) != null){
+        console.log(input);
+        console.log(sessionStorage.getItem(input));
+
+        var itemToUpdate = document.getElementById(input);
+        itemToUpdate.value = (sessionStorage.getItem(input)).toString();
+        getTotal(input);
+    }
+}
 
