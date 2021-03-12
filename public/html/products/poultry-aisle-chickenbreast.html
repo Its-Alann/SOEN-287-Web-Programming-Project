@@ -12,9 +12,12 @@
     <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
+    <script src="../../../public/js/poultry-aisle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body onload="updateValue('amount-cb')">
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -92,16 +95,16 @@
                         <p class="pricing">8.99/kg</p>
                         <div class="col-lg-12 incDecButton">
                             <span class="input-group-btn">
-                                <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                <button onclick="decrement('amount-cb');" class="quantity-left-minus btn btn-danger btn-number"
                                     data-type="minus" data-field="">-
                                 </button></span>
 
-                            <input size="3" type="text" value="1">
+                            <input id='amount-cb' size="3" type="text" value="1">
                             
                             <span class="input-group-btn">
-                            <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                            <button onclick="increment('amount-cb');" type="button" class="quantity-right-plus btn btn-success btn-number"
                                     data-type="plus" data-field="">+
-                                </button>
+</button>
                             </span>
                         </div>
                         <div class="col-lg-12 addToCart">
@@ -112,8 +115,14 @@
 
                 <div class="accordian">
                     <input type="checkbox" id="title1" />
-                    <label for="title1">More Description</label>
-                </div>
+                    <label onclick="ShowDescription()" for="title1">More Description</label>
+
+                    <p id="description" style="display:none;padding-top: 5px; padding-bottom: 5px;">Our main priority here at McJawz is getting local products into the hands of our consumers.
+                    <br>This brand of chicken breast comes from one of the finest farms in quebec with none of the price premium you expect to pay for a quality product.
+                    <br>The chicken breast are lean and trimmed of most fat before packaging.
+
+                    </p>
+                    </div>
 
             </div>
         </div>
