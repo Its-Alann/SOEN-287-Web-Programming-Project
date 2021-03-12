@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body onload="updateQuantities()">
     <script type="text/javascript" src="../../js/michael_buttons.js"></script>
 
     <!-- Navbar -->
@@ -91,14 +91,16 @@
                         </div>
                         <div class="col-lg-12 incDecButton">
                             <span class="input-group-btn">
-                                <button type="button" class="quantity-minus btn btn-danger btn-number" onclick="minus(2.99, 'bars')"
+                                <button type="button" class="quantity-minus btn btn-danger btn-number" onclick="minus('bars'); productSubtotal(3.99, 'bars')"
                                     data-type="minus" data-field="">
                                     -
                                 </button>
                             </span>
-                            <input class="quantity-input quantity-input-bars" size="3" type="text" value="1">
+
+                            <input class="quantity-input" id="qty-bars" size="3" type="text" value="1">
+
                             <span class="input-group-btn">
-                                <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus(2.99, 'bars')"
+                                <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus('bars'); productSubtotal(3.99, 'bars')"
                                     data-type="plus" data-field="">
                                     +
                                 </button>

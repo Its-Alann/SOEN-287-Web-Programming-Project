@@ -10,28 +10,39 @@ function moreDescription() {
     }
 }
 
-function plus(price, product) {
-    var btn = document.getElementsByClassName("quantity-plus")[0];
-    var qty = document.getElementsByClassName("quantity-input-" + product)[0];
-    qty.value ++;
+function plus(product) {
+    var qty = document.getElementById("qty-" + product);
+    qty.value++;
 
-    productSubtotal(price, product);
+    localStorage.setItem("qty-" + product, qty.value.toString());
 }
 
-function minus(price, product) {
-    var btn = document.getElementsByClassName("quantity-minus")[0];
-    var qty = document.getElementsByClassName("quantity-input-" + product)[0];
-    if (qty.value <= 1) {
-        qty.value = 1;
+function minus(product) {
+    var qty = document.getElementById("qty-" + product);
+    if (qty.value <= 0) {
+        qty.value = 0;
     } else {
-        qty.value --;
+        qty.value--;
     }
 
-    productSubtotal(price, product);
+    localStorage.setItem("qty-" + product, qty.value.toString());
 }
 
 function productSubtotal(price, product) {
-    var qty = document.getElementsByClassName("quantity-input-" + product)[0];
+    var qty = document.getElementById("qty-" + product);
     var subtotal = qty.value * price;
     document.getElementsByClassName("subtotal-" + product)[0].textContent = "(Subtotal: $" + subtotal.toFixed(2) + ")";
+}
+
+function updateQuantities() {
+    var keys = Object.keys(localStorage);
+    for (i = 0; i < keys.length; i++) {
+        var val = localStorage.getItem(keys[i]);
+        if (val != null) {
+            var element = document.getElementById(keys[i]);
+            if (element != null) {
+                element.value = parseInt(val);
+            }
+        }
+    }
 }

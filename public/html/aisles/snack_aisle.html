@@ -20,7 +20,7 @@
         />
     </head>
 
-    <body>
+    <body onload="updateQuantities()">
         <script type="text/javascript" src="../../js/michael_buttons.js"></script>
 
         <!-- Navbar -->
@@ -139,14 +139,16 @@
                             <div class="row quantity justify-content-around">
                                 <div class="">
                                     <span class="input-group-btn">
-                                        <button type="button" class="quantity-minus btn btn-danger btn-number" onclick="minus(3.99, 'cookies')"
+                                        <button type="button" class="quantity-minus btn btn-danger btn-number" onclick="minus('cookies'); productSubtotal(3.99, 'cookies')"
                                             data-type="minus" data-field="">
                                             -
                                         </button>
                                     </span>
-                                    <input class="quantity-input quantity-input-cookies" size="3" type="text" value="1">
+
+                                    <input class="quantity-input" id="qty-cookies" size="3" type="text" value="1">
+
                                     <span class="input-group-btn">
-                                        <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus(3.99, 'cookies')"
+                                        <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus('cookies'); productSubtotal(3.99, 'cookies')"
                                             data-type="plus" data-field="">
                                             +
                                         </button>
@@ -194,14 +196,16 @@
                             <div class="row quantity justify-content-around">
                                 <div class="">
                                     <span class="input-group-btn">
-                                        <button type="button" class="quantity-minus btn btn-danger btn-number" onclick="minus(2.99, 'bars')"
+                                        <button type="button" class="quantity-minus btn btn-danger btn-number" onclick="minus('bars'); productSubtotal(2.99, 'bars')"
                                             data-type="minus" data-field="">
                                             -
                                         </button>
                                     </span>
-                                    <input class="quantity-input quantity-input-bars" size="3" type="text" value="1">
+
+                                    <input class="quantity-input" id="qty-bars" size="3" type="text" value="1">
+
                                     <span class="input-group-btn">
-                                        <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus(2.99, 'bars')"
+                                        <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus('bars'); productSubtotal(2.99, 'bars')"
                                             data-type="plus" data-field="">
                                             +
                                         </button>
@@ -245,14 +249,16 @@
                             <div class="row quantity justify-content-around">
                                 <div class="">
                                     <span class="input-group-btn">
-                                        <button type="button" class="quantity-minus btn btn-danger btn-number" onclick="minus(1.89, 'chips')"
+                                        <button type="button" class="quantity-minus btn btn-danger btn-number" onclick="minus('chips'); productSubtotal(1.89, 'chips')"
                                             data-type="minus" data-field="">
                                             -
                                         </button>
                                     </span>
-                                    <input class="quantity-input quantity-input-chips" size="3" type="text" value="1">
+
+                                    <input class="quantity-input" id="qty-chips" size="3" type="text" value="1">
+
                                     <span class="input-group-btn">
-                                        <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus(1.89, 'chips')"
+                                        <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus('chips'); productSubtotal(1.89, 'chips')"
                                             data-type="plus" data-field="">
                                             +
                                         </button>
@@ -298,14 +304,16 @@
                             <div class="row quantity justify-content-around">
                                 <div class="">
                                     <span class="input-group-btn">
-                                        <button type="button" class="quantity-minus btn btn-danger btn-number" onclick="minus(4.99, 'pistachios')"
+                                        <button type="button" class="quantity-minus btn btn-danger btn-number" onclick="minus('pistachios'); productSubtotal(4.99, 'pistachios')"
                                             data-type="minus" data-field="">
                                             -
                                         </button>
                                     </span>
-                                    <input class="quantity-input quantity-input-pistachios" size="3" type="text" value="1">
+
+                                    <input class="quantity-input" id="qty-pistachios" size="3" type="text" value="1">
+
                                     <span class="input-group-btn">
-                                        <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus(4.99, 'pistachios')"
+                                        <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus('pistachios'); productSubtotal(4.99, 'pistachios')"
                                             data-type="plus" data-field="">
                                             +
                                         </button>
@@ -351,14 +359,16 @@
                             <div class="row quantity justify-content-around">
                                 <div class="">
                                     <span class="input-group-btn">
-                                        <button type="button" class="quantity-minus btn btn-danger btn-number" onclick="minus(3.99, 'pretzels')"
+                                        <button type="button" class="quantity-minus btn btn-danger btn-number" onclick="minus('pretzels'); productSubtotal(3.99, 'pretzels')"
                                             data-type="minus" data-field="">
                                             -
                                         </button>
                                     </span>
-                                    <input class="quantity-input quantity-input-pretzels" size="3" type="text" value="1">
+
+                                    <input class="quantity-input" id="qty-pretzels" size="3" type="text" value="1">
+
                                     <span class="input-group-btn">
-                                        <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus(3.99, 'pretzels')"
+                                        <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus('pretzels'); productSubtotal(3.99, 'pretzels')"
                                             data-type="plus" data-field="">
                                             +
                                         </button>
@@ -404,14 +414,16 @@
                             <div class="row quantity justify-content-around">
                                 <div class="">
                                     <span class="input-group-btn">
-                                        <button type="button" class="quantity-minus btn btn-danger btn-number" onclick="minus(8.49, 'popcorn')"
+                                        <button type="button" class="quantity-minus btn btn-danger btn-number" onclick="minus('popcorn'); productSubtotal(8.49, 'popcorn')"
                                             data-type="minus" data-field="">
                                             -
                                         </button>
                                     </span>
-                                    <input class="quantity-input quantity-input-popcorn" size="3" type="text" value="1">
+
+                                    <input class="quantity-input" id="qty-popcorn" size="3" type="text" value="1">
+
                                     <span class="input-group-btn">
-                                        <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus(8.49, 'popcorn')"
+                                        <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus('popcorn'); productSubtotal(8.49, 'popcorn')"
                                             data-type="plus" data-field="">
                                             +
                                         </button>
