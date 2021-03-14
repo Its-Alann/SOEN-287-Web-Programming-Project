@@ -12,9 +12,12 @@
     <link rel="stylesheet" href="../../../public/css/fruitsandveg-aisle.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script src="../../js/bakery-aisle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body onload="updateValues()">
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -101,14 +104,14 @@
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-left-minus btn btn-danger btn-number incdec"
-                                        data-type="minus" data-field="">
+                                        data-type="minus" data-field="" onclick="decrement('frenchBaguetteAmount')">
                                       -
                                     </button>
                                 </span>
-                                <input size="3" type="text" value="1">
+                                <input id="frenchBaguetteAmount" size="3" type="text" value="1">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-right-plus btn btn-success btn-number incdec"
-                                        data-type="plus" data-field="">
+                                        data-type="plus" data-field="" onclick="increment('frenchBaguetteAmount')">
                                         +
                                     </button>
                                 </span>
@@ -139,14 +142,14 @@
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-left-minus btn btn-danger btn-number incdec"
-                                        data-type="minus" data-field="">
+                                        data-type="minus" data-field="" onclick="decrement('whiteBreadAmount')">
                                       -
                                     </button>
                                 </span>
-                                <input size="3" type="text" value="1" >
+                                <input id="whiteBreadAmount" size="3" type="text" value="1" >
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-right-plus btn btn-success btn-number incdec"
-                                        data-type="plus" data-field="">
+                                        data-type="plus" data-field="" onclick="increment('whiteBreadAmount')">
                                         +
                                     </button>
                                 </span>
@@ -176,14 +179,14 @@
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-left-minus btn btn-danger btn-number incdec"
-                                        data-type="minus" data-field="">
+                                        data-type="minus" data-field="" onclick="decrement('wholeWheatBreadAmount')">
                                         -
                                     </button>
                                 </span>
-                                <input size="3" type="text" value="1">
+                                <input id="wholeWheatBreadAmount" size="3" type="text" value="1">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-right-plus btn btn-success btn-number incdec"
-                                        data-type="plus" data-field="">
+                                        data-type="plus" data-field="" onclick="increment('wholeWheatBreadAmount')">
                                         +
                                     </button>
                                 </span>
@@ -215,14 +218,14 @@
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-left-minus btn btn-danger btn-number incdec"
-                                        data-type="minus" data-field="">
+                                        data-type="minus" data-field="" onclick="decrement('raisinBreadAmount')">
                                         -
                                     </button>
                                 </span>
-                                <input size="3" type="text" value="1" >
+                                <input id="raisinBreadAmount" size="3" type="text" value="1" >
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-right-plus btn btn-success btn-number incdec"
-                                        data-type="plus" data-field="">
+                                        data-type="plus" data-field="" onclick="increment('raisinBreadAmount')">
                                         +
                                     </button>
                                 </span>
@@ -253,14 +256,14 @@
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-left-minus btn btn-danger btn-number incdec"
-                                        data-type="minus" data-field="">
+                                        data-type="minus" data-field="" onclick="decrement('croissantAmount')">
                                         -
                                     </button>
                                 </span>
-                                <input size="3" type="text" value="1">
+                                <input id="croissantAmount" size="3" type="text" value="1">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-right-plus btn btn-success btn-number incdec"
-                                        data-type="plus" data-field="">
+                                        data-type="plus" data-field="" onclick="increment('croissantAmount')">
                                         +
                                     </button>
                                 </span>
@@ -291,14 +294,14 @@
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-left-minus btn btn-danger btn-number incdec"
-                                        data-type="minus" data-field="">
+                                        data-type="minus" data-field="" onclick="decrement('bagelAmount')">
                                         -
                                     </button>
                                 </span>
-                                <input size="3" type="text" value="1" >
+                                <input id="bagelAmount" size="3" type="text" value="1" >
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-right-plus btn btn-success btn-number incdec"
-                                        data-type="plus" data-field="">
+                                        data-type="plus" data-field="" onclick="increment('bagelAmount')">
                                         +
                                     </button>
                                 </span>
@@ -329,14 +332,14 @@
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-left-minus btn btn-danger btn-number incdec"
-                                        data-type="minus" data-field="">
+                                        data-type="minus" data-field="" onclick="decrement('chocolatineAmount')">
                                         -
                                     </button>
                                 </span>
-                                <input size="3" type="text" value="1" >
+                                <input id="chocolatineAmount" size="3" type="text" value="1" >
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-right-plus btn btn-success btn-number incdec"
-                                        data-type="plus" data-field="">
+                                        data-type="plus" data-field="" onclick="increment('chocolatineAmount')">
                                         +
                                     </button>
                                 </span>
@@ -367,14 +370,14 @@
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-left-minus btn btn-danger btn-number incdec"
-                                        data-type="minus" data-field="">
+                                        data-type="minus" data-field="" onclick="decrement('chocolateCakeAmount')">
                                         -
                                     </button>
                                 </span>
-                                <input size="3" type="text" value="1">
+                                <input id="chocolateCakeAmount" size="3" type="text" value="1">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-right-plus btn btn-success btn-number incdec"
-                                        data-type="plus" data-field="">
+                                        data-type="plus" data-field="" onclick="increment('chocolateCakeAmount')">
                                         +
                                     </button>
                                 </span>
