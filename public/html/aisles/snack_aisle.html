@@ -20,7 +20,7 @@
         />
     </head>
 
-    <body onload="updateQuantities()">
+    <body onload="updateQuantities(); productSubtotal(3.99, 'cookies'); productSubtotal(2.99, 'bars'); productSubtotal(1.89, 'chips'); productSubtotal(4.99, 'pistachios'); productSubtotal(3.99, 'pretzels'); productSubtotal(8.49, 'popcorn')">
         <script type="text/javascript" src="../../js/michael_buttons.js"></script>
 
         <!-- Navbar -->
@@ -145,7 +145,7 @@
                                         </button>
                                     </span>
 
-                                    <input class="quantity-input" id="qty-cookies" size="3" type="text" value="1">
+                                    <input class="quantity-input" id="qty-cookies" size="3" type="text" value="0">
 
                                     <span class="input-group-btn">
                                         <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus('cookies'); productSubtotal(3.99, 'cookies')"
@@ -202,7 +202,7 @@
                                         </button>
                                     </span>
 
-                                    <input class="quantity-input" id="qty-bars" size="3" type="text" value="1">
+                                    <input class="quantity-input" id="qty-bars" size="3" type="text" value="0">
 
                                     <span class="input-group-btn">
                                         <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus('bars'); productSubtotal(2.99, 'bars')"
@@ -255,7 +255,7 @@
                                         </button>
                                     </span>
 
-                                    <input class="quantity-input" id="qty-chips" size="3" type="text" value="1">
+                                    <input class="quantity-input" id="qty-chips" size="3" type="text" value="0">
 
                                     <span class="input-group-btn">
                                         <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus('chips'); productSubtotal(1.89, 'chips')"
@@ -310,7 +310,7 @@
                                         </button>
                                     </span>
 
-                                    <input class="quantity-input" id="qty-pistachios" size="3" type="text" value="1">
+                                    <input class="quantity-input" id="qty-pistachios" size="3" type="text" value="0">
 
                                     <span class="input-group-btn">
                                         <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus('pistachios'); productSubtotal(4.99, 'pistachios')"
@@ -365,7 +365,7 @@
                                         </button>
                                     </span>
 
-                                    <input class="quantity-input" id="qty-pretzels" size="3" type="text" value="1">
+                                    <input class="quantity-input" id="qty-pretzels" size="3" type="text" value="0">
 
                                     <span class="input-group-btn">
                                         <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus('pretzels'); productSubtotal(3.99, 'pretzels')"
@@ -420,7 +420,7 @@
                                         </button>
                                     </span>
 
-                                    <input class="quantity-input" id="qty-popcorn" size="3" type="text" value="1">
+                                    <input class="quantity-input" id="qty-popcorn" size="3" type="text" value="0">
 
                                     <span class="input-group-btn">
                                         <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus('popcorn'); productSubtotal(8.49, 'popcorn')"

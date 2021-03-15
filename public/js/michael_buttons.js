@@ -29,8 +29,8 @@ function minus(product) {
 }
 
 function productSubtotal(price, product) {
-    var qty = document.getElementById("qty-" + product);
-    var subtotal = qty.value * price;
+    var qty = localStorage.getItem("qty-" + product);
+    var subtotal = qty * price;
     document.getElementsByClassName("subtotal-" + product)[0].textContent = "(Subtotal: $" + subtotal.toFixed(2) + ")";
 }
 
