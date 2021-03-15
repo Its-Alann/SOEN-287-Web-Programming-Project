@@ -11,9 +11,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script src = "../../js/dairyandeggs-aisle.js"></script>
 </head>
 
-<body>
+<body onload = 'setValues()'>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -90,14 +91,14 @@
                         <p class="pricing">$4.99/each</p>
                         <div class="col-lg-12 incDecButton">
                             <span class="input-group-btn">
-                                <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                <button onclick="decrement('amount-sam')" type="button" class="quantity-left-minus btn btn-danger btn-number"
                                     data-type="minus" data-field="">
                                     -
                                 </button>
                             </span>
-                            <input size="3" type="text" value="1">
+                            <input id= "amount-sam" size="3" type="text" value="1">
                             <span class="input-group-btn">
-                                <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                <button onclick="increment('amount-sam')" type="button" class="quantity-right-plus btn btn-success btn-number"
                                     data-type="plus" data-field="">
                                     +
                                 </button>
@@ -112,9 +113,14 @@
                 </div>
 
                 <div class="accordian">
-                    <input type="checkbox" id="title1" />
-                    <label for="title1">More Description</label>
-                </div>
+                  <input type="checkbox" id="title1" />
+                  <label onclick="showDescription()" for="title1">More Description</label>
+
+                  <p id="description" style="display:none; padding-top: 10px">
+                    You deserve more oh-so-mmm moments—especially if they include a note of vanilla. </br>
+                    And our smooth almondmilk also has 50% more calcium than milk. </p>
+
+                  </div>
 
             </div>
         </div>
