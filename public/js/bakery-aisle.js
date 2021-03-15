@@ -27,9 +27,9 @@ function updateValues(){
 
 function showDescription(){
   var description = document.getElementById("descriptionText");
-  if(descrption.style.display == "none"){
+  if(description.style.display == "none"){
     description.style.display = "block" ;
-  
+
   }
   else{
     description.style.display = "none";
