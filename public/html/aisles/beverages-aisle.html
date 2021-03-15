@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="../../../public/css/beverage.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script src="../../js/beverages-aisle.js"></script>
     
 </head>
 
-<body>
+<body onload="updateAllValues()">
     
     <!--NAVIGATIONAL BAR-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -94,14 +95,14 @@
                         <div class="row quantity">
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                    <button onclick="decrement('amountWater')" type="button" class="quantity-left-minus btn btn-danger btn-number"
                                         data-type="minus" data-field="">
                                         <span class="incdec">-</span>
                                     </button>
                                 </span>
-                                <input size="3" type="text" value="1">
+                                <input id="amountWater" size="3" type="text" value="1">
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                    <button onclick="increment('amountWater')" type="button" class="quantity-right-plus btn btn-success btn-number"
                                         data-type="plus" data-field="">
                                         <span class="incdec">+</span>
                                     </button>
@@ -132,14 +133,14 @@
                         <div class="row quantity">
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                    <button onclick="decrement('amountSprite')" type="button" class="quantity-left-minus btn btn-danger btn-number"
                                         data-type="minus" data-field="">
                                         <span class="incdec">-</span>
                                     </button>
                                 </span>
-                                <input size="3" type="text" value="1">
+                                <input id="amountSprite" size="3" type="text" value="1">
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                    <button onclick="increment('amountSprite')" type="button" class="quantity-right-plus btn btn-success btn-number"
                                         data-type="plus" data-field="">
                                         <span class="incdec">+</span>
                                     </button>
@@ -170,14 +171,14 @@
                         <div class="row quantity">
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                    <button onclick="decrement('amountCola')" type="button" class="quantity-left-minus btn btn-danger btn-number"
                                         data-type="minus" data-field="">
                                         <span class="incdec">-</span>
                                     </button>
                                 </span>
-                                <input size="3" type="text" value="1">
+                                <input id="amountCola" size="3" type="text" value="1">
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                    <button onclick="increment('amountCola')" type="button" class="quantity-right-plus btn btn-success btn-number"
                                         data-type="plus" data-field="">
                                         <span class="incdec">+</span>
                                     </button>
@@ -208,14 +209,14 @@
                         <div class="row quantity">
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                    <button onclick="decrement('amountFanta')" type="button" class="quantity-left-minus btn btn-danger btn-number"
                                         data-type="minus" data-field="">
                                         <span class="incdec">-</span>
                                     </button>
                                 </span>
-                                <input size="3" type="text" value="1">
+                                <input id="amountFanta" size="3" type="text" value="1">
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                    <button onclick="increment('amountFanta')" type="button" class="quantity-right-plus btn btn-success btn-number"
                                         data-type="plus" data-field="">
                                         <span class="incdec">+</span>
                                     </button>
@@ -247,14 +248,14 @@
                         <div class="row quantity">
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                    <button onclick="decrement('amountFruitPunch')" type="button" class="quantity-left-minus btn btn-danger btn-number"
                                         data-type="minus" data-field="">
                                         <span class="incdec">-</span>
                                     </button>
                                 </span>
-                                <input size="3" type="text" value="1">
+                                <input id="amountFruitPunch" size="3" type="text" value="1">
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                    <button onclick="increment('amountFruitPunch')" type="button" class="quantity-right-plus btn btn-success btn-number"
                                         data-type="plus" data-field="">
                                         <span class="incdec">+</span>
                                     </button>
@@ -285,14 +286,14 @@
                         <div class="row quantity">
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                    <button onclick="decrement('amountOrangeJuice')" type="button" class="quantity-left-minus btn btn-danger btn-number"
                                         data-type="minus" data-field="">
                                         <span class="incdec">-</span>
                                     </button>
                                 </span>
-                                <input size="3" type="text" value="1">
+                                <input id="amountOrangeJuice" size="3" type="text" value="1">
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                    <button onclick="increment('amountOrangeJuice')" type="button" class="quantity-right-plus btn btn-success btn-number"
                                         data-type="plus" data-field="">
                                         <span class="incdec">+</span>
                                     </button>
@@ -323,14 +324,14 @@
                         <div class="row quantity">
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                    <button onclick="decrement('amountMonster')" type="button" class="quantity-left-minus btn btn-danger btn-number"
                                         data-type="minus" data-field="">
                                         <span class="incdec">-</span>
                                     </button>
                                 </span>
-                                <input size="3" type="text" value="1">
+                                <input id="amountMonster" size="3" type="text" value="1">
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                    <button onclick="increment('amountMonster')" type="button" class="quantity-right-plus btn btn-success btn-number"
                                         data-type="plus" data-field="">
                                         <span class="incdec">+</span>
                                     </button>
@@ -361,14 +362,14 @@
                         <div class="row quantity">
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                    <button onclick="decrement('amountRedBull')" type="button" class="quantity-left-minus btn btn-danger btn-number"
                                         data-type="minus" data-field="">
                                         <span class="incdec">-</span>
                                     </button>
                                 </span>
-                                <input size="3" type="text" value="1">
+                                <input id="amountRedBull" size="3" type="text" value="1">
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number"
+                                    <button onclick="increment('amountRedBull')" type="button" class="quantity-right-plus btn btn-success btn-number"
                                         data-type="plus" data-field="">
                                         <span class="incdec">+</span>
                                     </button>

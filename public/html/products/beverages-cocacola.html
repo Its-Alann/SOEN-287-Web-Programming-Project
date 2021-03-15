@@ -12,9 +12,10 @@
         <link rel="stylesheet" href="../../../public/css/allproducts.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-        
+        <script src="../../js/beverages-aisle.js"></script>
+
     </head>
-    <body>
+    <body onload="updateValue('amountCola')">
          <!--NAVIGATIONAL BAR-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="../../../public/html/index.html">
@@ -86,14 +87,14 @@
                             <p class="pricing">$1.80/bottle</p>
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                    <button onclick="decrement('amountCola')" type="button" class="quantity-left-minus btn btn-danger btn-number"
                                         data-type="minus" data-field="">
                                         <span class="incdec">-</span>
                                     </button>
                                 </span>
-                                <input size="1" type="text" value="0">
+                                <input id="amountCola" size="1" type="text" value="0">
                                 <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn btn-success btn-number"
+                                    <button onclick="increment('amountCola')" type="button" class="quantity-right-plus btn btn btn-success btn-number"
                                         data-type="plus" data-field="">
                                         <span class="incdec">+</span>
                                     </button>
@@ -111,7 +112,11 @@
 
                     <div class="accordian mt-5">
                         <input type="checkbox" id="title1"/>
-                        <label for="title1">More Description</label>
+                        <label onclick="moreDescription()" for="title1">More Description</label>
+                        <p id="description-text" style="display: none;">Our 600mL coca cola beverages are imported straight from the The Coca-Cola Company. 
+                            This refreshing beverage was introduced in the year 1886 and is made from coca leaves and kola nuts. It's main ingredients are: carbonated water, sugar, 
+                            caffeine, phosphoric acid, caramel color and natural flavourings.
+                        </p>
                     </div>
 
                 </div>
