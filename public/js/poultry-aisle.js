@@ -50,11 +50,19 @@ function updateValue(amount){
 }
 
 
-function updateAllValues(){
-var arr=["amount-bm", "amount-cb","amount-cl","amount-ct","amount-gm","amount-sal",'amount-app','amount-ban','amount-kiwi','amount-pap','amount-broc','amount-carr','amount-lett','amount-bell','amount-ore','amount-chips','amount-nvb','amount-pist','amount-pret','amount-pop','amount-ew','amount-sprite','amount-coke','amount-fanta','amount-fp','amount-oj','amount-mon','amount-rb','amount-ssy','amount-sam','amount-qm','amount-qc','amount-be','amount-we','amount-fb','amount-wbl','amount-bbl','amount-nhl','amount-croi','amount-bagel','amount-chocola','amount-tcc'];
-arr.forEach((arr)=>{
-    
-return  updateValue(arr);
-})
+function updateValues(){
+
+    keys = (Object.keys(sessionStorage));
+    console.log(keys);
+    for(i=0; i<keys.length; i++){
+        if(sessionStorage.getItem(keys[i]) != null){
+            var temp = document.getElementById(keys[i]);
+            if(temp){
+                var itemToUpdate = document.getElementById(keys[i]);
+                itemToUpdate.value = (sessionStorage.getItem(keys[i])).toString();
+            }
+        }
+    }
+
 }
 
