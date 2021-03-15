@@ -14,9 +14,11 @@
     <link rel="stylesheet" href="../../public/css/cartnew.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script src = "../js/dairyandeggs-aisle.js"></script>
+    <script src = "../js/cart.js"></script>
 </head>
 
-<body>
+<body onload = 'setValues()'>
 
   <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -92,9 +94,9 @@
           </div>
           <div class="itembuttons">
             <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-outline-danger">-</button>
-                <input class="numberinput" type="number" value="0" min="0">
-              <button type="button" class="btn btn-outline-success">+</button>
+              <button onclick="decrement('cart-add1')" type="button" class="btn btn-outline-danger">-</button>
+                <input id = "cart-add1" class="numberinput" type="number" value="0" min="0">
+              <button onclick="increment('cart-add1')" type="button" class="btn btn-outline-success">+</button>
             </div>
               <button type="button" class="btn btn-outline-danger removebutt">Remove</button>
           </div>
@@ -109,9 +111,9 @@
           </div>
           <div class="itembuttons">
             <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-outline-danger">-</button>
-                <input class="numberinput" type="number" value="0" min="0">
-              <button type="button" class="btn btn-outline-success">+</button>
+              <button onclick="decrement('cart-add2')" type="button" class="btn btn-outline-danger">-</button>
+                <input id = "cart-add2" class="numberinput" class="numberinput" type="number" value="0" min="0">
+              <button onclick="increment('cart-add2')" type="button" class="btn btn-outline-success">+</button>
             </div>
             <button type="button" class="btn btn-outline-danger removebutt">Remove</button>
           </div>
@@ -126,9 +128,9 @@
           </div>
           <div class="itembuttons">
             <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-outline-danger">-</button>
-                <input class="numberinput" type="number" value="0" min="0">
-              <button type="button" class="btn btn-outline-success">+</button>
+              <button onclick="decrement('cart-add3')" type="button" class="btn btn-outline-danger">-</button>
+                <input id = "cart-add3" class="numberinput" class="numberinput" type="number" value="0" min="0">
+              <button onclick="increment('cart-add3')" type="button" class="btn btn-outline-success">+</button>
             </div>
             <button type="button" class="btn btn-outline-danger removebutt">Remove</button>
           </div>
@@ -143,9 +145,9 @@
           </div>
           <div class="itembuttons">
             <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-outline-danger">-</button>
-                <input class="numberinput" type="number" value="0" min="0">
-              <button type="button" class="btn btn-outline-success">+</button>
+              <button onclick="decrement('cart-add4')" type="button" class="btn btn-outline-danger">-</button>
+                <input id = "cart-add4" class="numberinput" class="numberinput" type="number" value="0" min="0">
+              <button onclick="increment('cart-add4')" type="button" class="btn btn-outline-success">+</button>
             </div>
             <button type="button" class="btn btn-outline-danger removebutt">Remove</button>
           </div>
@@ -163,7 +165,7 @@
           </div>
 
           <div class="col-6">
-            <h6>0.00$</h6>
+            <h6 id = "subTotal">0.00$</h6>
           </div>
         </div>
 
@@ -173,7 +175,7 @@
           </div>
 
           <div class="col-6">
-            <h6>0.00$</h6>
+            <h6 id = "qstPrice">0.00$</h6>
           </div>
         </div>
 
@@ -183,7 +185,7 @@
           </div>
 
           <div class="col-6">
-            <h6>0.00$</h6>
+            <h6 id = "gstPrice">0.00$</h6>
           </div>
         </div>
 
@@ -193,7 +195,7 @@
           </div>
 
           <div class="col-6">
-            <h6>0.00$</h6>
+            <h6 id = "shippingPrice">0.00$</h6>
           </div>
         </div>
 
@@ -203,7 +205,7 @@
           </div>
 
           <div class="col-6">
-            <h6>0.00$</h6>
+            <h6 id = "finalPrice">0.00$</h6>
           </div>
         </div>
 
@@ -214,7 +216,7 @@
             </a>
           </div>
           <div class="col-6 nicebuttons">
-            <button type="button" class="btn btn-success btn-sm">Proceed to Checkout</button>
+            <button onclick="getPrices()" type="button" class="btn btn-success btn-sm">Proceed to Checkout</button>
           </div>
         </div>
       </div>
