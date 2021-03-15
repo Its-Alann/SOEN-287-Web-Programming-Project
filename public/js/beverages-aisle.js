@@ -40,12 +40,14 @@ function moreDescription(){
 }
 
 function updateAllValues(){
+
     keys = (Object.keys(sessionStorage));
     console.log(keys);
-    for(i=0; i<keys.lengthl; i++){
+    for(i=0; i<keys.length; i++){
         if(sessionStorage.getItem(keys[i]) != null){
             var itemToUpdate = document.getElementById(keys[i]);
             itemToUpdate.value = (sessionStorage.getItem(keys[i])).toString();
+            
         }
     }
 
