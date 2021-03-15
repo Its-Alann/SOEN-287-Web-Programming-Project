@@ -47,10 +47,10 @@ function updateAllValues(){
         if(sessionStorage.getItem(keys[i]) != null){
             var itemToUpdate = document.getElementById(keys[i]);
             itemToUpdate.value = (sessionStorage.getItem(keys[i])).toString();
-            
+        
         }
     }
-
+    
 }
 
 function updateValue(input){
