@@ -43,11 +43,9 @@ function updateValues(){
     console.log(keys);
     for(i=0; i<keys.length; i++){
         if(sessionStorage.getItem(keys[i]) != null){
-            var temp = document.getElementById(keys[i]);
-            if(temp){
-                var itemToUpdate = document.getElementById(keys[i]);
-                itemToUpdate.value = (sessionStorage.getItem(keys[i])).toString();
-            }
+            var itemToUpdate = document.getElementById(keys[i]);
+            itemToUpdate.value = (sessionStorage.getItem(keys[i])).toString();
+            
         }
     }
 
