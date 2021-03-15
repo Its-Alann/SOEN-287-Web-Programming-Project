@@ -71,6 +71,10 @@ p {
     margin: 10px auto;
 }
 
+.product-info .more-description {
+    display: none;
+}
+
 .btn-more-descr {
     background-color: #78a794;
     color: #fff;
