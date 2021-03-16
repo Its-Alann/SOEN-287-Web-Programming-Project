@@ -14,7 +14,7 @@ function plus(product) {
     var qty = document.getElementById("qty-" + product);
     qty.value++;
 
-    localStorage.setItem("qty-" + product, qty.value.toString());
+    sessionStorage.setItem("qty-" + product, qty.value.toString());
 }
 
 function minus(product) {
@@ -25,19 +25,23 @@ function minus(product) {
         qty.value--;
     }
 
-    localStorage.setItem("qty-" + product, qty.value.toString());
+    sessionStorage.setItem("qty-" + product, qty.value.toString());
 }
 
 function productSubtotal(price, product) {
-    var qty = localStorage.getItem("qty-" + product);
+    var qty = sessionStorage.getItem("qty-" + product);
+    if (qty == null) {
+        qty = 1;
+    }
+    console.log(qty)
     var subtotal = qty * price;
     document.getElementsByClassName("subtotal-" + product)[0].textContent = "(Subtotal: $" + subtotal.toFixed(2) + ")";
 }
 
 function updateQuantities() {
-    var keys = Object.keys(localStorage);
+    var keys = Object.keys(sessionStorage);
     for (i = 0; i < keys.length; i++) {
-        var val = localStorage.getItem(keys[i]);
+        var val = sessionStorage.getItem(keys[i]);
         if (val != null) {
             var element = document.getElementById(keys[i]);
             if (element != null) {
