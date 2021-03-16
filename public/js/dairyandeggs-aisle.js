@@ -23,17 +23,6 @@ function decrement(amount) {
 function setValues(){
 
   keys = (Object.keys(sessionStorage));
-
-  console.log(keys);
-
-  for(i=0; i<keys.length; i++){
-
-    var itemToUpdate = document.getElementById(keys[i]);
-    itemToUpdate.value = sessionStorage.getItem(keys[i])
-  }
-
-}
-
     console.log(keys);
     for(i=0; i<keys.length; i++){
         if(sessionStorage.getItem(keys[i]) != null){
@@ -56,4 +45,3 @@ function showDescription(){
       description.style.display="none";
     }
   }
-
