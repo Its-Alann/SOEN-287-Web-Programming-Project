@@ -18,10 +18,10 @@ function getTotal(item){
     var total = document.getElementById("totalPrice");
     var quantity = document.getElementById(item);
     if(quantity.value > 0){
-        total.innerHTML = "Total Price: $" + Math.round((quantity.value*rate) * 100) / 100;
+        total.innerHTML = "Sub-total: $" + Math.round((quantity.value*rate) * 100) / 100;
     }
     else{
-        total.innerHTML = "Total Price: $0"
+        total.innerHTML = "Sub-total: $0"
     }
 }
 
