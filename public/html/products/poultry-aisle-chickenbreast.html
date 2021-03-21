@@ -93,16 +93,17 @@
 
                     <div class="row quantity">
                         <p class="pricing">8.99/kg</p>
+                        <p class="pricing" style="font-size: medium;" id="totalPrice">Sub total: $8.99</p>
                         <div class="col-lg-12 incDecButton">
                             <span class="input-group-btn">
-                                <button onclick="decrement('amount-cb');" class="quantity-left-minus btn btn-danger btn-number"
+                                <button onclick="decrement('amount-cb');totalprice('amount-cb');" class="quantity-left-minus btn btn-danger btn-number"
                                     data-type="minus" data-field="">-
                                 </button></span>
 
                             <input id='amount-cb' size="3" type="text" value="1">
                             
                             <span class="input-group-btn">
-                            <button onclick="increment('amount-cb');" type="button" class="quantity-right-plus btn btn-success btn-number"
+                            <button onclick="increment('amount-cb');totalprice('amount-cb');" type="button" class="quantity-right-plus btn btn-success btn-number"
                                     data-type="plus" data-field="">+
 </button>
                             </span>
