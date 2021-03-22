@@ -52,11 +52,14 @@ function updateValue(amount){
 
 
 function updateValues(){
-
-    for(const key in sessionStorage){
+    keys = (Object.keys(sessionStorage));
+    for(i=0; i<keys.length; i++){
         if(sessionStorage.getItem(keys[i]) != null){
+            var temp = document.getElementById(keys[i]);
+            if(temp){
                 var itemToUpdate = document.getElementById(keys[i]);
                 itemToUpdate.value = (sessionStorage.getItem(keys[i])).toString();
+            }
         }
     }
 
@@ -73,6 +76,6 @@ function totalprice(amount){
     total.innerHTML="Sub total: $"+Math.round((quantity.value*cost + Number.EPSILON) * 100) / 100;
     }
  else{
-    total.innerHTML="Sub total: $"+Math.round((quantity.value*cost + Number.EPSILON) * 100) / 100;
+    total.innerHTML="Sub:total $"+Math.round((quantity.value*cost + Number.EPSILON) * 100) / 100;
  }}
   
