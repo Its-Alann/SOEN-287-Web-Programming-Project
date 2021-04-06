@@ -10,7 +10,6 @@ else{
 
 function increment(amount) {
 
-
     if(sessionStorage[amount]){
     var setAmount=parseInt(sessionStorage.getItem(amount));
     }
@@ -46,15 +45,37 @@ function updateValue(amount){
     if(sessionStorage.getItem(amount) != null){
         var itemToUpdate = document.getElementById(amount);
         itemToUpdate.value = (sessionStorage.getItem(amount)).toString();
+
+    totalprice(amount);
     }
 }
 
 
-function updateAllValues(){
-var arr=["amount-bm", "amount-cb","amount-cl","amount-ct","amount-gm","amount-sal",'amount-app','amount-ban','amount-kiwi','amount-pap','amount-broc','amount-carr','amount-lett','amount-bell','amount-ore','amount-chips','amount-nvb','amount-pist','amount-pret','amount-pop','amount-ew','amount-sprite','amount-coke','amount-fanta','amount-fp','amount-oj','amount-mon','amount-rb','amount-ssy','amount-sam','amount-qm','amount-qc','amount-be','amount-we','amount-fb','amount-wbl','amount-bbl','amount-nhl','amount-croi','amount-bagel','amount-chocola','amount-tcc'];
-arr.forEach((arr)=>{
-    
-return  updateValue(arr);
-})
+function updateValues(){
+    keys = (Object.keys(sessionStorage));
+    for(i=0; i<keys.length; i++){
+        if(sessionStorage.getItem(keys[i]) != null){
+            var temp = document.getElementById(keys[i]);
+            if(temp){
+                var itemToUpdate = document.getElementById(keys[i]);
+                itemToUpdate.value = (sessionStorage.getItem(keys[i])).toString();
+            }
+        }
+    }
+
 }
 
+function totalprice(amount){
+
+    var products = document.getElementsByClassName("pricing")[0].innerHTML;
+    cost = parseFloat(products.slice(0,-3));
+    var total = document.getElementById("totalPrice");
+    var quantity = document.getElementById(amount);
+
+    if(sessionStorage.getItem(amount)===null){
+    total.innerHTML="Sub total: $"+Math.round((quantity.value*cost + Number.EPSILON) * 100) / 100;
+    }
+ else{
+    total.innerHTML="Sub:total $"+Math.round((quantity.value*cost + Number.EPSILON) * 100) / 100;
+ }}
+  

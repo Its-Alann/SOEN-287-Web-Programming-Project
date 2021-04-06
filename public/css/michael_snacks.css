@@ -65,7 +65,7 @@ p {
     margin: 20px auto;
 }
 
-.aisle-page .card img,
+.aisle-page .card-img-top,
 .product-info .card-img {
     width: 90%;
     margin: 10px auto;
