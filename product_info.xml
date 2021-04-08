@@ -54,4 +54,58 @@
         <weight>225 g</weight>
         <quantity>10</quantity>
     </product>
+    <product>
+        <code>7</code>
+        <name>Source Strawberry Yogurt</name>
+        <brand>Source</brand>
+        <description>Source Strawberry Yogurt is made with real fruits to guarantee you an incredible flavour. Free from fat and full of flavour, now you can enjoy wellness your way every day.</description>
+        <price>3.99</price>
+        <weight>650 g</weight>
+        <quantity>10</quantity>
+    </product>
+    <product>
+        <code>8</code>
+        <name>Silk Vanilla Almond Milk</name>
+        <brand>Silk</brand>
+        <description>You deserve more oh-so-mmm moments—especially if they include a note of vanilla. And our smooth almondmilk also has 50% more calcium than milk.</description>
+        <price>4.99</price>
+        <weight>1.85 L</weight>
+        <quantity>10</quantity>
+    </product>
+    <product>
+        <code>9</code>
+        <name>Quebon 2% Milk</name>
+        <brand>Quebon</brand>
+        <description>Why change tradition ? Québon partly skimmed 2% milk combine all the great taste and freshness of Quebec's milk with many vitamins and minerals necessary to the maintenance of good health. From our farms to your family.</description>
+        <price>6.99</price>
+        <weight>4 L</weight>
+        <quantity>10</quantity>
+    </product>
+    <product>
+        <code>10</code>
+        <name>P'Tit Quebec Cheese</name>
+        <brand>P'Tit Quebec</brand>
+        <description>P'Tit Quebec mozarella cheese is the freshest cheese you can get in Quebec. Use it in the kitchen for some delicious pasta or for a simple snack for the kids.</description>
+        <price>4.99</price>
+        <weight>460 g</weight>
+        <quantity>10</quantity>
+    </product>
+    <product>
+        <code>11</code>
+        <name>Burnbrae Brown Eggs</name>
+        <brand>Burnbrae</brand>
+        <description>Burnbrae Farms Brown Eggs are produced by Rhode Island Red hens. Although the nutritional value is the same as white eggs, some people swear they taste better; who are we to argue?</description>
+        <price>4.50</price>
+        <weight>760 g</weight>
+        <quantity>10</quantity>
+    </product>
+    <product>
+        <code>12</code>
+        <name>Burnbrae White Eggs</name>
+        <brand>Burnbrae</brand>
+        <description>Naturegg Omega 3 is a nutritionally enhanced egg for people looking for natural foods with more essential nutrients. While all eggs are nutritious, natural and offer a great source of protein, vitamins and minerals, Naturegg Omega 3 eggs also provide an additional source of DHA omega-3 fatty acids.</description>
+        <price>2.99</price>
+        <weight>760 g</weight>
+        <quantity>10</quantity>
+    </product>
 </products>
