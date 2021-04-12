@@ -108,4 +108,60 @@
         <weight>760 g</weight>
         <quantity>10</quantity>
     </product>
+    <product>
+        <code>13</code>
+        <name>Chicken Breast</name>
+        <brand>Canadian</brand>
+        <description>The Chicken's were raised on a free range farm in the upper regions of Quebec. They are antiobiotics and GMO free. SUPPORT YOUR LOCAL FARMERS.</description>
+        <price>8.99</price>
+        <weight>1000 g</weight>
+        <quantity>10</quantity>
+    </product>
+    <product>
+        <code>14</code>
+        <name>Chicken Thigh</name>
+        <brand>Canadian</brand>
+        <description>The Chicken's were raised on a free range farm in the upper regions of Quebec. They are antiobiotics and GMO free. Contains both leg and Thighs.
+WARNING: May contain bones. SUPPORT YOUR LOCAL FARMERS.</description>
+        <price>7.99</price>
+        <weight>1000 g</weight>
+        <quantity>10</quantity>
+    </product>
+    <product>
+        <code>15</code>
+        <name>Chicken Legs</name>
+        <brand>Canadian</brand>
+        <description>The Chicken's were raised on a free range farm in the upper regions of Quebec. They are antiobiotics and GMO free. Contains both leg and Thighs.
+WARNING: May contain bones. SUPPORT YOUR LOCAL FARMERS</description>
+        <price>6.99</price>
+        <weight>1000 g</weight>
+        <quantity>10</quantity>
+    </product>
+    <product>
+        <code>16</code>
+        <name>Ground Meat</name>
+        <brand>Canadian</brand>
+        <description>Ground meat was taken from cows grown on Canadian soil. They were grown antibiotic free and GMO free.SUPPORT YOUR LOCAL FARMERS.</description>
+        <price>8.99</price>
+        <weight>1000 g</weight>
+        <quantity>10</quantity>
+    </product>
+    <product>
+        <code>17</code>
+        <name>Beyond Meat</name>
+        <brand>Beyond Meat</brand>
+        <description>"The Beyond Burger is a plant-based burger that looks, cooks, and satisfies like beef. It has all the juicy, meaty deliciousness of a traditional burger, but comes with the upsides of a plant-based meal. The Beyond Burger has 20g of plant-based protein and has no GMOs, soy, or gluten." - BeyondMeat</description>
+        <price>10.99</price>
+        <weight>1000 g</weight>
+        <quantity>10</quantity>
+    </product>
+    <product>
+        <code>18</code>
+        <name>Atlantic Salmon</name>
+        <brand>Canadian</brand>
+        <description>The Salmon was caught off the coast of Newfoundland and kept alive until reaching its final destination to ensure its freshness. SUPPORT YOUR CANADIAN FISH FARMERS.</description>
+        <price>14.99</price>
+        <weight>1000 g</weight>
+        <quantity>10</quantity>
+    </product>
 </products>
