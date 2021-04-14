@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>McJawz | Sign Up </title>
-    <meta http-equiv = "refresh" content = "0; url = ../php/add_user.php" />
     <link rel="stylesheet" href="../../public/css/bootstrap.css">
     <link rel="stylesheet" href="../../public/css/backstore.css">
     <link rel="icon" href="../../images/favicon.ico" type="image/x-icon" />
@@ -52,31 +51,47 @@
                       <h1>Create an account</h1></div>
 
           <div class="card-body my-auto ">
-            <form action="../php/add_user.php" method = "post">
+            <?php
+            if(isset($_POST['submit'])){//The user pushed the submit button
+              $xml = simplexml_load_file("../../user_info.xml");//Loading XML file in an object
+              $currentAmount = $xml->amount;
+              $newUser = $xml->userList->addChild("user");
+              $newUser->addChild("code", $currentAmount);
+              $newUser->addChild("firstName", $_POST['firstName']);
+              $newUser->addChild("lastName", $_POST['lastName']);
+              $newUser->addChild("email", $_POST['email']);
+              $newUser->addChild("password", $_POST['password']);
+              $newUser->addChild("address", $_POST['address']);
+              $newUser->addChild("city", $_POST['city']);
+              $newUser->addChild("stateOrProvince", $_POST['stateOrProvince']);
+              $newUser->addChild("postalCode", $_POST['postalCode']);
+
+              $xml->amount = intval($currentAmount)+1;//Increasing the amount value in XML
+              $xml->asXML("../../user_info.xml");//Saving to XML file
+            }
+             ?>
+            <form action="" method = "POST">
               <input class="inputField" type="text" placeholder="First Name" name = "firstName">
               <input class="inputField" type="text" placeholder="Last Name" name = "lastName">
               <input class="inputField" type="text" placeholder="Address" name = "address">
               <input class="inputField" type="text" placeholder="City" name = "city">
               <input class="inputField" type="text" placeholder="State/Province" name = "stateOrProvince">
-              <input class="inputField" type="text" placeholder="Postal Code" name = "postal">
+              <input class="inputField" type="text" placeholder="Postal Code" name = "postalCode">
                 <input class="inputField" type="text" placeholder="Email" name = "email">
                 <input class="inputField" type="text" placeholder="Confirm Email">
                 <input class="inputField " type="password" placeholder="Create Password" name = "password">
                 <input class="inputField " type="password" placeholder="Confirm Password">
                 <div class="formButtons">
-                    <input type="submit" value = "Submit" class="btn btn-primary mt-3 mb-3">
-                    <button type="button" class="btn btn-danger mt-3 mb-3">Reset</button>
+                    <input type="submit" name = "submit" value = "Submit" class="btn btn-primary mt-3 mb-3">
+                    <button type="button"  class="btn btn-danger mt-3 mb-3">Reset</button>
                 </div>
             </form></div>
             <div class="card-footer bg-dark">
-                <h6><a class="clickhere" href="../html/login.html"> Already have an account? Click here to login</a></h6>
+                <h6>Already have an account? <a class="clickhere" href="../html/login.html"> Click here to login</a></h6>
               </div>
           </div>
         </div>
       </div>
-
-
-
 
     <div class="footer">
         <div class="footer-item ml-3">
