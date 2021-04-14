@@ -1,57 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <products>
-    <product>
-        <code>1</code>
-        <name>Oreo Original Cookies</name>
-        <brand>CHRISTIE</brand>
-        <description>OREO Chocolate Sandwich Cookies have been America's favorite cookie for over 100 years. Stuffed with delicious OREO creme, these chocolate sandwich cookies are supremely dunkable. OREO cookies are great for sharing with friends, serving at parties, or enjoying with cold milk.</description>
-        <price>3.99</price>
-        <weight>500 g</weight>
-        <quantity>10</quantity>
-    </product>
-    <product>
-        <code>2</code>
-        <name>Crunchy Pecan Cereal Bars</name>
-        <brand>NATURE VALLEY</brand>
-        <description>A tasty snack for a busy day or an active lifestyle! Smart snacking has never tasted so good.</description>
-        <price>2.99</price>
-        <weight>210 g</weight>
-        <quantity>10</quantity>
-    </product>
-    <product>
-        <code>3</code>
-        <name>Classic Potato Chips</name>
-        <brand>LAY'S</brand>
-        <description>It all starts with farm-grown potatoes, cooked and seasoned to perfection. So every LAY'S potato chip is perfectly crispy and full of fresh potato taste. Happiness in Every Bite.</description>
-        <price>1.89</price>
-        <weight>66 g</weight>
-        <quantity>10</quantity>
-    </product>
-    <product>
-        <code>4</code>
-        <name>Classic Thins Pretzels</name>
-        <brand>ROLD GOLD</brand>
-        <description>Between the one-of-a-kind flavor and crispy texture of ROLD GOLD pretzels, you just might fall in love with this golden-baked snack all over again every time you take a break. Try them with peanut butter, hummus or on their own to take your break to a whole new level!</description>
-        <price>3.99</price>
-        <weight>400 g</weight>
-        <quantity>10</quantity>
-    </product>
-    <product>
-        <code>5</code>
-        <name>Extra Buttery 10 Pack Popcorn</name>
-        <brand>ORVILLE REDENBACHER'S</brand>
-        <description>Treat yourself to the original. Made with the perfect balance of butter flavor and salt, our classic microwave butter popcorn is packed up in mini microwave bags for easy snacking.</description>
-        <price>8.49</price>
-        <weight>820 g</weight>
-        <quantity>10</quantity>
-    </product>
-    <product>
-        <code>6</code>
-        <name>Roasted Unsalted Pistachios</name>
-        <brand>WONDERFUL</brand>
-        <description>Fans of Wonderful Pistachios can now enjoy a sodium-free version of our pistachios, roasted to perfection with no additives.</description>
-        <price>4.99</price>
-        <weight>225 g</weight>
-        <quantity>10</quantity>
-    </product>
+    <total_products>6</total_products>
+    <snacks_aisle>
+        <product>
+            <code>1</code>
+            <aisle>snacks</aisle>
+            <name>Oreo Original Cookies</name>
+            <brand>CHRISTIE</brand>
+            <description>OREO Chocolate Sandwich Cookies have been America's favorite cookie for over 100 years. Stuffed with delicious OREO creme, these chocolate sandwich cookies are supremely dunkable. OREO cookies are great for sharing with friends, serving at parties, or enjoying with cold milk.</description>
+            <price>3.99</price>
+            <weight>500 g</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>2</code>
+            <aisle>snacks</aisle>
+            <name>Crunchy Pecan Cereal Bars</name>
+            <brand>NATURE VALLEY</brand>
+            <description>A tasty snack for a busy day or an active lifestyle! Smart snacking has never tasted so good.</description>
+            <price>2.99</price>
+            <weight>210 g</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>3</code>
+            <aisle>snacks</aisle>
+            <name>Classic Potato Chips</name>
+            <brand>LAY'S</brand>
+            <description>It all starts with farm-grown potatoes, cooked and seasoned to perfection. So every LAY'S potato chip is perfectly crispy and full of fresh potato taste. Happiness in Every Bite.</description>
+            <price>1.89</price>
+            <weight>66 g</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>4</code>
+            <aisle>snacks</aisle>
+            <name>Classic Thins Pretzels</name>
+            <brand>ROLD GOLD</brand>
+            <description>Between the one-of-a-kind flavor and crispy texture of ROLD GOLD pretzels, you just might fall in love with this golden-baked snack all over again every time you take a break. Try them with peanut butter, hummus or on their own to take your break to a whole new level!</description>
+            <price>3.99</price>
+            <weight>400 g</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>5</code>
+            <aisle>snacks</aisle>
+            <name>Extra Buttery 10 Pack Popcorn</name>
+            <brand>ORVILLE REDENBACHER'S</brand>
+            <description>Treat yourself to the original. Made with the perfect balance of butter flavor and salt, our classic microwave butter popcorn is packed up in mini microwave bags for easy snacking.</description>
+            <price>8.49</price>
+            <weight>820 g</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>6</code>
+            <aisle>snacks</aisle>
+            <name>Roasted Unsalted Pistachios</name>
+            <brand>WONDERFUL</brand>
+            <description>Fans of Wonderful Pistachios can now enjoy a sodium-free version of our pistachios, roasted to perfection with no additives.</description>
+            <price>4.99</price>
+            <weight>225 g</weight>
+            <quantity>10</quantity>
+        </product>
+    </snacks_aisle>
+    <meat_poultry_fish_aisle></meat_poultry_fish_aisle>
+    <bakery_aisle></bakery_aisle>
+    <beverages_aisle></beverages_aisle>
+    <dairy_eggs_aisle></dairy_eggs_aisle>
+    <fruits_vegetables_aisle></fruits_vegetables_aisle>
 </products>
