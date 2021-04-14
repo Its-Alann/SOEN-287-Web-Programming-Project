@@ -67,7 +67,7 @@ function getPrices() {
   document.getElementById("shippingPrice").innerHTML = shipping + ".00$";
 
   var finalPrice = subtotal + qst + gst + shipping;
-  document.getElementById("finalPrice").innerHTML = Math.round(finalPrice * 100) / 100
+  document.getElementById("finalPrice").innerHTML = Math.round(finalPrice * 100) / 100 + "$";
 }
 
 console.log(localStorage.getItem('subTotal'));
