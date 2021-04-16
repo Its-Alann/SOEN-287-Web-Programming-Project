@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <products>
-    <total_products>12</total_products>
+    <total_products>20</total_products>
     <snacks_aisle>
         <product>
             <code>1</code>
@@ -122,5 +122,79 @@
           <quantity>10</quantity>
       </product>
     </dairy_eggs_aisle>
+    <beverages_aisle>
+        <product>
+            <code>13</code>
+            <name>Evian Water</name>
+            <brand>Evian</brand>
+            <description>Evian water is a brand of mineral water coming from sources near Évian-les-Bains, on the south shore of Lake Geneva.</description>
+            <price>1.20</price>
+            <weight>500mL</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>14</code>
+            <name>Sprite</name>
+            <brand>Sprite</brand>
+            <description>A colourless, lemon-lime beverage produced by the Coca-Cola Company.</description>
+            <price>1.80</price>
+            <weight>600mL</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>15</code>
+            <name>Coca Cola</name>
+            <brand>Coca Cola</brand>
+            <description>A carbonated soft drink originally made and intended as a patent medicine.</description>
+            <price>1.80</price>
+            <weight>600mL</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>16</code>
+            <name>Fanta</name>
+            <brand>Fanta</brand>
+            <description>An orange flavored carbonated soft drink created by Coca-Cola.</description>
+            <price>1.80</price>
+            <weight>600mL</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>17</code>
+            <name>Fruit Punch</name>
+            <brand>Minute Maid</brand>
+            <description>A combination made from real fruit creating a refreshing and delicious blend.</description>
+            <price>2.25</price>
+            <weight>1.75L</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>18</code>
+            <name>Orange Juice</name>
+            <brand>Minute Maid</brand>
+            <description>A delectable and refreshing blend of 100% natural orange juices.</description>
+            <price>2.25</price>
+            <weight>1.75L</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>19</code>
+            <name>Monster Energy Drink</name>
+            <brand>Monster</brand>
+            <description>An energy drink made from taurine.</description>
+            <price>2.75</price>
+            <weight>473mL</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>20</code>
+            <name>RedBull Energy Drink</name>
+            <brand>RedBull</brand>
+            <description>RedBull is an energy that "Gives You Wings".</description>
+            <price>1.99</price>
+            <weight>355mL</weight>
+            <quantity>10</quantity>
+        </product>
+    </beverages_aisle>
     <fruits_vegetables_aisle></fruits_vegetables_aisle>
 </products>
