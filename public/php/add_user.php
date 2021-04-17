@@ -31,17 +31,23 @@ if(isset($_POST['submit'])){//The user pushed the submit button
 
   //Storing User infos on php session
 
-  $_SESSION['user_code'] = $currentAmount;
-  print
-  $_SESSION['user_firstName'] = $firstName;
-  $_SESSION['user_lastName'] = $lastName;
-  $_SESSION['user_email'] = $email;
-  $_SESSION['user_password'] = $password;
-  $_SESSION['user_address'] = $address;
-  $_SESSION['user_city'] = $city;
-  $_SESSION['user_stateOrProvince'] = $stateOrProvince;
-  $_SESSION['user_postalCode'] = $postalCode;
+//  $_SESSION['user_code'] = $currentAmount;
+//  $_SESSION['user_firstName'] = $firstName;
+//  $_SESSION['user_email'] = $email;
+  //$_SESSION['user_password'] = $password;
+//  $_SESSION['user_address'] = $address;
+//  $_SESSION['user_city'] = $city;
+//  $_SESSION['user_postalCode'] = $postalCode;
 
+setcookie("user_code", $code, time() + 86400, "/");
+setcookie("user_firstName", $firstName, time() + 86400, "/");
+setcookie("user_lastName", $lastName, time() + 86400, "/");
+setcookie("user_email", $email, time() + 86400, "/");
+setcookie("user_password", $password, time() + 86400, "/");
+setcookie("user_address", $address, time() + 86400, "/");
+setcookie("user_city", $city, time() + 86400, "/");
+setcookie("user_stateOrProvince", $stateOrProvince, time() + 86400, "/");
+setcookie("user_postalCode", $postalCode, time() + 86400, "/");
   header("Location: ../../index.php");
 
 }?>

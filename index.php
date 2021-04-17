@@ -1,13 +1,19 @@
 <?php //Starting the session
 session_start();
-$firstName = $_SESSION['user_firstName'];
-$lastName = $_SESSION['user_lastName'];
-$email = $_SESSION['user_email'];
-$password = $_SESSION['user_password'];
-$address = $_SESSION['user_address'];
-$city = $_SESSION['user_city'];
-$stateOrProvince = $_SESSION['user_stateOrProvince'];
-$postalCode =  $_SESSION['user_postalCode'];?>
+//$firstName = $_SESSION['user_firstName'];
+//$lastName = $_SESSION['user_lastName'];
+//$email = $_SESSION['user_email'];
+//$password = $_SESSION['user_password'];
+//$address = $_SESSION['user_address'];
+//$city = $_SESSION['user_city'];
+//$stateOrProvince = $_SESSION['user_stateOrProvince'];
+//$postalCode =  $_SESSION['user_postalCode'];
+if(count($_COOKIE) > 0) {
+  echo "Cookies are enabled.";
+} else {
+  echo "Cookies are disabled.";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,17 +63,20 @@ $postalCode =  $_SESSION['user_postalCode'];?>
             <li class="nav-item">
               <a class="nav-link" href="#aisles">Aisles</a>
             </li>
-            <li class="nav-item" style="<?php if(isset($_SESSION['user_firstName'])){echo "display:none;";}?>">
+            <li class="nav-item" style="<?php if(isset($_COOKIE['user_firstName'])){echo "display:none;";}?>">
               <a class="nav-link" href="../../public/html/signup.html">Sign Up</a>
             </li>
-            <li class="nav-item" style="<?php if(isset($_SESSION['user_firstName'])){echo "display:none;";} ?>">
+            <li class="nav-item" style="<?php if(isset($_COOKIE['user_firstName'])){echo "display:none;";} ?>">
               <a class="nav-link" href="../../public/html/login.html">Log in</a>
             </li>
-            <li class="nav-item" style="<?php if(isset($_SESSION['user_firstName'])){echo "display:block;";} else{echo "display:none;";}?>">
-              <a class="nav-link" href="../../public/html/login.html">Welcome <?php echo $_SESSION["user_firstName"]; ?>!</a>
+            <li class="nav-item" style="<?php if(isset($_COOKIE['user_firstName'])){echo "display:block;";} else{echo "display:none;";}?>">
+              Welcome, <?php echo $_COOKIE["user_firstName"]; ?>!
+            </li>
+            <li class="nav-item" style="<?php if(isset($_COOKIE['user_firstName'])){echo "display:block;";} else{echo "display:none;";}?>">
+              <a class="nav-link" href="public/php/logout.php">Log Out</a>
             </li>
           </ul>
-          <?php  echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>'; ?>
+
 
         </div>
 
