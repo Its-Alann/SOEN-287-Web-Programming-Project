@@ -1,3 +1,50 @@
+<?php
+session_start(); //Starting the session
+if(isset($_POST['submit'])){//The user pushed the submit button
+
+  $xml = simplexml_load_file("../../user_info.xml");//Loading XML file in an object
+  $currentAmount = $xml->amount;
+
+  $firstName = $_POST['firstName'];
+  $lastName = $_POST['lastName'];
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+  $address = $_POST['address'];
+  $city = $_POST['city'];
+  $stateOrProvince = $_POST['stateOrProvince'];
+  $postalCode =  $_POST['postalCode'];
+
+  $newUser = $xml->userList->addChild("user");
+  $newUser->addChild("code", $currentAmount);
+  $newUser->addChild("firstName", $firstName);
+  $newUser->addChild("lastName", $lastName);
+  $newUser->addChild("email", $email);
+  $newUser->addChild("password", $password);
+  $newUser->addChild("address", $address);
+  $newUser->addChild("city", $city);
+  $newUser->addChild("stateOrProvince", $stateOrProvince);
+  $newUser->addChild("postalCode", $postalCode);
+
+  $xml->amount = intval($currentAmount)+1;//Increasing the amount value in XML
+  $xml->asXML("../../user_info.xml");//Saving to XML file
+
+
+  //Storing User infos on php session
+
+  $_SESSION['user_code'] = $currentAmount;
+  print
+  $_SESSION['user_firstName'] = $firstName;
+  $_SESSION['user_lastName'] = $lastName;
+  $_SESSION['user_email'] = $email;
+  $_SESSION['user_password'] = $password;
+  $_SESSION['user_address'] = $address;
+  $_SESSION['user_city'] = $city;
+  $_SESSION['user_stateOrProvince'] = $stateOrProvince;
+  $_SESSION['user_postalCode'] = $postalCode;
+
+  header("Location: ../../index.php");
+
+}?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,38 +99,22 @@
 
           <div class="card-body my-auto ">
             <?php
-            if(isset($_POST['submit'])){//The user pushed the submit button
-              $xml = simplexml_load_file("../../user_info.xml");//Loading XML file in an object
-              $currentAmount = $xml->amount;
-              $newUser = $xml->userList->addChild("user");
-              $newUser->addChild("code", $currentAmount);
-              $newUser->addChild("firstName", $_POST['firstName']);
-              $newUser->addChild("lastName", $_POST['lastName']);
-              $newUser->addChild("email", $_POST['email']);
-              $newUser->addChild("password", $_POST['password']);
-              $newUser->addChild("address", $_POST['address']);
-              $newUser->addChild("city", $_POST['city']);
-              $newUser->addChild("stateOrProvince", $_POST['stateOrProvince']);
-              $newUser->addChild("postalCode", $_POST['postalCode']);
 
-              $xml->amount = intval($currentAmount)+1;//Increasing the amount value in XML
-              $xml->asXML("../../user_info.xml");//Saving to XML file
-            }
              ?>
             <form action="" method = "POST">
-              <input class="inputField" type="text" placeholder="First Name" name = "firstName">
-              <input class="inputField" type="text" placeholder="Last Name" name = "lastName">
-              <input class="inputField" type="text" placeholder="Address" name = "address">
-              <input class="inputField" type="text" placeholder="City" name = "city">
-              <input class="inputField" type="text" placeholder="State/Province" name = "stateOrProvince">
-              <input class="inputField" type="text" placeholder="Postal Code" name = "postalCode">
-                <input class="inputField" type="text" placeholder="Email" name = "email">
-                <input class="inputField" type="text" placeholder="Confirm Email">
-                <input class="inputField " type="password" placeholder="Create Password" name = "password">
-                <input class="inputField " type="password" placeholder="Confirm Password">
+              <input class="inputField" type="text" placeholder="First Name" name = "firstName"><br>
+              <input class="inputField" type="text" placeholder="Last Name" name = "lastName"><br>
+              <input class="inputField" type="text" placeholder="Address" name = "address"><br>
+              <input class="inputField" type="text" placeholder="City" name = "city"><br>
+              <input class="inputField" type="text" placeholder="State/Province" name = "stateOrProvince"><br>
+              <input class="inputField" type="text" placeholder="Postal Code" name = "postalCode"><br>
+                <input class="inputField" type="text" placeholder="Email" name = "email"><br>
+                <input class="inputField" type="text" placeholder="Confirm Email"><br>
+                <input class="inputField " type="password" placeholder="Create Password" name = "password"><br>
+                <input class="inputField " type="password" placeholder="Confirm Password"><br>
                 <div class="formButtons">
-                    <input type="submit" name = "submit" value = "Submit" class="btn btn-primary mt-3 mb-3">
-                    <button type="button"  class="btn btn-danger mt-3 mb-3">Reset</button>
+                    <input type="submit" name = "submit" value = "Sign Up" class="btn btn-primary mt-3 mb-3">
+                    <button type="button"  class="btn btn-danger mt-3 mb-3">Clear</button>
                 </div>
             </form></div>
             <div class="card-footer bg-dark">
