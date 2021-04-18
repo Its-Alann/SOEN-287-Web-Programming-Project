@@ -8,11 +8,11 @@ session_start();
 //$city = $_SESSION['user_city'];
 //$stateOrProvince = $_SESSION['user_stateOrProvince'];
 //$postalCode =  $_SESSION['user_postalCode'];
-if(count($_COOKIE) > 0) {
-  echo "Cookies are enabled.";
-} else {
-  echo "Cookies are disabled.";
-}
+//if(count($_COOKIE) > 0) {
+  //echo "Cookies are enabled.";
+//} else {
+//  echo "Cookies are disabled.";
+//}
 ?>
 <!DOCTYPE html>
 <html lang="en">
