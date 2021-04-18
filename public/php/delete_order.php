@@ -1,4 +1,24 @@
 <!DOCTYPE html>
+<?php
+    if(isset($_POST['delete'])){
+        $xml = new DomDocument();
+        $xml->load('order_info.xml');
+
+        $orderNum = $_POST['order_num'];
+
+        $xpath = new DOMXPath($xml);
+
+        foreach($xpath -> query("/order_list/order[order_num = '$orderNum']") as $node){
+            $node->parentNode->removeChild($node);
+
+        }
+        $xml -> formatoutput = true;
+        $xml -> save('order_info.xml');
+    }
+    
+?>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -54,14 +74,13 @@
         </div>
     </div>
             
-
-    <div class="card-body my-auto ">
-        <?php
-            $xml = simplexml_load_file('order_info.xml');
-            
-        ?>
-    </div>
-
+    <form method = "POST" action = "delete_order.php">
+        Order wished to be deleted </br>
+        Order Number <input type = "text" name = "order_num"></br>
+        <input type="submit" name = "delete" value = "Delete" class="btn btn-primary mt-3 mb-3">
+        <button type="button"  class="btn btn-danger mt-3 mb-3">Reset</button>
+    </form>
+ 
 
 
     <div class="footer">

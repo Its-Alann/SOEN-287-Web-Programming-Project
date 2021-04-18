@@ -1,4 +1,39 @@
 <!DOCTYPE html>
+<?php
+    $xml = simplexml_load_file('order_info.xml');
+    if (isset($_POST['insert'])){
+        #$xml = simplexml_load_file('../../order_info.xml');
+        #$currentAmount = $xml->amount;
+        #$newOrder = $xml -> order_list-> addChild("order");
+        #$newUser = $xml ->addChild("user", $_POST['user']);
+        #$newOrderNum = $xml ->addChild("order_num", $_POST['order_num']);
+        #$newOrderList = $xml ->addChild("orderList", $_POST['orderList']);
+        #$xml->amount = intval($currentAmount)+1;
+        #$xml->asXML("../../order_info.xml");
+
+        $xml = new DomDocument("1.0", "UTF-8");
+        $xml -> load('order_info.xml');
+
+        $newUser = $_POST['user'];
+        $newOrderNum = $_POST['order_num'];
+        $newOrderList = $_POST['orderList'];
+
+        $rootTag = $xml -> getElementsByTagname('order_list') -> item(0);
+
+        $infoTag = $xml -> createElement("order");
+            $userTag = $xml -> createElement("user", $newUser);
+            $orderNumTag = $xml -> createElement("order_num", $newOrderNum);
+            $orderListTag = $xml -> createElement("orderList", $newOrderList);
+
+            $infoTag ->appendChild($userTag);
+            $infoTag ->appendChild($orderNumTag);
+            $infoTag ->appendChild($orderListTag);
+
+        $rootTag -> appendChild($infoTag);
+        $xml->save('order_info.xml');
+ 
+    }
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -56,30 +91,15 @@
             
 
     <div class="card-body my-auto ">
-        <?php
-            $xml = simplexml_load_file('order_info.xml');
-            if(isset($_POST['submit'])){
-                $xml = simplexml_load_file('../../order_info.xml');
-                $currentAmount = $xml->amount;
-                $newOrder = $xml -> order_list-> addChild("order");
-                $newOrder = $xml ->addChild("user", $_POST['user']);
-                $newOrder = $xml ->addChild("order_num", $_POST['order_num']);
-                $newOrder = $xml ->addChild("orderList", $_POST['orderList']);
-
-                $xml->amount = intval($currentAmount)+1;
-                $xml->asXML("../../order_info.xml");
-            }
-        ?>
-
-        <form action="" method = "POST">
-            <input class="inputField" type="text" placeholder="User" name = "user">
-            <input class="inputField" type="text" placeholder="Order Number" name = "order_num">
-            <input class="inputField" type="text" placeholder="Order List" name = "orderList">
-
-            <div class="formButtons">
-                <input type="submit" name = "submit" value = "Submit" class="btn btn-primary mt-3 mb-3">
-                <button type="button"  class="btn btn-danger mt-3 mb-3">Reset</button>
-            </div>
+        <form method = "POST" action="add_order.php">
+            Order Info wished to be added</br>
+            User Name <input type = "text" name = "user"></br>
+            Order Number <input type = "text" name = "order_num"></br>
+            Order List <input type = "text" name = "orderList" class = "mt-5 mb-5"></br>
+            
+            <input type="submit" name = "insert" value = "Add" class="btn btn-primary mt-3 mb-3">
+            <button type="button"  class="btn btn-danger mt-3 mb-3">Reset</button>
+            
         </form>
     </div>
 
