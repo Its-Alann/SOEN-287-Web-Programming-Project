@@ -1,18 +1,65 @@
 <?php
 session_start(); //Starting the session
+$firstNameErr = "*";
+$lastNameErr = "*";
+$emailErr = "*";
+$passwordErr = "*";
+$confirmPasswordErr = "*";
+$isValid = true;
 if(isset($_POST['submit'])){//The user pushed the submit button
+  if(empty($_POST['firstName']) || !preg_match("/^[a-zA-Z0-9]{1,}$/", $_POST['firstName'])){
+    $firstNameErr = "* Field Missing";
+    $isValid = false;
+  }
+  if(empty($_POST['lastName']) || !preg_match("/^[a-zA-Z0-9]{1,}$/", $_POST['lastName'])){
+    $lastNameErr = "* Field Missing";
+    $isValid = false;
+  }
+  if(empty($_POST['email'])|| !preg_match("/^[a-zA-Z0-9]{1,}@[a-zA-Z0-9]{1,}\.[a-zA-Z0-9]{1,}$/", $_POST['email'])){
+    $emailErr = "* Field Missing";
+    $isValid = false;
+  }
+  if(empty($_POST['password'])){
+    $passwordErr = "* Field Missing";
+    $isValid = false;
+  }elseif (!preg_match("/^[a-zA-Z0-9]{8,12}$/", $_POST['password'])) {
+    $passwordErr = "* Password is Invalid ";
+    $isValid = false;
+  }elseif ($_POST['password']!=$_POST['confirmPassword']) {
+    $confirmPasswordErr = "* Passwords don't match";
+    $isValid = false;
+  }
+
+if($isValid==true){
 
   $xml = simplexml_load_file("../../user_info.xml");//Loading XML file in an object
-  $currentAmount = $xml->amount;
 
+  $currentAmount = $xml->amount;
   $firstName = $_POST['firstName'];
   $lastName = $_POST['lastName'];
   $email = $_POST['email'];
   $password = $_POST['password'];
-  $address = $_POST['address'];
+  if(empty($_POST['address'])){
+    $address = " ";
+  }else{
+    $address = $_POST['address'];
+  }
+  if(empty($_POST['city'])){
+    $city = " ";
+  }else{
   $city = $_POST['city'];
-  $stateOrProvince = $_POST['stateOrProvince'];
-  $postalCode =  $_POST['postalCode'];
+}
+  if(empty($_POST['stateOrProvince'])){
+    $stateOrProvince = " ";
+  }else{
+    $stateOrProvince = $_POST['stateOrProvince'];
+  }
+  if(empty($_POST['postalCode'])){
+    $postalCode = " ";
+  }else{
+    $postalCode =  $_POST['postalCode'];
+  }
+
 
   $newUser = $xml->userList->addChild("user");
   $newUser->addChild("code", $currentAmount);
@@ -28,9 +75,7 @@ if(isset($_POST['submit'])){//The user pushed the submit button
   $xml->amount = intval($currentAmount)+1;//Increasing the amount value in XML
   $xml->asXML("../../user_info.xml");//Saving to XML file
 
-
   //Storing User infos on php session
-
 //  $_SESSION['user_code'] = $currentAmount;
 //  $_SESSION['user_firstName'] = $firstName;
 //  $_SESSION['user_email'] = $email;
@@ -39,16 +84,18 @@ if(isset($_POST['submit'])){//The user pushed the submit button
 //  $_SESSION['user_city'] = $city;
 //  $_SESSION['user_postalCode'] = $postalCode;
 
-setcookie("user_code", $code, time() + 86400, "/");
-setcookie("user_firstName", $firstName, time() + 86400, "/");
-setcookie("user_lastName", $lastName, time() + 86400, "/");
-setcookie("user_email", $email, time() + 86400, "/");
-setcookie("user_password", $password, time() + 86400, "/");
-setcookie("user_address", $address, time() + 86400, "/");
-setcookie("user_city", $city, time() + 86400, "/");
-setcookie("user_stateOrProvince", $stateOrProvince, time() + 86400, "/");
-setcookie("user_postalCode", $postalCode, time() + 86400, "/");
+  setcookie("user_code", $code, time() + 86400, "/");
+  setcookie("user_firstName", $firstName, time() + 86400, "/");
+  setcookie("user_lastName", $lastName, time() + 86400, "/");
+  setcookie("user_email", $email, time() + 86400, "/");
+  setcookie("user_password", $password, time() + 86400, "/");
+  setcookie("user_address", $address, time() + 86400, "/");
+  setcookie("user_city", $city, time() + 86400, "/");
+  setcookie("user_stateOrProvince", $stateOrProvince, time() + 86400, "/");
+  setcookie("user_postalCode", $postalCode, time() + 86400, "/");
+
   header("Location: ../../index.php");
+  }
 
 }?>
 <!DOCTYPE html>
@@ -103,21 +150,34 @@ setcookie("user_postalCode", $postalCode, time() + 86400, "/");
                   <div class="card-header bg-dark text-white">
                       <h1>Create an account</h1></div>
 
-          <div class="card-body my-auto ">
-            <?php
-
-             ?>
-            <form action="" method = "POST">
-              <input class="inputField" type="text" placeholder="First Name" name = "firstName"><br>
-              <input class="inputField" type="text" placeholder="Last Name" name = "lastName"><br>
-              <input class="inputField" type="text" placeholder="Address" name = "address"><br>
-              <input class="inputField" type="text" placeholder="City" name = "city"><br>
-              <input class="inputField" type="text" placeholder="State/Province" name = "stateOrProvince"><br>
-              <input class="inputField" type="text" placeholder="Postal Code" name = "postalCode"><br>
-                <input class="inputField" type="text" placeholder="Email" name = "email"><br>
-                <input class="inputField " type="password" placeholder="Password (8-12 characters)" name = "password"><br>
-                <input class="inputField " type="password" placeholder="Confirm Password"><br>
-                <div class="formButtons">
+          <div class="card-body my-auto" style="display:flex; flex-direction:column; align-items: space-around; ">
+            <form action="" method = "POST"  style="display:flex; flex-direction:column; align-items:flex-start; padding-left:0px">
+              <div style="color:red;">*Field Required</div>
+              <div >
+                <input class="inputField" type="text" placeholder="First Name" name = "firstName">
+                <span style="color:red;"> <?php echo $firstNameErr;?></span>
+              </div>
+              <div>
+                <input class="inputField" type="text" placeholder="Last Name" name = "lastName">
+                  <span style="color:red; "> <?php echo $lastNameErr;?></span>
+              </div>
+              <input class="inputField" type="text" placeholder="Address" name = "address">
+              <input class="inputField" type="text" placeholder="City" name = "city">
+              <input class="inputField" type="text" placeholder="State/Province" name = "stateOrProvince">
+              <input class="inputField" type="text" placeholder="Postal Code" name = "postalCode">
+              <div>
+                <input class="inputField" type="text" placeholder="Email" name = "email">
+                  <span style="color:red;"> <?php echo $emailErr;?></span>
+              </div>
+              <div>
+                <input class="inputField " type="password" placeholder="Password (8-12 characters)" name = "password">
+                  <span style="color:red;"> <?php echo $passwordErr;?></span>
+              </div>
+              <div>
+                <input class="inputField " type="password" placeholder="Confirm Password" name="confirmPassword">
+                  <span style="color:red;"> <?php echo $confirmPasswordErr;?></span>
+              </div>
+              <div class="formButtons" style="align-self:center;">
                     <input type="submit" name = "submit" value = "Sign Up" class="btn btn-primary mt-3 mb-3">
                     <button type="button"  class="btn btn-danger mt-3 mb-3">Clear</button>
                 </div>

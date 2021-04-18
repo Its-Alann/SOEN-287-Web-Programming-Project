@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <products>
-    <total_products>20</total_products>
+    <total_products>26</total_products>
     <snacks_aisle>
         <product>
             <code>1</code>
-            <aisle>snacks</aisle>
             <name>Oreo Original Cookies</name>
             <brand>CHRISTIE</brand>
             <description>OREO Chocolate Sandwich Cookies have been America's favorite cookie for over 100 years. Stuffed with delicious OREO creme, these chocolate sandwich cookies are supremely dunkable. OREO cookies are great for sharing with friends, serving at parties, or enjoying with cold milk.</description>
@@ -24,7 +23,6 @@
         </product>
         <product>
             <code>3</code>
-            <aisle>snacks</aisle>
             <name>Classic Potato Chips</name>
             <brand>LAY'S</brand>
             <description>It all starts with farm-grown potatoes, cooked and seasoned to perfection. So every LAY'S potato chip is perfectly crispy and full of fresh potato taste. Happiness in Every Bite.</description>
@@ -34,7 +32,6 @@
         </product>
         <product>
             <code>4</code>
-            <aisle>snacks</aisle>
             <name>Classic Thins Pretzels</name>
             <brand>ROLD GOLD</brand>
             <description>Between the one-of-a-kind flavor and crispy texture of ROLD GOLD pretzels, you just might fall in love with this golden-baked snack all over again every time you take a break. Try them with peanut butter, hummus or on their own to take your break to a whole new level!</description>
@@ -44,7 +41,6 @@
         </product>
         <product>
             <code>5</code>
-            <aisle>snacks</aisle>
             <name>Extra Buttery 10 Pack Popcorn</name>
             <brand>ORVILLE REDENBACHER'S</brand>
             <description>Treat yourself to the original. Made with the perfect balance of butter flavor and salt, our classic microwave butter popcorn is packed up in mini microwave bags for easy snacking.</description>
@@ -54,7 +50,6 @@
         </product>
         <product>
             <code>6</code>
-            <aisle>snacks</aisle>
             <name>Roasted Unsalted Pistachios</name>
             <brand>WONDERFUL</brand>
             <description>Fans of Wonderful Pistachios can now enjoy a sodium-free version of our pistachios, roasted to perfection with no additives.</description>
@@ -63,9 +58,77 @@
             <quantity>10</quantity>
         </product>
     </snacks_aisle>
-    <meat_poultry_fish_aisle></meat_poultry_fish_aisle>
+    <meat_poultry_fish_aisle>  
+        <product>
+            <code>21</code>
+            <name>Chicken Breast</name>
+            <brand>100% Canadian Chicken</brand>
+            <description>The Chicken's were raised on a free range farm in the upper regions of Quebec. They are antiobiotics and GMO free. SUPPORT YOUR LOCAL FARMERS.</description>
+            <price>8.99</price>
+            <weight>1000 g</weight>
+            <quantity>10</quantity>
+            <description2>Our main priority here at McJawz is getting local products into the hands of our consumers.
+                   This brand of chicken breast comes from one of the finest farms in quebec with none of the price premium you expect to pay for a quality product.
+                   The chicken breast are lean and trimmed of most fat before packaging.</description2>
+        </product>
+        <product>
+            <code>22</code>
+            <name>Chicken Thigh</name>
+            <brand>100% Canadian Chicken</brand>
+            <description>The Chicken's were raised on a free range farm in the upper regions of Quebec. They are antiobiotics and GMO free. Contains both leg and Thighs.WARNING: May contain bones. SUPPORT YOUR LOCAL FARMERS.</description>
+            <price>7.99</price>
+            <weight>1000 g</weight>
+            <quantity>10</quantity>
+            <description2>Large chicken thighs from the top of the Chicken genetic pool.
+                    We carefully breed the chickens in order to yield the most meat and biggest size. Once again achieving this without explicitly modifying genetics.</description2>
+        </product>
+         <product>
+            <code>23</code>
+            <name>Chicken Legs</name>
+            <brand>100% Canadian Chicken</brand>
+            <description>The Chicken's were raised on a free range farm in the upper regions of Quebec. They are antiobiotics and GMO free. Contains both leg and Thighs.WARNING: May contain bones. SUPPORT YOUR LOCAL FARMERS</description>
+            <price>6.99</price>
+            <weight>1000 g</weight>
+             <quantity>10</quantity>
+            <description2>Large chicken legs from the top of the Chicken genetic pool.We carefully breed the chickens in order to yield the most meat and biggest size. Once again achieving this without explicitly modifying genetics.</description2>
+        </product>
+        <product>
+            <code>24</code>
+            <name>Ground Meat</name>
+            <brand>100% Canadian Grown Beef</brand>
+            <description>Ground meat was taken from cows grown on Canadian soil. They were grown antibiotic free and GMO free.SUPPORT YOUR LOCAL FARMERS.</description>
+            <price>8.99</price>
+            <weight>1000 g</weight>
+            <quantity>10</quantity>
+            <description2>We unfortunately only offer lean ground meat at this time.We plan to add variations of ground meat with a higher fat content. Within the next couple weeks.</description2>
+        </product>
+         <product>
+            <code>25</code>
+            <name>Beyond Meat</name>
+            <brand>100% Plant Products</brand>
+            <description>"The Beyond Burger is a plant-based burger that looks, cooks, and satisfies like beef. It has all the juicy, meaty deliciousness of a traditional burger, but comes with the upsides of a plant-based meal. The Beyond Burger has 20g of plant-based protein and has no GMOs, soy, or gluten." - BeyondMeat</description>
+            <price>10.99</price>
+            <weight>1000 g</weight>
+            <quantity>10</quantity>
+            <description2>By using a variety of plant proteins, our products deliver greater or equal levels of protein than their animal-based counterparts.
+                        Our fats create juicy plant-based burgers, beef, and sausages that sizzle in the pan or on the grill.
+                       From taste to function, these minerals deliver the nutrients we expect from meat. Potassium Chloride is a naturally occurring mineral, added to provide a mineral balance close to that of animal meat.
+                       The flavors and colors in our food come from plants, and this means we don’t use synthetic additives, for any reason, and we never will.</description2>
+        </product>
+        <product>
+            <code>26</code>
+            <name>Atlantic Salmon</name>
+            <brand>100% Canadian Farmed Salmon</brand>
+            <description>The Salmon was caught off the coast of Newfoundland and kept alive until reaching its final destination to ensure its freshness. SUPPORT YOUR CANADIAN FISH FARMERS.</description>
+            <price>14.99</price>
+            <weight>1000 g</weight>
+            <quantity>10</quantity>
+            <description2>Not your average salmon,guaranteed freshness straight from Canadian Hands.
+                        No artifical colors or flavors are added. Despite not being wild, the salmon's diet consisted of Krill and smaller fish(NO GRAINS).</description2>
+            </product>
+    </meat_poultry_fish_aisle>
+    
     <bakery_aisle></bakery_aisle>
-    <beverages_aisle></beverages_aisle>
     <dairy_eggs_aisle>
        <product>
           <code>7</code>
