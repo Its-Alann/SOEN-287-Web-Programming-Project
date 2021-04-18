@@ -1,5 +1,13 @@
 <?php
 session_start(); //Starting the session
+$firstName = $_COOKIE['user_firstName'];
+$lastName = $_COOKIE['user_lastName'];
+$email = $_COOKIE['user_email'];
+$password = $_COOKIE['user_password'];
+$address = $_COOKIE['user_address'];
+$city = $_COOKIE['user_city'];
+$stateOrProvince = $_COOKIE['user_stateOrProvince'];
+$postalCode =  $_COOKIE['user_postalCode'];
 if(isset($_POST['submit'])){//The user pushed the submit button
 
   $xml = simplexml_load_file("../../user_info.xml");//Loading XML file in an object
@@ -57,7 +65,7 @@ setcookie("user_postalCode", $postalCode, time() + 86400, "/");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>McJawz | Sign Up </title>
+    <title>McJawz | Account Info </title>
     <link rel="stylesheet" href="../../public/css/bootstrap.css">
     <link rel="stylesheet" href="../../public/css/backstore.css">
     <link rel="icon" href="../../images/favicon.ico" type="image/x-icon" />
@@ -101,22 +109,22 @@ setcookie("user_postalCode", $postalCode, time() + 86400, "/");
         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 align-self-center mx-auto mt-5  mb-5">
           <div class="card text-center">
                   <div class="card-header bg-dark text-white">
-                      <h1>Create an account</h1></div>
+                      <h1>Edit your account</h1></div>
 
           <div class="card-body my-auto ">
             <?php
 
              ?>
             <form action="" method = "POST">
-              <input class="inputField" type="text" placeholder="First Name" name = "firstName"><br>
-              <input class="inputField" type="text" placeholder="Last Name" name = "lastName"><br>
-              <input class="inputField" type="text" placeholder="Address" name = "address"><br>
-              <input class="inputField" type="text" placeholder="City" name = "city"><br>
-              <input class="inputField" type="text" placeholder="State/Province" name = "stateOrProvince"><br>
-              <input class="inputField" type="text" placeholder="Postal Code" name = "postalCode"><br>
-                <input class="inputField" type="text" placeholder="Email" name = "email"><br>
-                <input class="inputField " type="password" placeholder="Password (8-12 characters)" name = "password"><br>
-                <input class="inputField " type="password" placeholder="Confirm Password"><br>
+              <input class="inputField" type="text"  name = "firstName" value="<?php echo $firstName; ?>"><br>
+              <input class="inputField" type="text"  name = "lastName" value="<?php echo $lastName; ?>"><br>
+              <input class="inputField" type="text"  name = "address"  value="<?php echo $address; ?>"><br>
+              <input class="inputField" type="text" name = "city"  value="<?php echo $city; ?>"><br>
+              <input class="inputField" type="text"  name = "stateOrProvince"  value="<?php echo $stateOrProvince; ?>"><br>
+              <input class="inputField" type="text"  name = "postalCode"  value="<?php echo $postalCode; ?>"><br>
+              <input class="inputField" type="text" name = "email"  value="<?php echo $email; ?>"><br>
+              <input class="inputField " type="password" name = "password"  value="<?php echo $password; ?>"><br>
+
                 <div class="formButtons">
                     <input type="submit" name = "submit" value = "Sign Up" class="btn btn-primary mt-3 mb-3">
                     <button type="button"  class="btn btn-danger mt-3 mb-3">Clear</button>
