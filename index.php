@@ -70,7 +70,7 @@ if(count($_COOKIE) > 0) {
               <a class="nav-link" href="../../public/html/login.html">Log in</a>
             </li>
             <li class="nav-item" style="<?php if(isset($_COOKIE['user_firstName'])){echo "display:block;";} else{echo "display:none;";}?>">
-              Welcome, <?php echo $_COOKIE["user_firstName"]; ?>!
+              <a class="nav-link" href="public/php/edit_user.php">Welcome, <?php echo $_COOKIE["user_firstName"]; ?>!</a>
             </li>
             <li class="nav-item" style="<?php if(isset($_COOKIE['user_firstName'])){echo "display:block;";} else{echo "display:none;";}?>">
               <a class="nav-link" href="public/php/logout.php">Log Out</a>
