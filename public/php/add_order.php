@@ -1,5 +1,6 @@
-<!DOCTYPE html>
 <?php
+    session_start();
+    
     $xml = simplexml_load_file('order_info.xml');
     if (isset($_POST['insert'])){
         #$xml = simplexml_load_file('../../order_info.xml');
@@ -10,36 +11,46 @@
         #$newOrderList = $xml ->addChild("orderList", $_POST['orderList']);
         #$xml->amount = intval($currentAmount)+1;
         #$xml->asXML("../../order_info.xml");
-
+        
         $xml = new DomDocument("1.0", "UTF-8");
-        $xml -> load('order_info.xml');
-
+        $xml -> load('../../order_info.xml');
+        
         $newUser = $_POST['user'];
         $newOrderNum = $_POST['order_num'];
         $newOrderList = $_POST['orderList'];
-
+        
         $rootTag = $xml -> getElementsByTagname('order_list') -> item(0);
-
+        
         $infoTag = $xml -> createElement("order");
-            $userTag = $xml -> createElement("user", $newUser);
-            $orderNumTag = $xml -> createElement("order_num", $newOrderNum);
-            $orderListTag = $xml -> createElement("orderList", $newOrderList);
-
-            $infoTag ->appendChild($userTag);
-            $infoTag ->appendChild($orderNumTag);
-            $infoTag ->appendChild($orderListTag);
-
+        $userTag = $xml -> createElement("user", $newUser);
+        $orderNumTag = $xml -> createElement("order_num", $newOrderNum);
+        $orderListTag = $xml -> createElement("orderList", $newOrderList);
+        
+        $infoTag ->appendChild($userTag);
+        $infoTag ->appendChild($orderNumTag);
+        $infoTag ->appendChild($orderListTag);
+        
         $rootTag -> appendChild($infoTag);
-        $xml->save('order_info.xml');
- 
+        $xml->save('../../order_info.xml');
+        
+        setcookie("order_user", $newUser, time() + 86400, "/");
+        setcookie("order_order_num", $newOrderNum,time() + 86400, "/" );
+        setcookie("order_orderList", $newOrderList,time() + 86400, "/");
+            header("Location: ../../index.php");
+        //$newUser = $_COOKIE['order_user'];
+        //$newOrderNum = $_COOKIE['order_order_num'];
+        //$newOrderList = $_COOKIE['order_orderList'];
+
+        echo ("Your order has been successfully added!");
     }
 ?>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>McJawz | Order List </title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>McJawz | Order List </title>
     <link rel="stylesheet" href="../../public/css/bootstrap.css">
     <link rel="stylesheet" href="../../public/css/backstore.css">
     <link rel="icon" href="../../images/favicon.ico" type="image/x-icon" />

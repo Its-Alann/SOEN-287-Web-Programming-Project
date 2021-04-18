@@ -1,33 +1,41 @@
-<!DOCTYPE html>
 <?php
+    session_start();
     if(isset($_POST['delete'])){
         $xml = new DomDocument();
         $xml->load('order_info.xml');
-
+        
         $orderNum = $_POST['order_num'];
-
+        
         $xpath = new DOMXPath($xml);
-
+        
         foreach($xpath -> query("/order_list/order[order_num = '$orderNum']") as $node){
             $node->parentNode->removeChild($node);
-
+            
         }
         $xml -> formatoutput = true;
         $xml -> save('order_info.xml');
-    }
+
+        setcookie("order_user", $newUser, time() + 86400, "/");
+        setcookie("order_order_num", $newOrderNum,time() + 86400, "/" );
+        setcookie("order_orderList", $newOrderList,time() + 86400, "/");
+            header("Location: ../../index.php");
+        
+        echo ("Your order has been successfully deleted!");
     
+    }
 ?>
 
 
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>McJawz | Order List </title>
-    <link rel="stylesheet" href="../../public/css/bootstrap.css">
-    <link rel="stylesheet" href="../../public/css/backstore.css">
-    <link rel="icon" href="../../images/favicon.ico" type="image/x-icon" />
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>McJawz | Order List </title>
+        <link rel="stylesheet" href="../../public/css/bootstrap.css">
+        <link rel="stylesheet" href="../../public/css/backstore.css">
+        <link rel="icon" href="../../images/favicon.ico" type="image/x-icon" />
 </head>
 <body>
 

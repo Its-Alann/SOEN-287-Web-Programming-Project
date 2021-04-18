@@ -1,45 +1,59 @@
-<!DOCTYPE html>
 <?php
+    session_start();
+    $newUser = $_COOKIE['order_user'];
+    $newOrderNum = $_COOKIE['order_order_num'];
+    $newOrderList = $_COOKIE['order_orderList'];
+
     if(isset($_POST['edit'])){
         $xml = new DomDocument();
         $xml->load('order_info.xml');
-
+        
         #del order
         $orderNum = $_POST['order_num'];
-
+        
         $xpath = new DOMXPath($xml);
-
+        
         foreach($xpath -> query("/order_list/order[order_num = '$orderNum']") as $node){
             $node->parentNode->removeChild($node);
-
+            
         }
         $xml -> formatoutput = true;
         $xml -> save('order_info.xml');
-
+        
         #add order
         $newUser = $_POST['user'];
         $newOrderNum = $_POST['order_num'];
         $newOrderList = $_POST['orderList'];
-
+        
         $rootTag = $xml -> getElementsByTagname('order_list') -> item(0);
-
+        
         $infoTag = $xml -> createElement("order");
-            $userTag = $xml -> createElement("user", $newUser);
-            $orderNumTag = $xml -> createElement("order_num", $newOrderNum);
-            $orderListTag = $xml -> createElement("orderList", $newOrderList);
-
-            $infoTag ->appendChild($userTag);
-            $infoTag ->appendChild($orderNumTag);
-            $infoTag ->appendChild($orderListTag);
-
+        $userTag = $xml -> createElement("user", $newUser);
+        $orderNumTag = $xml -> createElement("order_num", $newOrderNum);
+        $orderListTag = $xml -> createElement("orderList", $newOrderList);
+        
+        $infoTag ->appendChild($userTag);
+        $infoTag ->appendChild($orderNumTag);
+        $infoTag ->appendChild($orderListTag);
+        
         $rootTag -> appendChild($infoTag);
         $xml->save('order_info.xml');
+
+        setcookie("order_user", $newUser, time() + 86400, "/");
+        setcookie("order_order_num", $newOrderNum,time() + 86400, "/" );
+        setcookie("order_orderList", $newOrderList,time() + 86400, "/");
+            header("Location: ../../index.php");
+    
+        echo ("Your order has been successfully edited!");
+        echo ("Your username is " + $newUser + ".");
+        echo ("Your order number is " + $newOrderNum + ".");
+        echo ("Your new order is " + $newOrderList + ".");
+
     }
     
 ?>
 
-
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
