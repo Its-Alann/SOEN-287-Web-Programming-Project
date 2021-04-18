@@ -254,6 +254,7 @@
             <name>RedBull Energy Drink</name>
             <brand>RedBull</brand>
             <description>RedBull is an energy that "Gives You Wings".</description>
+            <price>1.99</price>
             <weight>355mL</weight>
             <quantity>10</quantity>
         </product>
