@@ -115,10 +115,6 @@
     </form>
 
         <?php
-            $newUser = $_COOKIE['order_user'];
-            $newOrderNum = $_COOKIE['order_order_num'];
-            $newOrderList = $_COOKIE['order_orderList'];
-
             if(isset($_POST['edit'])){
                 $xml = new DomDocument();
                 $xml->load('order_info.xml');

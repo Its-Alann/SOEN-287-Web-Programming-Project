@@ -53,48 +53,102 @@
             </div>
         </div>
     </div>
-        <?php
-            $xml = simplexml_load_file('order_info.xml');
-            if (isset($_POST['insert'])){
-                #$xml = simplexml_load_file('../../order_info.xml');
-                #$currentAmount = $xml->amount;
-                #$newOrder = $xml -> order_list-> addChild("order");
-                #$newUser = $xml ->addChild("user", $_POST['user']);
-                #$newOrderNum = $xml ->addChild("order_num", $_POST['order_num']);
-                #$newOrderList = $xml ->addChild("orderList", $_POST['orderList']);
-                #$xml->amount = intval($currentAmount)+1;
-                #$xml->asXML("../../order_info.xml");
-                
-                $xml = new DomDocument("1.0", "UTF-8");
-                $xml -> load('order_info.xml');
-                
-                $newUser = $_POST['user'];
-                $newOrderNum = $_POST['order_num'];
-                $newOrderList = $_POST['orderList'];
-                
-                $rootTag = $xml -> getElementsByTagname('order_list') -> item(0);
-                
-                $infoTag = $xml -> createElement("order");
-                $userTag = $xml -> createElement("user", $newUser);
-                $orderNumTag = $xml -> createElement("order_num", $newOrderNum);
-                $orderListTag = $xml -> createElement("orderList", $newOrderList);
-                
-                $infoTag ->appendChild($userTag);
-                $infoTag ->appendChild($orderNumTag);
-                $infoTag ->appendChild($orderListTag);
-                
-                $rootTag -> appendChild($infoTag);
-                $xml->save('order_info.xml');
-                
-            
-                //$newUser = $_COOKIE['order_user'];
-                //$newOrderNum = $_COOKIE['order_order_num'];
-                //$newOrderList = $_COOKIE['order_orderList'];
 
-                echo ("Your order has been successfully added!");
-            }
-        ?>
+
+
+    <div class="product-table border rounded"></div>
+        <table class="order-list table ">
+            <thead>
+                <tr>
+                    <th scope="col">User</th>
+                    <th scope="col">Order Number</th>
+                    <th scope="col">Order List</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    $xml = simplexml_load_file('order_info.xml');    
+                    $i = 0;
+                    $orders = $xml->order;
+                    $user = "";
+                    $orderNum = "";
+                    $orderList = "";
+
+                    foreach($orders->order as $ORDER) {
+                        echo "<tr>
+                            <th scope = 'row'>$ORDER->user</th>
+                            <td scope = 'col'>$ORDER->order_num</td>
+                            <td scope = 'col'>$ORDER->orderList</td>
+                            
+                                <div class = 'container-fluid'>
+                                    <div class = 'collapse'>
+                                        <table class = 'table'>
+                                            <thead>
+                                                <tr>
+                                                <th scope = 'col'>User</th>
+                                                <th scope = 'col'>Order Number</th>
+                                                <th scope = 'col'>Order List</th>
+                                            </thead>
+                                            <tbody>
+                                                <td>$user</td>
+                                                <td>$orderNum</td>
+                                                <td>$orderList</td>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </tr>";
+                        ++$i;
+                        $user = "";
+                        $orderNum = "";
+                        $orderList = "";
+                    }
+                ?>
+            </tbody>
+        </table>
+    </div>
+
+    <?php
+        $xml = simplexml_load_file('order_info.xml');
+        if (isset($_POST['insert'])){
+            //$xml = simplexml_load_file('../../order_info.xml');
+            //$currentAmount = $xml->amount;
+            //$newOrder = $xml -> order_list-> addChild("order");
+            //$newUser = $xml ->addChild("user", $_POST['user']);
+            //$newOrderNum = $xml ->addChild("order_num", $_POST['order_num']);
+            //$newOrderList = $xml ->addChild("orderList", $_POST['orderList']);
+            //$xml->amount = intval($currentAmount)+1;
+            //$xml->asXML("../../order_info.xml");
             
+            $xml = new DomDocument("1.0", "UTF-8");
+            $xml -> load('order_info.xml');
+            
+            $newUser = $_POST['user'];
+            $newOrderNum = $_POST['order_num'];
+            $newOrderList = $_POST['orderList'];
+            
+            $rootTag = $xml -> getElementsByTagname('order_list') -> item(0);
+            
+            $infoTag = $xml -> createElement("order");
+            $userTag = $xml -> createElement("user", $newUser);
+            $orderNumTag = $xml -> createElement("order_num", $newOrderNum);
+            $orderListTag = $xml -> createElement("orderList", $newOrderList);
+            
+            $infoTag ->appendChild($userTag);
+            $infoTag ->appendChild($orderNumTag);
+            $infoTag ->appendChild($orderListTag);
+            
+            $rootTag -> appendChild($infoTag);
+            $xml->save('order_info.xml');
+            //$newUser = $_COOKIE['order_user'];
+            //$newOrderNum = $_COOKIE['order_order_num'];
+            //$newOrderList = $_COOKIE['order_orderList'];
+            
+            echo ("Your order has been successfully added!");
+        }
+
+        
+    ?>        
 
     <div class="card-body my-auto ">
         <form method = "POST" action="add_order.php">
@@ -129,7 +183,7 @@
     </form>
         <?php
             if(isset($_POST['delete'])){
-                $xml = new DomDocument();
+                $xml = new DomDocument("1.0", "UTF-8");
                 $xml->load('order_info.xml');
                 
                 $orderNum = $_POST['order_num'];
@@ -140,7 +194,7 @@
                     $node->parentNode->removeChild($node);
                     
                 }
-                $xml -> formatoutput = true;
+                
                 $xml -> save('order_info.xml');
 
                 echo ("Your order has been successfully deleted!");
