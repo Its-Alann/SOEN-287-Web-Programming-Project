@@ -15,8 +15,11 @@ if(isset($_POST['submit'])){//The user pushed the submit button
     $lastNameErr = "* Field Missing";
     $isValid = false;
   }
-  if(empty($_POST['email'])|| !preg_match("/^[a-zA-Z0-9]{1,}@[a-zA-Z0-9]{1,}\.[a-zA-Z0-9]{1,}$/", $_POST['email'])){
+  if(empty($_POST['email'])){
     $emailErr = "* Field Missing";
+    $isValid = false;
+  }elseif(!preg_match("/^[a-zA-Z0-9]{1,}@[a-zA-Z0-9]{1,}\.[a-zA-Z0-9]{1,}$/", $_POST['email'])){
+    $emailErr = "* Email is Invalid";
     $isValid = false;
   }
   if(empty($_POST['password'])){
@@ -35,6 +38,7 @@ if($isValid==true){
   $xml = simplexml_load_file("../../user_info.xml");//Loading XML file in an object
 
   $currentAmount = $xml->amount;
+  $lastCode = $xml->userList->user[(intval($currentAmount)-1)]->code;
   $firstName = $_POST['firstName'];
   $lastName = $_POST['lastName'];
   $email = $_POST['email'];
@@ -62,7 +66,7 @@ if($isValid==true){
 
 
   $newUser = $xml->userList->addChild("user");
-  $newUser->addChild("code", $currentAmount);
+  $newUser->addChild("code", $lastCode +1);
   $newUser->addChild("firstName", $firstName);
   $newUser->addChild("lastName", $lastName);
   $newUser->addChild("email", $email);
@@ -84,7 +88,7 @@ if($isValid==true){
 //  $_SESSION['user_city'] = $city;
 //  $_SESSION['user_postalCode'] = $postalCode;
 
-  setcookie("user_code", $code, time() + 86400, "/");
+  setcookie("user_code", $lastCode +1, time() + 86400, "/");
   setcookie("user_firstName", $firstName, time() + 86400, "/");
   setcookie("user_lastName", $lastName, time() + 86400, "/");
   setcookie("user_email", $email, time() + 86400, "/");

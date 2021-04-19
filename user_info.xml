@@ -6,8 +6,8 @@
       <code>0</code>
       <firstName>Admin</firstName>
       <lastName>Account</lastName>
-      <email>123@gmail.com</email>
-      <password>Admin</password>
+      <email>admin@gmail.com</email>
+      <password>admin</password>
       <address>123 Admin Street</address>
       <city>Montreal</city>
       <stateOrProvince>Quebec</stateOrProvince>
