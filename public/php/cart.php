@@ -2,10 +2,19 @@
 <?php
 session_start();
 $xml = simplexml_load_file("C:\Users\Alan\OneDrive\Documents\GitHub\SOEN-287\product_info.xml");
-$data = $xml->snacks_aisle[0]->product[0]->quantity[0];
+$data = $xml->meat_poultry_fish_aisle[0]->product[0]->quantity[0];
+//$data = $_SESSION['product-qty-cart-'.$i]
 $_SESSION['number'] = (int) $data;
 //echo $_SESSION['number'];
 
+ ?>
+
+ <?php
+ $myfile = fopen("C:\Users\Alan\OneDrive\Documents\GitHub\SOEN-287\product_infoTest.xml", "a") or die("Unable to open file!");
+ //fwrite($myfile,"test3\n");
+ $file = 'C:\Users\Alan\OneDrive\Documents\GitHub\SOEN-287\product_infoTest.xml';
+ file_put_contents($file,str_replace($xml->snacks_aisle[0]->product[0]->quantity[1],'REPLACED',file_get_contents($file)));
+  fclose($myfile);
  ?>
 
  <!DOCTYPE html>
