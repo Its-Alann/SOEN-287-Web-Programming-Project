@@ -1,3 +1,33 @@
+<?php session_start(); 
+
+?>
+<?php
+
+for($i=0; $i<100; $i++){
+    if(isset($_POST['amount-'.$i])){
+    $_SESSION['product-qty-cart-'.$i]=$_POST['amount-'.$i];}
+    }
+
+for($i=20;$i<28;$i++){
+    if(isset($_SESSION['product-qty-cart-'.$i])){;
+    
+    }
+}
+
+$xml = simplexml_load_file("C:\Users\cpang\Desktop\SOEN-287-main\product_info.xml");
+foreach($xml->meat_poultry_fish_aisle->product as $item){
+    if($item->code==$_GET['code']){
+    $code= (int)$item->code;
+    $name=$item->name;
+    $weight=$item->weight;
+    $brand=$item->brand;
+    $price=$item->price;
+    $description=$item->description;
+    $description2=$item->description2;
+}
+}
+    ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +36,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>McJawz | Meat... | Beyond Meat</title>
+    <title>McJawz | Meat... |<?=$name?></title>
     <link rel="stylesheet" href="../../../public/css/bootstrap.css">
     <link rel="stylesheet" href="../../../public/css/allproducts.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -18,7 +48,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body onload="updateValue('amount-bm')">
+<body onload="updateValue('amount-<?=$code?>')">
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -52,7 +82,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 title">
-                <h2>Meat, Poultry and Fish | Beyond Meat</h2>
+                <h2>Meat, Poultry and Fish | <?=$name?></h2>
             </div>
         </div>
 
@@ -79,49 +109,56 @@
             </div>
         </div>
     </div>
-
     <div class="card mb-3">
         <div class="row no-gutters">
+        
+
             <div class="col-md-4">
-                <img src="../../../images/beyondmeat.png" class="card-img" alt="beyondmeat">
+                <img src="../../../images/<?=$code?>.png" class="card-img" alt="<?=$brand?>">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h2 class="card-title">Beyond Meat</h2>
-                    <p class="card-text">100% Plant Products</p>
-                    <p class="card-text"><small class="text-muted">"The Beyond Burger is a plant-based burger that looks, cooks, and satisfies like beef. It has all the juicy, meaty deliciousness of a traditional burger, but comes with the upsides of a plant-based meal. The Beyond Burger has 20g of plant-based protein and has no GMOs, soy, or gluten." - BeyondMeat</small></p>
+                    <h2 class="card-title"><?=$name?></h2>
+                    <p class="card-text"><?=$brand?></p>
+                    <p class="card-text"><small class="text-muted">"<?=$description?></small></p>
 
                     <div class="row quantity">
-                        <p class="pricing">10.99/kg</p>
-                        <p class="pricing" style="font-size: medium;" id="totalPrice">Sub total: $10.99</p>
-                        <div class="col-lg-12 incDecButton">
+                        <p class="pricing"><?=$price?>/<?=$weight?></p>
+                        <p class="pricing" style="font-size: medium;" id="totalPrice">Sub total: $<?= $price?></p>
+                        <div class="col-lg-12 incDecButton mb-2">
                             <span class="input-group-btn">
-                                <button onclick="decrement('amount-bm');totalprice('amount-bm');" class="quantity-left-minus btn btn-danger btn-number"
+                                <button onclick="decrement('amount-<?=$code?>');totalprice('amount-<?=$code?>');" class="quantity-left-minus btn btn-danger btn-number"
                                     data-type="minus" data-field="">-
                                 </button></span>
 
-                            <input id='amount-bm' size="3" value="1">
+                            <input id='amount-<?=$code?>' size="3" value="1">
+
                             <span class="input-group-btn">
-                            <button onclick="increment('amount-bm');totalprice('amount-bm');" type="button" class="quantity-right-plus btn btn-success btn-number"
+                            <button onclick="increment('amount-<?=$code?>');totalprice('amount-<?=$code?>');" type="button" class="quantity-right-plus btn btn-success btn-number"
                                     data-type="plus" data-field="">+
-</button>
-                            </span>
+                            </button></span>
                         </div>
-                        <div class="col-lg-12 addToCart">
-                            <label class="btn btn-info mt-2" onclick="getTotalCost()">Add to cart</label>
-                        </div>
+                        <form id="myForm" action="" method="POST">
+                            <div class="col-lg-12 addToCart mb-3"> 
+                            <button onclick="mySubmit('submit-<?=$code?>',<?=$code?>);"class="btn btn-info">Add to cart</button>
+                            <input type="hidden" id="submit-<?=$code?>" name="amount-<?=$code?>" value="">
+                             </form>
+
+                    <script>   
+                    function mySubmit(name1,number) {
+                        var name='amount-'+number;
+                        var val=sessionStorage[name];
+                                  document.getElementById(name1).value=val;
+                                document.getElementById("myForm").submit();}</script>
+
                     </div>
                 </div>
 
                 <div class="accordian">
-                    <input type="checkbox" id="title1" />
+                    <input type="checkbox" id="title1"/>
                     <label onclick="ShowDescription()" for="title1">More Description</label>
 
-                    <p id="description" style="display:none;padding-top: 5px; padding-bottom: 5px;">By using a variety of plant proteins, our products deliver greater or equal levels of protein than their animal-based counterparts.
-                       <br> Our fats create juicy plant-based burgers, beef, and sausages that sizzle in the pan or on the grill.
-                       <br>From taste to function, these minerals deliver the nutrients we expect from meat. Potassium Chloride is a naturally occurring mineral, added to provide a mineral balance close to that of animal meat.
-                       <br>The flavors and colors in our food come from plants, and this means we don’t use synthetic additives, for any reason, and we never will.
-
+                    <p id="description2" style="display:none;padding-top: 5px; padding-bottom: 5px;"><?php echo $description2 ?>
                     </p>
                    
                    
