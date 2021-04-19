@@ -215,7 +215,7 @@ session_start();
 
   <div class="footer" style="margin-top: 5%;">
     <div class="footer-text">
-      <a href="../../public/html/admin.html" style="color: white;">Admin</a>
+      <a href="../../public/php/admin.php" style="color: white;">Admin</a>
     </div>
   </div>
 
