@@ -95,7 +95,7 @@ function updateQuantities() {
 function updateProductInfo() {
     xmlhttp = new XMLHttpRequest();
 
-    xmlhttp.open("GET", "/product_info_test.xml", false);
+    xmlhttp.open("GET", "/product_info.xml", false);
     xmlhttp.send();
     xmlDoc = xmlhttp.responseXML;
 

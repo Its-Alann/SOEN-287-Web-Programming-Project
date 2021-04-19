@@ -170,12 +170,7 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
     </div>
 
     <!-- Footer -->
-    <div class="footer">
-        <div class="footer-text">
-            <a href="public/html/admin.html">Admin</a>
-        </div>
-    </div>
-
+    <?php include('footer.php'); ?>
 
 
 

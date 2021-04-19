@@ -2,7 +2,7 @@
 session_start();
 
 $product_code = $_GET["product_code"];
-$products = simplexml_load_file("../../product_info_test.xml");
+$products = simplexml_load_file("../../product_info.xml");
 foreach ($products->snack_aisle->product as $product) {
     if ($product->code == $product_code) {
         $name = $product->name;

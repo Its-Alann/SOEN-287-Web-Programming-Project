@@ -13,38 +13,5 @@
       <stateOrProvince>Quebec</stateOrProvince>
       <postalCode>H1A 9A1</postalCode>
     </user>
-    <user>
-      <code>1</code>
-      <firstName>James</firstName>
-      <lastName>Kirk</lastName>
-      <email>ncc1701@gmail.com</email>
-      <password>enterprise</password>
-      <address>123 Enterprise Avenue</address>
-      <city>A City in Iowa</city>
-      <stateOrProvince>Iowa</stateOrProvince>
-      <postalCode>A2C 4E6</postalCode>
-    </user>
-    <user>
-      <code>2</code>
-      <firstName>JeanLuc</firstName>
-      <lastName>Picard</lastName>
-      <email>ncc1701d@gmail.com</email>
-      <password>enterprised</password>
-      <address>321 Enterprise Avenue</address>
-      <city>LaBarre</city>
-      <stateOrProvince>France</stateOrProvince>
-      <postalCode>T3G 0H1</postalCode>
-    </user>
-    <user>
-      <code>3</code>
-      <firstName>Kathryn</firstName>
-      <lastName>Janeway</lastName>
-      <email>ncc74656@gmail.com</email>
-      <password>voyager</password>
-      <address>222 Voyager Street</address>
-      <city>Blooomington</city>
-      <stateOrProvince>Indiana</stateOrProvince>
-      <postalCode>S0N 3A0</postalCode>
-    </user>
   </userList>
 </root>
