@@ -1,9 +1,10 @@
 <?php
 session_start();
 
+
 $product_code = $_GET["product_code"];
 $products = simplexml_load_file("../../product_info_test.xml");
-foreach ($products->snack_aisle->product as $product) {
+foreach ($products->snacks_aisle->product as $product) {
     if ($product->code == $product_code) {
         $name = $product->name;
         $brand = $product->brand;
@@ -14,7 +15,7 @@ foreach ($products->snack_aisle->product as $product) {
     }
 }
 
-$product_code = $_GET["product_code"];
+
 if (isset($_POST["product-qty-" . $product_code])) {
     $_SESSION["product-qty-cart-" . $product_code] = $_POST["product-qty-" . $product_code];
 }

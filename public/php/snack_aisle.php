@@ -49,9 +49,7 @@ if (isset($_POST["product-qty-" . $product_code])) {
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 title">
-                <a href="./test.php">
-                    <h2>Snacks</h2>
-                </a>
+                <h2>Snacks</h2>
             </div>
         </div>
 
