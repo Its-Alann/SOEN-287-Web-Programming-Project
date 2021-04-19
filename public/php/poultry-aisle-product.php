@@ -109,7 +109,6 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
             </div>
         </div>
     </div>
-
     <div class="card mb-3">
         <div class="row no-gutters">
         

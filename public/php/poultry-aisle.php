@@ -120,7 +120,6 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
                     </a>
                     <div class="card-footer">
                         <p class="pricing"><b><?= $price ?>/<?= $weight ?></b></p>
-
                         <div class="row quantity">
 
                             <div class="col-lg-12 incDecButton">
