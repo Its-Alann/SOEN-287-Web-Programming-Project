@@ -143,11 +143,7 @@ if (isset($_POST["product-qty-" . $product_code])) {
     </div>
 
     <!-- Footer -->
-    <div class="footer">
-        <div class="footer-text">
-            <a href="../../../public/html/admin.html">Admin</a>
-        </div>
-    </div>
+    <?php include('footer.php'); ?>
 
 
 

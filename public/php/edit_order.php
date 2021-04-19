@@ -135,13 +135,7 @@
         ?>
 
 
-    <!--FOOTER-->
-    <div class="footer mt-lg-5">
-        <div class="footer-item">
-            <a href="../../public/html/admin.html">
-                <p>Admin</p>
-            </a>
-        </div>
-    </div>
+        <!-- Footer -->
+        <?php include('footer.php'); ?>
 </body>
 </html>

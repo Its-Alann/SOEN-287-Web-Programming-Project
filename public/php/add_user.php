@@ -15,8 +15,11 @@ if(isset($_POST['submit'])){//The user pushed the submit button
     $lastNameErr = "* Field Missing";
     $isValid = false;
   }
-  if(empty($_POST['email'])|| !preg_match("/^[a-zA-Z0-9]{1,}@[a-zA-Z0-9]{1,}\.[a-zA-Z0-9]{1,}$/", $_POST['email'])){
+  if(empty($_POST['email'])){
     $emailErr = "* Field Missing";
+    $isValid = false;
+  }elseif(!preg_match("/^[a-zA-Z0-9]{1,}@[a-zA-Z0-9]{1,}\.[a-zA-Z0-9]{1,}$/", $_POST['email'])){
+    $emailErr = "* Email is Invalid";
     $isValid = false;
   }
   if(empty($_POST['password'])){
@@ -35,6 +38,7 @@ if($isValid==true){
   $xml = simplexml_load_file("../../user_info.xml");//Loading XML file in an object
 
   $currentAmount = $xml->amount;
+  $lastCode = $xml->userList->user[(intval($currentAmount)-1)]->code;
   $firstName = $_POST['firstName'];
   $lastName = $_POST['lastName'];
   $email = $_POST['email'];
@@ -62,7 +66,7 @@ if($isValid==true){
 
 
   $newUser = $xml->userList->addChild("user");
-  $newUser->addChild("code", $currentAmount);
+  $newUser->addChild("code", $lastCode +1);
   $newUser->addChild("firstName", $firstName);
   $newUser->addChild("lastName", $lastName);
   $newUser->addChild("email", $email);
@@ -84,7 +88,7 @@ if($isValid==true){
 //  $_SESSION['user_city'] = $city;
 //  $_SESSION['user_postalCode'] = $postalCode;
 
-  setcookie("user_code", $code, time() + 86400, "/");
+  setcookie("user_code", $lastCode +1, time() + 86400, "/");
   setcookie("user_firstName", $firstName, time() + 86400, "/");
   setcookie("user_lastName", $lastName, time() + 86400, "/");
   setcookie("user_email", $email, time() + 86400, "/");
@@ -111,30 +115,8 @@ if($isValid==true){
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="../html/index.html">
-            <img style="margin-right: 5px;" class="icon-logo" src="../../images/mcJawz_logo_no_txt.png" width="40" height="40" alt="">
-            McJawz
-        </a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/signup.html">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/login.html">Log in</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <!-- Navbar -->
+  <?php include('header.php'); ?>
 
     <div class="page-name">
         <div>
@@ -189,14 +171,8 @@ if($isValid==true){
         </div>
       </div>
 
-    <div class="footer">
-        <div class="footer-item ml-3">
-            <a href="admin.html"><p>Admin</p></a>
-        </div>
-        <div class="footer-item mr-3">
-            <p class="font-italic"></p>
-        </div>
-    </div>
+      <!-- Footer -->
+      <?php include('footer.php'); ?>
 
 
 </body>

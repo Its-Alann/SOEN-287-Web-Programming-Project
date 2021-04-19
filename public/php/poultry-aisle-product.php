@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php session_start();
 
 ?>
 <?php
@@ -10,7 +10,7 @@ for($i=0; $i<100; $i++){
 
 for($i=20;$i<28;$i++){
     if(isset($_SESSION['product-qty-cart-'.$i])){;
-    
+
     }
 }
 
@@ -98,7 +98,7 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
                 |
                 <a href="../php/poultry-aisle.php">Meat, Poultry & Fish</a>
                 |
-                <a href="../php/snack_aisle.php">Snacks</a> 
+                <a href="../php/snack_aisle.php">Snacks</a>
 </div>
 
             <div class="col-lg-6 col-md-12 myCartContainer">
@@ -111,7 +111,7 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
     </div>
     <div class="card mb-3">
         <div class="row no-gutters">
-        
+
 
             <div class="col-md-4">
                 <img src="../../../images/product_<?=$code?>.jpg" class="card-img" alt="<?=$brand?>">
@@ -139,12 +139,12 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
                             </button></span>
                         </div>
                         <form id="myForm" action="" method="POST">
-                            <div class="col-lg-12 addToCart mb-3"> 
+                            <div class="col-lg-12 addToCart mb-3">
                             <button onclick="mySubmit('submit-<?=$code?>',<?=$code?>);"class="btn btn-info">Add to cart</button>
                             <input type="hidden" id="submit-<?=$code?>" name="amount-<?=$code?>" value="">
                              </form>
 
-                    <script>   
+                    <script>
                     function mySubmit(name1,number) {
                         var name='amount-'+number;
                         var val=sessionStorage[name];
@@ -160,8 +160,8 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
 
                     <p id="description2" style="display:none;padding-top: 5px; padding-bottom: 5px;"><?php echo $description2 ?>
                     </p>
-                   
-                   
+
+
 
                 </div>
 
