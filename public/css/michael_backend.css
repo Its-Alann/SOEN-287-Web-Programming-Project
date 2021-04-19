@@ -201,7 +201,10 @@ input[type="number"] {
 }
 
 table .btn-cell {
+    display: flex;
+    flex-direction: row;
     text-align: center;
+    justify-content: space-around;
 }
 
 /* Edit Product */
