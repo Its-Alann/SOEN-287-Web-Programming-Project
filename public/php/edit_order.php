@@ -115,6 +115,7 @@
     </form>
 
         <?php
+            session_start();
             if(isset($_POST['edit'])){
                 $xml = new DomDocument();
                 $xml->load('order_info.xml');

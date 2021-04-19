@@ -67,6 +67,7 @@
             </thead>
             <tbody>
                 <?php
+                    session_start();
                     $xml = simplexml_load_file('order_info.xml');    
                     $i = 0;
                     $orders = $xml->order;
@@ -109,6 +110,7 @@
     </div>
 
     <?php
+        session_start();
         $xml = simplexml_load_file('order_info.xml');
         if (isset($_POST['insert'])){
             //$xml = simplexml_load_file('../../order_info.xml');
@@ -182,6 +184,7 @@
         <button type="button"  class="btn btn-danger mt-3 mb-3">Reset</button>
     </form>
         <?php
+            session_start();
             if(isset($_POST['delete'])){
                 $xml = new DomDocument("1.0", "UTF-8");
                 $xml->load('order_info.xml');
