@@ -1,5 +1,6 @@
 <?php
 session_start(); //Starting the session
+$code = $_COOKIE['user_code'];
 $firstName = $_COOKIE['user_firstName'];
 $lastName = $_COOKIE['user_lastName'];
 $email = $_COOKIE['user_email'];
@@ -8,7 +9,8 @@ $address = $_COOKIE['user_address'];
 $city = $_COOKIE['user_city'];
 $stateOrProvince = $_COOKIE['user_stateOrProvince'];
 $postalCode =  $_COOKIE['user_postalCode'];
-if(isset($_POST['submit'])){//The user pushed the submit button
+
+if(isset($_POST['submitEdit'])){//The user pushed the Edit button
 
   $xml = simplexml_load_file("../../user_info.xml");//Loading XML file in an object
   $currentAmount = $xml->amount;
@@ -36,7 +38,6 @@ if(isset($_POST['submit'])){//The user pushed the submit button
   $xml->amount = intval($currentAmount)+1;//Increasing the amount value in XML
   $xml->asXML("../../user_info.xml");//Saving to XML file
 
-
   //Storing User infos on php session
 
 //  $_SESSION['user_code'] = $currentAmount;
@@ -58,6 +59,24 @@ setcookie("user_stateOrProvince", $stateOrProvince, time() + 86400, "/");
 setcookie("user_postalCode", $postalCode, time() + 86400, "/");
   header("Location: ../../index.php");
 
+}
+if(isset($_POST['submitDelete'])){//The user pushed the Delete Account button
+  $xml = simplexml_load_file("../../user_info.xml");//Loading XML file in an object
+  $currentAmount = $xml->amount;
+  $currentCode;//Holds the code of the user to be deleted
+  if($code=="0"){
+
+  }
+  else{
+    $currentCode = $code;
+  }
+  //Deleting the user from the xml file
+  $users = $xml->xpath("/root/userList/user[code=".$currentCode."]");
+  unset($users[0][0]);
+
+  $xml->amount = intval($currentAmount)-1;//Decreasing the amount value in XML
+  $xml->asXML("../../user_info.xml");
+header("Location: logout.php");
 }?>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,7 +96,7 @@ setcookie("user_postalCode", $postalCode, time() + 86400, "/");
 
     <div class="page-name">
         <div>
-           Sign Up
+           Account Information : <?php echo $email; ?>
         </div>
     </div>
 
@@ -90,9 +109,7 @@ setcookie("user_postalCode", $postalCode, time() + 86400, "/");
                       <h1>Edit your account</h1></div>
 
           <div class="card-body my-auto ">
-            <?php
 
-             ?>
             <form action="" method = "POST">
               <input class="inputField" type="text"  name = "firstName" value="<?php echo $firstName; ?>"><br>
               <input class="inputField" type="text"  name = "lastName" value="<?php echo $lastName; ?>"><br>
@@ -104,8 +121,11 @@ setcookie("user_postalCode", $postalCode, time() + 86400, "/");
               <input class="inputField " type="password" name = "password"  value="<?php echo $password; ?>"><br>
 
                 <div class="formButtons">
-                    <input type="submit" name = "submit" value = "Edit" class="btn btn-primary mt-3 mb-3">
-                    <button type="button"  class="btn btn-danger mt-3 mb-3">Clear</button>
+                    <input type="submit" name = "submitEdit" value = "Edit" class="btn btn-primary mt-3 mb-3">
+
+                      <form class="" action="" method="POST">
+                        <input type="submit" name="submitDelete" value="Delete Account" class="btn btn-danger mt-3 mb-3">
+                      </form>
                 </div>
             </form></div>
             <div class="card-footer bg-dark">
@@ -115,14 +135,8 @@ setcookie("user_postalCode", $postalCode, time() + 86400, "/");
         </div>
       </div>
 
-    <div class="footer">
-        <div class="footer-item ml-3">
-            <a href="admin.html"><p>Admin</p></a>
-        </div>
-        <div class="footer-item mr-3">
-            <p class="font-italic"></p>
-        </div>
-    </div>
+      <!-- Footer -->
+      <?php include('footer.php'); ?>
 
 
 </body>

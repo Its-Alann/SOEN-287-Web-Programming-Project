@@ -4,6 +4,8 @@
 $product_code = $_GET["product_code"];
 if (isset($_POST["product-qty-" . $product_code])) {
     $_SESSION["product-qty-cart-" . $product_code] = $_POST["product-qty-" . $product_code];
+
+    echo $_SESSION["product-qty-cart-" . $product_code];
 }
 ?>
 
@@ -15,7 +17,7 @@ if (isset($_POST["product-qty-" . $product_code])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>McJawz | Snacks</title>
+    <title>McJawz | Snacks PHP</title>
     <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../../../public/css/bootstrap.css" />
     <link rel="stylesheet" href="../../public/css/michael_snacks.css" />
@@ -82,7 +84,7 @@ if (isset($_POST["product-qty-" . $product_code])) {
         <div class="row">
 
             <?php
-            $products = simplexml_load_file("../../product_info_test.xml");
+            $products = simplexml_load_file("../../product_info.xml");
             foreach ($products->snacks_aisle->product as $product) {
                 $code = (int)$product->code;
                 $name = $product->name;
@@ -138,11 +140,7 @@ if (isset($_POST["product-qty-" . $product_code])) {
     </div>
 
     <!-- Footer -->
-    <div class="footer mt-5">
-        <div class="footer-text">
-            <a href="../../../public/html/admin.html">Admin</a>
-        </div>
-    </div>
+    <?php include('footer.php'); ?>
 </body>
 
 </html>

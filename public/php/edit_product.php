@@ -2,7 +2,7 @@
 session_start();
 
 // This part is only to fill in default values of form input fields
-$code = $_GET["product_code"];
+$code = 3; //$_GET["product_code"];
 $file = simplexml_load_file("../../product_info_test.xml");
 foreach ($file->children() as $aisle) { // loop through each aisle
     foreach ($aisle->product as $product) { // loop through each product in the aisle
@@ -19,7 +19,7 @@ foreach ($file->children() as $aisle) { // loop through each aisle
 
 if (isset($_POST["product-code"])) {
     $file = simplexml_load_file("../../product_info_test.xml");
-    $product = $file->xpath("//product[./code = '{$_POST["product-code"]}']")[0];
+    $product = $file->xpath("//product[./code = '{$code}']")[0];
     $product->name = $_POST["product-name"];
     $product->brand  = $_POST["product-brand"];
     $product->weight = $_POST["product-weight"];
@@ -83,7 +83,7 @@ if (isset($_POST["product-code"])) {
     <!-- Page Name -->
     <section class="page-name">
         <div>
-            Edit Product
+            Edit Product PHP
         </div>
     </section>
 
@@ -157,6 +157,7 @@ if (isset($_POST["product-code"])) {
 
             <div class="price-input d-inline-block">
                 <label class="mt-3" for="product-price">Product price</label>
+
                 <p class="d-inline">$</p>
                 <input class="d-inline w-25" type="number" step="0.01" id="product-price" name="product-price" value="<?php echo $price ?>">
             </div>
@@ -167,13 +168,7 @@ if (isset($_POST["product-code"])) {
     </section>
 
     <!-- Footer -->
-    <section class="footer">
-        <div class="footer-item ml-3">
-            <a href="../../public/html/admin.html">
-                <p>Admin</p>
-            </a>
-        </div>
-    </section>
+    <?php include('footer.php'); ?>
 
 </body>
 

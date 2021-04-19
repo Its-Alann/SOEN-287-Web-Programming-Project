@@ -79,7 +79,7 @@ echo $_SESSION['product-qty-cart-'.$i];}
                 |
                 <a href="../php/poultry-aisle.php">Meat, Poultry & Fish</a>
                 |
-                <a href="../php/snack_aisle.php">Snacks</a> 
+                <a href="../php/snack_aisle.php">Snacks</a>
 </div>
 
             <div class="col-lg-6 col-md-12 myCartContainer">
@@ -128,9 +128,9 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
                                         data-type="minus" data-field="">-
                                     </button>
                                 </span>
-        
+
                                 <input id='amount-<?=$code?>' size="3" value="1">
-                                
+
                                     <span class="input-group-btn">
                                         <button onclick="increment('amount-<?=$code?>',)"; type="button" class="quantity-right-plus btn btn-success btn-number"
                                         data-type="plus" data-field="">+
@@ -139,12 +139,12 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
                             </div>
                             <div class="justify-content-center" >
                             <form id="myForm" action="" method="POST" >
-                            <div class="col-lg-12 addToCart "> 
+                            <div class="col-lg-12 addToCart ">
                             <button onclick="mySubmit('submit-<?=$code?>',<?=$code?>);"class="btn btn-info">Add to cart</button>
                             <input type="hidden" id="submit-<?=$code?>" name="amount-<?=$code?>" value="">
                              </form>
                              </div>
-                    <script>   
+                    <script>
                     function mySubmit(name1,number) {
                         var name='amount-'+number;
                         var val=sessionStorage[name];
@@ -157,12 +157,9 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
                 </div>
             </div>
             <?php } ?>
+
     <!-- Footer -->
-    <div class="footer">
-        <div class="footer-text">
-            <a href="../../../public/html/admin.html">Admin</a>
-        </div>
-    </div>
+    <?php include('footer.php'); ?>
 
 
 
