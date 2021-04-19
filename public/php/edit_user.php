@@ -70,13 +70,10 @@ if(isset($_POST['submitDelete'])){//The user pushed the Delete Account button
   else{
     $currentCode = $code;
   }
+  //Deleting the user from the xml file
   $users = $xml->xpath("/root/userList/user[code=".$currentCode."]");
   unset($users[0][0]);
-  //foreach ($xml->userList->user as $user) {
-    //if($user->code == $currentCode){
-      //unset($user);
-    //}
-  //}
+
   $xml->amount = intval($currentAmount)-1;//Decreasing the amount value in XML
   $xml->asXML("../../user_info.xml");
 header("Location: logout.php");
@@ -99,7 +96,7 @@ header("Location: logout.php");
 
     <div class="page-name">
         <div>
-           Sign Up
+           Account Information : <?php echo $email; ?>
         </div>
     </div>
 
@@ -138,14 +135,8 @@ header("Location: logout.php");
         </div>
       </div>
 
-    <div class="footer">
-        <div class="footer-item ml-3">
-            <a href="admin.html"><p>Admin</p></a>
-        </div>
-        <div class="footer-item mr-3">
-            <p class="font-italic"></p>
-        </div>
-    </div>
+      <!-- Footer -->
+      <?php include('footer.php'); ?>
 
 
 </body>

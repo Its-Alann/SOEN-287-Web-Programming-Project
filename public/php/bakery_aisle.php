@@ -369,11 +369,7 @@
     </div>
 
     <!-- Footer -->
-    <div class="footer">
-        <div class="footer-text">
-            <a href="../admin.html">Admin</a>
-        </div>
-    </div>
+    <?php include('footer.php'); ?>
 
 
 </body>

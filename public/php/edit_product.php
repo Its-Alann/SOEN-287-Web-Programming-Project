@@ -168,13 +168,7 @@ if (isset($_POST["product-code"])) {
     </section>
 
     <!-- Footer -->
-    <section class="footer">
-        <div class="footer-item ml-3">
-            <a href="../../public/html/admin.html">
-                <p>Admin</p>
-            </a>
-        </div>
-    </section>
+    <?php include('footer.php'); ?>
 
 </body>
 

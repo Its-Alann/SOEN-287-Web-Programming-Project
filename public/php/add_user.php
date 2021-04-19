@@ -115,30 +115,8 @@ if($isValid==true){
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="../html/index.html">
-            <img style="margin-right: 5px;" class="icon-logo" src="../../images/mcJawz_logo_no_txt.png" width="40" height="40" alt="">
-            McJawz
-        </a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/signup.html">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/login.html">Log in</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <!-- Navbar -->
+  <?php include('header.php'); ?>
 
     <div class="page-name">
         <div>
@@ -193,14 +171,8 @@ if($isValid==true){
         </div>
       </div>
 
-    <div class="footer">
-        <div class="footer-item ml-3">
-            <a href="admin.html"><p>Admin</p></a>
-        </div>
-        <div class="footer-item mr-3">
-            <p class="font-italic"></p>
-        </div>
-    </div>
+      <!-- Footer -->
+      <?php include('footer.php'); ?>
 
 
 </body>
