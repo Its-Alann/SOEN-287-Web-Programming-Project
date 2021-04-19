@@ -4,8 +4,7 @@
 <?php
 for($i=0; $i<100; $i++){
 if(isset($_POST['amount-'.$i])){
-$_SESSION['product-qty-cart-'.$i]=$_POST['amount-'.$i];
-echo $_SESSION['product-qty-cart-'.$i];}
+$_SESSION['product-qty-cart-'.$i]=$_POST['amount-'.$i];}
 }
 ?>
 <!DOCTYPE html>
@@ -30,6 +29,7 @@ echo $_SESSION['product-qty-cart-'.$i];}
 
 <body onload="updateAllValues()">
     <!-- Navbar -->
+
     <?php include('header.php'); ?>
 
     <!-- Subheader -->

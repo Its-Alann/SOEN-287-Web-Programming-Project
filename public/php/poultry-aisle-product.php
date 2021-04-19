@@ -51,7 +51,7 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
 <body onload="updateValue('amount-<?=$code?>')">
 
     <!-- Navbar -->
-    <?php include('header.php'); ?>
+    <?php include('header.php'); ?> 
 
     <!-- Subheader -->
     <div class="container-fluid">

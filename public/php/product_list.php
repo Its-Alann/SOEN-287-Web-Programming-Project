@@ -43,8 +43,7 @@ $number=$_POST['delete'];
 
 </head>
 
-<!-- Navbar -->
-<?php include('header.php'); ?>
+<?php include('header.php'); ?> 
 
 <section class="page-name">
     <div>
