@@ -160,7 +160,7 @@ session_start();
         </a>
       </div>
       <div class="col-lg-4 col-md-6">
-        <a href="../../public/html/aisles/snack_aisle.html">
+        <a href="../../public/html/php/snack_aisle.php">
           <div class="card">
             <img class="card-img-top" src="../../images/snacks.jpg" alt="Card image cap">
             <div class="card-body">
