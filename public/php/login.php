@@ -39,39 +39,15 @@ $fieldErr = "";
   <script type="text/javascript">
 
   </script>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="../html/index.html">
-            <img style="margin-right: 5px;" class="icon-logo" src="../../images/mcJawz_logo_no_txt.png" width="40" height="40" alt="">
-            McJawz
-        </a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/signup.html">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/login.html">Log in</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <!-- Navbar -->
+  <?php include('header.php'); ?>
 
     <section class="page-name">
         <div>
            Login
         </div>
     </section>
-
-
-
+    
     <div class="flex-wrapper">
         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 align-self-center mx-auto mt-5  mb-5">
           <div class="card text-center">

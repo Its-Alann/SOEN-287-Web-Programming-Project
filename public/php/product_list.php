@@ -7,8 +7,8 @@ if(isset($_POST['delete'])){
 
     foreach($xml->children() as $child){
         foreach($child->product as $item){
-        if ($item->code==$number){
-            unset($item->item);
+        if ($item->code==$_POST['delete']){
+            unset($item->product);
             unset($xml->item);
             unset($item->code);
             unset($item->name);
@@ -18,7 +18,7 @@ if(isset($_POST['delete'])){
             unset($item->description);
             unset($item->description2);
             unset($item->quantity);
-    
+
         break;
             }
     }}
@@ -89,7 +89,7 @@ foreach($aisle-> product as $item){
                   <button onclick="increment('amount-<?=$code?>');" type="button" class="quantity-right-plus btn btn-success btn-number"
                           data-type="plus" data-field="">+
 </button>                </span>
-               
+
 
         <a href="edit_product.php?add_product=true" class="btn btn-dark btn-md mt-2 d-block">Add</a>
         <a href="edit_product.php" class="btn btn-dark btn-md mt-2 d-block">Edit</a>
@@ -97,7 +97,7 @@ foreach($aisle-> product as $item){
         <button onclick="submit();"class="btn btn-danger btn-md mt-2 btn-block">Delete</button>
         <input type="hidden" name="delete" value=<?=$code?> >
 </form>
-    
+
 
 
             </div>
@@ -118,4 +118,3 @@ foreach($aisle-> product as $item){
 </section>
     </body>
 </html>
-

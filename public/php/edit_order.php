@@ -13,35 +13,8 @@
 </head>
 <body>
     <!--HEADER-->
-    <div class="header">
-        <nav class="header-nav">
-            <ul class="navbar navbar-left">
-                <li class="logo">
-                    <a class="mr-2" href="../../public/html/index.html" >
-                        <img src="../../images/mcJawz_logo_no_txt.png" alt="">
-                    </a>
-                </li>
-                <li class="logo">
-                    <a href="../../public/html/index.html" >
-                        McJawz                    
-                    </a>
-                </li>
-            </ul>
-            <ul class="navbar navbar-right">
-                <li class="login-signup">
-                    <a href="../../public/html/login.html">
-                        Login
-                    </a>
-                </li>
-                <li class="link-sep">|</li>
-                <li class="login-signup">
-                    <a href="../../public/html/signup.html">
-                        Sign Up
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
+    <!-- Navbar -->
+    <?php include('header.php'); ?>
 
     <!--PAGE NAME-->
     <div class="page-name">
@@ -56,7 +29,7 @@
             <ul class="navbar navbar-left">
                 <li class="aisle-link">
                     <a href="../../public/html/aisles/bakery.html" >
-                        Bakery                    
+                        Bakery
                     </a>
                 </li>
                 <li class="link-sep">|</li>
@@ -74,10 +47,10 @@
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
                     <a href="../../public/html/aisles/fruitsandveg-aisle.html" >
-                        Fruits & Vegetables                    
+                        Fruits & Vegetables
                     </a>
                 </li>
-                
+
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
                     <a href="../../public/html/aisles/poultry-aisle.html">
@@ -105,42 +78,62 @@
     </div>
 
     <!--EDIT ORDERS-->
-    <section class="backstore-12">
-        <div style="text-align: center;">
-            <div>
-                <h2 class="text-muted mt-4">
-                    User
-                </h2>
-                <input type="text"> 
-            </div>
-            <br>
-            <div>
-                <h2 class="text-muted mt-4">
-                    Order Number
-                </h2>
-                <input type="number">
-            </div>
-            <br>
-            <div>
-                <h2 class="text-muted mt-4">
-                    Order List
-                </h2>
-                <input class = "textboxID" type="text">
-                <br>
-                <br>
-                <span>
-                    <span class="btn btn-info">Edit</span>
-                    <span class="btn btn-info">Add</span>
-                    <span class="btn btn-info">Delete</span>
-                </span>
-            </div>
-            <button type="submit" class="btn btn-blue shadow-none mt-5">Save</button>
-          
+    <form method = "POST" action = "edit_order.php">
+        Please select order number wished to be edited<input type = "text" name = "order_num"></br>
+        Please enter the user's name <input type = "text" name = "user"></br>
+        Please enter the new order list <input type = "text" name = "orderList" class = "mt-5 mb-5"></br>
+        <input type="submit" name = "edit" value = "Edit" class="btn btn-primary mt-3 mb-3">
+        <button type="button"  class="btn btn-danger mt-3 mb-3">Reset</button>
+        <button type="submit" class="btn btn-blue shadow-none mt-5">Save</button>
+    </form>
 
-        </div>
-    </section>
+        <?php
+            session_start();
+            if(isset($_POST['edit'])){
+                $xml = new DomDocument();
+                $xml->load('order_info.xml');
 
-    
+                #del order
+                $orderNum = $_POST['order_num'];
+
+                $xpath = new DOMXPath($xml);
+
+                foreach($xpath -> query("/order_list/order[order_num = '$orderNum']") as $node){
+                    $node->parentNode->removeChild($node);
+
+                }
+                $xml -> formatoutput = true;
+                $xml -> save('order_info.xml');
+
+                #add order
+                $newUser = $_POST['user'];
+                $newOrderNum = $_POST['order_num'];
+                $newOrderList = $_POST['orderList'];
+
+                $rootTag = $xml -> getElementsByTagname('order_list') -> item(0);
+
+                $infoTag = $xml -> createElement("order");
+                $userTag = $xml -> createElement("user", $newUser);
+                $orderNumTag = $xml -> createElement("order_num", $newOrderNum);
+                $orderListTag = $xml -> createElement("orderList", $newOrderList);
+
+                $infoTag ->appendChild($userTag);
+                $infoTag ->appendChild($orderNumTag);
+                $infoTag ->appendChild($orderListTag);
+
+                $rootTag -> appendChild($infoTag);
+                $xml->save('order_info.xml');
+
+
+                echo ("Your order has been successfully edited!");
+                echo ("Your username is " + $newUser + ".");
+                echo ("Your order number is " + $newOrderNum + ".");
+                echo ("Your new order is " + $newOrderList + ".");
+
+            }
+
+        ?>
+
 
     <!--FOOTER-->
     <div class="footer mt-lg-5">

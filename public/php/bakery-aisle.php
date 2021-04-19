@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv = "refresh" content = "0; url = ../../php/bakery-aisle.php" />
+
     <title>McJawz | Bakery</title>
     <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../../../public/css/bootstrap.css">
-    <link rel="stylesheet" href="../../../public/css/fruitsandveg-aisle.css">
+    <link rel="stylesheet" href="../../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../../public/css/fruitsandveg-aisle.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <script src="../../js/bakery-aisle.js"></script>
@@ -20,33 +20,7 @@
 <body onload="updateValues()">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="../../../public/html/index.html">
-            <img style="margin-right: 5px;" class="icon-logo d-inline-block align-top" src="../../../images/mcJawz_logo_no_txt.png" width="40"
-                height="40" alt="">
-            McJawz
-        </a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="../../../public/html/index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../../../public/html/signup.html">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../../../public/html/login.html">Log in</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
+    <?php include('header.php'); ?>
 
     <!-- Subheader -->
     <div class="container-fluid">
