@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <total_products>26</total_products>
+    <snacks_aisle>
+        <product>
+            <code>1</code>
+            <name>Oreo Original Cookies</name>
+            <brand>CHRISTIE</brand>
+            <description>OREO Chocolate Sandwich Cookies have been America's favorite cookie for over 100 years. Stuffed with delicious OREO creme, these chocolate sandwich cookies are supremely dunkable. OREO cookies are great for sharing with friends, serving at parties, or enjoying with cold milk.</description>
+            <price>3.99</price>
+            <weight>500 g</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>2</code>
+            <aisle>snacks</aisle>
+            <name>Crunchy Pecan Cereal Bars</name>
+            <brand>NATURE VALLEY</brand>
+            <description>A tasty snack for a busy day or an active lifestyle! Smart snacking has never tasted so good.</description>
+            <price>2.99</price>
+            <weight>210 g</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>3</code>
+            <name>Classic Potato Chips</name>
+            <brand>LAY'S</brand>
+            <description>It all starts with farm-grown potatoes, cooked and seasoned to perfection. So every LAY'S potato chip is perfectly crispy and full of fresh potato taste. Happiness in Every Bite.</description>
+            <price>1.89</price>
+            <weight>66 g</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>4</code>
+            <name>Classic Thins Pretzels</name>
+            <brand>ROLD GOLD</brand>
+            <description>Between the one-of-a-kind flavor and crispy texture of ROLD GOLD pretzels, you just might fall in love with this golden-baked snack all over again every time you take a break. Try them with peanut butter, hummus or on their own to take your break to a whole new level!</description>
+            <price>3.99</price>
+            <weight>400 g</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>5</code>
+            <name>Extra Buttery 10 Pack Popcorn</name>
+            <brand>ORVILLE REDENBACHER'S</brand>
+            <description>Treat yourself to the original. Made with the perfect balance of butter flavor and salt, our classic microwave butter popcorn is packed up in mini microwave bags for easy snacking.</description>
+            <price>8.49</price>
+            <weight>820 g</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>6</code>
+            <name>Roasted Unsalted Pistachios</name>
+            <brand>WONDERFUL</brand>
+            <description>Fans of Wonderful Pistachios can now enjoy a sodium-free version of our pistachios, roasted to perfection with no additives.</description>
+            <price>4.99</price>
+            <weight>225 g</weight>
+            <quantity>10</quantity>
+        </product>
+    </snacks_aisle>
+    <meat_poultry_fish_aisle>
+        <product>
+            <code>21</code>
+            <name>Chicken Breast</name>
+            <brand>100% Canadian Chicken</brand>
+            <description>The Chicken's were raised on a free range farm in the upper regions of Quebec. They are antiobiotics and GMO free. SUPPORT YOUR LOCAL FARMERS.</description>
+            <price>8.99</price>
+            <weight>1000 g</weight>
+            <quantity>10</quantity>
+            <description2>Our main priority here at McJawz is getting local products into the hands of our consumers.
+                   This brand of chicken breast comes from one of the finest farms in quebec with none of the price premium you expect to pay for a quality product.
+                   The chicken breast are lean and trimmed of most fat before packaging.</description2>
+        </product>
+        <product>
+            <code>22</code>
+            <name>Chicken Thigh</name>
+            <brand>100% Canadian Chicken</brand>
+            <description>The Chicken's were raised on a free range farm in the upper regions of Quebec. They are antiobiotics and GMO free. Contains both leg and Thighs.WARNING: May contain bones. SUPPORT YOUR LOCAL FARMERS.</description>
+            <price>7.99</price>
+            <weight>1000 g</weight>
+            <quantity>10</quantity>
+            <description2>Large chicken thighs from the top of the Chicken genetic pool.
+                    We carefully breed the chickens in order to yield the most meat and biggest size. Once again achieving this without explicitly modifying genetics.</description2>
+        </product>
+         <product>
+            <code>23</code>
+            <name>Chicken Legs</name>
+            <brand>100% Canadian Chicken</brand>
+            <description>The Chicken's were raised on a free range farm in the upper regions of Quebec. They are antiobiotics and GMO free. Contains both leg and Thighs.WARNING: May contain bones. SUPPORT YOUR LOCAL FARMERS</description>
+            <price>6.99</price>
+            <weight>1000 g</weight>
+             <quantity>10</quantity>
+            <description2>Large chicken legs from the top of the Chicken genetic pool.We carefully breed the chickens in order to yield the most meat and biggest size. Once again achieving this without explicitly modifying genetics.</description2>
+        </product>
+        <product>
+            <code>24</code>
+            <name>Ground Meat</name>
+            <brand>100% Canadian Grown Beef</brand>
+            <description>Ground meat was taken from cows grown on Canadian soil. They were grown antibiotic free and GMO free.SUPPORT YOUR LOCAL FARMERS.</description>
+            <price>8.99</price>
+            <weight>1000 g</weight>
+            <quantity>10</quantity>
+            <description2>We unfortunately only offer lean ground meat at this time.We plan to add variations of ground meat with a higher fat content. Within the next couple weeks.</description2>
+        </product>
+         <product>
+            <code>25</code>
+            <name>Beyond Meat</name>
+            <brand>100% Plant Products</brand>
+            <description>"The Beyond Burger is a plant-based burger that looks, cooks, and satisfies like beef. It has all the juicy, meaty deliciousness of a traditional burger, but comes with the upsides of a plant-based meal. The Beyond Burger has 20g of plant-based protein and has no GMOs, soy, or gluten." - BeyondMeat</description>
+            <price>10.99</price>
+            <weight>1000 g</weight>
+            <quantity>10</quantity>
+            <description2>By using a variety of plant proteins, our products deliver greater or equal levels of protein than their animal-based counterparts.
+                        Our fats create juicy plant-based burgers, beef, and sausages that sizzle in the pan or on the grill.
+                       From taste to function, these minerals deliver the nutrients we expect from meat. Potassium Chloride is a naturally occurring mineral, added to provide a mineral balance close to that of animal meat.
+                       The flavors and colors in our food come from plants, and this means we don’t use synthetic additives, for any reason, and we never will.</description2>
+        </product>
+        <product>
+            <code>26</code>
+            <name>Atlantic Salmon</name>
+            <brand>100% Canadian Farmed Salmon</brand>
+            <description>The Salmon was caught off the coast of Newfoundland and kept alive until reaching its final destination to ensure its freshness. SUPPORT YOUR CANADIAN FISH FARMERS.</description>
+            <price>14.99</price>
+            <weight>1000 g</weight>
+            <quantity>10</quantity>
+            <description2>Not your average salmon,guaranteed freshness straight from Canadian Hands.
+                        No artifical colors or flavors are added. Despite not being wild, the salmon's diet consisted of Krill and smaller fish(NO GRAINS).</description2>
+            </product>
+    </meat_poultry_fish_aisle>
+
+    <bakery_aisle></bakery_aisle>
+    <dairy_eggs_aisle>
+       <product>
+          <code>7</code>
+          <aisle>dairy</aisle>
+          <name>Source Strawberry Yogurt</name>
+          <brand>Source</brand>
+          <description>Source Strawberry Yogurt is made with real fruits to guarantee you an incredible flavour. Free from fat and full of flavour, now you can enjoy wellness your way every day.</description>
+          <price>3.99</price>
+          <weight>650 g</weight>
+          <quantity>10</quantity>
+      </product>
+      <product>
+          <code>8</code>
+          <aisle>dairy</aisle>
+          <name>Silk Vanilla Almond Milk</name>
+          <brand>Silk</brand>
+          <description>You deserve more oh-so-mmm moments—especially if they include a note of vanilla. And our smooth almondmilk also has 50% more calcium than milk.</description>
+          <price>4.99</price>
+          <weight>1.85 L</weight>
+          <quantity>10</quantity>
+      </product>
+      <product>
+          <code>9</code>
+          <aisle>dairy</aisle>
+          <name>Quebon 2% Milk</name>
+          <brand>Quebon</brand>
+          <description>Why change tradition ? Québon partly skimmed 2% milk combine all the great taste and freshness of Quebec's milk with many vitamins and minerals necessary to the maintenance of good health. From our farms to your family.</description>
+          <price>6.99</price>
+          <weight>4 L</weight>
+          <quantity>10</quantity>
+      </product>
+      <product>
+          <code>10</code>
+          <aisle>dairy</aisle>
+          <name>P'Tit Quebec Cheese</name>
+          <brand>P'Tit Quebec</brand>
+          <description>P'Tit Quebec mozarella cheese is the freshest cheese you can get in Quebec. Use it in the kitchen for some delicious pasta or for a simple snack for the kids.</description>
+          <price>4.99</price>
+          <weight>460 g</weight>
+          <quantity>10</quantity>
+      </product>
+      <product>
+          <code>11</code>
+          <aisle>dairy</aisle>
+          <name>Burnbrae Brown Eggs</name>
+          <brand>Burnbrae</brand>
+          <description>Burnbrae Farms Brown Eggs are produced by Rhode Island Red hens. Although the nutritional value is the same as white eggs, some people swear they taste better; who are we to argue?</description>
+          <price>4.50</price>
+          <weight>760 g</weight>
+          <quantity>10</quantity>
+      </product>
+      <product>
+          <code>12</code>
+          <aisle>dairy</aisle>
+          <name>Burnbrae White Eggs</name>
+          <brand>Burnbrae</brand>
+          <description>Naturegg Omega 3 is a nutritionally enhanced egg for people looking for natural foods with more essential nutrients. While all eggs are nutritious, natural and offer a great source of protein, vitamins and minerals, Naturegg Omega 3 eggs also provide an additional source of DHA omega-3 fatty acids.</description>
+          <price>2.99</price>
+          <weight>760 g</weight>
+          <quantity>10</quantity>
+      </product>
+    </dairy_eggs_aisle>
+    <beverages_aisle>
+        <product>
+            <code>13</code>
+            <name>Evian Water</name>
+            <brand>Evian</brand>
+            <description>Evian water is a brand of mineral water coming from sources near Évian-les-Bains, on the south shore of Lake Geneva.</description>
+            <price>1.20</price>
+            <weight>500mL</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>14</code>
+            <name>Sprite</name>
+            <brand>Sprite</brand>
+            <description>A colourless, lemon-lime beverage produced by the Coca-Cola Company.</description>
+            <price>1.80</price>
+            <weight>600mL</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>15</code>
+            <name>Coca Cola</name>
+            <brand>Coca Cola</brand>
+            <description>A carbonated soft drink originally made and intended as a patent medicine.</description>
+            <price>1.80</price>
+            <weight>600mL</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>16</code>
+            <name>Fanta</name>
+            <brand>Fanta</brand>
+            <description>An orange flavored carbonated soft drink created by Coca-Cola.</description>
+            <price>1.80</price>
+            <weight>600mL</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>17</code>
+            <name>Fruit Punch</name>
+            <brand>Minute Maid</brand>
+            <description>A combination made from real fruit creating a refreshing and delicious blend.</description>
+            <price>2.25</price>
+            <weight>1.75L</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>18</code>
+            <name>Orange Juice</name>
+            <brand>Minute Maid</brand>
+            <description>A delectable and refreshing blend of 100% natural orange juices.</description>
+            <price>2.25</price>
+            <weight>1.75L</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>19</code>
+            <name>Monster Energy Drink</name>
+            <brand>Monster</brand>
+            <description>An energy drink made from taurine.</description>
+            <price>2.75</price>
+            <weight>473mL</weight>
+            <quantity>10</quantity>
+        </product>
+        <product>
+            <code>20</code>
+            <name>RedBull Energy Drink</name>
+            <brand>RedBull</brand>
+            <description>RedBull is an energy that "Gives You Wings".</description>
+            <price>1.99</price>
+            <weight>355mL</weight>
+            <quantity>10</quantity>
+        </product>
+    </beverages_aisle>
+    <fruits_vegetables_aisle></fruits_vegetables_aisle>
+</products>
