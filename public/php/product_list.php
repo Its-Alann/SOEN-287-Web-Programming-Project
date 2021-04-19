@@ -20,7 +20,7 @@ $number=$_POST['delete'];
             unset($item->description);
             unset($item->description2);
             unset($item->quantity);
-    
+
         break;
             }
     }}
@@ -43,30 +43,7 @@ $number=$_POST['delete'];
 
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="../html/index.html">
-        <img style="margin-right: 5px;" class="icon-logo" src="../../images/mcJawz_logo_no_txt.png" width="40" height="40" alt="">
-        McJawz
-    </a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="../html/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../html/signup.html">Sign Up</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../html/login.html">Log in</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<?php include('header.php'); ?> 
 
 <section class="page-name">
     <div>
@@ -96,7 +73,7 @@ foreach($aisle-> product as $item){
  <div class="row mt-2">
       <div class="card-body col-xl-4 col-lg-6 col-md-6 col-sm-6">
         <img src="../../images/<?=$code?>.png" class="img-fluid " style="background-color: white;" alt="<?= $name?>">
-      </div> 
+      </div>
       <div class="col-xl-8 col-lg-6 col-md-6 col-sm-6 align-self-center " id="productCC">
         <div class="card text-center">
                 <div class="card-header bg-dark text-white">
@@ -114,7 +91,7 @@ foreach($aisle-> product as $item){
                   <button onclick="increment('amount-<?=$code?>');" type="button" class="quantity-right-plus btn btn-success btn-number"
                           data-type="plus" data-field="">+
 </button>                </span>
-               
+
 
         <a href="edit_product.php?add_product=true" class="btn btn-dark btn-md mt-2 d-block">Add</a>
         <a href="edit_product.php" class="btn btn-dark btn-md mt-2 d-block">Edit</a>
@@ -122,7 +99,7 @@ foreach($aisle-> product as $item){
         <button onclick="submit();"class="btn btn-danger btn-md mt-2 btn-block">Delete</button>
         <input type="hidden" name="delete" value=<?=$code?> >
 </form>
-    
+
 
 
             </div>
@@ -143,4 +120,3 @@ foreach($aisle-> product as $item){
 </section>
     </body>
 </html>
-

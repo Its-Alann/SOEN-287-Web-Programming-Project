@@ -180,7 +180,7 @@ session_start();
         </a>
       </div>
       <div class="col-lg-4 col-md-6">
-        <a href="../../public/html/aisles/poultry-aisle.html">
+        <a href="public/php/poultry-aisle.php">
           <div class="card">
             <img class="card-img-top" src="../../images/meat.jpg" alt="Card image cap">
             <div class="card-body">
