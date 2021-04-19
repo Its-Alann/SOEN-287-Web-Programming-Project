@@ -1,9 +1,9 @@
 <?php
-if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code']!="0") {
-  header("Location: access_denied.php");
+if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code'] != "0") {
+    header("Location: access_denied.php");
 }
 
- ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,8 +11,7 @@ if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code']!="0") {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="../../public/css/michael_backend.css">
     <link rel="icon" href="../../images/favicon.ico" type="image/x-icon" />
     <title>McJawz | Admin</title>
@@ -20,8 +19,8 @@ if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code']!="0") {
 
 <body>
 
-  <!-- Navbar -->
-  <?php include('header.php'); ?>
+    <!-- Navbar -->
+    <?php include('header.php'); ?>
 
     <!-- Page Name -->
     <section class="page-name">
@@ -96,7 +95,7 @@ if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code']!="0") {
                     </div>
                 </div>
             </a>
-            <a href="../../public/html/user_list.html" class="back-page-link">
+            <a href="../../public/php/user_list.php" class="back-page-link">
                 <div class="card text-center">
                     <div class="card-body">
                         <h1 class="card-text">P9</h1>
