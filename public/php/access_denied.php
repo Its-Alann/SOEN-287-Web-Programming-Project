@@ -55,7 +55,7 @@
       <h2>You don't have the rights to access this page.</h2>
       <button type="button" class="btn btn-primary btn-lg"
        style="background-color:rgb(51, 51, 51); color:white; border-color:rgb(51, 51, 51); margin:20px;"
-       name="button" > <a href="index.html">Return to home page</button>
+       name="button" > <a href="../../index.php">Return to home page</button>
     </div>
 
     <!-- Navbar -->
