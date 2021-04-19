@@ -2,26 +2,10 @@
 <?php
 if(isset($_POST['delete'])){
 
-
     $xml = simplexml_load_file("../../product_info.xml");
-
-    foreach($xml->children() as $child){
-        foreach($child->product as $item){
-        if ($item->code==$_POST['delete']){
-            unset($item->product);
-            unset($xml->item);
-            unset($item->code);
-            unset($item->name);
-            unset($item->weight);
-            unset($item->brand);
-            unset($item->price);
-            unset($item->description);
-            unset($item->description2);
-            unset($item->quantity);
-
-        break;
-            }
-    }}
+    $CodeToDelete=$_POST['delete'];
+    $users = $xml->xpath("//product[./code = '{$CodeToDelete}']")[0];
+    unset($users[0][0]);
     file_put_contents("../../product_info.xml",$xml->saveXML());}
 ?>
 
@@ -48,7 +32,6 @@ if(isset($_POST['delete'])){
        Product List
     </div>
 </section>
-
 <body onload="updateAllValues()">
 
 <?php
@@ -107,14 +90,6 @@ foreach($aisle-> product as $item){
   </div>
 </div>
 <?php }}?>
-</body>
-<section class="footer">
-    <div class="footer-item ml-3">
-        <a href="../html/admin.html"><p>Admin</p></a>
-    </div>
-    <div class="footer-item mr-3">
-        <p class="font-italic"></p>
-    </div>
-</section>
+<?php include('footer.php'); ?>
     </body>
 </html>
