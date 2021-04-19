@@ -73,7 +73,7 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
                 |
                 <a href="../poultry-aisle.php">Meat, Poultry & Fish</a>
                 |
-                <a href="../../../public/html/aisles/snack_aisle.html">Snacks</a> 
+                <a href="../snack_aisle.php">Snacks</a> 
 </div>
 
             <div class="col-lg-6 col-md-12 myCartContainer">
@@ -89,7 +89,7 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
         
 
             <div class="col-md-4">
-                <img src="../../../images/<?=$code?>.png" class="card-img" alt="<?=$brand?>">
+                <img src="../../../images/product_<?=$code?>.jpg" class="card-img" alt="<?=$brand?>">
             </div>
             <div class="col-md-8">
                 <div class="card-body">

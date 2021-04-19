@@ -52,7 +52,7 @@ $_SESSION['product-qty-cart-'.$i]=$_POST['amount-'.$i];}
                 |
                 <a href="./poultry-aisle.php">Meat, Poultry & Fish</a>
                 |
-                <a href="../../../public/html/aisles/snack_aisle.html">Snacks</a> 
+                <a href="../snack_aisle.php">Snacks</a> 
 </div>
 
             <div class="col-lg-6 col-md-12 myCartContainer">
@@ -85,7 +85,7 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
             <div class="col-lg-4 col-md-6">
                 <div class="card">
                     <a class="item-link" href='./poultry-aisle-product.php?code=<?= $code ?>' >
-                        <img class="card-img-top" src="../../../images/<?= $code?>.png" alt="Meat,Poultry and Fish">
+                        <img class="card-img-top" src="../../../images/product_<?= $code?>.jpg" alt="<?=$brand?>">
                         <div class="card-body">
                             <h5 class="card-title"><?= $name?></h5>
                             <p class="card-text"><?= $brand?></p>

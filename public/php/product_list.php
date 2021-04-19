@@ -1,8 +1,6 @@
 <?php session_start();?>
 <?php
 if(isset($_POST['delete'])){
-$number=$_POST['delete'];
-   echo $number;
 
 
     $xml = simplexml_load_file("../../product_info.xml");
@@ -72,7 +70,7 @@ foreach($aisle-> product as $item){
 <div class=backstore-p7>
  <div class="row mt-2">
       <div class="card-body col-xl-4 col-lg-6 col-md-6 col-sm-6">
-        <img src="../../images/<?=$code?>.png" class="img-fluid " style="background-color: white;" alt="<?= $name?>">
+        <img src="../../images/product_<?=$code?>.jpg" class="img-fluid " style="background-color: white;" alt="<?= $name?>">
       </div> 
       <div class="col-xl-8 col-lg-6 col-md-6 col-sm-6 align-self-center " id="productCC">
         <div class="card text-center">
