@@ -92,7 +92,7 @@ foreach($aisle-> product as $item){
 
 
         <a href="edit_product.php?add_product=true" class="btn btn-dark btn-md mt-2 d-block">Add</a>
-        <a href="edit_product.php" class="btn btn-dark btn-md mt-2 d-block">Edit</a>
+        <a href="edit_product.php?product_code=<?=$code?>" class="btn btn-dark btn-md mt-2 d-block">Edit</a>
         <form action="" method="post">
         <button onclick="submit();"class="btn btn-danger btn-md mt-2 btn-block">Delete</button>
         <input type="hidden" name="delete" value=<?=$code?> >
