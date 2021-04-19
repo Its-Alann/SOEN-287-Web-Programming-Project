@@ -1,5 +1,5 @@
 function ShowDescription(){
-var description = document.getElementById("description")
+var description = document.getElementById("description2")
 if(description.style.display === "none"){
     description.style.display = "block";}
 else{
@@ -51,19 +51,18 @@ function updateValue(amount){
 }
 
 
-function updateValues(){
-    keys = (Object.keys(sessionStorage));
-    for(i=0; i<keys.length; i++){
-        if(sessionStorage.getItem(keys[i]) != null){
-            var temp = document.getElementById(keys[i]);
-            if(temp){
-                var itemToUpdate = document.getElementById(keys[i]);
-                itemToUpdate.value = (sessionStorage.getItem(keys[i])).toString();
+function updateAllValues(){
+         keys = Object.keys(sessionStorage);
+        for (i = 0; i < keys.length; i++) {
+            if (sessionStorage.getItem(keys[i])!= null) {
+                if ( document.getElementById(keys[i])!= null) {
+                    document.getElementById(keys[i]).value = parseInt(sessionStorage.getItem(keys[i]));
+                }
             }
         }
     }
 
-}
+
 
 function totalprice(amount){
 
@@ -77,5 +76,5 @@ function totalprice(amount){
     }
  else{
     total.innerHTML="Sub:total $"+Math.round((quantity.value*cost + Number.EPSILON) * 100) / 100;
- }}
-  
+ }
+}
