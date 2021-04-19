@@ -92,6 +92,7 @@
              <quantity>10</quantity>
             <description2>Large chicken legs from the top of the Chicken genetic pool.We carefully breed the chickens in order to yield the most meat and biggest size. Once again achieving this without explicitly modifying genetics.</description2>
         </product>
+        <product>
          <code>99</code>
             <name>TEST</name>
             <brand>Delete</brand>
@@ -340,6 +341,6 @@
           <price>2.25</price>
           <weight>1000 g</weight>
           <quantity>10</quantity>
-        </product>
-    </fruits_vegetables_aisle>
+          </product>
+</fruits_vegetables_aisle>
 </products>

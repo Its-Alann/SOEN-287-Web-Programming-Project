@@ -32,7 +32,6 @@ if(isset($_POST['delete'])){
        Product List
     </div>
 </section>
-
 <body onload="updateAllValues()">
 
 <?php
@@ -91,14 +90,6 @@ foreach($aisle-> product as $item){
   </div>
 </div>
 <?php }}?>
-</body>
-<section class="footer">
-    <div class="footer-item ml-3">
-        <a href="../html/admin.html"><p>Admin</p></a>
-    </div>
-    <div class="footer-item mr-3">
-        <p class="font-italic"></p>
-    </div>
-</section>
+<?php include('footer.php'); ?>
     </body>
 </html>
