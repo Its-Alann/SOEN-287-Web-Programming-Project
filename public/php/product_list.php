@@ -2,26 +2,10 @@
 <?php
 if(isset($_POST['delete'])){
 
-
     $xml = simplexml_load_file("../../product_info.xml");
-
-    foreach($xml->children() as $child){
-        foreach($child->product as $item){
-        if ($item->code==$_POST['delete']){
-            unset($item->product);
-            unset($xml->item);
-            unset($item->code);
-            unset($item->name);
-            unset($item->weight);
-            unset($item->brand);
-            unset($item->price);
-            unset($item->description);
-            unset($item->description2);
-            unset($item->quantity);
-
-        break;
-            }
-    }}
+    $CodeToDelete=$_POST['delete'];
+    $users = $xml->xpath("//product[./code = '{$CodeToDelete}']")[0];
+    unset($users[0][0]);
     file_put_contents("../../product_info.xml",$xml->saveXML());}
 ?>
 
@@ -92,7 +76,7 @@ foreach($aisle-> product as $item){
 
 
         <a href="edit_product.php?add_product=true" class="btn btn-dark btn-md mt-2 d-block">Add</a>
-        <a href="edit_product.php" class="btn btn-dark btn-md mt-2 d-block">Edit</a>
+        <a href="edit_product.php?product_code=<?=$code?>" class="btn btn-dark btn-md mt-2 d-block">Edit</a>
         <form action="" method="post">
         <button onclick="submit();"class="btn btn-danger btn-md mt-2 btn-block">Delete</button>
         <input type="hidden" name="delete" value=<?=$code?> >
