@@ -404,3 +404,8 @@ a.clickhere:hover {
 .card-footer {
   color: #7b7d7d;
 }
+
+.textboxID {
+  height: 200px;
+  width: 300px;
+}

@@ -1,4 +1,4 @@
-<?php session_start();
+<?php session_start(); 
 
 ?>
 <?php
@@ -10,11 +10,11 @@ for($i=0; $i<100; $i++){
 
 for($i=20;$i<28;$i++){
     if(isset($_SESSION['product-qty-cart-'.$i])){;
-
+    
     }
 }
 
-$xml = simplexml_load_file("../../product_info.xml");
+$xml = simplexml_load_file("C:\Users\cpang\Desktop\SOEN-287-main\product_info.xml");
 foreach($xml->meat_poultry_fish_aisle->product as $item){
     if($item->code==$_GET['code']){
     $code= (int)$item->code;
@@ -51,7 +51,32 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
 <body onload="updateValue('amount-<?=$code?>')">
 
     <!-- Navbar -->
-    <?php include('header.php'); ?> 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../../../public/html/index.html">
+            <img style="margin-right: 5px;" class="icon-logo" src="../../../images/mcJawz_logo_no_txt.png" width="40"
+                height="40" alt="logo">
+            McJawz
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../public/html/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../public/html/signup.html">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../public/html/login.html">Log in</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Subheader -->
     <div class="container-fluid">
@@ -71,9 +96,9 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
                 |
                 <a href="../../../public/html/aisles/fruitsandveg-aisle.html">Fruits & Vegetables</a>
                 |
-                <a href="../poultry-aisle.php">Meat, Poultry & Fish</a>
+                <a href="../../../public/html/aisles/poultry-aisle.html">Meat, Poultry & Fish</a>
                 |
-                <a href="../../../public/html/aisles/snack_aisle.html">Snacks</a>
+                <a href="../../../public/html/aisles/snack_aisle.html">Snacks</a> 
 </div>
 
             <div class="col-lg-6 col-md-12 myCartContainer">
@@ -86,7 +111,7 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
     </div>
     <div class="card mb-3">
         <div class="row no-gutters">
-
+        
 
             <div class="col-md-4">
                 <img src="../../../images/<?=$code?>.png" class="card-img" alt="<?=$brand?>">
@@ -114,12 +139,12 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
                             </button></span>
                         </div>
                         <form id="myForm" action="" method="POST">
-                            <div class="col-lg-12 addToCart mb-3">
+                            <div class="col-lg-12 addToCart mb-3"> 
                             <button onclick="mySubmit('submit-<?=$code?>',<?=$code?>);"class="btn btn-info">Add to cart</button>
                             <input type="hidden" id="submit-<?=$code?>" name="amount-<?=$code?>" value="">
                              </form>
 
-                    <script>
+                    <script>   
                     function mySubmit(name1,number) {
                         var name='amount-'+number;
                         var val=sessionStorage[name];
@@ -135,8 +160,8 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
 
                     <p id="description2" style="display:none;padding-top: 5px; padding-bottom: 5px;"><?php echo $description2 ?>
                     </p>
-
-
+                   
+                   
 
                 </div>
 

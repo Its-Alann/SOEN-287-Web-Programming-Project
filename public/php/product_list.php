@@ -20,7 +20,7 @@ $number=$_POST['delete'];
             unset($item->description);
             unset($item->description2);
             unset($item->quantity);
-    
+
         break;
             }
     }}
@@ -73,7 +73,7 @@ foreach($aisle-> product as $item){
  <div class="row mt-2">
       <div class="card-body col-xl-4 col-lg-6 col-md-6 col-sm-6">
         <img src="../../images/<?=$code?>.png" class="img-fluid " style="background-color: white;" alt="<?= $name?>">
-      </div> 
+      </div>
       <div class="col-xl-8 col-lg-6 col-md-6 col-sm-6 align-self-center " id="productCC">
         <div class="card text-center">
                 <div class="card-header bg-dark text-white">
@@ -91,7 +91,7 @@ foreach($aisle-> product as $item){
                   <button onclick="increment('amount-<?=$code?>');" type="button" class="quantity-right-plus btn btn-success btn-number"
                           data-type="plus" data-field="">+
 </button>                </span>
-               
+
 
         <a href="edit_product.php?add_product=true" class="btn btn-dark btn-md mt-2 d-block">Add</a>
         <a href="edit_product.php" class="btn btn-dark btn-md mt-2 d-block">Edit</a>
@@ -99,7 +99,7 @@ foreach($aisle-> product as $item){
         <button onclick="submit();"class="btn btn-danger btn-md mt-2 btn-block">Delete</button>
         <input type="hidden" name="delete" value=<?=$code?> >
 </form>
-    
+
 
 
             </div>
@@ -120,4 +120,3 @@ foreach($aisle-> product as $item){
 </section>
     </body>
 </html>
-
