@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <products>
     <total_products>26</total_products>
-    <snacks_aisle>
+    <snacks_aisle>https://github.com/mitotar/SOEN-287/blob/main/product_info.xml
         <product>
             <code>1</code>
             <name>Oreo Original Cookies</name>
@@ -126,6 +126,17 @@
             <description2>Not your average salmon,guaranteed freshness straight from Canadian Hands.
                         No artifical colors or flavors are added. Despite not being wild, the salmon's diet consisted of Krill and smaller fish(NO GRAINS).</description2>
             </product>
+        <product>
+             <code>199</code>
+            <name>TEST</name>
+            <brand>Delete</brand>
+            <description>Delete</description>
+            <price>100</price>
+            <weight>1000 g</weight>
+             <quantity>10</quantity>
+            <description2>TEST</description2>
+        </product>
+
     </meat_poultry_fish_aisle>
     
     <bakery_aisle></bakery_aisle>
