@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <amount>1</amount>
+  <userList>
+    <user>
+      <code>0</code>
+      <firstName>Admin</firstName>
+      <lastName>Account</lastName>
+      <email>MCJawzAdmin@gmail.com</email>
+      <password>Admin</password>
+      <address>123 Admin Street</address>
+      <city>Montreal</city>
+      <stateOrProvince>Quebec</stateOrProvince>
+      <postalCode>H1A 9A1</postalCode>
+    </user>
+  </userList>
+</root>
