@@ -72,30 +72,8 @@ setcookie("user_postalCode", $postalCode, time() + 86400, "/");
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="../html/index.html">
-            <img style="margin-right: 5px;" class="icon-logo" src="../../images/mcJawz_logo_no_txt.png" width="40" height="40" alt="">
-            McJawz
-        </a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/signup.html">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/login.html">Log in</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <!-- Navbar -->
+  <?php include('header.php'); ?>
 
     <div class="page-name">
         <div>
@@ -126,7 +104,7 @@ setcookie("user_postalCode", $postalCode, time() + 86400, "/");
               <input class="inputField " type="password" name = "password"  value="<?php echo $password; ?>"><br>
 
                 <div class="formButtons">
-                    <input type="submit" name = "submit" value = "Sign Up" class="btn btn-primary mt-3 mb-3">
+                    <input type="submit" name = "submit" value = "Edit" class="btn btn-primary mt-3 mb-3">
                     <button type="button"  class="btn btn-danger mt-3 mb-3">Clear</button>
                 </div>
             </form></div>
