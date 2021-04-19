@@ -5,7 +5,7 @@ $number=$_POST['delete'];
    echo $number;
 
 
-    $xml = simplexml_load_file("C:\Users\cpang\Desktop\SOEN-287-main\product_info.xml");
+    $xml = simplexml_load_file("../../product_info.xml");
 
     foreach($xml->children() as $child){
         foreach($child->product as $item){
@@ -22,10 +22,9 @@ $number=$_POST['delete'];
             unset($item->quantity);
     
         break;
-        echo "-----------------------------------------";
             }
     }}
-    file_put_contents("C:\Users\cpang\Desktop\SOEN-287-main\product_info.xml",$xml->saveXML());}
+    file_put_contents("../../product_info.xml",$xml->saveXML());}
 ?>
 
 <!DOCTYPE html>
@@ -78,7 +77,7 @@ $number=$_POST['delete'];
 <body onload="updateAllValues()">
 
 <?php
-$xml = simplexml_load_file("C:\Users\cpang\Desktop\SOEN-287-main\product_info.xml");
+$xml = simplexml_load_file("../../product_info.xml");
 foreach($xml->children()as $aisle){
 foreach($aisle-> product as $item){
     if($item->code==""){

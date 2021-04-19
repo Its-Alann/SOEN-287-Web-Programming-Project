@@ -77,7 +77,7 @@ echo $_SESSION['product-qty-cart-'.$i];}
                 |
                 <a href="../../../public/html/aisles/fruitsandveg-aisle.html">Fruits & Vegetables</a>
                 |
-                <a href="../../../public/html/aisles/poultry-aisle.html">Meat, Poultry & Fish</a>
+                <a href="./poultry-aisle.php">Meat, Poultry & Fish</a>
                 |
                 <a href="../../../public/html/aisles/snack_aisle.html">Snacks</a> 
 </div>
@@ -96,7 +96,7 @@ echo $_SESSION['product-qty-cart-'.$i];}
 
         <div class="row">
 <?php
-$xml = simplexml_load_file("C:\Users\cpang\Desktop\SOEN-287-main\product_info.xml");
+$xml = simplexml_load_file("../../product_info.xml");
 foreach($xml->meat_poultry_fish_aisle->product as $item){
     if($item->code==""){
         continue;
