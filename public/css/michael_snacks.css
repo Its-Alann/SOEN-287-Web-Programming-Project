@@ -24,6 +24,11 @@ p {
     padding: 0px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 .btn:hover {
     transform: scale(0.96);
 }
@@ -93,10 +98,6 @@ p {
     padding-bottom: 10px;
     text-align: center;
     font-size: large;
-}
-
-.addToCart {
-    margin-top: 10px;
 }
 
 .card {

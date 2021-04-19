@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<body onload="updateQuantities(); productSubtotal(4.99, 'pistachios')">
+<body onload="updateQuantities(); updateProductInfo(6)">
     <script type="text/javascript" src="../../js/michael.js"></script>
 
     <!-- Navbar -->
@@ -40,7 +40,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 title">
-                <h2>Roasted Unsalted Pistachios</h2>
+                <h2 id="product-page-name-6">Roasted Unsalted Pistachios</h2>
             </div>
         </div>
 
@@ -72,41 +72,44 @@
     <div class="product-info card text-center my-5">
         <div class="row no-gutters">
             <div class="col-md-4">
-                <img src="../../../images/pistachios.jpg" class="card-img" alt="Oreos">
+                <img src="../../../images/pistachios.jpg" class="card-img" alt="Pistachios">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h2 class="card-title">Roasted Unsalted Pistachios</h2>
-                    <p class="card-text text-muted">WONDERFUL</p>
-                    <p class="card-text text-muted"><small>225 g</small></p>
+                    <h2 class="card-title" id="product-name-6">Roasted Unsalted Pistachios</h2>
+                    <p class="card-text text-muted" id="product-brand-6">WONDERFUL</p>
+                    <p class="card-text text-muted" id="product-weight-6"><small>225 g</small></p>
 
-                    <p class="more-description text-muted">Fans of Wonderful Pistachios can now enjoy a sodium-free version of our pistachios, roasted to perfection with no additives.</p>
+                    <p class="more-description text-muted" id="product-description-6">Fans of Wonderful Pistachios can
+                        now enjoy a sodium-free
+                        version of our pistachios, roasted to perfection with no additives.</p>
 
                     <button class="btn btn-more-descr mt-3" onclick="moreDescription()">More Description</button>
 
                     <div class="row quantity mt-5">
                         <div class="pricing m-auto">
-                            <p class="base-price d-inline">$4.99</p>
-                            <p class="subtotal-pistachios d-inline ml-3">(Subtotal: $4.99)</p>
+                            <p class="base-price d-inline" id="product-price-6">$4.99</p>
+                            <p class="subtotal-pistachios d-inline ml-3" id="product-subtotal-6">(Subtotal: $4.99)</p>
                         </div>
                         <div class="col-lg-12 incDecButton">
                             <span class="input-group-btn">
-                                <button type="button" class="quantity-minus btn btn-danger btn-number" onclick="minus('pistachios'); productSubtotal(4.99, 'pistachios')"
-                                    data-type="minus" data-field="">
+                                <button type="button" class="quantity-minus btn btn-danger btn-number"
+                                    onclick="minus(6); updateProductSubtotal(6)" data-type="minus" data-field="">
                                     -
                                 </button>
                             </span>
 
-                            <input class="quantity-input" id="qty-pistachios" size="3" type="text" value="1">
+                            <input class="quantity-input" id="product-qty-6" size="3" type="text" value="1">
 
                             <span class="input-group-btn">
-                                <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus('pistachios'); productSubtotal(4.99, 'pistachios')"
-                                    data-type="plus" data-field="">
+                                <button type="button" class="quantity-plus btn btn-success btn-number"
+                                    onclick="plus(6); updateProductSubtotal(6)" data-type="plus" data-field="">
                                     +
                                 </button>
                             </span>
                             <button type="button" class="btn btn-info ml-3">
-                                <img style="margin-right: 10px;" class="shoppingcarticon" src="../../../images/shoppingcarticon.png" alt="">
+                                <img style="margin-right: 10px;" class="shoppingcarticon"
+                                    src="../../../images/shoppingcarticon.png" alt="">
                                 Add to cart
                             </button>
                         </div>
