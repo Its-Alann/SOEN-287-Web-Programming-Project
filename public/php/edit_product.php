@@ -2,7 +2,7 @@
 session_start();
 
 // This part is only to fill in default values of form input fields
-$code = $_GET["product_code"];
+$code = 3; //$_GET["product_code"];
 $file = simplexml_load_file("../../product_info_test.xml");
 foreach ($file->children() as $aisle) { // loop through each aisle
     foreach ($aisle->product as $product) { // loop through each product in the aisle

@@ -62,15 +62,6 @@
             <weight>225 g</weight>
             <quantity>10</quantity>
         </product>
-        <product>
-            <code>99</code>
-            <name>Test product</name>
-            <brand>Test brand</brand>
-            <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum praesentium optio dolor explicabo modi sequi ab libero numquam, voluptates nisi.</description>
-            <price>99.99</price>
-            <weight>999 g</weight>
-            <quantity>10</quantity>
-        </product>
     </snacks_aisle>
     <meat_poultry_fish_aisle></meat_poultry_fish_aisle>
     <bakery_aisle></bakery_aisle>

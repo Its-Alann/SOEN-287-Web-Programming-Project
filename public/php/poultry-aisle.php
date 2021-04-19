@@ -157,8 +157,9 @@ foreach($xml->meat_poultry_fish_aisle->product as $item){
                 </div>
             </div>
             <?php } ?>
-            <!-- Footer -->
-            <?php include('footer.php'); ?>
+
+    <!-- Footer -->
+    <?php include('footer.php'); ?>
 
 
 
