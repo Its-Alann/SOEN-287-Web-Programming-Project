@@ -70,7 +70,7 @@
         <div class="row">
 
         <?php
-            $all_products = simplexml_load_file("../../product_info.xml");
+            $all_products = simplexml_load_file("../../product_info_test.xml");
             foreach ($all_products->fruits_vegetables_aisle->product as $product){
                 $code = (int)$product->code;
                 $name = $product->name;
