@@ -18,18 +18,21 @@ foreach ($file->children() as $aisle) { // loop through each aisle
 }
 
 if (isset($_POST["product-code"])) {
-    $file = simplexml_load_file("../../product_info_test.xml");
-    $product = $file->xpath("//product[./code = '{$code}']")[0];
-    $product->name = $_POST["product-name"];
-    $product->brand  = $_POST["product-brand"];
-    $product->weight = $_POST["product-weight"];
-    $product->price  = $_POST["product-price"];
-    $product->description  = $_POST["product-description"];
-    $file->asXML("../../product_info_test.xml");
-} else if (true) {
-    // add product
-} else if (true) {
-    // delete product
+    $num_products = $file->xpath("//total_products")[0];
+
+    if ($num_products < $_POST["product-code"]) {
+        $not_found = true;
+    } else {
+        $product = $file->xpath("//product[./code = '{$_POST["product-code"]}']")[0];
+        $product->name = $_POST["product-name"];
+        $product->brand  = $_POST["product-brand"];
+        $product->weight = $_POST["product-weight"];
+        $product->price  = $_POST["product-price"];
+        $product->description  = $_POST["product-description"];
+        file_put_contents("../../product_info_test.xml", $file->asXML());
+
+        header("Location: product_list.php");
+    }
 }
 
 ?>
@@ -83,7 +86,7 @@ if (isset($_POST["product-code"])) {
     <!-- Page Name -->
     <section class="page-name">
         <div>
-            Edit Product PHP
+            Edit Product <?= $_GET["product_code"] ?>
         </div>
     </section>
 
@@ -92,13 +95,11 @@ if (isset($_POST["product-code"])) {
         <nav class="subheader-nav">
             <ul class="navbar navbar-left">
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/bakery.html">
-                        Bakery
-                    </a>
+                    <a href="../../../public/php/bakery-aisle.php">Bakery</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../../public/php/bakery-aisle.php">Bakery</a>
+                    <a href="../../../public/html/beverages-aisle.html">Beverages</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
@@ -137,9 +138,18 @@ if (isset($_POST["product-code"])) {
     <!-- Edit Product -->
     <section class="edit-product">
         <form class="form" action="./edit_product.php" method="post">
-            <label class="mt-3" for="product-code">Product code</label>
-            <h5>Note: This is the product code of the product you want to edit. This product code must exist and cannot be changed.</h5>
-            <input type="text" id="product-code" name="product-code" value="<?php echo $code ?>" style="width: 30px;" />
+
+            <?php if (isset($_GET["product_code"])) { ?>
+                <input type="hidden" id="product-code" name="product-code" value="<?php echo $code ?>" style="width: 30px;" />
+            <?php } else { ?>
+                <label class="mt-3" for="product-code">Product code</label>
+                <h5>Note: This is the product code of the product you want to edit. This product code must exist and cannot be changed.</h5>
+                <input type="text" id="product-code" name="product-code" value="" style="width: 30px;" />
+
+            <?php if ($not_found) {
+                    echo "<p style='color: red; font-style: italic'>Product does not exist.</p>";
+                }
+            } ?>
 
             <label class=" mt-3" for="product-name">Product name</label>
             <input type="text" id="product-name" name="product-name" value="<?php echo $name ?>" />
