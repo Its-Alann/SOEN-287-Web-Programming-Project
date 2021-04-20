@@ -278,6 +278,8 @@
             <price>4.50</price>
             <weight>1000 g</weight>
             <quantity>10</quantity>
+            <s_des>Crisp red apples from New Zealand.</s_des>
+            <calorie>52 cal/Apple</calorie>
         </product>
         <product>
             <code>29</code>
@@ -287,6 +289,8 @@
             <price>1.90</price>
             <weight>1000 g</weight>
             <quantity>10</quantity>
+            <s_des>Chiquita Bananas From South America.</s_des>
+            <calorie>89 cal/Banana</calorie>
         </product>
         <product>
             <code>30</code>
@@ -296,6 +300,8 @@
             <price>4.99</price>
             <weight>1000 g</weight>
             <quantity>10</quantity>
+            <s_des>Refreshing Zespri Kiwis from New Zealand.</s_des>
+            <calorie>61 cal/Kiwi</calorie>
         </product>
         <product>
             <code>31</code>
@@ -305,6 +311,8 @@
             <price>3.75</price>
             <weight>1000 g</weight>
             <quantity>10</quantity>
+            <s_des>Fresh & Authentic Papaya Fruit from India.</s_des>
+            <calorie>77 cal/Papaya</calorie>
         </product>
         <product>
             <code>32</code>
@@ -314,6 +322,8 @@
             <price>3.50</price>
             <weight>1000 g</weight>
             <quantity>10</quantity>
+            <s_des>Fresh Broccoli from Mallorca, Spain.</s_des>
+            <calorie>34 cal/Broccoli</calorie>
         </product>
         <product>
             <code>33</code>
@@ -323,6 +333,8 @@
             <price>2.25</price>
             <weight>1000 g</weight>
             <quantity>10</quantity>
+            <s_des>Locally Grown Canadian Carrots from Alberta.</s_des>
+            <calorie>41 cal/Carrot</calorie>
         </product>
         <product>
             <code>34</code>
@@ -332,6 +344,8 @@
             <price>1.99</price>
             <weight>1000 g</weight>
             <quantity>10</quantity>
+            <s_des>Middle Eastern Romaine Lettuce from Jordan.</s_des>
+            <calorie>17 cal/Lettuce</calorie>
         </product>
         <product>
             <code>35</code>
@@ -341,6 +355,8 @@
             <price>2.25</price>
             <weight>1000 g</weight>
             <quantity>10</quantity>
+            <s_des>Mix Bell Peppers from Valencia, Spain.</s_des>
+            <calorie>40 cal/Pepper</calorie>
         </product>
     </fruits_vegetables_aisle>
 </products>
