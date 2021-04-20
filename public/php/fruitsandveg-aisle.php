@@ -19,11 +19,11 @@
 
     <title>McJawz | Fruit & Veg</title>
     <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../../public/css/bootstrap.css">
     <link rel="stylesheet" href="../../../public/css/fruitsandveg-aisle.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-    <script src="../../js/fruitsandveg-aisle.js"></script>
+    <script src="../../../public/js/fruitsandveg-aisle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
