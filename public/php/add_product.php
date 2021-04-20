@@ -1,3 +1,56 @@
+<?php
+session_start();
+
+if (
+    isset($_POST["product-aisle"]) &&
+    isset($_POST["product-name"]) &&
+    isset($_POST["product-brand"]) &&
+    isset($_POST["product-weight"]) &&
+    isset($_POST["product-description"]) &&
+    isset($_POST["product-price"])
+) {
+    $file = simplexml_load_file("../../product_info_test.xml");
+    switch ($_POST["product-aisle"]) {
+        case "bakery":
+            $aisle = $file->bakery_aisle;
+            break;
+        case "beverages":
+            $aisle = $file->beverages_aisle;
+            break;
+        case "dairy-eggs":
+            $aisle = $file->dairy_eggs_aisle;
+            break;
+        case "fruits-veg":
+            $aisle = $file->fruits_vegetables_aisle;
+            break;
+        case "meat-fish-poultry":
+            $aisle = $file->meat_poultry_fish_aisle;
+            break;
+        case "snacks":
+            $aisle = $file->snacks_aisle;
+            break;
+    }
+
+    $num_products = $file->xpath("//total_products")[0];
+
+    $new_product = $aisle->addChild("product");
+    $new_product->addChild("code", $num_products + 1);
+    $new_product->addChild("name", $_POST["product-name"]);
+    $new_product->addChild("brand", $_POST["product-brand"]);
+    $new_product->addChild("description", $_POST["product-description"]);
+    $new_product->addChild("price", $_POST["product-price"]);
+    $new_product->addChild("weight", $_POST["product-weight"]);
+    $new_product->addChild("quantity", 10);
+
+    $file->total_products = $num_products + 1;
+
+    file_put_contents("../../product_info_test.xml", $file->asXML());
+
+    header("Location: product_list.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,12 +58,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=../php/edit_user.php" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="../../public/css/michael_backend.css">
     <link rel="icon" href="../../images/favicon.ico" type="image/x-icon" />
-    <title>McJawz | Edit Product</title>
+    <title>McJawz | Add Product</title>
 </head>
 
 <body>
@@ -49,7 +100,7 @@
     <!-- Page Name -->
     <section class="page-name">
         <div>
-            Edit Product
+            Add Product
         </div>
     </section>
 
@@ -58,15 +109,11 @@
         <nav class="subheader-nav">
             <ul class="navbar navbar-left">
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/bakery.html">
-                        Bakery
-                    </a>
+                    <a href="../../../public/php/bakery-aisle.php">Bakery</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/beverages-aisle.html">
-                        Beverages
-                    </a>
+                    <a href="../../../public/html/beverages-aisle.html">Beverages</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
@@ -82,15 +129,11 @@
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/poultry-aisle.html">
-                        Meat, Poultry & Fish
-                    </a>
+                    <a href="../../../public/php/poultry-aisle.php">Meat, Poultry & Fish</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/snack_aisle.html">
-                        Snacks
-                    </a>
+                    <a href="../../../public/php/snack_aisle.php">Snacks</a>
                 </li>
             </ul>
             <ul class="navbar navbar-right">
@@ -108,31 +151,37 @@
 
     <!-- Edit Product -->
     <section class="edit-product">
-        <form class="form" action="../php/michael.php">
-            <label for="product-image">Product image</label>
-            <button class="btn btn-yellow w-30" id="product-image">Change image</button>
+        <form class="form" action="./add_product.php" method="post">
 
-            <label class="mt-3" for="product-name">Product name</label>
-            <input type="text" id="product-name">
+            <label for="product-aisle">Product aisle</label>
+            <select class="form-control" id="product-aisle" name="product-aisle">
+                <option value="bakery">Bakery</option>
+                <option value="beverages">Beverages</option>
+                <option value="dairy-eggs">Dairy & Eggs</option>
+                <option value="fruits-veg">Fruits & Vegetables</option>
+                <option value="meat-fish-poultry">Meat, Fish & Poultry</option>
+                <option value="snacks">Snacks</option>
+            </select>
+
+            <label class=" mt-3" for="product-name">Product name</label>
+            <input type="text" id="product-name" name="product-name" value="<?php echo $name ?>" />
 
             <label class="mt-3" for="product-brand">Product brand</label>
-            <input type="text" id="product-brand">
+            <input type="text" id="product-brand" name="product-brand" value="<?php echo $brand ?>" />
 
             <div class="weight-input d-inline-block">
                 <label class="mt-3" for="product-weight">Product weight</label>
-                <input class="d-inline w-25" type="number" step="1" id="product-weight">
-                <p class="d-inline"> g</p>
+                <input class="d-inline w-25" type="text" id="product-weight" name="product-weight" value="<?php echo $weight ?>">
             </div>
 
             <label class="mt-3" for="product-description">Product description</label>
-            <textarea id="product-description"></textarea>
+            <textarea id="product-description" name="product-description"><?php echo $description ?></textarea>
 
             <div class="price-input d-inline-block">
                 <label class="mt-3" for="product-price">Product price</label>
 
                 <p class="d-inline">$</p>
-                <input class="d-inline w-25" type="number" step="0.01" id="product-price">
-                <p class="d-inline"> per unit</p>
+                <input class="d-inline w-25" type="number" step="0.01" id="product-price" name="product-price" value="<?php echo $price ?>">
             </div>
 
             <button type="submit" class="btn btn-blue shadow-none mt-5">Save</button>
@@ -141,13 +190,7 @@
     </section>
 
     <!-- Footer -->
-    <section class="footer">
-        <div class="footer-item ml-3">
-            <a href="../../public/html/admin.html">
-                <p>Admin</p>
-            </a>
-        </div>
-    </section>
+    <?php include('footer.php'); ?>
 
 </body>
 

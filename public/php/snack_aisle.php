@@ -84,7 +84,7 @@ if (isset($_POST["product-qty-" . $product_code])) {
         <div class="row">
 
             <?php
-            $products = simplexml_load_file("../../product_info.xml");
+            $products = simplexml_load_file("../../product_info_test.xml");
             foreach ($products->snacks_aisle->product as $product) {
                 $code = (int)$product->code;
                 $name = $product->name;
