@@ -86,7 +86,7 @@
 
             <div class="card">
                 <a class="item-link" href='./fruitsandveg-aisle-product.php?code=<?= $code ?>'>
-                    <img class="card-img-top" src="../../../images/<?= $code ?>.jpg" alt="<?= $name ?>">
+                    <img class="card-img-top" src="../../../images/product_<?= $code ?>.jpg" alt="<?= $name ?>">
                     <div class="card-body">
                         <h5 class="card-title"><?= $name ?></h5>
                         <p class="card-text"><?= $s_des ?></p>
@@ -94,7 +94,7 @@
                     </div>
                 </a>
                 <div class="card-footer">
-                    <p class="pricing"><b>"{<?= $name ?>}./kg"</b></p>
+                    <p class="pricing"><b>"<?= $name ?>"</b></p>
 
                     <div class="row quantity">
                         <div class="col-lg-12 incDecButton">
