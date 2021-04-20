@@ -28,7 +28,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body onload="updateAllValues()">
+<body onload="updateValues()">
 
     <?php include('header.php'); ?>
 
@@ -94,7 +94,7 @@
                     </div>
                 </a>
                 <div class="card-footer">
-                    <p class="pricing"><b>"<?= $price ?>"</b></p>
+                    <p class="pricing"><b><?= $price ?></b></p>
 
                     <div class="row quantity">
                         <div class="col-lg-12 incDecButton">
