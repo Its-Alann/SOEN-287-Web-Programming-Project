@@ -69,54 +69,53 @@
 
         <div class="row">
 
-        <?php
-            $all_products = simplexml_load_file("../../product_info_test.xml");
-            foreach ($all_products->fruits_vegetables_aisle->product as $product){
-                $code = (int)$product->code;
-                $name = $product->name;
-                $brand = $product->brand;
-                $weight = $product->weight;
-                $price = $product->price;
-                $s_des = $product->s_des;
-                $calorie = $product->calorie;
-            }
-        ?>
+            <?php
+                $all_products = simplexml_load_file("../../product_info_test.xml");
+                foreach ($all_products->fruits_vegetables_aisle->product as $product){
+                    $code = (int)$product->code;
+                    $name = $product->name;
+                    $brand = $product->brand;
+                    $weight = $product->weight;
+                    $price = $product->price;
+                    $s_des = $product->s_des;
+                    $calorie = $product->calorie;
+            ?>
 
-            <div class="col-lg-3 col-md-4">
+                <div class="col-lg-3 col-md-4">
+                    <div class="card">
+                        <a class="item-link" href='./fruitsandveg-aisle-product.php?code=<?= $code ?>'>
+                            <img class="card-img-top" src="../../../images/product_<?= $code ?>.jpg" alt="<?= $name ?>">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $name ?></h5>
+                                <p class="card-text"><?= $s_des ?></p>
+                                <p class="card-text"><small class="text-muted"><?= $calorie ?></small></p>
+                            </div>
+                        </a>
+                        <div class="card-footer">
+                            <p class="pricing"><b><?= $price ?></b></p>
 
-            <div class="card">
-                <a class="item-link" href='./fruitsandveg-aisle-product.php?code=<?= $code ?>'>
-                    <img class="card-img-top" src="../../../images/product_<?= $code ?>.jpg" alt="<?= $name ?>">
-                    <div class="card-body">
-                        <h5 class="card-title"><?= $name ?></h5>
-                        <p class="card-text"><?= $s_des ?></p>
-                        <p class="card-text"><small class="text-muted"><?= $calorie ?></small></p>
-                    </div>
-                </a>
-                <div class="card-footer">
-                    <p class="pricing"><b><?= $price ?></b></p>
-
-                    <div class="row quantity">
-                        <div class="col-lg-12 incDecButton">
-                            <span class="input-group-btn">
-                                <button onclick="decrement('amount-<?=$code?>');" type="button" class="quantity-left-minus btn btn-danger btn-number" data-type="minus" data-field="">
-                                    -
-                                </button>
-                            </span>
-                            <input id='amount-<?=$code?>' size="3" type = "text" value="1">
-                            <span class="input-group-btn">
-                                <button onclick="increment('amount-<?=$code?>');" type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
-                                    +
-                                </button>
-                            </span>
+                            <div class="row quantity">
+                                <div class="col-lg-12 incDecButton">
+                                    <span class="input-group-btn">
+                                        <button onclick="decrement('amount-<?=$code?>');" type="button" class="quantity-left-minus btn btn-danger btn-number" data-type="minus" data-field="">
+                                            -
+                                        </button>
+                                    </span>
+                                    <input id='amount-<?=$code?>' size="3" type = "text" value="1">
+                                    <span class="input-group-btn">
+                                        <button onclick="increment('amount-<?=$code?>');" type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                                            +
+                                        </button>
+                                    </span>
+                                </div>
+                                <div class="col-lg-12 addToCart">
+                                    <button type="button" class="btn btn-info">Add to cart</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-lg-12 addToCart">
-                            <button type="button" class="btn btn-info">Add to cart</button>
-                        </div>
                     </div>
-
                 </div>
-            </div>
+            <?php } ?>
         </div>
 
 
