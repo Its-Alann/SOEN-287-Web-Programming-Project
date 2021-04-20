@@ -95,7 +95,7 @@ if (isset($_POST["product-code"])) {
         <nav class="subheader-nav">
             <ul class="navbar navbar-left">
                 <li class="aisle-link">
-                    <a href="../../../public/php/bakery-aisle.php">Bakery</a>
+                    <a href="../../../public/php/bakery_aisle.php">Bakery</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">

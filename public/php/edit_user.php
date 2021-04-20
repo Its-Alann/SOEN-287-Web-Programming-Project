@@ -100,7 +100,49 @@ header("Location: logout.php");
         </div>
     </div>
 
-
+    <section class="subheader">
+        <nav class="subheader-nav">
+            <ul class="navbar navbar-left">
+                <li class="aisle-link">
+                    <a href="../../../public/php/bakery_aisle.php">Bakery</a>
+                </li>
+                <li class="link-sep">|</li>
+                <li class="aisle-link">
+                    <a href="../../../public/html/beverages-aisle.html">Beverages</a>
+                </li>
+                <li class="link-sep">|</li>
+                <li class="aisle-link">
+                    <a href="../../public/html/aisles/dairyandeggs-aisle.html">
+                        Dairy & Eggs
+                    </a>
+                </li>
+                <li class="link-sep">|</li>
+                <li class="aisle-link">
+                    <a href="../../public/html/aisles/fruitsandveg-aisle.html">
+                        Fruits & Vegetables
+                    </a>
+                </li>
+                <li class="link-sep">|</li>
+                <li class="aisle-link">
+                    <a href="../../../public/php/poultry-aisle.php">Meat, Poultry & Fish</a>
+                </li>
+                <li class="link-sep">|</li>
+                <li class="aisle-link">
+                    <a href="../../../public/php/snack_aisle.php">Snacks</a>
+                </li>
+            </ul>
+            <ul class="navbar navbar-right">
+                <li class="cart-link">
+                    <a href="../../public/html/cart.html">
+                        <img class="cart-icon" src="../../images/cart_transparent_black.png" alt="">
+                    </a>
+                </li>
+                <li class="cart-link">
+                    <a href="../../public/html/cart.html">Cart</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
 
     <div class="flex-wrapper">
         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 align-self-center mx-auto mt-5  mb-5">

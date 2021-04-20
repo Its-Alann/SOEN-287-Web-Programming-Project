@@ -69,7 +69,7 @@ if (isset($_POST["product-qty-" . $product_code])) {
 
         <div class="row subheader">
             <div class="col-lg-8 aisles text-dark">
-                <a href="../../../public/php/bakery-aisle.php">Bakery</a>
+                <a href="../../../public/php/bakery_aisle.php">Bakery</a>
                 |
                 <a href="../../../public/html/aisles/beverages-aisle.html">Beverages</a>
                 |
