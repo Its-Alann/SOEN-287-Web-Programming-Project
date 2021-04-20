@@ -94,7 +94,7 @@
                     </div>
                 </a>
                 <div class="card-footer">
-                    <p class="pricing"><b>"<?= $name ?>"</b></p>
+                    <p class="pricing"><b>"<?= $price ?>"</b></p>
 
                     <div class="row quantity">
                         <div class="col-lg-12 incDecButton">
