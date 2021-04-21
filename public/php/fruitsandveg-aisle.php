@@ -84,7 +84,7 @@
 
                 <div class="col-lg-3 col-md-4">
                     <div class="card">
-                        <a class="item-link" href='./fruitsandveg-aisle-product.php?code=<?= $code ?>'>
+                        <a class="item-link" href='./fruitsandveg-product.php?code=<?= $code ?>'>
                             <img class="card-img-top" src="../../../images/product_<?= $code ?>.jpg" alt="<?= $name ?>">
                             <div class="card-body">
                                 <h5 class="card-title"><?= $name ?></h5>
