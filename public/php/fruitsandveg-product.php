@@ -1,11 +1,11 @@
+<?php session_start();?>
+
 <?php
-session_start();
 
-
-$product_code = $_GET["product_code"];
-$products = simplexml_load_file("../../product_info_test.xml");
-foreach ($products->fruits_vegetables_aisle->product as $product) {
-    if ($product->code == $product_code) {
+$xml = simplexml_load_file("../../product_info_test.xml");
+foreach ($xml->fruits_vegetables_aisle->product as $product) {
+    if ($product->code == $_GET['code']) {
+        $code = (int)$product->code;
         $name = $product->name;
         $brand = $product->brand;
         $weight = $product->weight;
@@ -44,7 +44,7 @@ if (isset($_POST["product-qty-" . $product_code])) {
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body onload="updateValue('amount-<?=$product_code?>')">
+<body onload="updateValue('amount-<?=$code?>')">
 
     <!-- Navbar -->
     <?php include('header.php'); ?>
@@ -60,11 +60,11 @@ if (isset($_POST["product-qty-" . $product_code])) {
 
         <div class="row">
             <div class="col-lg-6 aisles">
-                <a href="../../../public/php/bakery-aisle.php">Bakery</a>
+                <a href="../../../public/html/aisles/bakery.html">Bakery</a>
                 |
-                <a href="../../../public/php/beverages-aisle.php">Beverages</a>
+                <a href="../../../public/html/aisles/beverages-aisle.html">Beverages</a>
                 |
-                <a href="../../../public/php/dairyandeggs-aisle.php">Dairy & Eggs</a>
+                <a href="../../../public/html/aisles/dairyandeggs-aisle.html">Dairy & Eggs</a>
                 |
                 <a href="../../../public/php/fruitsandveg-aisle.php">Fruits & Vegetables</a>
                 |
@@ -85,7 +85,7 @@ if (isset($_POST["product-qty-" . $product_code])) {
     <div class="card mb-3">
         <div class="row no-gutters">
             <div class="col-md-4">
-                <img src="../../../images/<?=$product_code?>.jpg" class="card-img" alt="Apples">
+                <img src="../../../images/product_<?=$code?>.jpg" class="card-img" alt="Apples">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
@@ -98,14 +98,14 @@ if (isset($_POST["product-qty-" . $product_code])) {
                         <p class="pricing" style="font-size: medium;" id="totalPrice">Sub-total: $<?=$price?></p>
                         <div class="col-lg-12 incDecButton">
                             <span class="input-group-btn">
-                                <button onclick="decrement('amount-<?=$product_code?>'); getTotal('amount-<?=$product_code?>')" type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                <button onclick="decrement('amount-<?=$code?>'); getTotal('amount-<?=$code?>')" type="button" class="quantity-left-minus btn btn-danger btn-number"
                                     data-type="minus" data-field="">
                                     -
                                 </button>
                             </span>
-                            <input id="amount-<?=$product_code?>" size=3 value=1>
+                            <input id="amount-<?=$code?>" size=3 value=1>
                             <span class="input-group-btn">
-                                <button onclick="increment('amount-<?=$product_code?>'); getTotal('amount-<?=$product_code?>')" type="button" class="quantity-right-plus btn btn-success btn-number"
+                                <button onclick="increment('amount-<?=$code?>'); getTotal('amount-<?=$code?>')" type="button" class="quantity-right-plus btn btn-success btn-number"
                                     data-type="plus" data-field="">
                                     +
                                 </button>
