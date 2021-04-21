@@ -23,23 +23,25 @@ if (isset($_POST["product-qty-" . $product_code])) {
     <link rel="stylesheet" href="../../public/css/michael_snacks.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet" />
+    <script type="text/javascript" src="../../public/js/michael.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body onload="updateQuantities(); updateProductInfo()">
-    <script type="text/javascript" src="../js/michael.js"></script>
 
     <!-- Navbar -->
     <?php include('header.php'); ?>
 
     <!-- Subheader -->
-    <div class="container-fluid">
+    <div class="subheader container-fluid">
         <div class="row">
             <div class="col-lg-12 title">
                 <h2>Snacks</h2>
             </div>
         </div>
 
-        <div class="row subheader">
+        <div class="row">
             <div class="col-lg-8 aisles text-dark">
                 <a href="../../../public/php/bakery_aisle.php">Bakery</a>
                 |

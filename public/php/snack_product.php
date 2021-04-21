@@ -35,10 +35,12 @@ if (isset($_POST["product-qty-" . $product_code])) {
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="../../public/js/michael.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body onload="updateQuantities(); updateProductInfo()">
-    <script type="text/javascript" src="../../public/js/michael.js"></script>
 
     <!-- Navbar -->
     <?php include('header.php'); ?>

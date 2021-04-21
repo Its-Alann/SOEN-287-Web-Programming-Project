@@ -2,6 +2,14 @@
 /* February 22, 2021 */
 /* Michael Totarella, 40005251 */
 
+.navbar-collapse.collapse.in {
+    display: block !important;
+}
+
+.navbar ul {
+    text-align: right;
+}
+
 body {
     font-family: "Raleway", sans-serif;
     background-color: #ecf0f1;
@@ -39,10 +47,6 @@ form {
     font-size: large;
     padding-top: 10px;
     color: white;
-}
-
-.navbar {
-    justify-content: space-between;
 }
 
 .aisles {
