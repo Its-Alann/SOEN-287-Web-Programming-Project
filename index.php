@@ -161,7 +161,7 @@ session_start();
     <a id="aisles"></a>
     <div class="row">
       <div class="col-lg-4 col-md-6">
-        <a href="../../public/html/aisles/fruitsandveg-aisle.html">
+        <a href="public/php/fruitsandveg-aisle.php">
           <div class="card">
             <img class="card-img-top" src="../../images/fruitsandveggy.jpg" alt="Card image cap">
             <div class="card-body">

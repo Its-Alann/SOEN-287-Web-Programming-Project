@@ -23,41 +23,27 @@ if (isset($_POST["product-qty-" . $product_code])) {
     <link rel="stylesheet" href="../../public/css/michael_snacks.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet" />
+    <script type="text/javascript" src="../../public/js/michael.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body onload="updateQuantities(); updateProductInfo()">
-    <script type="text/javascript" src="../js/michael.js"></script>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="../../../public/html/index.html">
-            <img style="margin-right: 5px" class="icon-logo" src="../../../images/mcJawz_logo_no_txt.png" width="40" height="40" alt="" />
-            McJawz
-        </a>
-
-        <div class="navbar-nav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="../../../public/html/signup.html">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../../../public/html/login.html">Log in</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <?php include('header.php'); ?>
 
     <!-- Subheader -->
-    <div class="container-fluid">
+    <div class="subheader container-fluid">
         <div class="row">
             <div class="col-lg-12 title">
                 <h2>Snacks</h2>
             </div>
         </div>
 
-        <div class="row subheader">
+        <div class="row">
             <div class="col-lg-8 aisles text-dark">
-                <a href="../../../public/php/bakery-aisle.php">Bakery</a>
+                <a href="../../../public/php/bakery_aisle.php">Bakery</a>
                 |
                 <a href="../../../public/html/aisles/beverages-aisle.html">Beverages</a>
                 |
@@ -84,7 +70,7 @@ if (isset($_POST["product-qty-" . $product_code])) {
         <div class="row">
 
             <?php
-            $products = simplexml_load_file("../../product_info.xml");
+            $products = simplexml_load_file("../../product_info_test.xml");
             foreach ($products->snacks_aisle->product as $product) {
                 $code = (int)$product->code;
                 $name = $product->name;
