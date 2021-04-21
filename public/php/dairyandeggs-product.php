@@ -2,10 +2,10 @@
 session_start();
 
 
-$product_code = $_GET["product_code"];
+$product_code = $_GET["code"];
 $products = simplexml_load_file("../../product_info_test.xml");
 foreach ($products->dairy_eggs_aisle->product as $product) {
-    if ($product->code !== $product_code) {
+    if ($product->code == $product_code) {
         $name = $product->name;
         $brand = $product->brand;
         $desc = $product->description;
@@ -36,7 +36,7 @@ if (isset($_POST["product-qty-" . $product_code])) {
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
-    <script src = "../../js/dairyandeggs-aisle.js"></script>
+    <script src = "../js/dairyandeggs-aisle.js"></script>
 </head>
 
 <body onload = 'setValues()'>
@@ -55,17 +55,17 @@ if (isset($_POST["product-qty-" . $product_code])) {
 
         <div class="row">
           <div class="col-lg-6 aisles">
-              <a href="../../../public/html/aisles/bakery.html">Bakery</a>
+              <a href="../../../public/html/aisles/bakery.php">Bakery</a>
               |
-              <a href="../../../public/html/aisles/beverages-aisle.html">Beverages</a>
+              <a href="../../../public/html/aisles/beverages-aisle.php">Beverages</a>
               |
-              <a href="../../../public/html/aisles/dairyandeggs-aisle.html">Dairy & Eggs</a>
+              <a href="../../../public/html/aisles/dairyandeggs-aisle.php">Dairy & Eggs</a>
               |
-              <a href="../../../public/html/aisles/fruitsandveg-aisle.html">Fruits & Vegetables</a>
+              <a href="../../../public/html/aisles/fruitsandveg-aisle.php">Fruits & Vegetables</a>
               |
-              <a href="../../../public/html/aisles/poultry-aisle.html">Meat, Poultry & Fish</a>
+              <a href="../../../public/html/aisles/poultry-aisle.php">Meat, Poultry & Fish</a>
               |
-              <a href="../../../public/html/aisles/snack_aisle.html">Snacks</a>
+              <a href="../../../public/html/aisles/snack_aisle.php">Snacks</a>
             </div>
 
             <div class="col-lg-6 col-md-12 myCartContainer">
