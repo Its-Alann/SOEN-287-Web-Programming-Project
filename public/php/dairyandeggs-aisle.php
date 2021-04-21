@@ -1,3 +1,14 @@
+<?php session_start();
+
+?>
+<?php
+    $product_code = $_GET["product_code"];
+    if (isset($_POST["product-qty-" . $product_code])) {
+        $_SESSION["product-qty-cart-" . $product_code] = $_POST["product-qty-" . $product_code];
+
+        echo $_SESSION["product-qty-cart-" . $product_code];
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,33 +69,45 @@
     <div class="card-deck">
 
         <div class="row">
+
+          <?php
+              $all_products = simplexml_load_file("../../product_info_test.xml");
+              foreach ($all_products->dairy_eggs_aisle->product as $product){
+                  $code = (int)$product->code;
+                  $name = $product->name;
+                  $brand = $product->brand;
+                  $desc = $product->description;
+                  $price = $product->price;
+                  $weight = $product->weight;
+                  $extradesc = $product->extra_description;
+                  $cal = $product->calories;
+          ?>
+
             <div class="col-lg-4 col-sm-6">
-
                 <div class="card">
-                  <a class="item-link" href="../../../public/html/products/dairyandeggs-yogurt.html">
-                      <img class="card-img-top" src="../../../images/yoplait_yogurt.jpg" alt="Source Strawberry Yogurt">
-
+                  <a class="item-link" href="dairyandeggs-product.php?code=<?=$code?>">
+                      <img class="card-img-top" src="../../../images/product_<?=$code?>.jpg" alt="<?=$name?>">
                         <div class="card-body">
-                            <h5 class="card-title">Source Strawberry Yogurt</h5>
-                            <p class="card-text">Made with real fruits 650g</p>
-                            <p class="card-text"><small class="text-muted">35 cal/100g</small></p>
+                            <h5 class="card-title"><?= $name ?></h5>
+                            <p class="card-text"><?=$extradesc?></p>
+                            <p class="card-text"><small class="text-muted"><?=$cal?></small></p>
                         </div>
                     </a>
                     <div class="card-footer">
-                        <p class="pricing"><b>$3.99/each</b></p>
+                        <p class="pricing"><b><?=$price?>/each</b></p>
 
                         <div class="row quantity">
                             <div class="col-lg-12 incDecButton">
                                 <span class="input-group-btn">
-                                    <button onclick="decrement('amount-ssy')" type="button" class="quantity-left-minus btn btn-danger btn-number"
+                                    <button onclick="decrement('amount-<?=$code?>')" type="button" class="quantity-left-minus btn btn-danger btn-number"
                                         data-type="minus" data-field="">
                                         -
                                     </button>
-                                    <input id='amount-ssy' size="3" type="text" value="1">
+                                    <input id='amount-<?=$code?>' size="3" type="text" value="1">
 
                                 </span>
                                 <span class="input-group-btn">
-                                    <button onclick="increment('amount-ssy')" type="button" class="quantity-right-plus btn btn-success btn-number"
+                                    <button onclick="increment('amount-<?=$code?>')" type="button" class="quantity-right-plus btn btn-success btn-number"
                                         data-type="plus" data-field="">
                                         +
                                     </button>
@@ -97,217 +120,14 @@
 
                     </div>
                 </div>
+
             </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="card">
-                    <a class="item-link" href="../../../public/html/products/dairyandeggs-almondmilk.html">
-                        <img class="card-img-top" src="../../../images/silk_almondmilk.jpg" alt="Silk Vanilla Almond Milk">
-                        <div class="card-body">
-                            <h5 class="card-title">Silk Vanila Almond Milk</h5>
-                            <p class="card-text">Silky smooth vanilla almond milk</p>
-                            <p class="card-text"><small class="text-muted">80 cal/240ml</small></p>
-                        </div>
-                    </a>
-                    <div class="card-footer">
-                        <p class="pricing"><b>$4.99/each</b></p>
-
-                        <div class="row quantity">
-                            <div class="col-lg-12 incDecButton">
-                                <span class="input-group-btn">
-
-                                    <button onclick="decrement('amount-sam')"type="button" class="quantity-left-minus btn btn-danger btn-number"
-
-                                    <button onclick="decrement('amount-sam')" type="button" class="quantity-left-minus btn btn-danger btn-number"
-                                        data-type="minus" data-field="">
-                                        -
-                                    </button>
-                                </span>
-                                <input id= "amount-sam" size="3" type="text" value="1">
-                                <span class="input-group-btn">
-                                    <button onclick="increment('amount-sam')" type="button" class="quantity-right-plus btn btn-success btn-number"
-                                        data-type="plus" data-field="">
-                                        +
-                                    </button>
-                                </span>
-                            </div>
-                            <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="card">
-                    <a class="item-link" href="../../../public/html/products/dairyandeggs-2milk.html">
-                        <img class="card-img-top" src="../../../images/quebon_milk.jpg" alt="Quebon 2% Milk">
-                        <div class="card-body">
-                            <h5 class="card-title">Quebon 2% Milk</h5>
-                            <p class="card-text">Milk from local farms</p>
-                            <p class="card-text"><small class="text-muted">130 cal/250ml</small></p>
-                        </div>
-                    </a>
-                    <div class="card-footer">
-                        <p class="pricing"><b>$6.99/each</b></p>
-
-                        <div class="row quantity">
-                            <div class="col-lg-12 incDecButton">
-                                <span class="input-group-btn">
-                                    <button onclick="decrement('amount-qm')" type="button" class="quantity-left-minus btn btn-danger btn-number"
-                                        data-type="minus" data-field="">
-                                        -
-                                    </button>
-                                </span>
-                                <input id = "amount-qm" size="3" type="text" value="1">
-                                <span class="input-group-btn">
-                                    <button onclick="increment('amount-qm')" type="button" class="quantity-right-plus btn btn-success btn-number"
-                                        data-type="plus" data-field="">
-                                        +
-                                    </button>
-                                </span>
-                            </div>
-                            <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="card">
-                    <a class="item-link" href="../../../public/html/products/dairyandeggs-cheese.html">
-                        <img class="card-img-top" src="../../../images/ptitqc_cheese.jpg" alt="P'Tit Quebec Cheese">
-                        <div class="card-body">
-                            <h5 class="card-title">P'Tit Quebec Cheese</h5>
-                            <p class="card-text">Mozarella cheese</p>
-                            <p class="card-text"><small class="text-muted">100 cal/30g</small></p>
-                        </div>
-                    </a>
-                    <div class="card-footer">
-                        <p class="pricing"><b>$4.99/each</b></p>
-
-                        <div class="row quantity">
-                            <div class="col-lg-12 incDecButton">
-                                <span class="input-group-btn">
-                                    <button onclick="decrement('amount-qc')" type="button" class="quantity-left-minus btn btn-danger btn-number"
-                                        data-type="minus" data-field="">
-                                        -
-                                    </button>
-                                </span>
-                                <input id = "amount-qc" size="3" type="text" value="1">
-                                <span class="input-group-btn">
-                                    <button onclick="increment('amount-qc')" type="button" class="quantity-right-plus btn btn-success btn-number"
-                                        data-type="plus" data-field="">
-                                        +
-                                    </button>
-                                </span>
-                            </div>
-                            <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="card">
-                    <a class="item-link" href="../../../public/html/products/dairyandeggs-browneggs.html">
-                        <img class="card-img-top" src="../../../images/burnbrae_browneggs.jpg" alt="Burnbrae Brown Eggs">
-                        <div class="card-body">
-                            <h5 class="card-title">Burnbrae Brown Eggs</h5>
-                            <p class="card-text">Brown eggs from local farms</p>
-                            <p class="card-text"><small class="text-muted">160 cal/2 large eggs</small></p>
-                        </div>
-                    </a>
-                    <div class="card-footer">
-                        <p class="pricing"><b>$4.50/Box</b></p>
-
-                        <div class="row quantity">
-                            <div class="col-lg-12 incDecButton">
-                                <span class="input-group-btn">
-                                    <button onclick="decrement('amount-be')" type="button" class="quantity-left-minus btn btn-danger btn-number"
-                                        data-type="minus" data-field="">
-                                        -
-                                    </button>
-                                </span>
-                                <input id = "amount-be" size="3" type="text" value="1">
-                                <span class="input-group-btn">
-                                    <button onclick="increment('amount-be')" type="button" class="quantity-right-plus btn btn-success btn-number"
-                                        data-type="plus" data-field="">
-                                        +
-                                    </button>
-                                </span>
-                            </div>
-                            <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="card">
-                    <a class="item-link" href="../../../public/html/products/dairyandeggs-whiteeggs.html">
-                        <img class="card-img-top" src="../../../images/burnbrae_whiteeggs.jpg" alt="Burnbrae White Eggs">
-                        <div class="card-body">
-                            <h5 class="card-title">Burnbrae White Eggs</h5>
-                            <p class="card-text">White eggs from local farms</p>
-                            <p class="card-text"><small class="text-muted">160 cal/2 large eggs</small></p>
-                        </div>
-                    </a>
-                    <div class="card-footer">
-                        <p class="pricing"><b>$2.99/box</b></p>
-
-                        <div class="row quantity">
-                            <div class="col-lg-12 incDecButton">
-                                <span class="input-group-btn">
-
-                                    <button onclick="decrement('amount-we') "type="button" class="quantity-left-minus btn btn-danger btn-number"
-
-                                    <button onclick="decrement('amount-we')" type="button" class="quantity-left-minus btn btn-danger btn-number"
-
-                                        data-type="minus" data-field="">
-                                        -
-                                    </button>
-                                </span>
-                                <input id = "amount-we" size="3" type="text" value="1">
-                                <span class="input-group-btn">
-                                    <button onclick="increment('amount-we')" type="button" class="quantity-right-plus btn btn-success btn-number"
-                                        data-type="plus" data-field="">
-                                        +
-                                    </button>
-                                </span>
-                            </div>
-                            <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-
+            <?php } ?>
     </div>
 
     <!-- Footer -->
-    <div class="footer">
-        <div class="footer-text">
-            <a href="../admin.html">Admin</a>
-        </div>
-    </div>
+
+    <?php include('footer.php'); ?>
 
 
 </body>
