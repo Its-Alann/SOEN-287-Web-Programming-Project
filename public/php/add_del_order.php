@@ -126,8 +126,6 @@
 
             echo ("Your order has been successfully added!");
         }
-
-
     ?>
 
     <div class="card-body my-auto ">
