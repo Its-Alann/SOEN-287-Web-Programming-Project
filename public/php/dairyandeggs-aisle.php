@@ -43,17 +43,17 @@
 
         <div class="row">
           <div class="col-lg-6 aisles">
-              <a href="../../../public/html/aisles/bakery.html">Bakery</a>
+              <a href="../../../public/html/aisles/bakery.php">Bakery</a>
               |
-              <a href="../../../public/html/aisles/beverages-aisle.html">Beverages</a>
+              <a href="../../../public/html/aisles/beverages-aisle.php">Beverages</a>
               |
-              <a href="../../../public/html/aisles/dairyandeggs-aisle.html">Dairy & Eggs</a>
+              <a href="../../../public/html/aisles/dairyandeggs-aisle.php">Dairy & Eggs</a>
               |
-              <a href="../../../public/html/aisles/fruitsandveg-aisle.html">Fruits & Vegetables</a>
+              <a href="../../../public/html/aisles/fruitsandveg-aisle.php">Fruits & Vegetables</a>
               |
-              <a href="../../../public/html/aisles/poultry-aisle.html">Meat, Poultry & Fish</a>
+              <a href="../../../public/html/aisles/poultry-aisle.php">Meat, Poultry & Fish</a>
               |
-              <a href="../../../public/html/aisles/snack_aisle.html">Snacks</a>
+              <a href="../../../public/html/aisles/snack_aisle.php">Snacks</a>
             </div>
 
             <div class="col-lg-6 col-md-12 myCartContainer">
