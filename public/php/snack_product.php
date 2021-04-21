@@ -41,24 +41,7 @@ if (isset($_POST["product-qty-" . $product_code])) {
     <script type="text/javascript" src="../../public/js/michael.js"></script>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="../../../public/html/index.html">
-            <img style="margin-right: 5px;" class="icon-logo" src="../../../images/mcJawz_logo_no_txt.png" width="40" height="40" alt="">
-            McJawz
-        </a>
-
-        <div class="navbar-nav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="../../../public/html/signup.html">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../../../public/html/login.html">Log in</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
+    <?php include('header.php'); ?>
     <!-- Subheader -->
     <div class="container-fluid">
         <div class="row">
