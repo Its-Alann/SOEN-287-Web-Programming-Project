@@ -280,6 +280,7 @@
             <quantity>10</quantity>
             <s_des>Crisp red apples from New Zealand.</s_des>
             <calorie>52 cal/Apple</calorie>
+            <unit>kg</unit>
         </product>
         <product>
             <code>29</code>
@@ -291,6 +292,7 @@
             <quantity>10</quantity>
             <s_des>Chiquita Bananas From South America.</s_des>
             <calorie>89 cal/Banana</calorie>
+            <unit>kg</unit>
         </product>
         <product>
             <code>30</code>
@@ -302,6 +304,7 @@
             <quantity>10</quantity>
             <s_des>Refreshing Zespri Kiwis from New Zealand.</s_des>
             <calorie>61 cal/Kiwi</calorie>
+            <unit>kg</unit>
         </product>
         <product>
             <code>31</code>
@@ -313,6 +316,7 @@
             <quantity>10</quantity>
             <s_des>Fresh and Authentic Papaya Fruit from India.</s_des>
             <calorie>77 cal/Papaya</calorie>
+            <unit>kg</unit>
         </product>
         <product>
             <code>32</code>
@@ -324,6 +328,7 @@
             <quantity>10</quantity>
             <s_des>Fresh Broccoli from Mallorca, Spain.</s_des>
             <calorie>34 cal/Broccoli</calorie>
+            <unit>kg</unit>
         </product>
         <product>
             <code>33</code>
@@ -335,6 +340,7 @@
             <quantity>10</quantity>
             <s_des>Locally Grown Canadian Carrots from Alberta.</s_des>
             <calorie>41 cal/Carrot</calorie>
+            <unit>kg</unit>
         </product>
         <product>
             <code>34</code>
@@ -346,6 +352,7 @@
             <quantity>10</quantity>
             <s_des>Middle Eastern Romaine Lettuce from Jordan.</s_des>
             <calorie>17 cal/Lettuce</calorie>
+            <unit>Piece</unit>
         </product>
         <product>
             <code>35</code>
@@ -357,6 +364,7 @@
             <quantity>10</quantity>
             <s_des>Mix Bell Peppers from Valencia, Spain.</s_des>
             <calorie>40 cal/Pepper</calorie>
+            <unit>Pack</unit>
         </product>
     </fruits_vegetables_aisle>
 </products>
