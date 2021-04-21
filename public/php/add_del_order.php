@@ -28,60 +28,7 @@
                 <div class="card-header bg-dark text-white">
                     <h1>Create an order</h1>
                 </div>
-                <div class="product-table border rounded"></div>
-                <table class="order-list table ">
-                    <thead>
-                        <tr>
-                            <th scope="col">User</th>
-                            <th scope="col">Order Number</th>
-                            <th scope="col">Order List</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                                session_start();
-                                $xml = simplexml_load_file('order_info.xml');
-                                $i = 0;
-                                $orders = $xml->order;
-                                $user = "";
-                                $orderNum = "";
-                                $orderList = "";
-                                
-                                foreach($orders->order as $ORDER) {
-                                    echo "<tr>
-                                    <th scope = 'row'>$ORDER->user</th>
-                                    <td scope = 'col'>$ORDER->order_num</td>
-                                    <td scope = 'col'>$ORDER->orderList</td>
-                                    
-                                    <div class = 'container-fluid'>
-                                    <div class = 'collapse'>
-                                    <table class = 'table'>
-                                    <thead>
-                                    <tr>
-                                    <th scope = 'col'>User</th>
-                                    <th scope = 'col'>Order Number</th>
-                                    <th scope = 'col'>Order List</th>
-                                    </thead>
-                                    <tbody>
-                                    <td>$user</td>
-                                    <td>$orderNum</td>
-                                    <td>$orderList</td>
-                                    </tbody>
-                                    </table>
-                                    </div>
-                                    </div>
-                                    </tr>";
-                                    ++$i;
-                                    $user = "";
-                                    $orderNum = "";
-                                    $orderList = "";
-                                }
-                                ?>
-                        </tbody>
-                    </table>
-                </div>
             
-                
                 <?php
                     session_start();
                     $xml = simplexml_load_file('order_info.xml');
