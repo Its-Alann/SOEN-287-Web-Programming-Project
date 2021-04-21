@@ -47,7 +47,7 @@ $fieldErr = "";
            Login
         </div>
     </section>
-    
+
     <div class="flex-wrapper">
         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 align-self-center mx-auto mt-5  mb-5">
           <div class="card text-center">
@@ -75,14 +75,8 @@ $fieldErr = "";
 
 
 
-    <section class="footer">
-        <div class="footer-item ml-3">
-            <a href="../html/admin.html"><p>Admin</p></a>
-        </div>
-        <div class="footer-item mr-3">
-            <p class="font-italic"></p>
-        </div>
-    </section>
+      <!-- Footer -->
+      <?php include('footer.php'); ?>
 
 
 </body>

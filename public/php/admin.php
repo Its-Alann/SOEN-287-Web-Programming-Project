@@ -1,3 +1,9 @@
+<?php
+if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code'] != "0") {
+    header("Location: access_denied.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv = "refresh" content = "0; url = ../php/admin.php" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="../../public/css/michael_backend.css">
     <link rel="icon" href="../../images/favicon.ico" type="image/x-icon" />
     <title>McJawz | Admin</title>
@@ -15,36 +19,8 @@
 
 <body>
 
-    <!-- Header -->
-    <section class="header">
-        <nav class="header-nav">
-            <ul class="navbar navbar-left">
-                <li class="logo">
-                    <a class="mr-2" href="../../public/html/index.html">
-                        <img src="../../images/mcJawz_logo_no_txt.png" alt="">
-                    </a>
-                </li>
-                <li class="logo">
-                    <a href="../../public/html/index.html">
-                        McJawz
-                    </a>
-                </li>
-            </ul>
-            <ul class="navbar navbar-right">
-                <li class="login-signup">
-                    <a href="../../public/html/login.html">
-                        Login
-                    </a>
-                </li>
-                <li class="link-sep">|</li>
-                <li class="login-signup">
-                    <a href="../../public/html/signup.html">
-                        Sign Up
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </section>
+    <!-- Navbar -->
+    <?php include('header.php'); ?>
 
     <!-- Page Name -->
     <section class="page-name">
@@ -58,9 +34,7 @@
         <nav class="subheader-nav">
             <ul class="navbar navbar-left">
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/bakery.html">
-                        Bakery
-                    </a>
+                    <a href="../../../public/php/bakery_aisle.php">Bakery</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
@@ -82,15 +56,11 @@
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/poultry-aisle.html">
-                        Meat, Poultry & Fish
-                    </a>
+                    <a href="../../../public/php/poultry-aisle.php">Meat, Poultry & Fish</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/php/snack_aisle.php">
-                        Snacks
-                    </a>
+                    <a href="../../public/php/snack_aisle.php">Snacks</a>
                 </li>
             </ul>
             <ul class="navbar navbar-right">
@@ -122,6 +92,14 @@
                     <div class="card-body">
                         <h1 class="card-text">P8</h1>
                         <p>Edit Product</p>
+                    </div>
+                </div>
+            </a>
+            <a href="../../public/php/add_product.php" class="back-page-link">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h1 class="card-text">P8</h1>
+                        <p>Add Product</p>
                     </div>
                 </div>
             </a>

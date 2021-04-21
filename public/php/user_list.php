@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv = "refresh" content = "0; url = ../php/admin.php" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="../../public/css/michael_backend.css">
     <link rel="icon" href="../../images/favicon.ico" type="image/x-icon" />
-    <title>McJawz | Admin</title>
+    <title>McJawz | User List</title>
 </head>
 
 <body>
@@ -49,7 +47,7 @@
     <!-- Page Name -->
     <section class="page-name">
         <div>
-            Admin
+            User List
         </div>
     </section>
 
@@ -106,66 +104,64 @@
         </nav>
     </section>
 
-    <!-- Admin -->
-    <section class="admin my-5">
-        <div class="card-deck">
-            <a href="../../public/php/product_list.php" class="back-page-link">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h1 class="card-text">P7</h1>
-                        <p>Product List</p>
-                    </div>
-                </div>
-            </a>
-            <a href="../../public/php/edit_product.php" class="back-page-link">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h1 class="card-text">P8</h1>
-                        <p>Edit Product</p>
-                    </div>
-                </div>
-            </a>
-            <a href="../../public/html/user_list.html" class="back-page-link">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h1 class="card-text">P9</h1>
-                        <p>User List</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="card-deck mt-4">
-            <a href="../../public/html/edit_user.html" class="back-page-link">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h1 class="card-text">P10</h1>
-                        <p>Edit User</p>
-                    </div>
-                </div>
-            </a>
-            <a href="../../public/html/orderlist.html" class="back-page-link">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h1 class="card-text">P11</h1>
-                        <p>Order List</p>
-                    </div>
-                </div>
-            </a>
-            <a href="../../public/html/edit_orderlist.html" class="back-page-link">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h1 class="card-text">P12</h1>
-                        <p>Edit Order</p>
-                    </div>
-                </div>
-            </a>
-        </div>
+    <!-- User List -->
+    <section class="user-list">
+        <table class="table table-bordered bg-white">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">City</th>
+                    <th scope="col">State/Province</th>
+                    <th scope="col">Postal Code</th>
+                    <th class="btn-col" scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $file = simplexml_load_file("../../user_info.xml");
+                foreach ($file->userList->user as $user) {
+                    $code = (int)$user->code;
+                    $first_name = $user->firstName;
+                    $last_name = $user->lastName;
+                    $email = $user->email;
+                    $address = $user->address;
+                    $city = $user->city;
+                    $state_province = $user->stateOrProvince;
+                    $postal_code = $user->postalCode;
+                ?>
+                    <tr>
+                        <td><?= $code ?></td>
+                        <td><?= $first_name ?></td>
+                        <td><?= $last_name ?></td>
+                        <td><?= $email ?></td>
+                        <td><?= $address ?></td>
+                        <td><?= $city ?></td>
+                        <td><?= $state_province ?></td>
+                        <td><?= $postal_code ?></td>
+                        <td>
+                            <div class="btn-cell">
+                                <a href="../../public/html/edit_user.html" class="btn shadow-none btn-yellow">Edit</a>
+                                <button class="btn shadow-none btn-red">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+
+                <?php } ?>
+            </tbody>
+        </table>
+
+        <a href="../php/add_user.php" class="btn btn-blue shadow-none">Add User</a>
+
     </section>
 
     <!-- Footer -->
     <section class="footer">
         <div class="footer-item ml-3">
-            <a href="#">
+            <a href="../../public/html/admin.html">
                 <p>Admin</p>
             </a>
         </div>

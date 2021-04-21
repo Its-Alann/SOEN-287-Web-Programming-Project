@@ -9,7 +9,7 @@ session_start();
 //$stateOrProvince = $_SESSION['user_stateOrProvince'];
 //$postalCode =  $_SESSION['user_postalCode'];
 //if(count($_COOKIE) > 0) {
-  //echo "Cookies are enabled.";
+//echo "Cookies are enabled.";
 //} else {
 //  echo "Cookies are disabled.";
 //}
@@ -49,8 +49,7 @@ session_start();
         </a>
 
         <!-- Toggle Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -63,16 +62,28 @@ session_start();
             <li class="nav-item">
               <a class="nav-link" href="#aisles">Aisles</a>
             </li>
-            <li class="nav-item" style="<?php if(isset($_COOKIE['user_firstName'])){echo "display:none;";}?>">
+            <li class="nav-item" style="<?php if (isset($_COOKIE['user_firstName'])) {
+                                          echo "display:none;";
+                                        } ?>">
               <a class="nav-link" href="../../public/html/signup.html">Sign Up</a>
             </li>
-            <li class="nav-item" style="<?php if(isset($_COOKIE['user_firstName'])){echo "display:none;";} ?>">
+            <li class="nav-item" style="<?php if (isset($_COOKIE['user_firstName'])) {
+                                          echo "display:none;";
+                                        } ?>">
               <a class="nav-link" href="../../public/html/login.html">Log in</a>
             </li>
-            <li class="nav-item" style="<?php if(isset($_COOKIE['user_firstName'])){echo "display:block;";} else{echo "display:none;";}?>">
+            <li class="nav-item" style="<?php if (isset($_COOKIE['user_firstName'])) {
+                                          echo "display:block;";
+                                        } else {
+                                          echo "display:none;";
+                                        } ?>">
               <a class="nav-link" href="public/php/edit_user.php">Welcome, <?php echo $_COOKIE["user_firstName"]; ?>!</a>
             </li>
-            <li class="nav-item" style="<?php if(isset($_COOKIE['user_firstName'])){echo "display:block;";} else{echo "display:none;";}?>">
+            <li class="nav-item" style="<?php if (isset($_COOKIE['user_firstName'])) {
+                                          echo "display:block;";
+                                        } else {
+                                          echo "display:none;";
+                                        } ?>">
               <a class="nav-link" href="public/php/logout.php">Log Out</a>
             </li>
           </ul>
@@ -150,7 +161,7 @@ session_start();
     <a id="aisles"></a>
     <div class="row">
       <div class="col-lg-4 col-md-6">
-        <a href="../../public/html/aisles/fruitsandveg-aisle.html">
+        <a href="public/php/fruitsandveg-aisle.php">
           <div class="card">
             <img class="card-img-top" src="../../images/fruitsandveggy.jpg" alt="Card image cap">
             <div class="card-body">
@@ -160,7 +171,7 @@ session_start();
         </a>
       </div>
       <div class="col-lg-4 col-md-6">
-        <a href="../../public/html/aisles/snack_aisle.html">
+        <a href="/public/php/snack_aisle.php">
           <div class="card">
             <img class="card-img-top" src="../../images/snacks.jpg" alt="Card image cap">
             <div class="card-body">
@@ -215,7 +226,7 @@ session_start();
 
   <div class="footer" style="margin-top: 5%;">
     <div class="footer-text">
-      <a href="../../public/html/admin.html" style="color: white;">Admin</a>
+      <a href="../../public/php/admin.php" style="color: white;">Admin</a>
     </div>
   </div>
 

@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<body onload="updateQuantities(); productSubtotal(2.99, 'bars')">
+<body onload="updateQuantities(); updateProductInfo()">
     <script type="text/javascript" src="../../js/michael.js"></script>
 
     <!-- Navbar -->
@@ -40,7 +40,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12 title">
-                <h2>Crunchy Pecan Cereal Bars</h2>
+                <h2 id="product-page-name-2">Crunchy Pecan Cereal Bars</h2>
             </div>
         </div>
 
@@ -72,41 +72,43 @@
     <div class="product-info card text-center my-5">
         <div class="row no-gutters">
             <div class="col-md-4">
-                <img src="../../../images/bars.jpg" class="card-img" alt="Oreos">
+                <img src="../../../images/bars.jpg" class="card-img" alt="Bars">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h2 class="card-title">Crunchy Pecan Cereal Bars</h2>
-                    <p class="card-text text-muted">NATURE VALLEY</p>
-                    <p class="card-text text-muted"><small>210 g</small></p>
+                    <h2 class="card-title" id="product-name-2">Crunchy Pecan Cereal Bars</h2>
+                    <p class="card-text text-muted" id="product-brand-2">NATURE VALLEY</p>
+                    <p class="card-text text-muted" id="product-weight-2"><small>210 g</small></p>
 
-                    <p class="more-description text-muted">A tasty snack for a busy day or an active lifestyle! Smart snacking has never tasted so good.</p>
+                    <p class="more-description text-muted" id="product-description-2">A tasty snack for a busy day or an
+                        active lifestyle! Smart snacking has never tasted so good.</p>
 
                     <button class="btn btn-more-descr mt-3" onclick="moreDescription()">More Description</button>
 
                     <div class="row quantity mt-5">
                         <div class="pricing m-auto">
-                            <p class="base-price d-inline">$2.99</p>
-                            <p class="subtotal-bars d-inline ml-3">(Subtotal: $2.99)</p>
+                            <p class="base-price d-inline" id="product-price-2">$2.99</p>
+                            <p class="d-inline ml-3" id="product-subtotal-2">(Subtotal: $2.99)</p>
                         </div>
                         <div class="col-lg-12 incDecButton">
                             <span class="input-group-btn">
-                                <button type="button" class="quantity-minus btn btn-danger btn-number" onclick="minus('bars'); productSubtotal(2.99, 'bars')"
-                                    data-type="minus" data-field="">
+                                <button type="button" class="quantity-minus btn btn-danger btn-number"
+                                    onclick="minus(2); updateProductSubtotal(2)" data-type="minus" data-field="">
                                     -
                                 </button>
                             </span>
 
-                            <input class="quantity-input" id="qty-bars" size="3" type="text" value="1">
+                            <input class="quantity-input" id="product-qty-2" size="3" type="text" value="1">
 
                             <span class="input-group-btn">
-                                <button type="button" class="quantity-plus btn btn-success btn-number" onclick="plus('bars'); productSubtotal(2.99, 'bars')"
-                                    data-type="plus" data-field="">
+                                <button type="button" class="quantity-plus btn btn-success btn-number"
+                                    onclick="plus(2); updateProductSubtotal(2)" data-type="plus" data-field="">
                                     +
                                 </button>
                             </span>
                             <button type="button" class="btn btn-info ml-3">
-                                <img style="margin-right: 10px;" class="shoppingcarticon" src="../../../images/shoppingcarticon.png" alt="">
+                                <img style="margin-right: 10px;" class="shoppingcarticon"
+                                    src="../../../images/shoppingcarticon.png" alt="">
                                 Add to cart
                             </button>
                         </div>

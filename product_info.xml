@@ -93,6 +93,16 @@
             <description2>Large chicken legs from the top of the Chicken genetic pool.We carefully breed the chickens in order to yield the most meat and biggest size. Once again achieving this without explicitly modifying genetics.</description2>
         </product>
         <product>
+         <code>99</code>
+            <name>TEST</name>
+            <brand>Delete</brand>
+            <description>Delete</description>
+            <price>100</price>
+            <weight>1000 g</weight>
+             <quantity>10</quantity>
+            <description2>TEST</description2>
+        </product>
+        <product>
             <code>24</code>
             <name>Ground Meat</name>
             <brand>100% Canadian Grown Beef</brand>
@@ -265,5 +275,78 @@
             <quantity>10</quantity>
         </product>
     </beverages_aisle>
-    <fruits_vegetables_aisle></fruits_vegetables_aisle>
+    <fruits_vegetables_aisle>
+        <product>
+          <code>27</code>
+          <name>Royal Gala Apples</name>
+          <brand>Royal Gala</brand>
+          <description>Royal Gala Apples are bi-coloured with an attractive orange-red blush, which is most commonly striped and exposes a white-yellow background colouration. The fruit has sweet, yellowish flesh and an attractive crisp texture. Royal Gala Apples are aromatically sweet and snappy which makes it ideal as a healthy ready-to-eat snack. Our Royal Gala Apples are carefully sourced from various countries with the best growing conditions per season, to ensure our customers with a year-round supply of this beloved "gourmet apple" that is a staple among varieties of its kind.</description>
+          <price>4.50</price>
+          <weight>1000 g</weight>
+          <quantity>10</quantity>
+        </product>
+        <product>
+          <code>28</code>
+          <name>Chiquita Bananas</name>
+          <brand>Chiquita</brand>
+          <description>Our Organic Bananas are deliciously low in calories, have no fat, no sodium, and no cholesterol. They are a healthy source of fiber, Potassium, Vitamin B6, Vitamin C and various antioxidants and phytonutrients.</description>
+          <price>1.90</price>
+          <weight>1000 g</weight>
+          <quantity>10</quantity>
+        </product>
+        <product>
+          <code>29</code>
+          <name>Zespri Kiwis</name>
+          <brand>Zespri</brand>
+          <description>Kiwis are one of the perfect fruits one can incorporate in their diet. Each one has Potassium content as much as a banana and packed with Vitamin C higher than an orange, as well as high levels of Beta-Carotene, Vitamin A and E. Its seeds are rich in Alpha-Linoleic Acid, which is an Omega-3 essential fatty acid. It is also rich in fiber and have antioxidants which are considered great cancer fighters.</description>
+          <price>4.99</price>
+          <weight>1000 g</weight>
+          <quantity>10</quantity>
+        </product>
+        <product>
+          <code>30</code>
+          <name>Papaya Fruit</name>
+          <brand>Del Monte</brand>
+          <description>Our papayas are a smaller variety compared to other papayas. The skin of the papaya is thin and yellow. The orange flesh of the solo papaya is deliciously sweet. There are small black seeds in the middle of the fruit.</description>
+          <price>3.75</price>
+          <weight>1000 g</weight>
+          <quantity>10</quantity>
+        </product>
+        <product>
+          <code>31</code>
+          <name>Pictsweet Farms Broccoli</name>
+          <brand>Pictsweet</brand>
+          <description>Broccoli is high in vitamin C and vitamins A, and K, calcium, folate, and iron. It is also fat free, sodium free, and cholesterol free. It contains dietary fiber that is essential in the fight against obesity, heart disease, hypertension, diabetes, high blood cholesterol, and ulcers.</description>
+          <price>3.50</price>
+          <weight>1000 g</weight>
+          <quantity>10</quantity>
+        </product>
+        <product>
+          <code>32</code>
+          <name>Carrots</name>
+          <brand>Bolthouse</brand>
+          <description>Carrots are one of the most popular root vegetable around owing to its versatility in kitchen use and of course, for its wide-range of healthy and nutritional benefits. They come in many colors like purple, yellow, red and white, but the orange variety remains the most common ones. Carrots get their bright-coloured skin from Beta-Carotene, a nutrient that the body readily converts into Vitamin A which is very significant in the support of eye health and prevention of eye diseases. Depending on variety and cultivation, Carrots are normally having sweet flavor and can be juicy and delicious. Our Sama Carrots are freshly flown from Lebanon and guarantees you the best in season Carrots to enjoy.</description>
+          <price>2.25</price>
+          <weight>1000 g</weight>
+          <quantity>10</quantity>
+        </product>
+        <product>
+          <code>33</code>
+          <name>Lettuce</name>
+          <brand>Bolthouse</brand>
+          <description>Our Mixed Lettuce include a wonderful selection of Lollo Rosso, ‘Garnet Rosa’, ‘Merlot Flame’, ‘Devil’s Ear’, Butterhead, Green Oak Leave, Red Oak Leave or any of our other heirloom varieties. Selection depends on daily availability. Lettuce have been cultivated for thousands of years. They were first grown by the ancient Egyptians and were then spread by the Romans into the rest of Europe. Lettuce come in lots of different colours, shapes and sizes and we are growing a large selection of seasonal varieties all year round.</description>
+          <price>1.99</price>
+          <weight>1000 g</weight>
+          <quantity>10</quantity>
+        </product>
+        <product>
+          <code>34</code>
+          <name>Assorted Bell Peppers</name>
+          <brand>Bolthouse</brand>
+          <description>Capsicums or bell peppers are aptly called by their characteristically large bell shape. They commonly come in various colors of green, red, yellow, orange and even purple. While they belong in the same family of peppers, Capsicums are not spicy and are in fact sweet, tangy and are similarly pungent in smell. They are crunchy and can be eaten both raw and cooked. They are popular cooking ingredients in the culinary world, as well as even in the most humble home dishes.</description>
+          <price>2.25</price>
+          <weight>1000 g</weight>
+          <quantity>10</quantity>
+          </product>
+</fruits_vegetables_aisle>
 </products>

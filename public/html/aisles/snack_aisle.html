@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>McJawz | Snacks</title>
+    <meta http-equiv="refresh" content="0; url=../../php/snack_aisle.php" />
     <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../../../public/css/bootstrap.css" />
     <link rel="stylesheet" href="../../../public/css/michael_snacks.css" />
@@ -14,8 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet" />
 </head>
 
-<body
-    onload="updateQuantities(); productSubtotal(3.99, 'cookies'); productSubtotal(2.99, 'bars'); productSubtotal(1.89, 'chips'); productSubtotal(4.99, 'pistachios'); productSubtotal(3.99, 'pretzels'); productSubtotal(8.49, 'popcorn')">
+<body onload="updateQuantities(); updateProductInfo()">
     <script type="text/javascript" src="../../js/michael.js"></script>
 
     <!-- Navbar -->
@@ -59,6 +59,8 @@
                 <a href="../../../public/html/aisles/poultry-aisle.html">Meat, Poultry & Fish</a>
                 |
                 <a href="../../../public/html/aisles/snack_aisle.html">Snacks</a>
+                |
+                <a href="../../../public/php/snack_aisle.php">(Snacks PHP)</a>
             </div>
 
             <div class="col-lg-4 col-md-12 myCartContainer">
@@ -79,37 +81,35 @@
                         <img class="card-img-top mb-3" src="../../../images/oreo.jpg" alt="Oreos" />
 
                         <div class="card-body">
-                            <h5 class="card-title mt-4">
+                            <h5 class="card-title mt-4" id="product-name-1">
                                 Oreo Original Cookies
                             </h5>
-                            <p class="card-text text-muted">CHRISTIE</p>
-                            <p class="card-text text-muted">
+                            <p class="card-text text-muted" id="product-brand-1">CHRISTIE</p>
+                            <p class="card-text text-muted" id="product-weight-1">
                                 <small>500 g</small>
                             </p>
                         </div>
                     </a>
                     <div class="card-footer">
                         <div class="pricing m-auto">
-                            <p class="base-price d-inline">$3.99</p>
-                            <p class="subtotal-cookies d-inline ml-3">(Subtotal: $3.99)</p>
+                            <p class="base-price d-inline" id="product-price-1">$3.99</p>
+                            <p class="d-inline ml-3" id="product-subtotal-1">(Subtotal: $3.99)</p>
                         </div>
 
                         <div class="row quantity justify-content-around">
                             <div class="">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-minus btn btn-danger btn-number"
-                                        onclick="minus('cookies'); productSubtotal(3.99, 'cookies')" data-type="minus"
-                                        data-field="">
+                                        onclick="minus(1); updateProductSubtotal(1)" data-type="minus" data-field="">
                                         -
                                     </button>
                                 </span>
 
-                                <input class="quantity-input" id="qty-cookies" size="3" type="text" value="1">
+                                <input class="quantity-input" id="product-qty-1" size="3" type="number" value=1>
 
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-plus btn btn-success btn-number"
-                                        onclick="plus('cookies'); productSubtotal(3.99, 'cookies')" data-type="plus"
-                                        data-field="">
+                                        onclick="plus(1); updateProductSubtotal(1)" data-type="plus" data-field="">
                                         +
                                     </button>
                                 </span>
@@ -131,39 +131,37 @@
                     <a class="item-link" href="../../../public/html/products/snack_aisle_bars.html">
                         <img class="card-img-top" src="../../../images/bars.jpg" alt="Granola Bars" />
                         <div class="card-body">
-                            <h5 class="card-title">
+                            <h5 class="card-title" id="product-name-2">
                                 Crunchy Pecan Cereal Bars
                             </h5>
-                            <p class="card-text text-muted">
+                            <p class="card-text text-muted" id="product-brand-2">
                                 NATURE VALLEY
                             </p>
-                            <p class="card-text text-muted">
+                            <p class="card-text text-muted" id="product-weight-2">
                                 <small>210 g</small>
                             </p>
                         </div>
                     </a>
                     <div class="card-footer">
                         <div class="pricing m-auto">
-                            <p class="base-price d-inline">$2.99</p>
-                            <p class="subtotal-bars d-inline ml-3">(Subtotal: $2.99)</p>
+                            <p class="base-price d-inline" id="product-price-2">$2.99</p>
+                            <p class="subtotal-bars d-inline ml-3" id="product-subtotal-2">(Subtotal: $2.99)</p>
                         </div>
 
                         <div class="row quantity justify-content-around">
                             <div class="">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-minus btn btn-danger btn-number"
-                                        onclick="minus('bars'); productSubtotal(2.99, 'bars')" data-type="minus"
-                                        data-field="">
+                                        onclick="minus(2); updateProductSubtotal(2)" data-type="minus" data-field="">
                                         -
                                     </button>
                                 </span>
 
-                                <input class="quantity-input" id="qty-bars" size="3" type="text" value="1">
+                                <input class="quantity-input" id="product-qty-2" size="3" type="text" value="1">
 
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-plus btn btn-success btn-number"
-                                        onclick="plus('bars'); productSubtotal(2.99, 'bars')" data-type="plus"
-                                        data-field="">
+                                        onclick="plus(2); updateProductSubtotal(2)" data-type="plus" data-field="">
                                         +
                                     </button>
                                 </span>
@@ -185,35 +183,33 @@
                     <a class="item-link" href="../../../public/html/products/snack_aisle_chips.html">
                         <img class="card-img-top" src="../../../images/chips.jpg" alt="Potato Chips" />
                         <div class="card-body">
-                            <h5 class="card-title">Classic Potato Chips</h5>
-                            <p class="card-text text-muted">LAY'S</p>
-                            <p class="card-text text-muted">
-                                <small class="text-muted">66 g</small>
+                            <h5 class="card-title" id="product-name-3">Classic Potato Chips</h5>
+                            <p class="card-text text-muted" id="product-brand-3">LAY'S</p>
+                            <p class="card-text text-muted" id="product-weight-3">
+                                <small>66 g</small>
                             </p>
                         </div>
                     </a>
                     <div class="card-footer">
                         <div class="pricing m-auto">
-                            <p class="base-price d-inline">$1.89</p>
-                            <p class="subtotal-chips d-inline ml-3">(Subtotal: $1.89)</p>
+                            <p class="base-price d-inline" id="product-price-3">$1.89</p>
+                            <p class="subtotal-chips d-inline ml-3" id="product-subtotal-3">(Subtotal: $1.89)</p>
                         </div>
 
                         <div class="row quantity justify-content-around">
                             <div class="">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-minus btn btn-danger btn-number"
-                                        onclick="minus('chips'); productSubtotal(1.89, 'chips')" data-type="minus"
-                                        data-field="">
+                                        onclick="minus(3); updateProductSubtotal(3)" data-type="minus" data-field="">
                                         -
                                     </button>
                                 </span>
 
-                                <input class="quantity-input" id="qty-chips" size="3" type="text" value="1">
+                                <input class="quantity-input" id="product-qty-3" size="3" type="text" value="1">
 
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-plus btn btn-success btn-number"
-                                        onclick="plus('chips'); productSubtotal(1.89, 'chips')" data-type="plus"
-                                        data-field="">
+                                        onclick="plus(3); updateProductSubtotal(3)" data-type="plus" data-field="">
                                         +
                                     </button>
                                 </span>
@@ -235,37 +231,35 @@
                     <a class="item-link" href="../../../public/html/products/snack_aisle_pistachios.html">
                         <img class="card-img-top" src="../../../images/pistachios.jpg" alt="Pistachios" />
                         <div class="card-body">
-                            <h5 class="card-title">
+                            <h5 class="card-title" id="product-name-6">
                                 Roasted Unsalted Pistachios
                             </h5>
-                            <p class="card-text text-muted">WONDERFUL</p>
-                            <p class="card-text text-muted">
-                                <small class="text-muted">225 g</small>
+                            <p class="card-text text-muted" id="product-brand-6">WONDERFUL</p>
+                            <p class="card-text text-muted" id="product-weight-6">
+                                <small>225 g</small>
                             </p>
                         </div>
                     </a>
                     <div class="card-footer">
                         <div class="pricing m-auto">
-                            <p class="base-price d-inline">$4.99</p>
-                            <p class="subtotal-pistachios d-inline ml-3">(Subtotal: $4.99)</p>
+                            <p class="base-price d-inline" id="product-price-6">$4.99</p>
+                            <p class="d-inline ml-3" id="product-subtotal-6">(Subtotal: $4.99)</p>
                         </div>
 
                         <div class="row quantity justify-content-around">
                             <div class="">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-minus btn btn-danger btn-number"
-                                        onclick="minus('pistachios'); productSubtotal(4.99, 'pistachios')"
-                                        data-type="minus" data-field="">
+                                        onclick="minus(6); updateProductSubtotal(6)" data-type="minus" data-field="">
                                         -
                                     </button>
                                 </span>
 
-                                <input class="quantity-input" id="qty-pistachios" size="3" type="text" value="1">
+                                <input class="quantity-input" id="product-qty-6" size="3" type="text" value="1">
 
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-plus btn btn-success btn-number"
-                                        onclick="plus('pistachios'); productSubtotal(4.99, 'pistachios')"
-                                        data-type="plus" data-field="">
+                                        onclick="plus(6);updateProductSubtotal(6)" data-type="plus" data-field="">
                                         +
                                     </button>
                                 </span>
@@ -287,37 +281,35 @@
                     <a class="item-link" href="../../../public/html/products/snack_aisle_pretzels.html">
                         <img class="card-img-top" src="../../../images/pretzels.jpg" alt="Pretzels" />
                         <div class="card-body">
-                            <h5 class="card-title">
+                            <h5 class="card-title" id="product-name-4">
                                 Classic Thins Pretzels
                             </h5>
-                            <p class="card-text text-muted">ROLD GOLD</p>
-                            <p class="card-text text-muted">
+                            <p class="card-text text-muted" id="product-brand-4">ROLD GOLD</p>
+                            <p class="card-text text-muted" id="product-weight-4">
                                 <small>400 g</small>
                             </p>
                         </div>
                     </a>
                     <div class="card-footer">
                         <div class="pricing m-auto">
-                            <p class="base-price d-inline">$3.99</p>
-                            <p class="subtotal-pretzels d-inline ml-3">(Subtotal: $3.99)</p>
+                            <p class="base-price d-inline" id="product-price-4">$3.99</p>
+                            <p class="d-inline ml-3" id="product-subtotal-4">(Subtotal: $3.99)</p>
                         </div>
 
                         <div class="row quantity justify-content-around">
                             <div class="">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-minus btn btn-danger btn-number"
-                                        onclick="minus('pretzels'); productSubtotal(3.99, 'pretzels')" data-type="minus"
-                                        data-field="">
+                                        onclick="minus(4); updateProductSubtotal(4)" data-type="minus" data-field="">
                                         -
                                     </button>
                                 </span>
 
-                                <input class="quantity-input" id="qty-pretzels" size="3" type="text" value="1">
+                                <input class="quantity-input" id="product-qty-4" size="3" type="text" value="1">
 
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-plus btn btn-success btn-number"
-                                        onclick="plus('pretzels'); productSubtotal(3.99, 'pretzels')" data-type="plus"
-                                        data-field="">
+                                        onclick="plus(4); updateProductSubtotal(4)" data-type="plus" data-field="">
                                         +
                                     </button>
                                 </span>
@@ -339,37 +331,35 @@
                     <a class="item-link" href="../../../public/html/products/snack_aisle_popcorn.html">
                         <img class="card-img-top" src="../../../images/popcorn.jpg" alt="Popcorn" />
                         <div class="card-body">
-                            <h5 class="card-title">
+                            <h5 class="card-title" id="product-name-5">
                                 Extra Buttery 10 Pack Popcorn
                             </h5>
-                            <p class="card-text">ORVILLE REDENBACHER'S</p>
-                            <p class="card-text">
-                                <small class="text-muted">820 g</small>
+                            <p class="card-text text-muted" id="product-brand-5">ORVILLE REDENBACHER'S</p>
+                            <p class="card-text text-muted" id="product-weight-5">
+                                <small>820 g</small>
                             </p>
                         </div>
                     </a>
                     <div class="card-footer">
                         <div class="pricing m-auto">
-                            <p class="base-price d-inline">$8.49</p>
-                            <p class="subtotal-popcorn d-inline ml-3">(Subtotal: $8.49)</p>
+                            <p class="base-price d-inline" id="product-price-5">$8.49</p>
+                            <p class="d-inline ml-3" id="product-subtotal-5">(Subtotal: $8.49)</p>
                         </div>
 
                         <div class="row quantity justify-content-around">
                             <div class="">
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-minus btn btn-danger btn-number"
-                                        onclick="minus('popcorn'); productSubtotal(8.49, 'popcorn')" data-type="minus"
-                                        data-field="">
+                                        onclick="minus(5); updateProductSubtotal(5)" data-type="minus" data-field="">
                                         -
                                     </button>
                                 </span>
 
-                                <input class="quantity-input" id="qty-popcorn" size="3" type="text" value="1">
+                                <input class="quantity-input" id="product-qty-5" size="3" type="text" value="1">
 
                                 <span class="input-group-btn">
                                     <button type="button" class="quantity-plus btn btn-success btn-number"
-                                        onclick="plus('popcorn'); productSubtotal(8.49, 'popcorn')" data-type="plus"
-                                        data-field="">
+                                        onclick="plus(5); updateProductSubtotal(5)" data-type="plus" data-field="">
                                         +
                                     </button>
                                 </span>

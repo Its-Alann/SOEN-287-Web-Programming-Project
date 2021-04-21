@@ -1,29 +1,11 @@
 <?php session_start();?>
 <?php
 if(isset($_POST['delete'])){
-$number=$_POST['delete'];
-   echo $number;
-
 
     $xml = simplexml_load_file("../../product_info.xml");
-
-    foreach($xml->children() as $child){
-        foreach($child->product as $item){
-        if ($item->code==$number){
-            unset($item->item);
-            unset($xml->item);
-            unset($item->code);
-            unset($item->name);
-            unset($item->weight);
-            unset($item->brand);
-            unset($item->price);
-            unset($item->description);
-            unset($item->description2);
-            unset($item->quantity);
-
-        break;
-            }
-    }}
+    $CodeToDelete=$_POST['delete'];
+    $users = $xml->xpath("//product[./code = '{$CodeToDelete}']")[0];
+    unset($users[0][0]);
     file_put_contents("../../product_info.xml",$xml->saveXML());}
 ?>
 
@@ -50,7 +32,6 @@ $number=$_POST['delete'];
        Product List
     </div>
 </section>
-
 <body onload="updateAllValues()">
 
 <?php
@@ -72,8 +53,8 @@ foreach($aisle-> product as $item){
 <div class=backstore-p7>
  <div class="row mt-2">
       <div class="card-body col-xl-4 col-lg-6 col-md-6 col-sm-6">
-        <img src="../../images/<?=$code?>.png" class="img-fluid " style="background-color: white;" alt="<?= $name?>">
-      </div>
+        <img src="../../images/product_<?=$code?>.jpg" class="img-fluid " style="background-color: white;" alt="<?= $name?>">
+      </div> 
       <div class="col-xl-8 col-lg-6 col-md-6 col-sm-6 align-self-center " id="productCC">
         <div class="card text-center">
                 <div class="card-header bg-dark text-white">
@@ -94,7 +75,7 @@ foreach($aisle-> product as $item){
 
 
         <a href="edit_product.php?add_product=true" class="btn btn-dark btn-md mt-2 d-block">Add</a>
-        <a href="edit_product.php" class="btn btn-dark btn-md mt-2 d-block">Edit</a>
+        <a href="edit_product.php?product_code=<?=$code?>" class="btn btn-dark btn-md mt-2 d-block">Edit</a>
         <form action="" method="post">
         <button onclick="submit();"class="btn btn-danger btn-md mt-2 btn-block">Delete</button>
         <input type="hidden" name="delete" value=<?=$code?> >
@@ -109,14 +90,6 @@ foreach($aisle-> product as $item){
   </div>
 </div>
 <?php }}?>
-</body>
-<section class="footer">
-    <div class="footer-item ml-3">
-        <a href="../html/admin.html"><p>Admin</p></a>
-    </div>
-    <div class="footer-item mr-3">
-        <p class="font-italic"></p>
-    </div>
-</section>
+<?php include('footer.php'); ?>
     </body>
 </html>
