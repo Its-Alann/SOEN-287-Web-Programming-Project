@@ -256,6 +256,8 @@
 				from fat and full of flavour, now you can enjoy wellness your way every day.</description>
 			<price>3.99</price>
 			<weight>650 g</weight>
+			<extra_description>Made with real fruits 650g</extra_description>
+			<calories>35 cal/100g</calories>
 			<quantity>10</quantity>
 		</product>
 		<product>
@@ -266,6 +268,8 @@
 				almondmilk also has 50% more calcium than milk.</description>
 			<price>4.99</price>
 			<weight>1.85 L</weight>
+			<extra_description>Silky smooth vanilla almond milk</extra_description>
+			<calories>80 cal/240ml</calories>
 			<quantity>10</quantity>
 		</product>
 		<product>
@@ -277,6 +281,8 @@
 				farms to your family.</description>
 			<price>6.99</price>
 			<weight>4 L</weight>
+			<extra_description>Milk from local farms</extra_description>
+			<calories>130 cal/250ml</calories>
 			<quantity>10</quantity>
 		</product>
 		<product>
@@ -287,6 +293,8 @@
 				kitchen for some delicious pasta or for a simple snack for the kids.</description>
 			<price>4.99</price>
 			<weight>460 g</weight>
+			<extra_description>Mozarella cheese</extra_description>
+			<calories>100 cal/30g</calories>
 			<quantity>10</quantity>
 		</product>
 		<product>
@@ -297,6 +305,8 @@
 				is the same as white eggs, some people swear they taste better; who are we to argue?</description>
 			<price>4.50</price>
 			<weight>760 g</weight>
+			<extra_description>Brown eggs from local farms</extra_description>
+			<calories>160 cal/2 large eggs</calories>
 			<quantity>10</quantity>
 		</product>
 		<product>
@@ -309,6 +319,8 @@
 				also provide an additional source of DHA omega-3 fatty acids.</description>
 			<price>2.99</price>
 			<weight>760 g</weight>
+			<extra_description>White eggs from local farms</extra_description>
+			<calories>160 cal/2 large eggs</calories>
 			<quantity>10</quantity>
 		</product>
 	</dairy_eggs_aisle>
