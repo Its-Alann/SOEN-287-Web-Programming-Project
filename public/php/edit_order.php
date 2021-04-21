@@ -78,14 +78,20 @@
     </div>
 
     <!--EDIT ORDERS-->
-    <form method = "POST" action = "edit_order.php">
-        Please select order number wished to be edited<input type = "text" name = "order_num"></br>
-        Please enter the user's name <input type = "text" name = "user"></br>
-        Please enter the new order list <input type = "text" name = "orderList" class = "mt-5 mb-5"></br>
-        <input type="submit" name = "edit" value = "Edit" class="btn btn-primary mt-3 mb-3">
-        <button type="button"  class="btn btn-danger mt-3 mb-3">Reset</button>
-        <button type="submit" class="btn btn-blue shadow-none mt-5">Save</button>
-    </form>
+    <div class="flex-wrapper">
+        <div class="card text-center">
+            <div class="card-body my-auto ">
+                <form method = "POST" action = "edit_order.php">
+                    Please select order number wished to be edited<input type = "text" name = "order_num"></br>
+                    Please enter the user's name <input type = "text" name = "user"></br>
+                    Please enter the new order list <input type = "text" name = "orderList" class = "mt-5 mb-5"></br>
+                    <input type="submit" name = "edit" value = "Edit" class="btn btn-primary mt-3 mb-3">
+                    <button type="button"  class="btn btn-danger mt-3 mb-3">Reset</button>
+                    <button type="submit" class="btn btn-blue shadow-none mt-5">Save</button>
+                </form>
+            </div>
+        </div>  
+    </div>
 
         <?php
             session_start();
