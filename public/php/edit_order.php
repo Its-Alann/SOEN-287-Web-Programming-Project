@@ -91,7 +91,7 @@
             session_start();
             if(isset($_POST['edit'])){
                 $xml = new DomDocument();
-                $xml->load('order_info.xml');
+                $xml->load('../../order_info.xml');
 
                 #del order
                 $orderNum = $_POST['order_num'];
@@ -103,7 +103,7 @@
 
                 }
                 $xml -> formatoutput = true;
-                $xml -> save('order_info.xml');
+                $xml -> save('../../order_info.xml');
 
                 #add order
                 $newUser = $_POST['user'];
@@ -122,7 +122,7 @@
                 $infoTag ->appendChild($orderListTag);
 
                 $rootTag -> appendChild($infoTag);
-                $xml->save('order_info.xml');
+                $xml->save('../../order_info.xml');
 
 
                 echo ("Your order has been successfully edited!");
@@ -137,5 +137,6 @@
 
         <!-- Footer -->
         <?php include('footer.php'); ?>
+
 </body>
 </html>

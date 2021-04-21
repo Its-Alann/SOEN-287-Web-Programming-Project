@@ -129,7 +129,15 @@ if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code'] != "0") {
                     </div>
                 </div>
             </a>
-            <a href="../../public/html/edit_orderlist.html" class="back-page-link">
+            <a href="../../public/php/add_del_order.php" class="back-page-link">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h1 class="card-text">P11</h1>
+                        <p>Add and Delete Order</p>
+                    </div>
+                </div>
+            </a>
+            <a href="../../public/php/edit_order.php" class="back-page-link">
                 <div class="card text-center">
                     <div class="card-body">
                         <h1 class="card-text">P12</h1>
