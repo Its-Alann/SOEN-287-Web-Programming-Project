@@ -84,11 +84,11 @@ if (isset($_POST["product-qty-" . $product_code])) {
 
         <div class="row">
             <div class="col-lg-6 aisles">
-                <a href="../../../public/html/aisles/bakery.html">Bakery</a>
+                <a href="../../../public/php/bakery-aisle.php">Bakery</a>
                 |
-                <a href="../../../public/html/aisles/beverages-aisle.html">Beverages</a>
+                <a href="../../../public/php/beverages-aisle.php">Beverages</a>
                 |
-                <a href="../../../public/html/aisles/dairyandeggs-aisle.html">Dairy & Eggs</a>
+                <a href="../../../public/php/dairyandeggs-aisle.php">Dairy & Eggs</a>
                 |
                 <a href="../../../public/php/fruitsandveg-aisle.php">Fruits & Vegetables</a>
                 |
