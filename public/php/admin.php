@@ -34,7 +34,7 @@ if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code'] != "0") {
         <nav class="subheader-nav">
             <ul class="navbar navbar-left">
                 <li class="aisle-link">
-                    <a href="../../../public/php/bakery-aisle.php">Bakery</a>
+                    <a href="../../../public/php/bakery_aisle.php">Bakery</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
