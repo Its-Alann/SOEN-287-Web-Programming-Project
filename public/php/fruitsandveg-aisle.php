@@ -79,6 +79,7 @@
                     $price = $product->price;
                     $s_des = $product->s_des;
                     $calorie = $product->calorie;
+                    $unit = $product->unit;
             ?>
 
                 <div class="col-lg-3 col-md-4">
@@ -92,7 +93,7 @@
                             </div>
                         </a>
                         <div class="card-footer">
-                            <p class="pricing"><b><?= $price ?></b></p>
+                            <p class="pricing"><b><?= $price ?>/<?= $unit?></b></p>
 
                             <div class="row quantity">
                                 <div class="col-lg-12 incDecButton">
