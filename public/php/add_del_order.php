@@ -31,7 +31,7 @@
             
                 <?php
                     session_start();
-                    $xml = simplexml_load_file('order_info.xml');
+                    $xml = simplexml_load_file('../../order_info.xml');
                     if (isset($_POST['insert'])){
                         //$xml = simplexml_load_file('../../order_info.xml');
                         //$currentAmount = $xml->amount;
