@@ -1,7 +1,5 @@
-<?php session_start();?>
-
 <?php
-
+session_start();
 $xml = simplexml_load_file("../../product_info_test.xml");
 foreach ($xml->beverages_aisle->product as $product) {
     if ($product->code == $_GET['code']) {
@@ -90,7 +88,6 @@ if (isset($_POST["product-qty-" . $product_code])) {
                     <h2 class="card-title"><?=$name?></h2>
                     <p class="card-text"><?=$description?></p>
                     <p class="card-text"><small class="text-muted"><?=$weight?></small></p>
-
                     <div class="row quantity">
                         <p class="pricing">$<?=$price?></p>
                         <p class="pricing" style="font-size: medium;" id="totalPrice">Sub-total: $<?=$price?></p>
@@ -114,17 +111,13 @@ if (isset($_POST["product-qty-" . $product_code])) {
                             </button>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="accordian">
                     <input type="checkbox" id="title1" />
                     <label onclick="moreDescription()" for="title1">More Description</label>
-
                     <p id="description-text" style="display:none;"><?=$moreDescription?></p>
-                    
                 </div>
-
             </div>
         </div>
     </div>
