@@ -10,6 +10,9 @@ if (
     isset($_POST["product-price"])
 ) {
     $file = simplexml_load_file("../../product_info_test.xml");
+
+
+
     switch ($_POST["product-aisle"]) {
         case "bakery":
             $aisle = $file->bakery_aisle;
@@ -32,9 +35,10 @@ if (
     }
 
     $num_products = $file->xpath("//total_products")[0];
+    $high_code = $file->xpath("//highest_product_code")[0];
 
     $new_product = $aisle->addChild("product");
-    $new_product->addChild("code", $num_products + 1);
+    $new_product->addChild("code", $high_code + 1);
     $new_product->addChild("name", $_POST["product-name"]);
     $new_product->addChild("brand", $_POST["product-brand"]);
     $new_product->addChild("description", $_POST["product-description"]);
@@ -43,6 +47,7 @@ if (
     $new_product->addChild("quantity", 10);
 
     $file->total_products = $num_products + 1;
+    $file->highest_product_code = $high_code + 1;
 
     file_put_contents("../../product_info_test.xml", $file->asXML());
 

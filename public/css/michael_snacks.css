@@ -120,9 +120,6 @@ a.item-link:hover {
     margin-top: auto;
     width: 100%;
     background-color: rgb(51, 51, 51);
-    height: 50px;
-    line-height: 50px;
-    white-space: nowrap;
 }
 
 .footer a {

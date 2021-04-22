@@ -131,9 +131,6 @@ if (isset($_POST["product-qty-" . $product_code])) {
     <!-- Footer -->
     <?php include('footer.php'); ?>
 
-
-
-
 </body>
 
 </html>
