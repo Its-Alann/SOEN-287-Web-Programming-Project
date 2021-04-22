@@ -1,3 +1,14 @@
+<?php session_start();
+
+?>
+<?php
+    $product_code = $_GET["product_code"];
+    if (isset($_POST["product-qty-" . $product_code])) {
+        $_SESSION["product-qty-cart-" . $product_code] = $_POST["product-qty-" . $product_code];
+
+        echo $_SESSION["product-qty-cart-" . $product_code];
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,313 +69,57 @@
     <div class="card-deck">
 
         <div class="row">
-          <!--Item-->
-            <div class="col-lg-3 col-md-4">
 
-                <div class="card">
-                    <a class="item-link" href="../../../public/html/products/bakery-frenchbaguette.html">
-                        <img class="card-img-top" src="../../../images/baguette.jpg" alt="French Baguette">
+            <?php
+                $all_products = simplexml_load_file("../../product_info_test.xml");
+                foreach ($all_products->bakery_aisle->product as $product){
+                    $code = (int)$product->code;
+                    $name = $product->name;
+                    $brand = $product->brand;
+                    $weight = $product->weight;
+                    $price = $product->price;
+                    $s_des = $product->s_des;
+                    $calorie = $product->calorie;
+                    $unit = $product->unit;
+            ?>
 
-                        <div class="card-body">
-                            <h5 class="card-title">French Baguette</h5>
-                            <p class="card-text">Freshly baked french style baguette.</p>
-                            <p class="card-text"><small class="text-muted">900 cal/baguette</small></p>
-                        </div>
-                    </a>
-                    <div class="card-footer">
-                        <p class="pricing"><b>$2.99 ea.</b></p>
-
-                        <div class="row quantity">
-                            <div class="col-lg-12 incDecButton">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number incdec"
-                                        data-type="minus" data-field="" onclick="decrement('frenchBaguetteAmount')">
-                                      -
-                                    </button>
-                                </span>
-                                <input id="frenchBaguetteAmount" size="3" type="text" value="1">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number incdec"
-                                        data-type="plus" data-field="" onclick="increment('frenchBaguetteAmount')">
-                                        +
-                                    </button>
-                                </span>
+                <div class="col-lg-3 col-md-4">
+                    <div class="card">
+                        <a class="item-link" href='./bakery_product.php?code=<?= $code ?>'>
+                            <img class="card-img-top" src="../../../images/product_<?= $code ?>.jpg" alt="<?= $name ?>">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $name ?></h5>
+                                <p class="card-text"><?= $s_des ?></p>
+                                <p class="card-text"><small class="text-muted"><?= $calorie ?></small></p>
                             </div>
-                            <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
-                            </div>
-                        </div>
+                        </a>
+                        <div class="card-footer">
+                            <p class="pricing"><b>$<?= $price ?>/unit</b></p>
 
-                    </div>
-                </div>
-            </div>
-            <!--Item-->
-            <div class="col-lg-3 col-md-4">
-                <div class="card">
-                    <a class="item-link" href="../../../public/html/products/bakery-whitebread.html">
-                        <img class="card-img-top" src="../../../images/gadoua_whitebread.jpg" alt="WhiteBread">
-                        <div class="card-body">
-                            <h5 class="card-title">Gadoua White Bread Loaf</h5>
-                            <p class="card-text">A white bread loaf perfect for sandwiches.</p>
-                            <p class="card-text"><small class="text-muted">105 cal/slice</small></p>
-                        </div>
-                    </a>
-                    <div class="card-footer">
-                        <p class="pricing"><b>$3.25 ea.</b></p>
-
-                        <div class="row quantity">
-                            <div class="col-lg-12 incDecButton">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number incdec"
-                                        data-type="minus" data-field="" onclick="decrement('whiteBreadAmount')">
-                                      -
-                                    </button>
-                                </span>
-                                <input id="whiteBreadAmount" size="3" type="text" value="1" >
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number incdec"
-                                        data-type="plus" data-field="" onclick="increment('whiteBreadAmount')">
-                                        +
-                                    </button>
-                                </span>
-                            </div>
-                            <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
+                            <div class="row quantity">
+                                <div class="col-lg-12 incDecButton">
+                                    <span class="input-group-btn">
+                                        <button onclick="decrement('amount-<?=$code?>');" type="button" class="quantity-left-minus btn btn-danger btn-number" data-type="minus" data-field="">
+                                            -
+                                        </button>
+                                    </span>
+                                    <input id='amount-<?=$code?>' size="3" type = "text" value="1">
+                                    <span class="input-group-btn">
+                                        <button onclick="increment('amount-<?=$code?>');" type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                                            +
+                                        </button>
+                                    </span>
+                                </div>
+                                <div class="col-lg-12 addToCart">
+                                    <button type="button" class="btn btn-info">Add to cart</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!--Item-->
-            <div class="col-lg-3 col-md-4">
-                <div class="card">
-                    <a class="item-link" href="../../../public/html/products/bakery-wholewheatbread.html">
-                        <img class="card-img-top" src="../../../images/gadoua_wholewheatbread.jpg" alt="Wholewheatbread">
-                        <div class="card-body">
-                            <h5 class="card-title">Gadoua Whole Wheat Bread Loaf</h5>
-                            <p class="card-text">A whole wheat bread loaf perfect for sandwiches.</p>
-                            <p class="card-text"><small class="text-muted">100 cal/slice</small></p>
-                        </div>
-                    </a>
-                    <div class="card-footer">
-                        <p class="pricing"><b>$3.25 ea.</b></p>
-
-                        <div class="row quantity">
-                            <div class="col-lg-12 incDecButton">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number incdec"
-                                        data-type="minus" data-field="" onclick="decrement('wholeWheatBreadAmount')">
-                                        -
-                                    </button>
-                                </span>
-                                <input id="wholeWheatBreadAmount" size="3" type="text" value="1">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number incdec"
-                                        data-type="plus" data-field="" onclick="increment('wholeWheatBreadAmount')">
-                                        +
-                                    </button>
-                                </span>
-                            </div>
-                            <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <!--Item-->
-            <div class="col-lg-3 col-md-4">
-                <div class="card">
-                    <a class="item-link" href="../../../public/html/products/bakery-raisinbread.html">
-                        <img class="card-img-top" src="../../../images/gadoua_raisinbread.jpg" alt="Raisinbread">
-                        <div class="card-body">
-                            <h5 class="card-title">Gadoua Raisin and Cinnamon Bread Loaf</h5>
-                            <p class="card-text">Tasty brioche bread loaf packed with heartwarming flavors.</p>
-                            <p class="card-text"><small class="text-muted">130 cal/slice</small></p>
-                        </div>
-                    </a>
-                    <div class="card-footer">
-                        <p class="pricing"><b>$3.39 ea.</b></p>
-
-                        <div class="row quantity">
-                            <div class="col-lg-12 incDecButton">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number incdec"
-                                        data-type="minus" data-field="" onclick="decrement('raisinBreadAmount')">
-                                        -
-                                    </button>
-                                </span>
-                                <input id="raisinBreadAmount" size="3" type="text" value="1" >
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number incdec"
-                                        data-type="plus" data-field="" onclick="increment('raisinBreadAmount')">
-                                        +
-                                    </button>
-                                </span>
-                            </div>
-                            <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!--Item-->
-            <div class="col-lg-3 col-md-4">
-                <div class="card">
-                    <a class="item-link" href="../../../public/html/products/bakery-croissant.html">
-                        <img class="card-img-top" src="../../../images/croissant.png" alt="Croissant">
-                        <div class="card-body">
-                            <h5 class="card-title">Croissant</h5>
-                            <p class="card-text">Freshly baked croissant, the perfect breakfast item.</p>
-                            <p class="card-text"><small class="text-muted">280 cal/croissant</small></p>
-                        </div>
-                    </a>
-                    <div class="card-footer">
-                        <p class="pricing"><b>$0.99 ea.</b></p>
-
-                        <div class="row quantity">
-                            <div class="col-lg-12 incDecButton">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number incdec"
-                                        data-type="minus" data-field="" onclick="decrement('croissantAmount')">
-                                        -
-                                    </button>
-                                </span>
-                                <input id="croissantAmount" size="3" type="text" value="1">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number incdec"
-                                        data-type="plus" data-field="" onclick="increment('croissantAmount')">
-                                        +
-                                    </button>
-                                </span>
-                            </div>
-                            <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!--Item-->
-            <div class="col-lg-3 col-md-4">
-                <div class="card">
-                    <a class="item-link" href="../../../public/html/products/bakery-bagel.html">
-                        <img class="card-img-top" src="../../../images/st.viateur_bagel.jpg" alt="Bagels">
-                        <div class="card-body">
-                            <h5 class="card-title">St. Viateur Bagels</h5>
-                            <p class="card-text">Classic St. Viateur taste, baked here in Montreal.</p>
-                            <p class="card-text"><small class="text-muted">240 cal/bagel</small></p>
-                        </div>
-                    </a>
-                    <div class="card-footer">
-                        <p class="pricing"><b>$11.25/dozen</b></p>
-
-                        <div class="row quantity">
-                            <div class="col-lg-12 incDecButton">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number incdec"
-                                        data-type="minus" data-field="" onclick="decrement('bagelAmount')">
-                                        -
-                                    </button>
-                                </span>
-                                <input id="bagelAmount" size="3" type="text" value="1" >
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number incdec"
-                                        data-type="plus" data-field="" onclick="increment('bagelAmount')">
-                                        +
-                                    </button>
-                                </span>
-                            </div>
-                            <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!--Item-->
-            <div class="col-lg-3 col-md-4">
-                <div class="card">
-                    <a class="item-link" href="../../../public/html/products/bakery-chocolatine.html">
-                        <img class="card-img-top" src="../../../images/chocolatine.png" alt="Chocolatine">
-                        <div class="card-body">
-                            <h5 class="card-title">Chocolatine</h5>
-                            <p class="card-text">Freshly baked chocolatine from the current morning.</p>
-                            <p class="card-text"><small class="text-muted">300 cal/chocolatine</small></p>
-                        </div>
-                    </a>
-                    <div class="card-footer">
-                        <p class="pricing"><b>$0.99 ea.</b></p>
-
-                        <div class="row quantity">
-                            <div class="col-lg-12 incDecButton">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number incdec"
-                                        data-type="minus" data-field="" onclick="decrement('chocolatineAmount')">
-                                        -
-                                    </button>
-                                </span>
-                                <input id="chocolatineAmount" size="3" type="text" value="1" >
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number incdec"
-                                        data-type="plus" data-field="" onclick="increment('chocolatineAmount')">
-                                        +
-                                    </button>
-                                </span>
-                            </div>
-                            <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!--Item-->
-            <div class="col-lg-3 col-md-4">
-                <div class="card">
-                    <a class="item-link" href="../../../public/html/products/bakery-chocolatecake.html">
-                        <img class="card-img-top" src="../../../images/chocolatecake.png" alt="Chocolate Cake">
-                        <div class="card-body">
-                            <h5 class="card-title">Triple Chocolate Cake</h5>
-                            <p class="card-text">Delicious triple chocolate cake made from our own secret recipe.</p>
-                            <p class="card-text"><small class="text-muted">300 cal/serving</small></p>
-                        </div>
-                    </a>
-                    <div class="card-footer">
-                        <p class="pricing"><b>$12.99 ea.</b></p>
-
-                        <div class="row quantity">
-                            <div class="col-lg-12 incDecButton">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number incdec"
-                                        data-type="minus" data-field="" onclick="decrement('chocolateCakeAmount')">
-                                        -
-                                    </button>
-                                </span>
-                                <input id="chocolateCakeAmount" size="3" type="text" value="1">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number incdec"
-                                        data-type="plus" data-field="" onclick="increment('chocolateCakeAmount')">
-                                        +
-                                    </button>
-                                </span>
-                            </div>
-                            <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
         </div>
+
 
     </div>
 
