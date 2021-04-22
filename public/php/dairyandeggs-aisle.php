@@ -1,5 +1,14 @@
 <?php session_start();
 
+$amount[0] = $_POST["test"];
+//$_SESSION["test"] = $amount . 7;
+
+if (isset($_POST["test"])) {
+  $_SESSION["amount"] = $_POST["test"];
+
+  echo $_SESSION["amount"];
+  echo $code;
+}
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +60,7 @@
 
             <div class="col-lg-6 col-md-12 myCartContainer">
                 <img class="shoppingcarticon" src="../../../images/shoppingcarticon.png" alt="">
-                <a href="../../../public/html/cart.html">
+                <a href="../../../public/php/cart.php">
                     <p>My Cart</p>
                 </a>
             </div>
@@ -74,6 +83,7 @@
                   $weight = $product->weight;
                   $extradesc = $product->extra_description;
                   $cal = $product->calories;
+
           ?>
 
             <div class="col-lg-4 col-sm-6">
@@ -107,7 +117,23 @@
                                 </span>
                             </div>
                             <div class="col-lg-12 addToCart">
-                                <button type="button" class="btn btn-info">Add to cart</button>
+
+                              <form method="POST">
+                                <input id= "myText-<?php echo $code ?>" type="hidden" name="test" value="1">
+                                <button type="submit" class="btn btn-info" onclick="getAmount()"> Add to Cart </button>
+                              </form>
+                              <script>
+
+                              function getAmount(){
+
+                                console.log(<?php echo $code ?>);
+                                console.log(sessionStorage["amount-<?php echo $code ?>"]);
+                                var a = sessionStorage["amount-<?php echo $code ?>"];
+                                document.getElementById("myText-<?php echo $code ?>").value = a;
+                              }
+                              getAmount();
+
+                              </script>
                             </div>
                         </div>
 
