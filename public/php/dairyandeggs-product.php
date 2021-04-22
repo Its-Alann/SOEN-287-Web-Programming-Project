@@ -17,10 +17,24 @@ foreach ($products->dairy_eggs_aisle->product as $product) {
     }
 }
 
+$amount = $_POST["test"];
+$_SESSION["test"] = $amount;
+//return $_SESSION["amount"] ?? null;
+echo $_SESSION["test"];
 
-if (isset($_POST["product-qty-" . $product_code])) {
-    $_SESSION["product-qty-cart-" . $product_code] = $_POST["product-qty-" . $product_code];
-}
+$_SESSION['cart'] =array(
+array("name"=>(string)$name,"quantity"=>$amount),
+array("name"=>"Orange","quantity"=>4),
+array("name"=>"Banana","quantity"=>5),
+array("name"=>"Mango","quantity"=>7),
+);
+
+//echo $_SESSION['cart'][0]["name"];
+// if (isset($_POST["product-qty-" . $product_code])) {
+//     $_SESSION["product-qty-cart-" . $product_code] = $_POST["product-qty-" . $product_code];
+//
+//     echo $_SESSION["product-qty-cart-" . $product_code];
+// }
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +84,7 @@ if (isset($_POST["product-qty-" . $product_code])) {
 
             <div class="col-lg-6 col-md-12 myCartContainer">
                 <img class="shoppingcarticon" src="../../../images/shoppingcarticon.png" alt="">
-                <a href="../../../public/html/cart.html">
+                <a href="../../../public/php/cart.php">
                     <p>My Cart</p>
                 </a>
             </div>
@@ -104,10 +118,32 @@ if (isset($_POST["product-qty-" . $product_code])) {
                                     +
                                 </button>
                             </span>
-                            <button type="button" class="btn btn-info">
+
+                            <form id="addCart" action="dairyandeggs-product.php?code=<?= $product_code ?>"method="POST">
+                              <input id= "myText" type="hidden" name="test" value="1">
+                              <button type="submit" class="btn btn-info" onclick="getAmount()">
                                 <img class="shoppingcarticon" src="../../../images/shoppingcarticon.png" alt="">
-                                    Add to cart
-                            </button>
+                                Add to cart
+                              </button>
+                            </form>
+
+
+                              <script>
+
+
+                              function getAmount(){
+                                //console.log("Hello");
+                                //console.log(sessionStorage["amount-<?=$product_code?>"]);
+                                var a = sessionStorage["amount-<?=$product_code?>"];
+                                document.getElementById("myText").value = a;
+                                //document.getElementById("addCart").submit();
+                                console.log(document.getElementById("addCart"));
+
+                              }
+
+                              getAmount();
+                              </script>
+
                         </div>
                     </div>
 
@@ -118,7 +154,7 @@ if (isset($_POST["product-qty-" . $product_code])) {
                   <label onclick="showDescription()" for="title1">More Description</label>
 
                   <p id="description" style="display:none; padding-top: 10px">
-                    <?=$description?>
+                    <?=$desc?>
                   </div>
 
             </div>
