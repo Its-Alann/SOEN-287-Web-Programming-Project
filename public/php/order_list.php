@@ -144,7 +144,6 @@
                     <td>
                         <a href="../../public/php/edit_order.php" class="btn btn-info">Edit</a>
                         <a href="../../public/php/add_del_order.php" class="btn btn-info">Delete</a>
-                        <a href="#" class="btn btn-info">Save</a>
                     </td>
                 </tr>
 
