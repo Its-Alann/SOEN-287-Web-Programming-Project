@@ -1,20 +1,12 @@
 
 <?php
 session_start();
-$xml = simplexml_load_file("C:\Users\Alan\OneDrive\Documents\GitHub\SOEN-287\product_info.xml");
-$data = $xml->meat_poultry_fish_aisle[0]->product[0]->quantity[0];
-//$data = $_SESSION['product-qty-cart-'.$i]
-$_SESSION['number'] = (int) $data;
-//echo $_SESSION['number'];
-
- ?>
-
- <?php
- $myfile = fopen("C:\Users\Alan\OneDrive\Documents\GitHub\SOEN-287\product_infoTest.xml", "a") or die("Unable to open file!");
- //fwrite($myfile,"test3\n");
- $file = 'C:\Users\Alan\OneDrive\Documents\GitHub\SOEN-287\product_infoTest.xml';
- file_put_contents($file,str_replace($xml->snacks_aisle[0]->product[0]->quantity[1],'REPLACED',file_get_contents($file)));
-  fclose($myfile);
+$product_code = 1;
+$subtotal = 0;
+$qst = ($subtotal * 0.1);
+$gst;
+$shipping;
+$final;
  ?>
 
  <!DOCTYPE html>
@@ -40,32 +32,8 @@ $_SESSION['number'] = (int) $data;
  <body onload = 'setValues()'>
 
    <!-- Header -->
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-         <a class="navbar-brand" href="../../public/html/index.html">
-             <img style="margin-right: 5px;" class="icon-logo" src="../../images/mcJawz_logo_no_txt.png" width="40"
-                 height="40" alt="">
-             McJawz
-         </a>
 
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-             <span class="navbar-toggler-icon"></span>
-         </button>
-
-         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-             <ul class="navbar-nav ml-auto">
-                 <li class="nav-item">
-                     <a class="nav-link" href="index.html">Home</a>
-                 </li>
-                 <li class="nav-item">
-                     <a class="nav-link" href="signup.html">Sign Up</a>
-                 </li>
-                 <li class="nav-item">
-                     <a class="nav-link" href="login.html">Log in</a>
-                 </li>
-             </ul>
-         </div>
-     </nav>
+   <?php include('header.php'); ?>
 
    <!-- Subheader -->
    <div class="container-fluid">
@@ -103,25 +71,43 @@ $_SESSION['number'] = (int) $data;
 
      <div class="cartitems">
        <div class="container-fluid">
+         <?php for($i=1; $i<43; $i++){
+
+           if (isset($_SESSION["product-qty-cart-" . $product_code])) {
+             $products = simplexml_load_file("../../product_info_test.xml");
+             foreach ($products->snacks_aisle->product as $product) {
+               if ($product_code == $product->code) {
+                 $name = $product->name;
+                 $price = $product->price;
+               }
+             }
+             ?>
 
          <div class="card">
            <div class="col-4 images">
-             <img src="../../images/apples.jpg" alt="Apples" class="img-thumbnail">
+             <img src="../../images/product_<?=$product_code?>.jpg" alt="<?php echo $name ?>" class="img-thumbnail">
            </div>
            <div class="d-flex justify-content-center">
-             <p>Royal Gala Apples</p>
+              <p><?php echo $name ?></p>
            </div>
            <div class="itembuttons">
              <div class="btn-group" role="group" aria-label="Basic example">
 
                <button onclick="decrement('cart-add1')" type="button" class="btn btn-outline-danger">-</button>
-                 <input id = "cart-add1" class="numberinput" type="number" value= <?php echo $_SESSION['number']; ?> min="0">
+                 <input id = "cart-<?php $i ?>" class="numberinput" type="number" value="<?php echo $_SESSION["product-qty-cart-" . $product_code] ?>" min="0">
                <button onclick="increment('cart-add1')" type="button" class="btn btn-outline-success">+</button>
              </div>
-               <button type="button" class="btn btn-outline-danger removebutt"><?php echo $_SESSION['number']; ?></button>
+               <button onclick="location.reload();" type="button" class="btn btn-outline-danger removebutt">Remove</button>
            </div>
          </div>
+         <?php
+         $subtotal += ($_SESSION["product-qty-cart-" . $product_code] * $price)
 
+          ?>
+       <?php
+
+       $product_code++; } ?>
+     <?php } ?>
          <div class="card">
            <div class="col-4 images">
              <img src="../../images/broccoli.jpg" alt="Broccoli" class="img-thumbnail">
@@ -185,7 +171,8 @@ $_SESSION['number'] = (int) $data;
            </div>
 
            <div class="col-6">
-             <h6 id = "subTotal">0.00$</h6>
+             <!-- <h6 id = "subTotal">0.00$</h6> -->
+             <h6> <?php echo round($subtotal, 2) ?>$ </h6>
            </div>
          </div>
 
@@ -195,7 +182,10 @@ $_SESSION['number'] = (int) $data;
            </div>
 
            <div class="col-6">
-             <h6 id = "qstPrice">0.00$</h6>
+             <h6><?php
+             $qst = round($subtotal * 0.1, 2);
+             echo $qst; ?>$ </h6>
+             <!-- <h6 id = "qstPrice">0.00$</h6> -->
            </div>
          </div>
 
@@ -205,7 +195,10 @@ $_SESSION['number'] = (int) $data;
            </div>
 
            <div class="col-6">
-             <h6 id = "gstPrice">0.00$</h6>
+             <h6><?php
+             $gst = round($subtotal * 0.05, 2);
+             echo $gst; ?>$</h6>
+             <!-- <h6 id = "gstPrice">0.00$</h6> -->
            </div>
          </div>
 
@@ -215,7 +208,10 @@ $_SESSION['number'] = (int) $data;
            </div>
 
            <div class="col-6">
-             <h6 id = "shippingPrice">0.00$</h6>
+             <h6><?php
+             $shipping = 19.99;
+             echo $shipping;?>$ </h6>
+             <!-- <h6 id = "shippingPrice">0.00$</h6> -->
            </div>
          </div>
 
@@ -225,7 +221,11 @@ $_SESSION['number'] = (int) $data;
            </div>
 
            <div class="col-6">
-             <h6 id = "finalPrice">0.00$</h6>
+             <h6><?php
+             $final = $subtotal + $qst + $gst + $shipping;
+             echo $final;
+              ?>$ </h6>
+             <!-- <h6 id = "finalPrice">0.00$</h6> -->
            </div>
          </div>
 
@@ -254,11 +254,7 @@ $_SESSION['number'] = (int) $data;
      </div>
 
      <!-- Footer -->
-     <div class="footer">
-         <div class="footer-text">
-             <a href="admin.html">Admin</a>
-         </div>
-     </div>
+     <?php include('footer.php'); ?>
 
    </body>
  </html>
