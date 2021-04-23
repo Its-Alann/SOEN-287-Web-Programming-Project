@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-  <amount>1</amount>
+  <amount>5</amount>
   <userList>
     <user>
       <code>0</code>
@@ -46,5 +46,6 @@
       <stateOrProvince>Quebec</stateOrProvince>
       <postalCode>H3R 8D7</postalCode>
     </user>
+
   </userList>
 </root>
