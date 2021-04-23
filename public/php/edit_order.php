@@ -87,12 +87,14 @@
             <div class="card-header bg-dark text-white">
                 <h1>Edit an Order</h1>
             </div>
-            <form method = "POST" action = "edit_order.php">
-                Please select order number wished to be edited<input type = "text" name = "order_num"><br>
-                Please enter the user's name <input type = "text" name = "user"><br>
-                Please enter the new order list <input type = "text" name = "orderList" style = "height:200px"><br>
-                <input type="submit" name = "edit" value = "Edit" class="btn btn-primary mt-3 mb-3">
-            </form>
+            <div class="card-body my-auto ">
+                <form method = "POST" action = "edit_order.php">
+                    Please select order number wished to be edited<input type = "text" name = "order_num"><br>
+                    Please enter the user's name <input type = "text" name = "user"><br>
+                    Please enter the new order list <input type = "text" name = "orderList" style = "height:200px"><br>
+                    <input type="submit" name = "edit" value = "Edit" class="btn btn-primary mt-3 mb-3">
+                </form>
+            </div>
             <?php
                 session_start();
                 if(isset($_POST['edit'])){

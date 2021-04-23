@@ -76,27 +76,26 @@
                         User Name <input type = "text" name = "user"></br>
                         Order Number <input type = "text" name = "order_num"></br>
                         Order List <input type = "text" name = "orderList"></br>
-
                         <input type="submit" name = "insert" value = "Add" class="btn btn-primary mt-3 mb-3">
                     </form>
                 </div>
             </div>
         </div>
-    </div>
 
 
-    <!-- DELETE AN ORDER-->
-    <div class="flex-wrapper">
+        <!-- DELETE AN ORDER-->
         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 align-self-center mx-auto mt-5  mb-5">
             <div class="card text-center">
                 <div class="card-header bg-dark text-white">
                     <h1>Delete an order</h1>
                 </div>
-                <form method = "POST" action = "add_del_order.php">
-                    Order wished to be deleted <br>
-                    Order Number <input type = "text" name = "order_num"><br>
-                    <input type="submit" name = "delete" value = "Delete" class="btn btn-primary mt-3 mb-3">
-                </form>
+                <div class="card-body my-auto ">
+                    <form method = "POST" action = "add_del_order.php">
+                        Order wished to be deleted <br>
+                        Order Number <input type = "text" name = "order_num"><br>
+                        <input type="submit" name = "delete" value = "Delete" class="btn btn-primary mt-3 mb-3">
+                    </form>
+                </div>
                 <?php
                     session_start();
                     if(isset($_POST['delete'])){
