@@ -71,19 +71,15 @@ if (isset($_POST["product-code"])) {
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../../public/html/beverages-aisle.html">Beverages</a>
+                    <a href="../../../public/php/beverage-aisle.php">Beverages</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/dairyandeggs-aisle.html">
-                        Dairy & Eggs
-                    </a>
+                    <a href="../../public/html/aisles/dairyandeggs-aisle.html">Dairy & Eggs</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/fruitsandveg-aisle.html">
-                        Fruits & Vegetables
-                    </a>
+                    <a href="../../../public/php/fruitsandveg-aisle.php">Fruits & Vegetables</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">

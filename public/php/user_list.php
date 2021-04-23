@@ -28,39 +28,27 @@
         <nav class="subheader-nav">
             <ul class="navbar navbar-left">
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/bakery.html">
-                        Bakery
-                    </a>
+                    <a href="../../../public/php/bakery_aisle.php">Bakery</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/beverages-aisle.html">
-                        Beverages
-                    </a>
+                    <a href="../../../public/php/beverage-aisle.php">Beverages</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/dairyandeggs-aisle.html">
-                        Dairy & Eggs
-                    </a>
+                    <a href="../../public/html/aisles/dairyandeggs-aisle.html">Dairy & Eggs</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/fruitsandveg-aisle.html">
-                        Fruits & Vegetables
-                    </a>
+                    <a href="../../../public/php/fruitsandveg-aisle.php">Fruits & Vegetables</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/poultry-aisle.html">
-                        Meat, Poultry & Fish
-                    </a>
+                    <a href="../../../public/php/poultry-aisle.php">Meat, Poultry & Fish</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/php/snack_aisle.php">
-                        Snacks
-                    </a>
+                    <a href="../../../public/php/snack_aisle.php">Snacks</a>
                 </li>
             </ul>
             <ul class="navbar navbar-right">

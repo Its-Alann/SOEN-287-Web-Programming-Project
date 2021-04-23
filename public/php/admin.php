@@ -38,21 +38,15 @@ if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code'] != "0") {
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/beverages-aisle.html">
-                        Beverages
-                    </a>
+                    <a href="../../../public/php/beverage-aisle.php">Beverages</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/dairyandeggs-aisle.html">
-                        Dairy & Eggs
-                    </a>
+                    <a href="../../public/html/aisles/dairyandeggs-aisle.html">Dairy & Eggs</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/fruitsandveg-aisle.html">
-                        Fruits & Vegetables
-                    </a>
+                    <a href="../../../public/php/fruitsandveg-aisle.php">Fruits & Vegetables</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
@@ -60,7 +54,7 @@ if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code'] != "0") {
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/php/snack_aisle.php">Snacks</a>
+                    <a href="../../../public/php/snack_aisle.php">Snacks</a>
                 </li>
             </ul>
             <ul class="navbar navbar-right">
