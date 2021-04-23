@@ -41,6 +41,21 @@ function decrement(amount) {
 
 }
 
+function decrementNegative(amount) {
+
+    if(sessionStorage[amount]){
+        setAmount=parseInt(sessionStorage.getItem(amount));
+        }
+        else{
+         setAmount=parseInt(document.getElementById(amount).value);
+        }
+    
+        setAmount--; 
+        document.getElementById(amount).value = setAmount;
+        sessionStorage.setItem(amount, setAmount);
+
+}
+
 function updateValue(amount){
     if(sessionStorage.getItem(amount) != null){
         var itemToUpdate = document.getElementById(amount);
