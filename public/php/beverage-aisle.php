@@ -21,6 +21,7 @@
     <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../../../public/css/bootstrap.css">
     <link rel="stylesheet" href="../../../public/css/beverage.css">
+    <link rel="stylesheet" href ="../../../public/css/fruitsandveg-aisle.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <script src="../../../public/js/beverages-aisle.js"></script>
@@ -80,44 +81,41 @@
                     $weight = $product->weight;
             ?>
 
-                <div class="col-lg-3 col-md-4">
-                    <div class="card">
-                        <a class="item-link" href='./beverage-product.php?code=<?= $code ?>'>
-                            <img class="card-img-top" src="../../../images/product_<?= $code ?>.jpg" alt="<?= $name ?>">
-                            <div class="card-body">
-                                <h5 class="card-title"><?= $name ?></h5>
-                                <p class="card-text text-muted"><?= $description ?></p>
-                                <p class="text muted"><?= $weight?></p>
-                            </div>
-                        </a>
-                        <div class="card-footer">
-                            <p class="pricing"><b><?= $price ?></p>
+            <div class="col-lg-3 col-md-4">
+                <div class="card">
+                    <a class="item-link" href='./beverage-product.php?code=<?= $code ?>'>
+                        <img class="card-img-top" src="../../../images/product_<?= $code ?>.jpg" alt="<?= $name ?>">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $name ?></h5>
+                            <p class="card-text text-muted"><?= $description ?></p>
+                            <p class="text muted"><?= $weight?></p>
+                        </div>
+                    </a>
+                    <div class="card-footer">
+                        <p class="pricing"><b><?= $price ?></p>
 
-                            <div class="row quantity">
-                                <div class="col-lg-12 incDecButton">
-                                    <span class="input-group-btn">
-                                        <button onclick="decrement('amount-<?=$code?>');" type="button" class="quantity-left-minus btn btn-danger btn-number" data-type="minus" data-field="">
-                                            -
-                                        </button>
-                                    </span>
-                                    <input id='amount-<?=$code?>' size="3" type = "text" value="1">
-                                    <span class="input-group-btn">
-                                        <button onclick="increment('amount-<?=$code?>');" type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
-                                            +
-                                        </button>
-                                    </span>
-                                </div>
-                                <div class="col-lg-12 addToCart">
-                                    <button type="button" class="btn btn-info">Add to cart</button>
-                                </div>
+                        <div class="row quantity">
+                            <div class="col-lg-12 incDecButton">
+                                <span class="input-group-btn">
+                                    <button onclick="decrement('amount-<?=$code?>');" type="button" class="quantity-left-minus btn btn-danger btn-number" data-type="minus" data-field="">
+                                        -
+                                    </button>
+                                </span>
+                                <input id='amount-<?=$code?>' size="3" type = "text" value="1">
+                                <span class="input-group-btn">
+                                    <button onclick="increment('amount-<?=$code?>');" type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                                        +
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="col-lg-12 addToCart">
+                                <button type="button" class="btn btn-info">Add to cart</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            <?php } ?>
+            </div>
         </div>
-
-
     </div>
 
 
