@@ -53,35 +53,7 @@ if (isset($_POST["product-code"])) {
 <body>
 
     <!-- Header -->
-    <section class="header">
-        <nav class="header-nav">
-            <ul class="navbar navbar-left">
-                <li class="logo">
-                    <a class="mr-2" href="../../public/html/index.html">
-                        <img src="../../images/mcJawz_logo_no_txt.png" alt="">
-                    </a>
-                </li>
-                <li class="logo">
-                    <a href="../../public/html/index.html">
-                        McJawz
-                    </a>
-                </li>
-            </ul>
-            <ul class="navbar navbar-right">
-                <li class="login-signup">
-                    <a href="../../public/html/login.html">
-                        Login
-                    </a>
-                </li>
-                <li class="link-sep">|</li>
-                <li class="login-signup">
-                    <a href="../../public/html/signup.html">
-                        Sign Up
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </section>
+    <?php include('header.php'); ?>
 
     <!-- Page Name -->
     <section class="page-name">
@@ -99,19 +71,15 @@ if (isset($_POST["product-code"])) {
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../../public/html/beverages-aisle.html">Beverages</a>
+                    <a href="../../../public/php/beverage-aisle.php">Beverages</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/dairyandeggs-aisle.html">
-                        Dairy & Eggs
-                    </a>
+                    <a href="../../public/html/aisles/dairyandeggs-aisle.html">Dairy & Eggs</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/fruitsandveg-aisle.html">
-                        Fruits & Vegetables
-                    </a>
+                    <a href="../../../public/php/fruitsandveg-aisle.php">Fruits & Vegetables</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
@@ -178,7 +146,13 @@ if (isset($_POST["product-code"])) {
     </section>
 
     <!-- Footer -->
-    <?php include('footer.php'); ?>
+    <section class="footer">
+        <div class="footer-item ml-3">
+            <a href="../../public/php/admin.php">
+                <p>Admin</p>
+            </a>
+        </div>
+    </section>
 
 </body>
 
