@@ -4,8 +4,6 @@
 $product_code = $_GET["product_code"];
 if (isset($_POST["product-qty-" . $product_code])) {
     $_SESSION["product-qty-cart-" . $product_code] = $_POST["product-qty-" . $product_code];
-
-    echo $_SESSION["product-qty-cart-" . $product_code];
 }
 ?>
 
