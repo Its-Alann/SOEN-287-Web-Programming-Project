@@ -144,8 +144,8 @@
                         <td><?= $postal_code ?></td>
                         <td>
                             <div class="btn-cell">
-                                <a href="../../public/php/edit_user.php?first_name=<?= $last_name ?>&last_name=<?= $first_name ?>" class="btn shadow-none btn-yellow">Edit</a>
-                                <button class="btn shadow-none btn-red">Delete</button>
+                                <a href="../../public/php/edit_user.php?code=<?= $code ?>" class="btn shadow-none btn-yellow">Edit</a>
+                                <a href="../../public/php/delete_user.php?code=<?= $code ?>" class="btn shadow-none btn-red">Delete</a>
                             </div>
                         </td>
                     </tr>
