@@ -78,20 +78,26 @@
     </div>
 
     <!--EDIT ORDERS-->
-    <form method = "POST" action = "edit_order.php">
-        Please select order number wished to be edited<input type = "text" name = "order_num"></br>
-        Please enter the user's name <input type = "text" name = "user"></br>
-        Please enter the new order list <input type = "text" name = "orderList" class = "mt-5 mb-5"></br>
-        <input type="submit" name = "edit" value = "Edit" class="btn btn-primary mt-3 mb-3">
-        <button type="button"  class="btn btn-danger mt-3 mb-3">Reset</button>
-        <button type="submit" class="btn btn-blue shadow-none mt-5">Save</button>
-    </form>
+    <div class="flex-wrapper">
+        <div class="card text-center">
+            <div class="card-body my-auto ">
+                <form method = "POST" action = "edit_order.php">
+                    Please select order number wished to be edited<input type = "text" name = "order_num"></br>
+                    Please enter the user's name <input type = "text" name = "user"></br>
+                    Please enter the new order list <input type = "text" name = "orderList" class = "mt-5 mb-5"></br>
+                    <input type="submit" name = "edit" value = "Edit" class="btn btn-primary mt-3 mb-3">
+                    <button type="button"  class="btn btn-danger mt-3 mb-3">Reset</button>
+                    <button type="submit" class="btn btn-blue shadow-none mt-5">Save</button>
+                </form>
+            </div>
+        </div>  
+    </div>
 
         <?php
             session_start();
             if(isset($_POST['edit'])){
                 $xml = new DomDocument();
-                $xml->load('order_info.xml');
+                $xml->load('../../order_info.xml');
 
                 #del order
                 $orderNum = $_POST['order_num'];
@@ -103,7 +109,7 @@
 
                 }
                 $xml -> formatoutput = true;
-                $xml -> save('order_info.xml');
+                $xml -> save('../../order_info.xml');
 
                 #add order
                 $newUser = $_POST['user'];
@@ -122,7 +128,7 @@
                 $infoTag ->appendChild($orderListTag);
 
                 $rootTag -> appendChild($infoTag);
-                $xml->save('order_info.xml');
+                $xml->save('../../order_info.xml');
 
 
                 echo ("Your order has been successfully edited!");
@@ -137,5 +143,6 @@
 
         <!-- Footer -->
         <?php include('footer.php'); ?>
+
 </body>
 </html>

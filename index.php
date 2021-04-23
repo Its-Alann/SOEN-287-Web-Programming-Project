@@ -201,7 +201,7 @@ session_start();
         </a>
       </div>
       <div class="col-lg-4 col-md-6">
-        <a href="../../public/html/aisles/beverages-aisle.html">
+        <a href="/public/php/beverage-aisle.php">
           <div class="card">
             <img class="card-img-top" src="../../images/beverages.jpg" alt="Card image cap">
             <div class="card-body">
