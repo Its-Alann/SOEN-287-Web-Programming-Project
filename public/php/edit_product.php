@@ -53,35 +53,7 @@ if (isset($_POST["product-code"])) {
 <body>
 
     <!-- Header -->
-    <section class="header">
-        <nav class="header-nav">
-            <ul class="navbar navbar-left">
-                <li class="logo">
-                    <a class="mr-2" href="../../public/html/index.html">
-                        <img src="../../images/mcJawz_logo_no_txt.png" alt="">
-                    </a>
-                </li>
-                <li class="logo">
-                    <a href="../../public/html/index.html">
-                        McJawz
-                    </a>
-                </li>
-            </ul>
-            <ul class="navbar navbar-right">
-                <li class="login-signup">
-                    <a href="../../public/html/login.html">
-                        Login
-                    </a>
-                </li>
-                <li class="link-sep">|</li>
-                <li class="login-signup">
-                    <a href="../../public/html/signup.html">
-                        Sign Up
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </section>
+    <?php include('header.php'); ?>
 
     <!-- Page Name -->
     <section class="page-name">
