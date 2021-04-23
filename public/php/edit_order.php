@@ -80,69 +80,67 @@
     <!--EDIT ORDERS-->
     <div class="flex-wrapper">
         <div class="card text-center">
-            <div class="card-body my-auto ">
-                <form method = "POST" action = "edit_order.php">
-                    Please select order number wished to be edited<input type = "text" name = "order_num"></br>
-                    Please enter the user's name <input type = "text" name = "user"></br>
-                    Please enter the new order list <input type = "text" name = "orderList" class = "mt-5 mb-5"></br>
-                    <input type="submit" name = "edit" value = "Edit" class="btn btn-primary mt-3 mb-3">
-                    <button type="button"  class="btn btn-danger mt-3 mb-3">Reset</button>
-                    <button type="submit" class="btn btn-blue shadow-none mt-5">Save</button>
-                </form>
+            <div class="card-header bg-dark text-white">
+                <h1>Edit an Order</h1>
             </div>
-        </div>  
-    </div>
+            <form method = "POST" action = "edit_order.php">
+                Please select order number wished to be edited<input type = "text" name = "order_num"><br>
+                Please enter the user's name <input type = "text" name = "user"><br>
+                Please enter the new order list <input type = "text" name = "orderList" style = "height:200px"><br>
+                <input type="submit" name = "edit" value = "Edit" class="btn btn-primary mt-3 mb-3">
+            </form>
+            <?php
+                session_start();
+                if(isset($_POST['edit'])){
+                    $xml = new DomDocument();
+                    $xml->load('../../order_info.xml');
 
-        <?php
-            session_start();
-            if(isset($_POST['edit'])){
-                $xml = new DomDocument();
-                $xml->load('../../order_info.xml');
+                    //del order
+                    $orderNum = $_POST['order_num'];
 
-                #del order
-                $orderNum = $_POST['order_num'];
+                    $xpath = new DOMXPath($xml);
 
-                $xpath = new DOMXPath($xml);
+                    foreach($xpath -> query("/order_list/order[order_num = '$orderNum']") as $node){
+                        $node->parentNode->removeChild($node);
 
-                foreach($xpath -> query("/order_list/order[order_num = '$orderNum']") as $node){
-                    $node->parentNode->removeChild($node);
+                    }
+                    $xml -> formatoutput = true;
+                    $xml -> save('../../order_info.xml');
+
+                    //add order
+                    $newUser = $_POST['user'];
+                    $newOrderNum = $_POST['order_num'];
+                    $newOrderList = $_POST['orderList'];
+
+                    $rootTag = $xml -> getElementsByTagname('order_list') -> item(0);
+
+                    $infoTag = $xml -> createElement("order");
+                    $userTag = $xml -> createElement("user", $newUser);
+                    $orderNumTag = $xml -> createElement("order_num", $newOrderNum);
+                    $orderListTag = $xml -> createElement("orderList", $newOrderList);
+
+                    $infoTag ->appendChild($userTag);
+                    $infoTag ->appendChild($orderNumTag);
+                    $infoTag ->appendChild($orderListTag);
+
+                    $rootTag -> appendChild($infoTag);
+                    $xml->save('../../order_info.xml');
+
+
+                    echo ("Your order has been successfully edited!");
+                    echo ("Your username is " + $newUser + ".");
+                    echo ("Your order number is " + $newOrderNum + ".");
+                    echo ("Your new order is " + $newOrderList + ".");
 
                 }
-                $xml -> formatoutput = true;
-                $xml -> save('../../order_info.xml');
-
-                #add order
-                $newUser = $_POST['user'];
-                $newOrderNum = $_POST['order_num'];
-                $newOrderList = $_POST['orderList'];
-
-                $rootTag = $xml -> getElementsByTagname('order_list') -> item(0);
-
-                $infoTag = $xml -> createElement("order");
-                $userTag = $xml -> createElement("user", $newUser);
-                $orderNumTag = $xml -> createElement("order_num", $newOrderNum);
-                $orderListTag = $xml -> createElement("orderList", $newOrderList);
-
-                $infoTag ->appendChild($userTag);
-                $infoTag ->appendChild($orderNumTag);
-                $infoTag ->appendChild($orderListTag);
-
-                $rootTag -> appendChild($infoTag);
-                $xml->save('../../order_info.xml');
+            ?>
+        </div>
+    </div>
 
 
-                echo ("Your order has been successfully edited!");
-                echo ("Your username is " + $newUser + ".");
-                echo ("Your order number is " + $newOrderNum + ".");
-                echo ("Your new order is " + $newOrderList + ".");
 
-            }
-
-        ?>
-
-
-        <!-- Footer -->
-        <?php include('footer.php'); ?>
+    <!-- Footer -->
+    <?php include('footer.php'); ?>
 
 </body>
 </html>

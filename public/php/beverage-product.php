@@ -90,7 +90,6 @@ if (isset($_POST["product-qty-" . $product_code])) {
                     <p class="card-text"><small class="text-muted"><?=$weight?></small></p>
                     <div class="row quantity">
                         <p class="pricing">$<?=$price?></p>
-                        <p class="pricing" style="font-size: medium;" id="totalPrice">Sub-total: $<?=$price?></p>
                         <div class="col-lg-12 incDecButton">
                             <span class="input-group-btn">
                                 <button onclick="decrement('amount-<?=$code?>'); getTotal('amount-<?=$code?>')" type="button" class="quantity-left-minus btn btn-danger btn-number"

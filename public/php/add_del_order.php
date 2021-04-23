@@ -28,7 +28,6 @@
                 <div class="card-header bg-dark text-white">
                     <h1>Create an order</h1>
                 </div>
-            
                 <?php
                     session_start();
                     $xml = simplexml_load_file('../../order_info.xml');
@@ -73,31 +72,27 @@
                         Order Info wished to be added</br>
                         User Name <input type = "text" name = "user"></br>
                         Order Number <input type = "text" name = "order_num"></br>
-                        Order List <input type = "text" name = "orderList" class = "mt-5 mb-5"></br>
+                        Order List <input type = "text" name = "orderList"></br>
 
                         <input type="submit" name = "insert" value = "Add" class="btn btn-primary mt-3 mb-3">
-                        <button type="button"  class="btn btn-danger mt-3 mb-3">Reset</button>
-
                     </form>
                 </div>
+            </div>
+        </div>
+    </div>
 
 
-                <!-- DELETE AN ORDER-->
-                <div class="flex-wrapper">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 align-self-center mx-auto mt-5  mb-5">
-                    <div class="card text-center">
-                            <div class="card-header bg-dark text-white">
-                                <h1>Delete an order</h1>
-                            </div>
-                        </div>
-                    </div>
+    <!-- DELETE AN ORDER-->
+    <div class="flex-wrapper">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 align-self-center mx-auto mt-5  mb-5">
+            <div class="card text-center">
+                <div class="card-header bg-dark text-white">
+                    <h1>Delete an order</h1>
                 </div>
-
                 <form method = "POST" action = "add_del_order.php">
-                    Order wished to be deleted </br>
-                    Order Number <input type = "text" name = "order_num"></br>
+                    Order wished to be deleted <br>
+                    Order Number <input type = "text" name = "order_num"><br>
                     <input type="submit" name = "delete" value = "Delete" class="btn btn-primary mt-3 mb-3">
-                    <button type="button"  class="btn btn-danger mt-3 mb-3">Reset</button>
                 </form>
                 <?php
                     session_start();
@@ -123,7 +118,6 @@
             </div>
         </div>
     </div>
-
 
 
 
