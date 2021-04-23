@@ -47,15 +47,15 @@ if (isset($_POST["test"])) {
           <div class="col-lg-6 aisles">
               <a href="../../../public/php/bakery_aisle.php">Bakery</a>
               |
-              <a href="../../../public/php/ beverages-aisle.php">Beverages</a>
+              <a href="../../../public/php/beverage-aisle.php">Beverages</a>
               |
-              <a href="../../../public/php/ dairyandeggs-aisle.php">Dairy & Eggs</a>
+              <a href="../../../public/php/dairyandeggs-aisle.php">Dairy & Eggs</a>
               |
-              <a href="../../../public/php/ fruitsandveg-aisle.php">Fruits & Vegetables</a>
+              <a href="../../../public/php/fruitsandveg-aisle.php">Fruits & Vegetables</a>
               |
-              <a href="../../../public/php/ poultry-aisle.php">Meat, Poultry & Fish</a>
+              <a href="../../../public/php/poultry-aisle.php">Meat, Poultry & Fish</a>
               |
-              <a href="../../../public/php/ snack_aisle.php">Snacks</a>
+              <a href="../../../public/php/snack_aisle.php">Snacks</a>
             </div>
 
             <div class="col-lg-6 col-md-12 myCartContainer">

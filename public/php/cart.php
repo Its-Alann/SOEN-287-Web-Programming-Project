@@ -45,17 +45,17 @@ $final;
 
        <div class="row">
          <div class="col-lg-6 aisles">
-               <a href="../../public/html/aisles/bakery.html">Bakery</a>
+               <a href="../php/bakery_aisle.php">Bakery</a>
                |
-               <a href="../../public/html/aisles/beverages-aisle.html">Beverages</a>
+               <a href="../php/beverage-aisle.php">Beverages</a>
                |
-               <a href="../../public/html/aisles/dairyandeggs-aisle.html">Dairy & Eggs</a>
+               <a href="../php/dairyandeggs-aisle.php">Dairy & Eggs</a>
                |
-               <a href="../../public/html/aisles/fruitsandveg-aisle.html">Fruits & Vegetables</a>
+               <a href="../php/fruitsandveg-aisle.php">Fruits & Vegetables</a>
                |
-               <a href="../../public/html/aisles/poultry-aisle.html">Meat, Poultry & Fish</a>
+               <a href="../php/poultry-aisle.php">Meat, Poultry & Fish</a>
                |
-               <a href="../../public/html/aisles/snack_aisle.html">Snacks</a>
+               <a href="../php/snack_aisle.php">Snacks</a>
  </div>
 
            <div class="col-lg-6 col-md-12 myCartContainer">
@@ -71,7 +71,7 @@ $final;
 
      <div class="cartitems">
        <div class="container-fluid">
-         <?php for($i=1; $i<43; $i++){
+         <?php for($i=1; $i<100; $i++){
 
            if (isset($_SESSION["product-qty-cart-" . $product_code])) {
              $products = simplexml_load_file("../../product_info_test.xml");
