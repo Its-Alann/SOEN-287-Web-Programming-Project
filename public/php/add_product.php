@@ -169,24 +169,24 @@ if (
             </select>
 
             <label class=" mt-3" for="product-name">Product name</label>
-            <input type="text" id="product-name" name="product-name" value="<?php echo $name ?>" />
+            <input type="text" id="product-name" name="product-name" value="" />
 
             <label class="mt-3" for="product-brand">Product brand</label>
-            <input type="text" id="product-brand" name="product-brand" value="<?php echo $brand ?>" />
+            <input type="text" id="product-brand" name="product-brand" value="" />
 
             <div class="weight-input d-inline-block">
                 <label class="mt-3" for="product-weight">Product weight</label>
-                <input class="d-inline w-25" type="text" id="product-weight" name="product-weight" value="<?php echo $weight ?>">
+                <input class="d-inline w-25" type="text" id="product-weight" name="product-weight" value="">
             </div>
 
             <label class="mt-3" for="product-description">Product description</label>
-            <textarea id="product-description" name="product-description"><?php echo $description ?></textarea>
+            <textarea id="product-description" name="product-description"></textarea>
 
             <div class="price-input d-inline-block">
                 <label class="mt-3" for="product-price">Product price</label>
 
                 <p class="d-inline">$</p>
-                <input class="d-inline w-25" type="number" step="0.01" id="product-price" name="product-price" value="<?php echo $price ?>">
+                <input class="d-inline w-25" type="number" step="0.01" id="product-price" name="product-price" value="">
             </div>
 
             <button type="submit" class="btn btn-blue shadow-none mt-5">Save</button>
@@ -195,7 +195,13 @@ if (
     </section>
 
     <!-- Footer -->
-    <?php include('footer.php'); ?>
+    <section class="footer">
+        <div class="footer-item ml-3">
+            <a href="../../public/php/admin.php">
+                <p>Admin</p>
+            </a>
+        </div>
+    </section>
 
 </body>
 

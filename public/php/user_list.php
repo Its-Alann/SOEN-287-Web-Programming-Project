@@ -144,7 +144,7 @@
                         <td><?= $postal_code ?></td>
                         <td>
                             <div class="btn-cell">
-                                <a href="../../public/html/edit_user.html" class="btn shadow-none btn-yellow">Edit</a>
+                                <a href="../../public/php/edit_user.php?first_name=<?= $last_name ?>&last_name=<?= $first_name ?>" class="btn shadow-none btn-yellow">Edit</a>
                                 <button class="btn shadow-none btn-red">Delete</button>
                             </div>
                         </td>
@@ -161,7 +161,7 @@
     <!-- Footer -->
     <section class="footer">
         <div class="footer-item ml-3">
-            <a href="../../public/html/admin.html">
+            <a href="../../public/php/admin.php">
                 <p>Admin</p>
             </a>
         </div>

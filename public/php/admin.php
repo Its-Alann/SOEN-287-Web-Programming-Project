@@ -143,7 +143,7 @@ if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code'] != "0") {
     <!-- Footer -->
     <section class="footer">
         <div class="footer-item ml-3">
-            <a href="#">
+            <a href="../../public/php/admin.php">
                 <p>Admin</p>
             </a>
         </div>

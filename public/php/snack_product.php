@@ -44,6 +44,7 @@ if (isset($_POST["product-qty-" . $product_code])) {
 
     <!-- Navbar -->
     <?php include('header.php'); ?>
+
     <!-- Subheader -->
     <div class="container-fluid">
         <div class="row">
@@ -126,10 +127,15 @@ if (isset($_POST["product-qty-" . $product_code])) {
             </div>
         </div>
     </div>
-    </div>
 
     <!-- Footer -->
-    <?php include('footer.php'); ?>
+    <section class="footer">
+        <div class="footer-item ml-3">
+            <a href="../../public/php/admin.php">
+                <p>Admin</p>
+            </a>
+        </div>
+    </section>
 
 </body>
 

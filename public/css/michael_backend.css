@@ -258,7 +258,7 @@ table .btn-cell {
 .footer {
     height: 50px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     background-color: black;
 }
 
@@ -267,7 +267,8 @@ table .btn-cell {
     margin: 0 10px;
 }
 
-.footer a:hover {
+.footer a:hover,
+.footer a:visited {
     color: lightgrey;
 }
 
