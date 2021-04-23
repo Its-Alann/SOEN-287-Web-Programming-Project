@@ -50,7 +50,7 @@ if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code'] != "0") {
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/fruitsandveg-aisle.html">
+                    <a href="../../../public/php/fruitsandveg-aisle.php">
                         Fruits & Vegetables
                     </a>
                 </li>
@@ -121,7 +121,7 @@ if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code'] != "0") {
                     </div>
                 </div>
             </a>
-            <a href="../../public/html/orderlist.html" class="back-page-link">
+            <a href="../../public/php/order_list.php" class="back-page-link">
                 <div class="card text-center">
                     <div class="card-body">
                         <h1 class="card-text">P11</h1>
