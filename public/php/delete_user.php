@@ -4,9 +4,11 @@ if (isset($_GET["code"])) {
     $code = $_GET["code"];
     $file = simplexml_load_file("../../user_info.xml");
     list($user) = $file->xpath("//user[./code='$code']");
-    echo $user->firstName;
     unset($user[0]);
-    echo "\n";
+
+    list($total) = $file->xpath("//amount");
+    $total[0] = $total[0] - 1;
+
     echo $file->asXML("../../user_info.xml");
 }
 

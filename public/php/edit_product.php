@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code'] != "0") {
+    header("Location: access_denied.php");
+}
 
 // This part is only to fill in default values of form input fields
 $code = $_GET["product_code"];
