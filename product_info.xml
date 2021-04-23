@@ -197,76 +197,108 @@
     </dairy_eggs_aisle>
     <beverages_aisle>
         <product>
-            <code>13</code>
-            <name>Evian Water</name>
-            <brand>Evian</brand>
-            <description>Evian water is a brand of mineral water coming from sources near Évian-les-Bains, on the south shore of Lake Geneva.</description>
-            <price>1.20</price>
-            <weight>500mL</weight>
-            <quantity>10</quantity>
-        </product>
-        <product>
-            <code>14</code>
-            <name>Sprite</name>
-            <brand>Sprite</brand>
-            <description>A colourless, lemon-lime beverage produced by the Coca-Cola Company.</description>
-            <price>1.80</price>
-            <weight>600mL</weight>
-            <quantity>10</quantity>
-        </product>
-        <product>
-            <code>15</code>
-            <name>Coca Cola</name>
-            <brand>Coca Cola</brand>
-            <description>A carbonated soft drink originally made and intended as a patent medicine.</description>
-            <price>1.80</price>
-            <weight>600mL</weight>
-            <quantity>10</quantity>
-        </product>
-        <product>
-            <code>16</code>
-            <name>Fanta</name>
-            <brand>Fanta</brand>
-            <description>An orange flavored carbonated soft drink created by Coca-Cola.</description>
-            <price>1.80</price>
-            <weight>600mL</weight>
-            <quantity>10</quantity>
-        </product>
-        <product>
-            <code>17</code>
-            <name>Fruit Punch</name>
-            <brand>Minute Maid</brand>
-            <description>A combination made from real fruit creating a refreshing and delicious blend.</description>
-            <price>2.25</price>
-            <weight>1.75L</weight>
-            <quantity>10</quantity>
-        </product>
-        <product>
-            <code>18</code>
-            <name>Orange Juice</name>
-            <brand>Minute Maid</brand>
-            <description>A delectable and refreshing blend of 100% natural orange juices.</description>
-            <price>2.25</price>
-            <weight>1.75L</weight>
-            <quantity>10</quantity>
-        </product>
-        <product>
-            <code>19</code>
-            <name>Monster Energy Drink</name>
-            <brand>Monster</brand>
-            <description>An energy drink made from taurine.</description>
-            <price>2.75</price>
-            <weight>473mL</weight>
-            <quantity>10</quantity>
-        </product>
-        <product>
-            <code>20</code>
-            <name>RedBull Energy Drink</name>
-            <brand>RedBull</brand>
-            <description>RedBull is an energy that "Gives You Wings".</description>
-            <price>1.99</price>
-            <weight>355mL</weight>
-            <quantity>10</quantity>
+			<code>13</code>
+			<name>Evian Water</name>
+			<brand>Evian</brand>
+			<description>Evian water is a brand of mineral water coming from sources near Évian-les-Bains, on the south
+				shore of Lake Geneva.</description>
+			<price>1.20</price>
+			<weight>500mL</weight>
+			<quantity>10</quantity>
+			<more_description>Evian Water is a mineral water coming from several sources near Évian-les-Bains, on the south shore of Lake Geneva, which is owned by Danone. It has a PH of 7.2, 
+                            a calcium concentration of 80mg/L, a chloride concentration of 6.8mg/L, a magnesium concentration of 26mg/L, a potassium concentration of 1mg/L 
+                            and a sodium concentration of 6.5mg/L.
+			</more_description>
+		</product>
+		<product>
+			<code>14</code>
+			<name>Sprite</name>
+			<brand>Sprite</brand>
+			<description>A colourless, lemon-lime beverage produced by the Coca-Cola Company.</description>
+			<price>1.80</price>
+			<weight>600mL</weight>
+			<quantity>10</quantity>
+			<more_description>This colorless, lemon-lime flavored soft-drink is created by the same creators of Coca-Cola, the Coca-Cola Company, and was introduced in 1961. It's main ingredients 
+                            consists of carbonated water, high fructose corn syrop, citric acid, natural flavors, sodium citrate and sodium benzoate.
+			</more_description>
+		</product>
+		<product>
+			<code>15</code>
+			<name>Coca Cola</name>
+			<brand>Coca Cola</brand>
+			<description>A carbonated soft drink originally made and intended as a patent medicine.</description>
+			<price>1.80</price>
+			<weight>600mL</weight>
+			<quantity>10</quantity>
+			<more_description>Our 600mL coca cola beverages are imported straight from the The Coca-Cola Company. 
+                            This refreshing beverage was introduced in the year 1886 and is made from coca leaves and kola nuts. It's main ingredients are: carbonated water, sugar, 
+                            caffeine, phosphoric acid, caramel color and natural flavourings.
+			</more_description>
+		</product>
+		<product>
+			<code>16</code>
+			<name>Fanta</name>
+			<brand>Fanta</brand>
+			<description>An orange flavored carbonated soft drink created by Coca-Cola.</description>
+			<price>1.80</price>
+			<weight>600mL</weight>
+			<quantity>10</quantity>
+			<more_description> This delicious, bubbly and refreshing fruit-flavored soft drink is imported from the same creators of Coca-Cola, the Coca-Cola Company, and has over 100 flavors worldwide. 
+                            The Fanta beverage was introduced in 1940 and was created using only ingredients available in Germany at the time of creation, including beet sugar, whey, and 
+                            apple pomace. 
+			</more_description>
+		</product>
+		<product>
+			<code>17</code>
+			<name>Fruit Punch</name>
+			<brand>Minute Maid</brand>
+			<description>A combination made from real fruit creating a refreshing and delicious blend.</description>
+			<price>2.25</price>
+			<weight>1.75L</weight>
+			<quantity>10</quantity>
+			<more_description>Our fruit punch is directly delivered from Minute Maid. Minute Maid Fruit Punch combines a number of fruit flavors together in a refreshing, delicious blend, 
+                            that is made with real fruit juice and with natural flavors. The Fruit Punch's main ingredients are filtered water, fruit juices from concentrate(grape, pineapple, 
+                            pear, and/or apple), sugar/glucose-fructose, natural flavors, citric acid, ascorbic acid(vitamin c), grape skin extract and stevia extract.
+			</more_description>
+		</product>
+		<product>
+			<code>18</code>
+			<name>Orange Juice</name>
+			<brand>Minute Maid</brand>
+			<description>A delectable and refreshing blend of 100% natural orange juices.</description>
+			<price>2.25</price>
+			<weight>1.75L</weight>
+			<quantity>10</quantity>
+			<more_description> We offer a refreshing Orange Juice that is manufactured from Minute Maid, made from perfectly riped, natural oranges which creates an authentic and delicious 
+                            beverage with 100% orange juice concentrate. It's main ingredients are filtered water and concretrated orange juice.  
+			</more_description>
+		</product>
+		<product>
+			<code>19</code>
+			<name>Monster Energy Drink</name>
+			<brand>Monster</brand>
+			<description>An energy drink made from taurine.</description>
+			<price>2.75</price>
+			<weight>473mL</weight>
+			<quantity>10</quantity>
+			<more_description>This refrenshing caffeinated energy drink was introduced by Hansen Natural Company in 2002, which includes ingredients such as: 
+                            carbonated water, sucrose, glucose, citric acid, natural flavors, taurine, sodium citrate, color added, panax ginseng root extract, L-carnitine, 
+                            L-tratarate, caffeine, sorbic acid, benzoic acid, niacinamide, sodium chloride, glycine max glucoronolactone, inositol, guarana seed extract, pyridoxine hydrochloride, 
+                            sucrolase, riboflavinm maltodextrin and cyanocobalamin.
+			</more_description>
+		</product>
+		<product>
+			<code>20</code>
+			<name>RedBull Energy Drink</name>
+			<brand>RedBull</brand>
+			<description>RedBull is an energy that "Gives You Wings".</description>
+			<price>1.99</price>
+			<weight>355mL</weight>
+			<quantity>10</quantity>
+			<more_description>The Red Bull we offer is an energy drink which is sold by Red Bull GmbH and was introduced in 1987. The Red Bull drink has the highest market share of any 
+                            drink in the world with the unique and distinct slogan "Red Bull gives you wings." It's main ingredients are caffeine, taurine, glucoronolactone, sucrose and glucose, 
+                            B-group vitamins, and alpine spring water. 
+			</more_description>
         </product>
     </beverages_aisle>
     <fruits_vegetables_aisle>

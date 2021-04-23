@@ -66,3 +66,18 @@ function updateValue(input){
     }
 
 }
+
+function getTotal(item){
+    var priceArray = document.getElementsByClassName("pricing");
+    var rate = priceArray[0].innerHTML;
+    rate = parseFloat(rate.slice(1, rate.indexOf("/")));
+
+    var total = document.getElementById("totalPrice");
+    var quantity = document.getElementById(item);
+    if(quantity.value > 0){
+        total.innerHTML = "Sub-total: $" + Math.round((quantity.value*rate) * 100) / 100;
+    }
+    else{
+        total.innerHTML = "Sub-total: $0"
+    }
+}
