@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../public/css/bootstrap.css">
     <link rel="stylesheet" href="../../public/css/backstore.css">
 
     <link rel="icon" href="../../images/favicon.ico" type="image/x-icon" />
@@ -86,12 +87,14 @@
             <div class="card-header bg-dark text-white">
                 <h1>Edit an Order</h1>
             </div>
-            <form method = "POST" action = "edit_order.php">
-                Please select order number wished to be edited<input type = "text" name = "order_num"><br>
-                Please enter the user's name <input type = "text" name = "user"><br>
-                Please enter the new order list <input type = "text" name = "orderList" style = "height:200px"><br>
-                <input type="submit" name = "edit" value = "Edit" class="btn btn-primary mt-3 mb-3">
-            </form>
+            <div class="card-body my-auto ">
+                <form method = "POST" action = "edit_order.php">
+                    Please select order number wished to be edited<input type = "text" name = "order_num"><br>
+                    Please enter the user's name <input type = "text" name = "user"><br>
+                    Please enter the new order list <input type = "text" name = "orderList" style = "height:200px"><br>
+                    <input type="submit" name = "edit" value = "Edit" class="btn btn-primary mt-3 mb-3">
+                </form>
+            </div>
             <?php
                 session_start();
                 if(isset($_POST['edit'])){

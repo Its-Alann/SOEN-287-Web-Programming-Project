@@ -1,7 +1,5 @@
-<?php session_start();
-
-?>
 <?php
+    session_start();
     $product_code = $_GET["product_code"];
     if (isset($_POST["product-qty-" . $product_code])) {
         $_SESSION["product-qty-cart-" . $product_code] = $_POST["product-qty-" . $product_code];
