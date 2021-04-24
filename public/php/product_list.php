@@ -26,7 +26,11 @@ file_put_contents("../../product_info_test.xml", $xml->asXML());
 
 }
 ?>
-
+<?php
+if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code'] != "0") {
+    header("Location: access_denied.php");
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
