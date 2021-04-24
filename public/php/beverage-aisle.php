@@ -18,7 +18,6 @@
     <title>McJawz | Beverages</title>
     <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../../../public/css/bootstrap.css">
-    <link rel="stylesheet" href="../../../public/css/beverage.css">
     <link rel="stylesheet" href ="../../../public/css/fruitsandveg-aisle.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
@@ -90,7 +89,7 @@
                         </div>
                     </a>
                     <div class="card-footer">
-                        <p class="pricing"><b><?= $price ?></p>
+                        <p class="pricing">$<b><?= $price ?></p>
 
                         <div class="row quantity">
                             <div class="col-lg-12 incDecButton">
