@@ -107,7 +107,7 @@ if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code'] != "0") {
             </a>
         </div>
         <div class="card-deck mt-4">
-            <a href="../../public/html/edit_user.html" class="back-page-link">
+            <a href="../../public/php/edit_user.php" class="back-page-link">
                 <div class="card text-center">
                     <div class="card-body">
                         <h1 class="card-text">P10</h1>
