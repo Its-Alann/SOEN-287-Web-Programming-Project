@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <products>
     <total_products>26</total_products>
+	<highest_product_code>45</highest_product_code>
     <snacks_aisle>
         <product>
             <code>1</code>
