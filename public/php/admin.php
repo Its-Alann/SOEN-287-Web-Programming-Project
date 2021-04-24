@@ -38,21 +38,15 @@ if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code'] != "0") {
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/beverages-aisle.html">
-                        Beverages
-                    </a>
+                    <a href="../../../public/php/beverage-aisle.php">Beverages</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/dairyandeggs-aisle.html">
-                        Dairy & Eggs
-                    </a>
+                    <a href="../../public/html/aisles/dairyandeggs-aisle.html">Dairy & Eggs</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/fruitsandveg-aisle.html">
-                        Fruits & Vegetables
-                    </a>
+                    <a href="../../../public/php/fruitsandveg-aisle.php">Fruits & Vegetables</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
@@ -60,7 +54,7 @@ if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code'] != "0") {
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/php/snack_aisle.php">Snacks</a>
+                    <a href="../../../public/php/snack_aisle.php">Snacks</a>
                 </li>
             </ul>
             <ul class="navbar navbar-right">
@@ -121,7 +115,7 @@ if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code'] != "0") {
                     </div>
                 </div>
             </a>
-            <a href="../../public/html/orderlist.html" class="back-page-link">
+            <a href="../../public/php/order_list.php" class="back-page-link">
                 <div class="card text-center">
                     <div class="card-body">
                         <h1 class="card-text">P11</h1>
@@ -129,7 +123,15 @@ if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code'] != "0") {
                     </div>
                 </div>
             </a>
-            <a href="../../public/html/edit_orderlist.html" class="back-page-link">
+            <a href="../../public/php/add_del_order.php" class="back-page-link">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h1 class="card-text">P11</h1>
+                        <p>Add and Delete Order</p>
+                    </div>
+                </div>
+            </a>
+            <a href="../../public/php/edit_order.php" class="back-page-link">
                 <div class="card text-center">
                     <div class="card-body">
                         <h1 class="card-text">P12</h1>
@@ -143,7 +145,7 @@ if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code'] != "0") {
     <!-- Footer -->
     <section class="footer">
         <div class="footer-item ml-3">
-            <a href="#">
+            <a href="../../public/php/admin.php">
                 <p>Admin</p>
             </a>
         </div>

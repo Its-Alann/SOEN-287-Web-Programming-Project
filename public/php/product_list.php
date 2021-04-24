@@ -2,12 +2,31 @@
 <?php
 if(isset($_POST['delete'])){
 
-    $xml = simplexml_load_file("../../product_info.xml");
+    $xml = simplexml_load_file("../../product_info_test.xml");
     $CodeToDelete=$_POST['delete'];
     $users = $xml->xpath("//product[./code = '{$CodeToDelete}']")[0];
     unset($users[0][0]);
-    file_put_contents("../../product_info.xml",$xml->saveXML());}
+    file_put_contents("../../product_info_test.xml",$xml->saveXML());}
 ?>
+
+
+
+<?php
+$xml = simplexml_load_file("../../product_info_test.xml");
+foreach($xml->children()as $aisle){
+foreach($aisle-> product as $item){
+  $code= (int)$item->code;
+  if(isset($_POST['add-'.$code])){
+$quantity=$item->quantity;
+$quantity+=$_POST['add-'.$code];
+$item->quantity=$quantity;
+file_put_contents("../../product_info_test.xml", $xml->asXML());
+}
+}
+
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,9 +52,9 @@ if(isset($_POST['delete'])){
     </div>
 </section>
 <body onload="updateAllValues()">
-
+<a href="./add_product.php" class="btn btn-success btn-md mt-2 d-block ">Add Product</a>
 <?php
-$xml = simplexml_load_file("../../product_info.xml");
+$xml = simplexml_load_file("../../product_info_test.xml");
 foreach($xml->children()as $aisle){
 foreach($aisle-> product as $item){
     if($item->code==""){
@@ -64,7 +83,7 @@ foreach($aisle-> product as $item){
                     <h5 class="card-title d-inline">Price: $<?= $price?></h5>
                     <h6 class="card-title">Quantity Remaining: <?= $quantity?></h6>
                     <span class="input-group-btn">
-                      <button onclick="decrement('amount-<?=$code?>');" class="quantity-left-minus btn btn-danger btn-number"
+                      <button onclick="decrementNegative('amount-<?=$code?>');" class="quantity-left-minus btn btn-danger btn-number"
                           data-type="minus" data-field="">-
                       </button></span>
                   <input id='amount-<?=$code?>' size="3" type="text" value="0">
@@ -73,9 +92,22 @@ foreach($aisle-> product as $item){
                           data-type="plus" data-field="">+
 </button>                </span>
 
+       <form id="addForm" action="" method="POST" >   
+        <button onclick="mySubmit('add-<?=$code?>',<?=$code?>);"class="btn btn-dark btn-md mt-2 ">Add Quantity(Cannot Add zero)</button>
+        <input type="hidden" id="add-<?=$code?>" name="add-<?=$code?>" value="">
+        </form>
+        <script>
+                    function mySubmit(name1,number) {
+                        
+                      try{var name='amount-'+number;
+                        var val=sessionStorage[name];
+                                  document.getElementById(name1).value=val;
+                                 }
+                                  catch(e){console.log(e.message)}
+                                document.getElementById("addForm").submit();}
+                                </script>
 
-        <a href="edit_product.php?add_product=true" class="btn btn-dark btn-md mt-2 d-block">Add</a>
-        <a href="edit_product.php?product_code=<?=$code?>" class="btn btn-dark btn-md mt-2 d-block">Edit</a>
+        <a href="edit_product.php?product_code=<?=$code?>" class="btn btn-dark btn-md mt-2 d-block ">Edit</a>
         <form action="" method="post">
         <button onclick="submit();"class="btn btn-danger btn-md mt-2 btn-block">Delete</button>
         <input type="hidden" name="delete" value=<?=$code?> >

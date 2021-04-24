@@ -1,3 +1,9 @@
+<?php
+if (!isset($_COOKIE['user_code']) || $_COOKIE['user_code'] != "0") {
+    header("Location: access_denied.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,35 +20,7 @@
 <body>
 
     <!-- Header -->
-    <section class="header">
-        <nav class="header-nav">
-            <ul class="navbar navbar-left">
-                <li class="logo">
-                    <a class="mr-2" href="../../public/html/index.html">
-                        <img src="../../images/mcJawz_logo_no_txt.png" alt="">
-                    </a>
-                </li>
-                <li class="logo">
-                    <a href="../../public/html/index.html">
-                        McJawz
-                    </a>
-                </li>
-            </ul>
-            <ul class="navbar navbar-right">
-                <li class="login-signup">
-                    <a href="../../public/html/login.html">
-                        Login
-                    </a>
-                </li>
-                <li class="link-sep">|</li>
-                <li class="login-signup">
-                    <a href="../../public/html/signup.html">
-                        Sign Up
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </section>
+    <?php include('header.php'); ?>
 
     <!-- Page Name -->
     <section class="page-name">
@@ -56,39 +34,27 @@
         <nav class="subheader-nav">
             <ul class="navbar navbar-left">
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/bakery.html">
-                        Bakery
-                    </a>
+                    <a href="../../../public/php/bakery_aisle.php">Bakery</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/beverages-aisle.html">
-                        Beverages
-                    </a>
+                    <a href="../../../public/php/beverage-aisle.php">Beverages</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/dairyandeggs-aisle.html">
-                        Dairy & Eggs
-                    </a>
+                    <a href="../../public/html/aisles/dairyandeggs-aisle.html">Dairy & Eggs</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/fruitsandveg-aisle.html">
-                        Fruits & Vegetables
-                    </a>
+                    <a href="../../../public/php/fruitsandveg-aisle.php">Fruits & Vegetables</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/html/aisles/poultry-aisle.html">
-                        Meat, Poultry & Fish
-                    </a>
+                    <a href="../../../public/php/poultry-aisle.php">Meat, Poultry & Fish</a>
                 </li>
                 <li class="link-sep">|</li>
                 <li class="aisle-link">
-                    <a href="../../public/php/snack_aisle.php">
-                        Snacks
-                    </a>
+                    <a href="../../../public/php/snack_aisle.php">Snacks</a>
                 </li>
             </ul>
             <ul class="navbar navbar-right">
@@ -144,8 +110,8 @@
                         <td><?= $postal_code ?></td>
                         <td>
                             <div class="btn-cell">
-                                <a href="../../public/html/edit_user.html" class="btn shadow-none btn-yellow">Edit</a>
-                                <button class="btn shadow-none btn-red">Delete</button>
+                                <a href="../../public/php/edit_user.php?code=<?= $code ?>" class="btn shadow-none btn-yellow">Edit</a>
+                                <a href="../../public/php/delete_user.php?code=<?= $code ?>" class="btn shadow-none btn-red">Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -161,7 +127,7 @@
     <!-- Footer -->
     <section class="footer">
         <div class="footer-item ml-3">
-            <a href="../../public/html/admin.html">
+            <a href="../../public/php/admin.php">
                 <p>Admin</p>
             </a>
         </div>

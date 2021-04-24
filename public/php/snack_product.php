@@ -44,6 +44,7 @@ if (isset($_POST["product-qty-" . $product_code])) {
 
     <!-- Navbar -->
     <?php include('header.php'); ?>
+
     <!-- Subheader -->
     <div class="container-fluid">
         <div class="row">
@@ -56,11 +57,11 @@ if (isset($_POST["product-qty-" . $product_code])) {
             <div class="col-lg-8 aisles text-dark">
                 <a href="../../../public/php/bakery_aisle.php">Bakery</a>
                 |
-                <a href="../../../public/html/aisles/beverages-aisle.html">Beverages</a>
+                <a href="../../../public/php/beverage-aisle.php">Beverages</a>
                 |
                 <a href="../../../public/html/aisles/dairyandeggs-aisle.html">Dairy & Eggs</a>
                 |
-                <a href="../../../public/html/aisles/fruitsandveg-aisle.html">Fruits & Vegetables</a>
+                <a href="../../../public/php/fruitsandveg-aisle.php">Fruits & Vegetables</a>
                 |
                 <a href="../../../public/php/poultry-aisle.php">Meat, Poultry & Fish</a>
                 |
@@ -126,13 +127,15 @@ if (isset($_POST["product-qty-" . $product_code])) {
             </div>
         </div>
     </div>
-    </div>
 
     <!-- Footer -->
-    <?php include('footer.php'); ?>
-
-
-
+    <section class="footer">
+        <div class="footer-item ml-3">
+            <a href="../../public/php/admin.php">
+                <p>Admin</p>
+            </a>
+        </div>
+    </section>
 
 </body>
 
