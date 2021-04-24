@@ -96,7 +96,7 @@ echo $_SESSION['product-qty-cart-'.$i];}
 
         <div class="row">
 <?php
-$xml = simplexml_load_file("../../product_info.xml");
+$xml = simplexml_load_file("../../product_info_test.xml");
 foreach($xml->meat_poultry_fish_aisle->product as $item){
     if($item->code==""){
         continue;
