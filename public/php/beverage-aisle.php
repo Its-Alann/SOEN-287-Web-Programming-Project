@@ -77,7 +77,6 @@
                     $description = $product->description;
                     $price = $product->price;
                     $weight = $product->weight;
-                }
             ?>
 
             <div class="col-lg-3 col-md-4">
@@ -114,6 +113,7 @@
                     </div>
                 </div>
             </div>
+            <?php } ?>
         </div>
     </div>
 
