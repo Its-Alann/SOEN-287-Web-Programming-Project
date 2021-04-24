@@ -32,7 +32,7 @@ if (isset($_POST["product-qty-" . $product_code])) {
     <title>McJawz | Beverages</title>
     <link rel="icon" href="../../../images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../../../public/css/bootstrap.css">
-    <link rel="stylesheet" href="../../../public/css/beverage.css">
+    <link rel="stylesheet" href ="../../../public/css/fruitsandveg-aisle.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <script src="../../../public/js/beverages-aisle.js"></script>
