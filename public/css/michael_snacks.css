@@ -2,6 +2,10 @@
 /* February 22, 2021 */
 /* Michael Totarella, 40005251 */
 
+.mt-footer {
+    margin-top: 127px;
+}
+
 .navbar-collapse.collapse.in {
     display: block !important;
 }
@@ -116,20 +120,20 @@ a.item-link:hover {
     text-decoration: none;
 }
 
+/* Footer */
 .footer {
     margin-top: auto;
-    width: 100%;
-    background-color: rgb(51, 51, 51);
     height: 50px;
-    line-height: 50px;
-    white-space: nowrap;
+    width: 100%;
+    background-color: black;
 }
 
 .footer a {
     color: #d7dbdd;
 }
 
-.footer-text {
+.footer-text,
+.footer-item {
     padding: 10px 20px;
     text-align: left;
     display: flex;

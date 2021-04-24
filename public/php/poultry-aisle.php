@@ -2,7 +2,7 @@
 
 ?>
 <?php
-for($i=0; $i<100; $i++){
+for($i=0; $i<1000; $i++){
 if(isset($_POST['amount-'.$i])){
 $_SESSION['product-qty-cart-'.$i]=$_POST['amount-'.$i];
 echo $_SESSION['product-qty-cart-'.$i];}
