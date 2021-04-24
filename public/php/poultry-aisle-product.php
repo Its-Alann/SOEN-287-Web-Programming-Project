@@ -14,6 +14,7 @@ for($i=20;$i<28;$i++){
     }
 }
 
+
 $xml = simplexml_load_file("../../product_info_test.xml");
 foreach($xml->meat_poultry_fish_aisle->product as $item){
     if($item->code==$_GET['code']){
